@@ -1,0 +1,16 @@
+languageCode = "en-us"
+baseurl = "https://toxi.nu/"
+title = "toxinu"
+theme = "toxinu"
+pygmentsuseclasses = true
+pygmentscodefences = true
+
+[permalinks]
+fixed = ":title/"
+blog = "blog/:slug/"
+
+[params]
+twitter = "toxinu_"
+github = "toxinu"
+email = "contact@toxi.nu"
+description = "Developer, hacker, music listener and books reader."

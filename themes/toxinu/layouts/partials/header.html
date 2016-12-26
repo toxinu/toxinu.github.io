@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="referrer" content="no-referrer">
+    <meta name="author" content="{{ .Site.Title }}" />
+	{{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
+
+	<base href="{{ .Site.BaseURL }}">
+
+	<title>
+	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+	{{ if eq $url "/" }}
+	    {{ .Site.Title }}
+	{{ else }}
+	    {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
+	{{ end }}
+	</title>
+	<link rel="canonical" href="{{ .Permalink }}">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    {{ if .RSSLink }}
+		<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+		<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+	{{ end }}
+
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+<body>
+    <div class="masthead grid">
+        <div class="inline left">
+            <a class="home" href="/">{{ .Site.Title }}</a>
+        </div>
+        <ul class="inline right">
+            <li><a href="/code">Code</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>

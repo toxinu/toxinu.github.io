@@ -164,7 +164,7 @@ to show you how to ship a Django project in a professional way.
 
 You can retrieve this template [here][16].
 
-Feel free to contact [me][13] for any questions, leave issue on [Github][12].
+Feel free to contact me for any questions, leave issue on [Github][12].
 
 In further posts I'll speak about: "*How to store package metadata*", "*How to trash your unmaintainable fixtures*" and more tools like [bumpversion][14] and [docker-compose][15].
 
@@ -180,7 +180,6 @@ In further posts I'll speak about: "*How to store package metadata*", "*How to t
 [10]: http://initd.org/psycopg/docs/
 [11]: http://click.pocoo.org/
 [12]: https://github.com/toxinu/cookiecutter-django/blob/59daaaebe9c1828dfab1beb7f7c8a22c4376ce7b/%7B%7B%20cookiecutter.package_name%20%7D%7D/src/%7B%7B%20cookiecutter.module_name%20%7D%7D/runner/commands/django.py
-[13]: mailto:contact@toxi.nu
 [14]: https://github.com/peritus/bumpversion
 [15]: https://www.docker.com/products/docker-compose
 [16]: https://github.com/toxinu/cookiecutter-django/

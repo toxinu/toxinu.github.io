@@ -93,7 +93,7 @@ Let's take a quick look at `setup.py`:
 
 {{< highlight python >}}
 [...]
-	entry_points={
+    entry_points={
         'console_scripts': [
             'my-awesome-project = my_awesome_project.runner:main']
     },

@@ -1,16 +1,14 @@
-languageCode = "en-us"
 baseurl = "https://toxi.nu/"
-title = "toxinu"
-theme = "toxinu"
-pygmentsuseclasses = true
+languageCode = "en-us"
 pygmentscodefences = true
-
-[permalinks]
-fixed = ":title/"
-blog = "blog/:slug/"
-
+pygmentsuseclasses = true
+theme = "toxinu"
+title = "toxinu"
 [params]
-twitter = "toxinu_"
-github = "toxinu"
-email = "contact@toxi.nu"
 description = "Developer, hacker, music listener and books reader."
+email = "toxinu@gmail.com"
+github = "toxinu"
+twitter = "toxinu_"
+[permalinks]
+blog = "blog/:slug/"
+fixed = ":title/"

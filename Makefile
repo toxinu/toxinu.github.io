@@ -42,5 +42,6 @@ publish:
 
 	echo "Updating gh-pages branch"
 	git add docs && git commit -m "Publishing a new print..."
+	git push
 
 .PHONY: install clean build serve

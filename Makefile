@@ -1,4 +1,4 @@
-HUGO_VERSION ?= 0.19
+HUGO_VERSION ?= 0.26
 
 install:
 	if [ ! -a .bin/hugo ] ; \
@@ -6,8 +6,6 @@ install:
 		mkdir -p .bin ; \
 		cd .bin ; \
 		curl -L https://github.com/spf13/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_Linux-64bit.tar.gz | tar zx  ; \
-		mv hugo_$(HUGO_VERSION)_linux_amd64/hugo_$(HUGO_VERSION)_linux_amd64 hugo ; \
-		rm -r hugo_$(HUGO_VERSION)_linux_amd64 ; \
 		cd .. ; \
 	fi; \
 	if [ ! -f hugo ] ; \

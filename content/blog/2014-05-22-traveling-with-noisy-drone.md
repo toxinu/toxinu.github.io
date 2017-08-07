@@ -1,9 +1,9 @@
 +++
-title = "Traveling with Noisy drone"
-date = "2014-05-22"
 aliases = ["2014/05/22/Traveling-with-noisy-drone.html"]
-+++
+date = "2014-05-22T00:00:00Z"
+title = "Traveling with Noisy drone"
 
++++
 I really enjoy *electro/drone/experimental* music.
 
 From [Boards of Canada][1] to [Tim Hecker][2] with [Ben Frost][3], return to [Fennesz][4] and finish with [Aphex Twin][5].

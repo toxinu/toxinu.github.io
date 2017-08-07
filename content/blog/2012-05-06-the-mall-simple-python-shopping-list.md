@@ -1,9 +1,9 @@
 +++
-title = "TheMall - A simple Python web shopping list"
-date = "2012-05-06"
 aliases = ["2012/05/06/TheMall-Simple-Python-Shopping-list.html"]
-+++
+date = "2012-05-06T00:00:00Z"
+title = "TheMall - A simple Python web shopping list"
 
++++
 I have used [myTinyTodo][1] for at least 1 year but I'm fed up of Mysql database and Php...
 Am I serious ?
 

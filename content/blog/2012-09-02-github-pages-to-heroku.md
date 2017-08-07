@@ -1,9 +1,9 @@
 +++
-title = "Github Pages to Heroku"
-date = "2012-09-02"
 aliases = ["2012/09/02/Github-Pages-to-Heroku.html"]
-+++
+date = "2012-09-02T00:00:00Z"
+title = "Github Pages to Heroku"
 
++++
 # Synopsis
 
 My initial goal was to put my jekyll website on Heroku but I have encountered many problems due of my bad Ruby level and ``pygment`` usage.

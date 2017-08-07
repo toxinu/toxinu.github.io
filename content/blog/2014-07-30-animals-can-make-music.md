@@ -1,9 +1,9 @@
 +++
-title = "Animals can make music"
-date = "2014-07-30"
 aliases = ["2014/07/30/Animals-can-make-music.html"]
-+++
+date = "2014-07-30T00:00:00Z"
+title = "Animals can make music"
 
++++
 ![Animal collecive by Alex Wright](/images/posts/animals_co.jpg)
 
 First of all, sorry about embedded videos.

@@ -1,9 +1,9 @@
 +++
-title = "Filtering and ordering with Restless"
-date = "2014-12-29"
 aliases = ["2014/12/29/restless-filtering-and-ordering.html"]
-+++
+date = "2014-12-29T00:00:00Z"
+title = "Filtering and ordering with Restless"
 
++++
 Let's continue with my [previous blog post][0] on [Restless][1] introduction with [Django][2].
 Today I'll show you two quick and simple [Mixins][3] for Restless. One for **filtering** and another for **ordering**.
 

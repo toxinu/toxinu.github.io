@@ -1,9 +1,9 @@
 +++
-title = "Restless for building Python RESTful API"
-date = "2014-11-28"
 aliases = ["2014/11/28/restless-presentation-and-pagination.html"]
-+++
+date = "2014-11-28T00:00:00Z"
+title = "Restless for building Python RESTful API"
 
++++
 After trying to build RESTful API in Django with [Django Rest Framework][0], my friend [Pabluk][1] allow me to discover [Restless][2]. A very small code base Python module to build RESTful API.
 
 I'm totally not a huge fan of [Django Rest Framework][0]. It's just to restricting if you don't make a 100% REST API, and this is often the case. First of all, you'll have a long progression period when you'll have a bad use of this framework. I think it's to complex while we try a build something simple. A RESTful API.

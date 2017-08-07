@@ -1,9 +1,9 @@
 +++
-title = "No normal food for 2 months"
-date = "2013-08-10"
 aliases = ["2013/08/10/2-Months-of-Soylent.html"]
-+++
+date = "2013-08-10T00:00:00Z"
+title = "No normal food for 2 months"
 
++++
 The game.
 
 About four months ago I discover [this][1] blog entry and I realize that some other guys have been thinking about a new way to eat.

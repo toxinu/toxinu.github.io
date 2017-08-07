@@ -1,9 +1,9 @@
 +++
-title = "How to store your Python package metadata"
-date = "2016-12-20"
 aliases = ["2016/12/20/store-python-package-metadata.html"]
-+++
+date = "2016-12-20T00:00:00Z"
+title = "How to store your Python package metadata"
 
++++
 A small, but full of snippets, post about how to store your package metadata cleanly.
 
 

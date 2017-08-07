@@ -1,9 +1,9 @@
 +++
-title = "Nagios Oracle health plugin"
-date = "2011-10-28"
 aliases = ["2011/10/28/Nagios-oracle-health-plugin.html"]
-+++
+date = "2011-10-28T00:00:00Z"
+title = "Nagios Oracle health plugin"
 
++++
 This is more a memo than an article. A quick and dirty [check_oracle_health][1] plugin installation, with prerequires.
 
 Developped by [Gerhard Lausser][2], an active [Shinken][3] developper with [Jean Gabès][4].

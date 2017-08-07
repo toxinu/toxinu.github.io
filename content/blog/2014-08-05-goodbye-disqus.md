@@ -1,9 +1,9 @@
 +++
-title = "Goodbye Disqus"
-date = "2014-08-05"
 aliases = ["2014/08/05/Goodbye-disqus.html"]
-+++
+date = "2014-08-05T00:00:00Z"
+title = "Goodbye Disqus"
 
++++
 Hi folks,
 
 I just trash [Disqus][3] from my website cause of some disgusting issues.

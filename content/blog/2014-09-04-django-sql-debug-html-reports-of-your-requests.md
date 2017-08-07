@@ -1,9 +1,9 @@
 +++
-title = "Django SQL Debug - HTML reports of your HTTP requests"
-date = "2014-09-04"
 aliases = ["2014/09/04/django-sql-debug-html-reports-of-your-requests.html"]
-+++
+date = "2014-09-04T00:00:00Z"
+title = "Django SQL Debug - HTML reports of your HTTP requests"
 
++++
 [Django Debug Toolbar][1] is an awesome tool but it has some limitations. It's an `HTML` panel that is injected in your web pages that allow you to debug and profile your application at different layers. From `HTTP` to `SQL` requests.
 
 But when you do applications with a [REST][2] pattern for example, with a full javascript client for example, it quickly become pain in the ass to debug your app.

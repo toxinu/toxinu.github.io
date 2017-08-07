@@ -1,9 +1,9 @@
 +++
-title = "Websocket with Flask and Gevent"
-date = "2012-10-28"
 aliases = ["2012/10/28/Websocket_with_flask_and_gevent.html"]
-+++
+date = "2012-10-28T00:00:00Z"
+title = "Websocket with Flask and Gevent"
 
++++
 ## Ubik, package manager for Unix
 
 If you follow me on [Github][7] you have maybe already seen that I currently develop a package manager for Unix, [Ubik][1].

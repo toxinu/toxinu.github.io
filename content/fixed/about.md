@@ -1,8 +1,7 @@
 +++
-draft = false
 title = "About"
-+++
 
++++
 hi, I'm Geoffrey Lehée, french devOps.
 
 My work is full of Python, Django, Linux and Javascript. &lt;3 Open source.

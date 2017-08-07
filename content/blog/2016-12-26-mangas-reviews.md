@@ -1,9 +1,9 @@
 +++
-title = "Reviews d'un lecteur occasionnel de mangas"
-date = "2016-12-26"
+date = "2016-12-26T00:00:00Z"
 draft = true
-+++
+title = "Reviews d'un lecteur occasionnel de mangas"
 
++++
 Autant le dire tout de suite, je ne suis pas un grand lecteur de mangas, même si j'en apprécie certains. J'ai pas mal de difficultés à trouver un type, genre, style de manga qui me touche. Beaucoup d'entre eux me sont insupportable dans cette masse assez hallucinante.
 
 Pas mal de petites choses peuvent facilement m'irriter et me faire décrocher d'une série. J'ai vraiment des difficultés avec tout ce qui est de type combat, rapport de puissance. Mais également toutes connotations "érotiques", notamment quand il s'agit de jeunes hommes ou femmes de seize ans (ou moins). Il faut osez le dire, c'est quelque chose de très présent dans l'univers du manga.

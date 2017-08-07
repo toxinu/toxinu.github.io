@@ -1,9 +1,9 @@
 +++
-title = "Pip installable Django project"
-date = "2016-12-16"
 aliases = ["2016/12/16/pip-installable-django-project.html"]
-+++
+date = "2016-12-16T00:00:00Z"
+title = "Pip installable Django project"
 
++++
 I'll present you a [Django][1] layout which allow to ship your project (not app) as a [Python][5] package. Your users will be able to install it with [pip][2] for example.
 
 This template is available as a [Cookiecutter][3] template. But I'll remove every references, because this paper is mainly written to present you a Django project layout. Maybe I'll do another post about Cookiecutter later.

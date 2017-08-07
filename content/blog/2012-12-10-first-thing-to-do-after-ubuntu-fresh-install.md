@@ -1,9 +1,9 @@
 +++
-title = "First thing to do after Ubuntu fresh install"
-date = "2012-12-10"
 aliases = ["2012/12/10/First-thing-to-do-after-ubuntu-fresh-install.html"]
-+++
+date = "2012-12-10T00:00:00Z"
+title = "First thing to do after Ubuntu fresh install"
 
++++
 It's time to return to sources, Linux, good buy Apple.
 But this is the first thing to do on every new Ubuntu installation.
 

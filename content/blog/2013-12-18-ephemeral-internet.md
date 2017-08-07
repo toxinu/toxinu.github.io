@@ -1,9 +1,9 @@
 +++
-title = "Ephemeral Internet"
-date = "2013-12-18"
 aliases = ["2013/12/18/Ephemeral-Internet.html"]
-+++
+date = "2013-12-18T00:00:00Z"
+title = "Ephemeral Internet"
 
++++
 <center>
 I enjoy this ephemeral vision of the Internet.
 </center>

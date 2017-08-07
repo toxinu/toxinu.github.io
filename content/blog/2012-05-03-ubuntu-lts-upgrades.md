@@ -1,9 +1,9 @@
 +++
-title = "Ubuntu Server LTS upgrades are stress test"
-date = "2012-05-03"
 aliases = ["2012/05/03/Ubuntu-Lts-Upgrades.html"]
-+++
+date = "2012-05-03T00:00:00Z"
+title = "Ubuntu Server LTS upgrades are stress test"
 
++++
 <br />
 <hr>
 ### Update

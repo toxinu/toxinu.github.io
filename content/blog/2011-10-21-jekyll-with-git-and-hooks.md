@@ -1,9 +1,9 @@
 +++
-title = "Jekyll with Git and Hooks"
-date = "2011-10-21"
 aliases = ["2011/10/21/Jekyll-with-Git-and-Hooks.html"]
-+++
+date = "2011-10-21T00:00:00Z"
+title = "Jekyll with Git and Hooks"
 
++++
 Good bye my lovely [Pyame][1]... Hello [Jekyll][2] ! Pyame is my personnal static website creator written in Python under heavy development. These days I searched powerfull, light and easy to use static website creator, and Jekyll is arrived. Thanks God.
 
 In short, these programs parse differents files written in a special syntax, for example : Markdown, Textile, etc. An easy syntax to make your articles or docs more swag. And it generate html output.

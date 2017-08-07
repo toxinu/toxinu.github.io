@@ -1,9 +1,9 @@
 +++
-title = "Bistouille and ASP 21\""
-date = "2013-09-03"
 aliases = ["2013/09/03/Bistouille-and-ASP-21.html"]
-+++
+date = "2013-09-03T00:00:00Z"
+title = "Bistouille and ASP 21\""
 
++++
 I have admit that this is not a rage article.
 
 # Todo

@@ -1,9 +1,9 @@
 +++
-date = "2015-03-11"
-title = "H.P. Lovecraft, hallucinations et Tekeli'li !"
 aliases = ["2015/03/11/lovecraft-hallucinogenes.html"]
-+++
+date = "2015-03-11T00:00:00Z"
+title = "H.P. Lovecraft, hallucinations et Tekeli'li !"
 
++++
 Premier article en français ! Il n'est jamais trop tard me direz-vous. Pourquoi ? Car je vais parler un peu de littérature et également d'un bouquin qui a été très tardivement mais récemment traduit en français.
 
 L'ouvrage qui m'a donné envie de rédiger cet article est bien entendu, [Les Montagnes Hallucinées][1] du grand [H.P. Lovecraft][2].

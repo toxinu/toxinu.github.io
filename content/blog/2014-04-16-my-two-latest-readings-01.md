@@ -1,9 +1,9 @@
 +++
-title = "Two latest readings - *sick*"
-date = "2014-04-16"
 aliases = ["2014/04/16/My-two-latest-readings-01.html"]
-+++
+date = "2014-04-16T00:00:00Z"
+title = "Two latest readings - *sick*"
 
++++
 Chuck Palahniuk is the guy that will use little daily weird things to make you very petty.
 
 # Rant

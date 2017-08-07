@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="referrer" content="no-referrer">
+    <meta name="author" content="toxinu" />
+	<meta name="description" content="Developer, hacker, music listener and books reader.">
+
+	<base href="https://toxi.nu/">
+
+	<title>
+	
+	
+	     Websocket with Flask and Gevent 
+	
+	</title>
+	<link rel="canonical" href="https://toxi.nu/blog/websocket-with-flask-and-gevent/">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+	
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+<body>
+    <div class="masthead grid">
+        <div class="inline left">
+            <a class="home" href="/">toxinu</a>
+        </div>
+        <ul class="inline right">
+            <li><a href="/code">Code</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>
+
+<div class="grid">
+<h1>Websocket with Flask and Gevent</h1>
+    <span class="small">Posted on 28 October 2012</span>
+
+    <div>
+
+<h2 id="ubik-package-manager-for-unix">Ubik, package manager for Unix</h2>
+
+<p>If you follow me on <a href="https://github.com/Socketubs">Github</a> you have maybe already seen that I currently develop a package manager for Unix, <a href="https://github.com/Socketubs/Ubik">Ubik</a>.</p>
+
+<p>In order to test my API, I create a <em>WebUI</em> for <em>Ubik</em> and the websockets comes to me.
+My two prefered web framework are <strong>Django</strong> and <strong>Flask</strong>, but I need a <em>lightweight</em> web app, so welcome to Flask.</p>
+
+<h2 id="node-js-blah-blah">Node.js, blah, blah</h2>
+
+<p>Ok, I have many many times hear good things about <strong>Node.js</strong> and <strong><a href="http://www.gelens.org/code/gevent-websocket/">Socket.io</a></strong>, no doubt.
+But my focus is to do a lightweight and <strong>full Python</strong> implemented application.</p>
+
+<p>So, tools are:</p>
+
+<ul>
+<li><a href="http://flask.pocoo.org/">flask</a></li>
+<li><a href="http://www.gevent.org/">gevent</a></li>
+<li><a href="http://www.gelens.org/code/gevent-websocket/">gevent-websocket</a></li>
+</ul>
+
+<p>By the way, <a href="https://github.com/abourget/gevent-socketio">gevent-socketio</a> seems to be a solid <strong>socket.io</strong> Python implementation.</p>
+
+<h2 id="app-presentation">App presentation</h2>
+
+<p>This is my Flask app structure:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>.
+├── runserver.py
+├── requirements.txt
+└── app
+    ├── __init__.py
+    ├── views.py
+    ├── websocket.py
+    ├── static
+    │   └── ...
+    └── templates
+        └── index.html
+</code></pre></div>
+
+
+<h3 id="requirements-txt">requirements.txt</h3>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>flask
+gevent
+gevent-websocket
+</code></pre></div>
+
+
+<h3 id="init-py">__init__.py</h3>
+
+<p>This is the <em>app core</em>, create your app, import every shared object you want to use into your app, like databases, etc.</p>
+
+<p>And don&rsquo;t forget to import views at the end to avoid circular imports.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># coding: utf-8</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+<span class="kn">from</span> <span class="nn">websocket</span> <span class="kn">import</span> <span class="n">handle_websocket</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">secret_key</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">urandom</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="k">def</span> <span class="nf">my_app</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">):</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">environ</span><span class="p">[</span><span class="s2">&quot;PATH_INFO&quot;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&quot;/&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">app</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&quot;/websocket&quot;</span><span class="p">:</span>
+        <span class="n">handle_websocket</span><span class="p">(</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;wsgi.websocket&quot;</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">app</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">views</span>
+</code></pre></div>
+
+
+<h3 id="websocket-py">websocket.py</h3>
+
+<p>All your websocket stuff could be here, this is the <em>websocket handler</em>.
+Messages from browser arrived here, and you can easily send message throught websocket with <code>send</code> method from <code>ws</code> object.</p>
+
+<p>Use <code>json</code>, please.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># coding: utf-8</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">def</span> <span class="nf">handle_websocket</span><span class="p">(</span><span class="n">ws</span><span class="p">):</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">receive</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">message</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">message</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+            <span class="n">r</span>  <span class="o">=</span> <span class="s2">&quot;I have received this message from you : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">message</span>
+            <span class="n">r</span> <span class="o">+=</span> <span class="s2">&quot;&lt;br&gt;Glad to be your webserver.&quot;</span>
+            <span class="n">ws</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">&#39;output&#39;</span><span class="p">:</span> <span class="n">r</span><span class="p">}))</span>
+</code></pre></div>
+
+
+<h3 id="views-py">views.py</h3>
+
+<p>Simple <code>flask</code> view to <code>index.html</code> template.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># coding: utf-8</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span>
+
+<span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">app</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h3 id="runserver-py">runserver.py</h3>
+
+<p>Run your app with this script. It import your app and feed <code>WSGIServer</code> with it.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="c1"># coding: utf-8</span>
+<span class="kn">from</span> <span class="nn">gevent.pywsgi</span> <span class="kn">import</span> <span class="n">WSGIServer</span>
+<span class="kn">from</span> <span class="nn">geventwebsocket.handler</span> <span class="kn">import</span> <span class="n">WebSocketHandler</span>
+
+<span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">my_app</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">http_server</span> <span class="o">=</span> <span class="n">WSGIServer</span><span class="p">((</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">5000</span><span class="p">),</span> <span class="n">my_app</span><span class="p">,</span> <span class="n">handler_class</span><span class="o">=</span><span class="n">WebSocketHandler</span><span class="p">)</span>
+    <span class="n">http_server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+</code></pre></div>
+
+
+<h3 id="index-html">index.html</h3>
+
+<p>And a quick <em>Javascript</em> websocket example.</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Websocket with Flask, Gevent and Gevent-websocket<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;log&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;send&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Send!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://code.jquery.com/jquery-1.8.2.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+            <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;WebSocket&quot;</span> <span class="k">in</span> <span class="nb">window</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">ws</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WebSocket</span><span class="p">(</span><span class="s2">&quot;ws://&quot;</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">domain</span> <span class="o">+</span> <span class="s2">&quot;:5000/websocket&quot;</span><span class="p">);</span>
+                <span class="nx">ws</span><span class="p">.</span><span class="nx">onmessage</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;p#log&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">output</span><span class="p">);</span>
+                <span class="p">};</span>
+            <span class="p">};</span>
+
+            <span class="c1">// Bind send button to websocket</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;button#send&quot;</span><span class="p">).</span><span class="nx">live</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="s1">&#39;output&#39;</span><span class="o">:</span> <span class="s1">&#39;Sent from my browser!&#39;</span><span class="p">}));</span>
+            <span class="p">});</span>
+
+            <span class="c1">// Cleanly close websocket when unload window</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">onbeforeunload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span> <span class="c1">// disable onclose handler first</span>
+                <span class="nx">ws</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
+            <span class="p">};</span>
+        <span class="p">});</span>
+    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+
+
+<p>All can find all this stuff in this <a href="https://github.com/tzangms/python-websocket-example">repository</a>.
+Thanks to <a href="https://github.com/tzangms">tzangms</a>.</p>
+
+<h2 id="what-now">What now ?</h2>
+
+<p>Play websockets with Flask and Python is fun !</p>
+
+<p>I will continue to improve <a href="https://github.com/Socketubs/Ubik"><strong>Ubik</strong></a> <em>webui</em> with <em>websocket</em> and you have to take a look at the <em>0.2</em> branch.
+Bunch of new features is coming !</p>
+</div>
+</div>
+	<div class="footer grid ta">
+		&copy; 2017 toxinu <small class="latest-update">(latest update at 2017-08-07 10:41:04 &#43;0200 CEST)</small>
+	</div>
+	<script data-no-instant>InstantClick.init();</script>
+</body>
+</html>
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="referrer" content="no-referrer">
+    <meta name="author" content="toxinu" />
+	<meta name="description" content="Developer, hacker, music listener and books reader.">
+
+	<base href="https://toxi.nu/">
+
+	<title>
+	
+	
+	     Github Pages to Heroku 
+	
+	</title>
+	<link rel="canonical" href="https://toxi.nu/blog/github-pages-to-heroku/">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+	
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+<body>
+    <div class="masthead grid">
+        <div class="inline left">
+            <a class="home" href="/">toxinu</a>
+        </div>
+        <ul class="inline right">
+            <li><a href="/code">Code</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>
+
+<div class="grid">
+<h1>Github Pages to Heroku</h1>
+    <span class="small">Posted on 02 September 2012</span>
+
+    <div>
+
+<h1 id="synopsis">Synopsis</h1>
+
+<p>My initial goal was to put my jekyll website on Heroku but I have encountered many problems due of my bad Ruby level and <code>pygment</code> usage.</p>
+
+<p>During month my jekyll website was freely hosted by <strong>GitHub Pages</strong>. Thanks for all the fish. But <strong>GitHub</strong> is not for app hosting.</p>
+
+<p>Many hours of:</p>
+
+<blockquote>
+<p>&ldquo;What the fuck I have 404 ?&rdquo;
+&ldquo;Oh Damn it my local Jekyll render it correctly and not on Github&hellip;&rdquo;
+&ldquo;Ohh enough, it was just the yaml header with quotes which give me fucking 404&rdquo;</p>
+</blockquote>
+
+<h1 id="idea">Idea</h1>
+
+<p>I think it&rsquo;s important to use local rendering to be sur of it and don&rsquo;t have surprise after deployment.</p>
+
+<ul>
+<li><code>www.socketubs.net</code> is a github repo (not Github Page)</li>
+<li><code>www.socketubs.net/_site</code> is a Heroku repo (Html app (<a href="http://kennethreitz.com/static-sites-on-heroku-cedar.html">see</a>))</li>
+<li><code>www.socketubs.net/make.sh</code> is a little bash script which do all the job</li>
+</ul>
+
+<p>Jekyll is rendered locally, hosted on Heroku, backuped on Heroku and Github for versionning.</p>
+
+<p>By the way you can see a <code>404.html</code> page.</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#############################################################</span>
+<span class="c1"># Variables</span>
+<span class="nv">heroku_repo</span><span class="o">=</span><span class="s2">&quot;_site&quot;</span>
+<span class="nv">heroku_url</span><span class="o">=</span><span class="s2">&quot;git@heroku.com:socketubs.git&quot;</span>
+<span class="nv">heroku_commit</span><span class="o">=</span><span class="s2">&quot;New release&quot;</span>
+<span class="nv">github_commit</span><span class="o">=</span><span class="s2">&quot;New release&quot;</span>
+<span class="c1">#############################################################</span>
+
+<span class="k">function</span> usage <span class="o">()</span> <span class="o">{</span>
+	<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -lt <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+		<span class="nb">echo</span> <span class="s2">&quot;Usage: ./make (run|deploy|open)&quot;</span>
+		<span class="nb">echo</span> <span class="s2">&quot;&quot;</span>
+		<span class="nb">echo</span> <span class="s2">&quot; run         Run jekyll into _site&quot;</span>
+		<span class="nb">echo</span> <span class="s2">&quot; deploy      Deploy your website on heroku and save it on github&quot;</span>
+		<span class="nb">echo</span> <span class="s2">&quot; open        Open local and remote version in browser&quot;</span>
+		<span class="nb">exit</span> <span class="m">1</span>
+	<span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="k">function</span> make_heroku <span class="o">()</span> <span class="o">{</span>
+	<span class="nb">cd</span> _site
+	<span class="k">if</span> ! <span class="o">[</span> -e <span class="s2">&quot;.git&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+		git init
+		git remote add heroku <span class="nv">$heroku_url</span>
+	<span class="k">fi</span>
+	touch index.php
+	<span class="nb">echo</span> <span class="s2">&quot;php_flag engine off&quot;</span> &gt; .htaccess
+	<span class="nb">echo</span> <span class="s2">&quot;ErrorDocument 404 /404.html&quot;</span> &gt;&gt; .htaccess$
+	<span class="nb">cd</span> ..
+<span class="o">}</span>
+
+<span class="k">function</span> update_heroku <span class="o">()</span> <span class="o">{</span>
+	<span class="nb">cd</span> _site
+	git add .
+	git commit -a -m <span class="s2">&quot;</span><span class="nv">$heroku_commit</span><span class="s2">&quot;</span>
+	git push -u -f heroku master
+	<span class="nb">cd</span> ..
+<span class="o">}</span>
+
+<span class="k">function</span> update_github <span class="o">()</span> <span class="o">{</span>
+	git add .
+	git commit -a -m <span class="s2">&quot;</span><span class="nv">$github_commit</span><span class="s2">&quot;</span>
+	git push origin master
+<span class="o">}</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;run&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	jekyll
+	make_heroku
+	<span class="nb">exit</span> <span class="m">0</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;deploy&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	make_heroku
+	update_heroku
+	update_github
+	<span class="nb">exit</span> <span class="m">0</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">==</span> <span class="s2">&quot;open&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+	<span class="nb">cd</span> _site
+	heroku open
+	open http://localhost:4000
+	python -m SimpleHTTPServer <span class="m">4000</span>
+	<span class="nb">cd</span> ..
+<span class="k">else</span>
+	usage
+<span class="k">fi</span>
+</code></pre></div>
+
+
+<h1 id="finally">Finally</h1>
+
+<p>And finally we have this workflow:</p>
+
+<ul>
+<li>Write your articles</li>
+<li><code>./make run</code></li>
+<li><code>./make open</code></li>
+<li>See local version and online version</li>
+<li>Correct if you want</li>
+<li><code>./make deploy</code></li>
+</ul>
+
+<p>Your Github repo will be updated and heroku will received new website version.</p>
+</div>
+</div>
+	<div class="footer grid ta">
+		&copy; 2017 toxinu <small class="latest-update">(latest update at 2017-08-07 10:41:04 &#43;0200 CEST)</small>
+	</div>
+	<script data-no-instant>InstantClick.init();</script>
+</body>
+</html>
+

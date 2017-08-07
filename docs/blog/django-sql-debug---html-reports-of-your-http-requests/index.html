@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="referrer" content="no-referrer">
+    <meta name="author" content="toxinu" />
+	<meta name="description" content="Developer, hacker, music listener and books reader.">
+
+	<base href="https://toxi.nu/">
+
+	<title>
+	
+	
+	     Django SQL Debug - HTML reports of your HTTP requests 
+	
+	</title>
+	<link rel="canonical" href="https://toxi.nu/blog/django-sql-debug---html-reports-of-your-http-requests/">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    
+
+	
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+<body>
+    <div class="masthead grid">
+        <div class="inline left">
+            <a class="home" href="/">toxinu</a>
+        </div>
+        <ul class="inline right">
+            <li><a href="/code">Code</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>
+
+<div class="grid">
+<h1>Django SQL Debug - HTML reports of your HTTP requests</h1>
+    <span class="small">Posted on 04 September 2014</span>
+
+    <div><p><a href="https://github.com/django-debug-toolbar/django-debug-toolbar">Django Debug Toolbar</a> is an awesome tool but it has some limitations. It&rsquo;s an <code>HTML</code> panel that is injected in your web pages that allow you to debug and profile your application at different layers. From <code>HTTP</code> to <code>SQL</code> requests.</p>
+
+<p>But when you do applications with a <a href="http://en.wikipedia.org/wiki/Representational_state_transfer">REST</a> pattern for example, with a full javascript client for example, it quickly become pain in the ass to debug your app.
+You can&rsquo;t reproduce easily <code>POST</code>, <code>PUT</code>, etc&hellip; requests.</p>
+
+<p>Let&rsquo;s introduce <a href="https://github.com/socketubs/django-sql-debug">Django SQL Debug</a>. It&rsquo;s a tool that works with <a href="https://github.com/django-debug-toolbar/django-debug-toolbar">Django Debug Toolbar</a> to generate an <code>HTML</code> report that you can read offline or later for each <code>HTTP</code> requests.</p>
+
+<p><img src="https://raw.githubusercontent.com/socketubs/django-sql-debug/master/screenshots/01.png" alt="Django SQL Debug screenshot" /></p>
+
+<p>It&rsquo;s goal is to let you see all your <code>SQL</code> queries (<em>and more</em>) when you don&rsquo;t have a direct access to <a href="https://github.com/django-debug-toolbar/django-debug-toolbar">Django Debug Toolbar</a>.
+That&rsquo;s why it&rsquo;s generate an <code>HTML</code> report that looks like the toolbar.</p>
+
+<p>You can install it like any other Django application:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>pip install django-sql-debug
+</code></pre></div>
+
+
+<p>Just add <code>django_sql_debug</code> before <code>debug_toolbar</code> in <code>INSTALLED_APPS</code>. Configure your <code>HTML</code> reports directory, let&rsquo;s use your app and see your first report.</p>
+
+<p>Development is at the very beginning and it&rsquo;s more a proof of concept for now but it&rsquo;s usable and it can save you in special cases.</p>
+
+<p>You can find source at <a href="https://github.com/socketubs/django-sql-debug">Github</a>. Contribution and any feedbacks are welcome.</p>
+
+<p>Let&rsquo;s discuss <a href="https://news.ycombinator.com/item?id=8268848">here</a>.</p>
+</div>
+</div>
+	<div class="footer grid ta">
+		&copy; 2017 toxinu <small class="latest-update">(latest update at 2017-08-07 10:41:04 &#43;0200 CEST)</small>
+	</div>
+	<script data-no-instant>InstantClick.init();</script>
+</body>
+</html>
+

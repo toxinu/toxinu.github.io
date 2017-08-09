@@ -1,4 +1,4 @@
-baseurl = "http://toxi.nu/"
+baseurl = ""
 languageCode = "en-us"
 pygmentscodefences = true
 pygmentsuseclasses = true

@@ -39,6 +39,7 @@ publish:
 
 	echo "Generating site"
 	./hugo
+	echo "toxi.nu" > docs/CNAME
 
 	echo "Updating gh-pages branch"
 	git add docs && git commit -m "Publishing a new print..."

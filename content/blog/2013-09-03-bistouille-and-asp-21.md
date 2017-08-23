@@ -2,7 +2,7 @@
 aliases = ["2013/09/03/Bistouille-and-ASP-21.html"]
 date = "2013-09-03T00:00:00Z"
 title = "Bistouille and ASP 21\""
-
+expiryDate = "2014-09-03T00:00:00Z"
 +++
 I have admit that this is not a rage article.
 

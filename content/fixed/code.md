@@ -2,7 +2,7 @@
 title = "Code"
 
 +++
-Below is a short list of projects I have created or worked on. You can find many more recent projects on [Github](https://github.com/toxinu).
+Below is a short list of projects I have created or worked on. You can find many more recent projects on [Github](https://github.com/toxinu) or [Gitlab](https://gitlab.com/toxinu).
 
 * **[Sublimall](https://github.com/toxinu/sublimall)** - SublimeText 3 plugin to sync your configuration. *<small>~560 stars</small>*
 

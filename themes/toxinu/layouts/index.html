@@ -5,6 +5,9 @@
         {{ if .Site.Params.github }}
             <a id="github" href="https://github.com/{{ .Site.Params.github }}" target="_blank"><span>{{ .Site.Params.github }}</span></a>
         {{ end }}
+        {{ if .Site.Params.gitlab }}
+            <a id="gitlab" href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank"><span>{{ .Site.Params.gitlab }}</span></a>
+        {{ end }}
         {{ if .Site.Params.twitter }}
             <a id="twitter" href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank"><span>{{ .Site.Params.twitter }}</span></a>
         {{ end }}

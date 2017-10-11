@@ -9,6 +9,7 @@ publishDir = "docs"
 description = "Developer, hacker, music listener and books reader."
 email = "toxinu@gmail.com"
 github = "toxinu"
+gitlab= "toxinu"
 twitter = "toxinu_"
 [permalinks]
 blog = "blog/:slug/"

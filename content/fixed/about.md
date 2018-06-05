@@ -2,9 +2,9 @@
 title = "About"
 
 +++
-Hi, I'm Geoffrey L., french devOps.
+Hi, I'm Geoffrey L., french SRE.
 
-My work is full of <em>Python</em>, <em>Go</em>, <em>Django</em>, <em>Linux</em> and <em>Javascript</em>. &lt;3 Open source.
+My work is full of <em>Python</em>, <em>Golang</em>, <em>Linux</em> and <em>Sysop</em>. &lt;3 Open source.
 
 <div class="profiles grid ta">
     <a target="_blank" href="https://github.com/toxinu" id="github"><span>toxinu</span></a>

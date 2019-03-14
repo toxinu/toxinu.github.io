@@ -83,7 +83,7 @@ But my focus is to do a lightweight and <strong>full Python</strong> implemented
 
 <p>This is my Flask app structure:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>.
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">.
 ├── runserver.py
 ├── requirements.txt
 └── app
@@ -93,17 +93,13 @@ But my focus is to do a lightweight and <strong>full Python</strong> implemented
     ├── static
     │   └── ...
     └── templates
-        └── index.html
-</code></pre></div>
-
+        └── index.html</code></pre></div>
 
 <h3 id="requirements-txt">requirements.txt</h3>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>flask
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">flask
 gevent
-gevent-websocket
-</code></pre></div>
-
+gevent-websocket</code></pre></div>
 
 <h3 id="init-py">__init__.py</h3>
 
@@ -111,7 +107,7 @@ gevent-websocket
 
 <p>And don&rsquo;t forget to import views at the end to avoid circular imports.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># coding: utf-8</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># coding: utf-8</span>
 <span class="kn">import</span> <span class="nn">os</span>
 
 <span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
@@ -122,17 +118,15 @@ gevent-websocket
 <span class="n">app</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
 
 <span class="k">def</span> <span class="nf">my_app</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">):</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="n">environ</span><span class="p">[</span><span class="s2">&quot;PATH_INFO&quot;</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&quot;/&quot;</span><span class="p">:</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">environ</span><span class="p">[</span><span class="s2">&#34;PATH_INFO&#34;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&#34;/&#34;</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">app</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&quot;/websocket&quot;</span><span class="p">:</span>
-        <span class="n">handle_websocket</span><span class="p">(</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;wsgi.websocket&quot;</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">path</span> <span class="o">==</span> <span class="s2">&#34;/websocket&#34;</span><span class="p">:</span>
+        <span class="n">handle_websocket</span><span class="p">(</span><span class="n">environ</span><span class="p">[</span><span class="s2">&#34;wsgi.websocket&#34;</span><span class="p">])</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">app</span><span class="p">(</span><span class="n">environ</span><span class="p">,</span> <span class="n">start_response</span><span class="p">)</span>
 
-<span class="kn">import</span> <span class="nn">views</span>
-</code></pre></div>
-
+<span class="kn">import</span> <span class="nn">views</span></code></pre></div>
 
 <h3 id="websocket-py">websocket.py</h3>
 
@@ -141,7 +135,7 @@ Messages from browser arrived here, and you can easily send message throught web
 
 <p>Use <code>json</code>, please.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># coding: utf-8</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># coding: utf-8</span>
 <span class="kn">import</span> <span class="nn">json</span>
 
 <span class="k">def</span> <span class="nf">handle_websocket</span><span class="p">(</span><span class="n">ws</span><span class="p">):</span>
@@ -152,32 +146,28 @@ Messages from browser arrived here, and you can easily send message throught web
         <span class="k">else</span><span class="p">:</span>
             <span class="n">message</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 
-            <span class="n">r</span>  <span class="o">=</span> <span class="s2">&quot;I have received this message from you : </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">message</span>
-            <span class="n">r</span> <span class="o">+=</span> <span class="s2">&quot;&lt;br&gt;Glad to be your webserver.&quot;</span>
-            <span class="n">ws</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">&#39;output&#39;</span><span class="p">:</span> <span class="n">r</span><span class="p">}))</span>
-</code></pre></div>
-
+            <span class="n">r</span>  <span class="o">=</span> <span class="s2">&#34;I have received this message from you : </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">message</span>
+            <span class="n">r</span> <span class="o">+=</span> <span class="s2">&#34;&lt;br&gt;Glad to be your webserver.&#34;</span>
+            <span class="n">ws</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">&#39;output&#39;</span><span class="p">:</span> <span class="n">r</span><span class="p">}))</span></code></pre></div>
 
 <h3 id="views-py">views.py</h3>
 
 <p>Simple <code>flask</code> view to <code>index.html</code> template.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="c1"># coding: utf-8</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># coding: utf-8</span>
 <span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">render_template</span>
 
 <span class="kn">from</span> <span class="nn">app</span> <span class="kn">import</span> <span class="n">app</span>
 
 <span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
-</code></pre></div>
-
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span></code></pre></div>
 
 <h3 id="runserver-py">runserver.py</h3>
 
 <p>Run your app with this script. It import your app and feed <code>WSGIServer</code> with it.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="ch">#!/usr/bin/env python</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># coding: utf-8</span>
 <span class="kn">from</span> <span class="nn">gevent.pywsgi</span> <span class="kn">import</span> <span class="n">WSGIServer</span>
 <span class="kn">from</span> <span class="nn">geventwebsocket.handler</span> <span class="kn">import</span> <span class="n">WebSocketHandler</span>
@@ -186,50 +176,46 @@ Messages from browser arrived here, and you can easily send message throught web
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">http_server</span> <span class="o">=</span> <span class="n">WSGIServer</span><span class="p">((</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="mi">5000</span><span class="p">),</span> <span class="n">my_app</span><span class="p">,</span> <span class="n">handler_class</span><span class="o">=</span><span class="n">WebSocketHandler</span><span class="p">)</span>
-    <span class="n">http_server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
-</code></pre></div>
-
+    <span class="n">http_server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span></code></pre></div>
 
 <h3 id="index-html">index.html</h3>
 
 <p>And a quick <em>Javascript</em> websocket example.</p>
 
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
-<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;utf-8&#34;</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Websocket with Flask, Gevent and Gevent-websocket<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;log&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;send&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;button&quot;</span><span class="p">&gt;</span>Send!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;log&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;send&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;button&#34;</span><span class="p">&gt;</span>Send!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://code.jquery.com/jquery-1.8.2.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;http://code.jquery.com/jquery-1.8.2.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
         <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-            <span class="k">if</span> <span class="p">(</span><span class="s2">&quot;WebSocket&quot;</span> <span class="k">in</span> <span class="nb">window</span><span class="p">)</span> <span class="p">{</span>
-                <span class="nx">ws</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WebSocket</span><span class="p">(</span><span class="s2">&quot;ws://&quot;</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">domain</span> <span class="o">+</span> <span class="s2">&quot;:5000/websocket&quot;</span><span class="p">);</span>
+            <span class="k">if</span> <span class="p">(</span><span class="s2">&#34;WebSocket&#34;</span> <span class="k">in</span> <span class="nb">window</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">ws</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WebSocket</span><span class="p">(</span><span class="s2">&#34;ws://&#34;</span> <span class="o">+</span> <span class="nb">document</span><span class="p">.</span><span class="nx">domain</span> <span class="o">+</span> <span class="s2">&#34;:5000/websocket&#34;</span><span class="p">);</span>
                 <span class="nx">ws</span><span class="p">.</span><span class="nx">onmessage</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
                     <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">msg</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
-                    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;p#log&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">output</span><span class="p">);</span>
+                    <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;p#log&#34;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">message</span><span class="p">.</span><span class="nx">output</span><span class="p">);</span>
                 <span class="p">};</span>
             <span class="p">};</span>
 
-            <span class="c1">// Bind send button to websocket</span>
-            <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;button#send&quot;</span><span class="p">).</span><span class="nx">live</span><span class="p">(</span><span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="c1">// Bind send button to websocket
+</span><span class="c1"></span>            <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;button#send&#34;</span><span class="p">).</span><span class="nx">live</span><span class="p">(</span><span class="s2">&#34;click&#34;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
                 <span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="s1">&#39;output&#39;</span><span class="o">:</span> <span class="s1">&#39;Sent from my browser!&#39;</span><span class="p">}));</span>
             <span class="p">});</span>
 
-            <span class="c1">// Cleanly close websocket when unload window</span>
-            <span class="nb">window</span><span class="p">.</span><span class="nx">onbeforeunload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-                <span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span> <span class="c1">// disable onclose handler first</span>
-                <span class="nx">ws</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
+            <span class="c1">// Cleanly close websocket when unload window
+</span><span class="c1"></span>            <span class="nb">window</span><span class="p">.</span><span class="nx">onbeforeunload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="nx">ws</span><span class="p">.</span><span class="nx">onclose</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{};</span> <span class="c1">// disable onclose handler first
+</span><span class="c1"></span>                <span class="nx">ws</span><span class="p">.</span><span class="nx">close</span><span class="p">()</span>
             <span class="p">};</span>
         <span class="p">});</span>
     <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></code></pre></div>
 
 <p>All can find all this stuff in this <a href="https://github.com/tzangms/python-websocket-example">repository</a>.
 Thanks to <a href="https://github.com/tzangms">tzangms</a>.</p>
@@ -243,7 +229,7 @@ Bunch of new features is coming !</p>
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2018 toxinu <small class="latest-update">(latest update at 2018-07-26 16:48:53 &#43;0200 CEST)</small>
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-03-14 15:21:17 &#43;0100 CET)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

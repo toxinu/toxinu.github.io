@@ -18,10 +18,10 @@ clean:
 	rm hugo
 
 build:
-	./hugo
+	hugo
 
 serve:
-	./hugo serve
+	hugo serve
 
 download-caddy:
 	mkdir -p .bin/caddy
@@ -38,7 +38,7 @@ publish:
 	rm -rf docs/*
 
 	echo "Generating site"
-	./hugo
+	hugo
 	echo "toxi.nu" > docs/CNAME
 
 	echo "Updating gh-pages branch"

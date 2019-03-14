@@ -71,39 +71,37 @@ The first reference for this template is <a href="https://github.com/getsentry/s
 
 <p>This is a little description of my typical layout for every new Django project I build.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="lineno"> 1 </span>$ tree .
-<span class="lineno"> 2 </span>.
-<span class="lineno"> 3 </span>├── conftest.py
-<span class="lineno"> 4 </span>├── Makefile
-<span class="lineno"> 5 </span>├── MANIFEST.in
-<span class="lineno"> 6 </span>├── README.rst
-<span class="lineno"> 7 </span>├── setup.cfg
-<span class="lineno"> 8 </span>├── setup.py
-<span class="lineno"> 9 </span>├── src
-<span class="lineno">10 </span>│   └── my_awesome_project
-<span class="lineno">11 </span>│       ├── __about__.py
-<span class="lineno">12 </span><span class="hll">│       ├── apps
-</span><span class="lineno">13 </span>│       │   ├── app_one
-<span class="lineno">14 </span>│       │   └── app_two
-<span class="lineno">15 </span><span class="hll">│       ├── core
-</span><span class="lineno">16 </span>│       │   ├── apps.py
-<span class="lineno">17 </span>│       │   ├── views.py
-<span class="lineno">18 </span>│       │   └── <span class="o">[</span>...<span class="o">]</span>
-<span class="lineno">19 </span>│       ├── runner
-<span class="lineno">20 </span>│       │   ├── commands
-<span class="lineno">21 </span>│       │   │   ├── django.py
-<span class="lineno">22 </span>│       │   │   └── help.py
-<span class="lineno">23 </span>│       │   └── decorators.py
-<span class="lineno">24 </span>│       ├── settings
-<span class="lineno">25 </span><span class="hll">│       │   ├── base.py
-</span><span class="lineno">26 </span><span class="hll">│       │   └── local.dist.py
-</span><span class="lineno">27 </span>│       ├── urls.py
-<span class="lineno">28 </span>│       └── wsgi.py
-<span class="lineno">29 </span>└── tests
-<span class="lineno">30 </span>    └── core
-<span class="lineno">31 </span>        └── test_core.py
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="ln"> 1</span>$ tree .
+<span class="ln"> 2</span>.
+<span class="ln"> 3</span>├── conftest.py
+<span class="ln"> 4</span>├── Makefile
+<span class="ln"> 5</span>├── MANIFEST.in
+<span class="ln"> 6</span>├── README.rst
+<span class="ln"> 7</span>├── setup.cfg
+<span class="ln"> 8</span>├── setup.py
+<span class="ln"> 9</span>├── src
+<span class="ln">10</span>│   └── my_awesome_project
+<span class="ln">11</span>│       ├── __about__.py
+<span class="hl"><span class="ln">12</span>│       ├── apps
+</span><span class="ln">13</span>│       │   ├── app_one
+<span class="ln">14</span>│       │   └── app_two
+<span class="hl"><span class="ln">15</span>│       ├── core
+</span><span class="ln">16</span>│       │   ├── apps.py
+<span class="ln">17</span>│       │   ├── views.py
+<span class="ln">18</span>│       │   └── <span class="o">[</span>...<span class="o">]</span>
+<span class="ln">19</span>│       ├── runner
+<span class="ln">20</span>│       │   ├── commands
+<span class="ln">21</span>│       │   │   ├── django.py
+<span class="ln">22</span>│       │   │   └── help.py
+<span class="ln">23</span>│       │   └── decorators.py
+<span class="ln">24</span>│       ├── settings
+<span class="hl"><span class="ln">25</span>│       │   ├── base.py
+</span><span class="hl"><span class="ln">26</span>│       │   └── local.dist.py
+</span><span class="ln">27</span>│       ├── urls.py
+<span class="ln">28</span>│       └── wsgi.py
+<span class="ln">29</span>└── tests
+<span class="ln">30</span>    └── core
+<span class="ln">31</span>        └── test_core.py</code></pre></div>
 
 <p>In order to have a <a href="https://pip.pypa.io/en/stable/">pip</a> installable project we need to have a <code>setup.py</code> like every <a href="https://www.python.org/">Python</a> package.
 You&rsquo;ll notive that we don&rsquo;t need <code>requirements.txt</code> at all. Hooray! All your dependencies will be organized in <code>setup.py</code>.
@@ -118,14 +116,12 @@ command line entry points will be stored.</p>
 Always try to put a little description below every settings that can be complex. But don&rsquo;t try to describe all them all if it seems easy to understand.
 This kind of documentation can be difficult to keep up-to-date.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="n">LOGIN_URL</span> <span class="o">=</span> <span class="s1">&#39;https://localhost:8000/login&#39;</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">LOGIN_URL</span> <span class="o">=</span> <span class="s1">&#39;https://localhost:8000/login&#39;</span>
 <span class="c1"># Set these to drop to an unprivileged user after</span>
 <span class="c1"># binding the SMTP daemon (Default: False)</span>
 <span class="n">DROP_PRIVILEGES_USER</span> <span class="o">=</span> <span class="bp">False</span>
 <span class="c1"># Product name appear in email templates and optouts pages</span>
-<span class="n">PRODUCT_NAME</span> <span class="o">=</span> <span class="s1">&#39;My Awesome App&#39;</span>
-</code></pre></div>
-
+<span class="n">PRODUCT_NAME</span> <span class="o">=</span> <span class="s1">&#39;My Awesome App&#39;</span></code></pre></div>
 
 <h2 id="install-process">Install process</h2>
 
@@ -147,7 +143,7 @@ This kind of documentation can be difficult to keep up-to-date.</p>
 
 <p>Let&rsquo;s take a quick look at <code>setup.py</code>:</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="p">[</span><span class="o">...</span><span class="p">]</span>
     <span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
         <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
             <span class="s1">&#39;my-awesome-project = my_awesome_project.runner:main&#39;</span><span class="p">]</span>
@@ -165,9 +161,7 @@ This kind of documentation can be difficult to keep up-to-date.</p>
             <span class="s1">&#39;fake-factory==0.7.2&#39;</span>
         <span class="p">],</span>
     <span class="p">},</span>
-<span class="p">[</span><span class="o">...</span><span class="p">]</span>
-</code></pre></div>
-
+<span class="p">[</span><span class="o">...</span><span class="p">]</span></code></pre></div>
 
 <p>This <code>extra_require</code> option is pretty useful. You can have a <code>production</code>
 one which contains for example <a href="http://gunicorn.org/">Gunicorn</a> or <a href="http://initd.org/psycopg/docs/">Psycopg</a>, etc&hellip;</p>
@@ -178,40 +172,32 @@ one which contains for example <a href="http://gunicorn.org/">Gunicorn</a> or <a
 
 <p>Instead of <code>python manage.py shell</code>, you can do:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nv">DJANGO_SETTINGS_MODULE</span><span class="o">=</span>my_awesome_project.settings django-admin shell
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">DJANGO_SETTINGS_MODULE</span><span class="o">=</span>my_awesome_project.settings django-admin shell</code></pre></div>
 
 <p>Ok, it&rsquo;s very verbose. This is why this template give you another approach with <code>runner</code> which use <a href="http://click.pocoo.org/">click</a> library.</p>
 
 <p>Main goal is to be able to do something like:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>my-awesome-project django shell
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">my-awesome-project django shell</code></pre></div>
 
 <p>Then every Django commands will be accessible. You can take a look at how it works <a href="https://github.com/toxinu/cookiecutter-django/blob/59daaaebe9c1828dfab1beb7f7c8a22c4376ce7b/%7B%7B%20cookiecutter.package_name%20%7D%7D/src/%7B%7B%20cookiecutter.module_name%20%7D%7D/runner/commands/django.py">here</a>.</p>
 
 <p>This is a dead simple example of a custom command which return Django version.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="err">$</span> <span class="n">cat</span> <span class="n">src</span><span class="o">/</span><span class="n">my_awesome_project</span><span class="o">/</span><span class="n">runner</span><span class="o">/</span><span class="n">commands</span><span class="o">/</span><span class="n">version</span><span class="o">.</span><span class="n">py</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="err">$</span> <span class="n">cat</span> <span class="n">src</span><span class="o">/</span><span class="n">my_awesome_project</span><span class="o">/</span><span class="n">runner</span><span class="o">/</span><span class="n">commands</span><span class="o">/</span><span class="n">version</span><span class="o">.</span><span class="n">py</span>
 <span class="kn">import</span> <span class="nn">click</span>
 <span class="kn">import</span> <span class="nn">django</span>
 
 
 <span class="nd">@click.command</span><span class="p">()</span>
 <span class="k">def</span> <span class="nf">version</span><span class="p">():</span>
-    <span class="s2">&quot;Show Django version.&quot;</span>
-    <span class="n">click</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Django {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">django</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
-</code></pre></div>
-
+    <span class="s2">&#34;Show Django version.&#34;</span>
+    <span class="n">click</span><span class="o">.</span><span class="n">echo</span><span class="p">(</span><span class="s1">&#39;Django {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">django</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span></code></pre></div>
 
 <p>Then you&rsquo;ll be able to do:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>$ my-awesome-project version
-Django <span class="m">1</span>.10.1
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ my-awesome-project version
+Django <span class="m">1</span>.10.1</code></pre></div>
 
 <h2 id="end">End</h2>
 
@@ -226,7 +212,7 @@ to show you how to ship a Django project in a professional way.</p>
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2018 toxinu <small class="latest-update">(latest update at 2018-07-26 16:48:53 &#43;0200 CEST)</small>
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-03-14 15:21:16 &#43;0100 CET)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

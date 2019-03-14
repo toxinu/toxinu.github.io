@@ -85,9 +85,7 @@
 
 <p>Jekyll installation is easy like trolling about proprietary software. <a href="https://github.com/mojombo/jekyll/wiki">Docs</a>.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>sudo gem install jekyll
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo gem install jekyll</code></pre></div>
 
 <p>Next ? I think you know how to install git instance. There are too many tutorials and docs on the Internet.</p>
 
@@ -96,31 +94,27 @@
 <p>Githooks are specials scripts which will be execute when git received, a push, a commit, an update&hellip;
 Look at your <em>.git/hooks</em> folder on your server:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>socketubs@socket-desktop:~/Repositories/canopsis$ ls -lh .git/hooks/
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">socketubs@socket-desktop:~/Repositories/canopsis$ ls -lh .git/hooks/
 total 44K
 -rwxrwxr-x <span class="m">1</span> socketubs socketubs  <span class="m">452</span> <span class="m">2011</span>-10-21 <span class="m">21</span>:04 applypatch-msg.sample
 -rwxrwxr-x <span class="m">1</span> socketubs socketubs  <span class="m">896</span> <span class="m">2011</span>-10-21 <span class="m">21</span>:04 commit-msg.sample
 -rwxrwxr-x <span class="m">1</span> socketubs socketubs  <span class="m">160</span> <span class="m">2011</span>-10-21 <span class="m">21</span>:04 post-commit.sample
 -rwxrwxr-x <span class="m">1</span> socketubs socketubs  <span class="m">552</span> <span class="m">2011</span>-10-21 <span class="m">21</span>:04 post-receive.sample
 -rwxrwxr-x <span class="m">1</span> socketubs socketubs  <span class="m">189</span> <span class="m">2011</span>-10-21 <span class="m">21</span>:04 post-update.sample
-...
-</code></pre></div>
-
+...</code></pre></div>
 
 <p>A short description is present at the top of each files.</p>
 
 <p>This is my <strong>post-receive</strong> file :</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>root@socketubs:/srv/gitosis/repositories/socket_site.git/hooks# cat post-receive
-<span class="c1">#!/bin/sh</span>
-
-<span class="nb">echo</span> <span class="s2">&quot;-- Attempting to pull and launch jekyll --&quot;</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">root@socketubs:/srv/gitosis/repositories/socket_site.git/hooks# cat post-receive
+<span class="cp">#!/bin/sh
+</span><span class="cp"></span>
+<span class="nb">echo</span> <span class="s2">&#34;-- Attempting to pull and launch jekyll --&#34;</span>
 <span class="nb">cd</span> /var/www/socket_site
 git --git-dir /var/www/socket_site/.git pull file:///srv/.../socket_site.git/ master
 jekyll
-<span class="nb">echo</span>
-</code></pre></div>
-
+echo</code></pre></div>
 
 <h2 id="the-pie-on-the-cherry">The pie on the cherry</h2>
 
@@ -131,7 +125,7 @@ Like a Boss.</p>
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2018 toxinu <small class="latest-update">(latest update at 2018-07-26 16:48:53 &#43;0200 CEST)</small>
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-03-14 15:21:16 &#43;0100 CET)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

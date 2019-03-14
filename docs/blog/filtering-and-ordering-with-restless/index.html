@@ -64,7 +64,7 @@ Today I&rsquo;ll show you two quick and simple <a href="http://en.wikipedia.org/
 
 <p>Just to be clear, I have this <code>models.py</code> for our Pizza shop.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
 
 
 <span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
@@ -79,13 +79,11 @@ Today I&rsquo;ll show you two quick and simple <a href="http://en.wikipedia.org/
 
 <span class="k">class</span> <span class="nc">PizzaIngredient</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="n">pizza</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;Pizza&#39;</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;ingredients&#39;</span><span class="p">)</span>
-    <span class="n">ingredient</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;Ingredient&#39;</span><span class="p">)</span>
-</code></pre></div>
-
+    <span class="n">ingredient</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="s1">&#39;Ingredient&#39;</span><span class="p">)</span></code></pre></div>
 
 <p>And my <code>resources.py</code>:</p>
 
-<p><div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="kn">from</span> <span class="nn">restless.dj</span> <span class="kn">import</span> <span class="n">DjangoResource</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">restless.dj</span> <span class="kn">import</span> <span class="n">DjangoResource</span>
 <span class="kn">from</span> <span class="nn">restless.preparers</span> <span class="kn">import</span> <span class="n">FieldsPreparer</span>
 
 <span class="kn">from</span> <span class="nn">.models</span> <span class="kn">import</span> <span class="n">Pizza</span>
@@ -96,25 +94,21 @@ Today I&rsquo;ll show you two quick and simple <a href="http://en.wikipedia.org/
         <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">})</span>
 
     <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">Pizza</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-</code></pre></div>
-</p>
+        <span class="k">return</span> <span class="n">Pizza</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span></code></pre></div>
 
 <h2 id="filtering">Filtering</h2>
 
 <p>We are building a very simple and not complete <code>APIFilterMixin</code> class.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="lineno">1 </span><span class="k">class</span> <span class="nc">APIFilterMixin</span><span class="p">:</span>
-<span class="lineno">2 </span>    <span class="n">allowed_fields_filter</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="lineno">3 </span>
-<span class="lineno">4 </span>    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
-<span class="lineno">5 </span>        <span class="n">filters</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="lineno">6 </span>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="p">:</span>
-<span class="lineno">7 </span>            <span class="k">if</span> <span class="n">arg</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_fields_filter</span><span class="p">:</span>
-<span class="lineno">8 </span>                <span class="n">filters</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">arg</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">arg</span><span class="p">)})</span>
-<span class="lineno">9 </span><span class="hll">        <span class="k">return</span> <span class="n">queryset</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="o">**</span><span class="n">filters</span><span class="p">)</span>
-</span></code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="ln">1</span><span class="k">class</span> <span class="nc">APIFilterMixin</span><span class="p">:</span>
+<span class="ln">2</span>    <span class="n">allowed_fields_filter</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ln">3</span>
+<span class="ln">4</span>    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
+<span class="ln">5</span>        <span class="n">filters</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="ln">6</span>        <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="p">:</span>
+<span class="ln">7</span>            <span class="k">if</span> <span class="n">arg</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_fields_filter</span><span class="p">:</span>
+<span class="ln">8</span>                <span class="n">filters</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">arg</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">arg</span><span class="p">)})</span>
+<span class="hl"><span class="ln">9</span>        <span class="k">return</span> <span class="n">queryset</span><span class="o">.</span><span class="nb">filter</span><span class="p">(</span><span class="o">**</span><span class="n">filters</span><span class="p">)</span></span></code></pre></div>
 
 <p>As you can see <code>allowed_fields_filter</code> allow us to put filters (with lookup) that we want to authorize on our <code>Resource</code>.</p>
 
@@ -124,7 +118,7 @@ Today I&rsquo;ll show you two quick and simple <a href="http://en.wikipedia.org/
 
 <p>And this is updated revision of our previous <code>resources.py</code> with new mixin:</p>
 
-<p><div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="k">class</span> <span class="nc">PizzaResource</span><span class="p">(</span><span class="n">APIFilterMixin</span><span class="p">,</span> <span class="n">DjangoResource</span><span class="p">):</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">PizzaResource</span><span class="p">(</span><span class="n">APIFilterMixin</span><span class="p">,</span> <span class="n">DjangoResource</span><span class="p">):</span>
     <span class="n">preparer</span> <span class="o">=</span> <span class="n">FieldsPreparer</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">{</span>
         <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">})</span>
     <span class="n">allowed_fields_filter</span> <span class="o">=</span> <span class="p">[</span>
@@ -133,10 +127,8 @@ Today I&rsquo;ll show you two quick and simple <a href="http://en.wikipedia.org/
         <span class="s1">&#39;ingredients__ingredient__name&#39;</span><span class="p">]</span>
 
     <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">qs</span> <span class="o">=</span> <span class="n">Pizza</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">qs</span><span class="p">)</span>
-</code></pre></div>
-</p>
+        <span class="n">qs</span> <span class="o">=</span> <span class="n">Pizza</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">qs</span><span class="p">)</span></code></pre></div>
 
 <p>We can now give all filters we have allowed in <code>allowed_fields_filter</code>, including relation lookups.</p>
 
@@ -144,21 +136,19 @@ Today I&rsquo;ll show you two quick and simple <a href="http://en.wikipedia.org/
 
 <p>Ordering is even more simple than filtering. Look how restless allow us to cleanly create our minimal <a href="http://en.wikipedia.org/wiki/Application_programming_interface">API</a>.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="lineno"> 1 </span><span class="k">class</span> <span class="nc">APIOrderingMixin</span><span class="p">:</span>
-<span class="lineno"> 2 </span>    <span class="n">allowed_fields_ordering</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="lineno"> 3 </span>    <span class="n">ordering_field</span> <span class="o">=</span> <span class="s1">&#39;order_by&#39;</span>
-<span class="lineno"> 4 </span>
-<span class="lineno"> 5 </span>    <span class="k">def</span> <span class="nf">ordering</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
-<span class="lineno"> 6 </span>        <span class="n">order_by</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ordering_field</span><span class="p">)</span>
-<span class="lineno"> 7 </span>        <span class="k">if</span> <span class="ow">not</span> <span class="n">order_by</span><span class="p">:</span>
-<span class="lineno"> 8 </span>            <span class="k">return</span> <span class="n">queryset</span>
-<span class="lineno"> 9 </span>
-<span class="lineno">10 </span><span class="hll">        <span class="k">if</span> <span class="n">order_by</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_fields_ordering</span><span class="p">:</span>
-</span><span class="lineno">11 </span>            <span class="k">return</span> <span class="n">queryset</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">order_by</span><span class="p">)</span>
-<span class="lineno">12 </span>
-<span class="lineno">13 </span>        <span class="k">return</span> <span class="n">queryset</span>
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="ln"> 1</span><span class="k">class</span> <span class="nc">APIOrderingMixin</span><span class="p">:</span>
+<span class="ln"> 2</span>    <span class="n">allowed_fields_ordering</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ln"> 3</span>    <span class="n">ordering_field</span> <span class="o">=</span> <span class="s1">&#39;order_by&#39;</span>
+<span class="ln"> 4</span>
+<span class="ln"> 5</span>    <span class="k">def</span> <span class="nf">ordering</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queryset</span><span class="p">):</span>
+<span class="ln"> 6</span>        <span class="n">order_by</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">GET</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ordering_field</span><span class="p">)</span>
+<span class="ln"> 7</span>        <span class="k">if</span> <span class="ow">not</span> <span class="n">order_by</span><span class="p">:</span>
+<span class="ln"> 8</span>            <span class="k">return</span> <span class="n">queryset</span>
+<span class="ln"> 9</span>
+<span class="hl"><span class="ln">10</span>        <span class="k">if</span> <span class="n">order_by</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">allowed_fields_ordering</span><span class="p">:</span>
+</span><span class="ln">11</span>            <span class="k">return</span> <span class="n">queryset</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="n">order_by</span><span class="p">)</span>
+<span class="ln">12</span>
+<span class="ln">13</span>        <span class="k">return</span> <span class="n">queryset</span></code></pre></div>
 
 <p>This mixin support custom ordering field name with <code>ordering_field</code>. We can allow fields we want with <code>allowed_fields_ordering</code>.
 Another simple but cool feature is reverse ordering support (<em>line 10</em>).</p>
@@ -169,7 +159,7 @@ Another simple but cool feature is reverse ordering support (<em>line 10</em>).<
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2018 toxinu <small class="latest-update">(latest update at 2018-07-26 16:48:53 &#43;0200 CEST)</small>
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-03-14 15:21:16 &#43;0100 CET)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

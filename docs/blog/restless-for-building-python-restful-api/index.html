@@ -70,18 +70,16 @@ It has so small code base that it can fit to many web frameworks, like <a href="
 
 <p>This is your existing <code>models.py</code> :</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="k">class</span> <span class="nc">Country</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Country</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
 	<span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
     <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
-    <span class="n">country</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Country</span><span class="p">)</span>
-</code></pre></div>
-
+    <span class="n">country</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Country</span><span class="p">)</span></code></pre></div>
 
 <p>You have to understand that your API will expose <em>Resources</em>, this is how many framework call it. Let&rsquo;s create a <code>resources.py</code>.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="kn">from</span> <span class="nn">restless.dj</span> <span class="kn">import</span> <span class="n">DjangoResource</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">restless.dj</span> <span class="kn">import</span> <span class="n">DjangoResource</span>
 <span class="kn">from</span> <span class="nn">restless.preparers</span> <span class="kn">import</span> <span class="n">FieldsPreparer</span>
 
 <span class="k">class</span> <span class="nc">CountryResource</span><span class="p">(</span><span class="n">DjangoResource</span><span class="p">):</span>
@@ -93,24 +91,20 @@ It has so small code base that it can fit to many web frameworks, like <a href="
 	<span class="n">preparer</span> <span class="o">=</span> <span class="n">FieldsPreparer</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">{</span>
     	<span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;id&#39;</span><span class="p">,</span>
         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;country&#39;</span><span class="p">:</span> <span class="s1">&#39;country.id&#39;</span><span class="p">})</span>
-</code></pre></div>
-
+        <span class="s1">&#39;country&#39;</span><span class="p">:</span> <span class="s1">&#39;country.id&#39;</span><span class="p">})</span></code></pre></div>
 
 <p>And now just expose it through your <code>urls.py</code> :</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="p">[</span><span class="o">...</span><span class="p">]</span>
 <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^api/countries/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">CountryResource</span><span class="o">.</span><span class="n">urls</span><span class="p">())),</span>
 <span class="n">url</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;^api/pizzas/&#39;</span><span class="p">,</span> <span class="n">include</span><span class="p">(</span><span class="n">PizzaResource</span><span class="o">.</span><span class="n">urls</span><span class="p">())),</span>
-<span class="p">[</span><span class="o">...</span><span class="p">]</span>
-</code></pre></div>
-
+<span class="p">[</span><span class="o">...</span><span class="p">]</span></code></pre></div>
 
 <p>This is quite simple, I won&rsquo;t explain you how to use <code>POST</code>, <code>PATCH</code>, etc&hellip; Just read <a href="http://restless.readthedocs.org/en/latest/index.html">documentation</a>.</p>
 
 <p>But just leave me show you a simple mixin for pagination. Let&rsquo;s create a <code>mixins.py</code>, just as Django <em>Class Based View</em>.</p>
 
-<div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="kn">from</span> <span class="nn">django.core.paginator</span> <span class="kn">import</span> <span class="n">Paginator</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">django.core.paginator</span> <span class="kn">import</span> <span class="n">Paginator</span>
 
 <span class="k">class</span> <span class="nc">APIPaginatorMixin</span><span class="p">:</span>
     <span class="n">per_page</span> <span class="o">=</span> <span class="mi">25</span>
@@ -120,11 +114,11 @@ It has so small code base that it can fit to many web frameworks, like <a href="
 
     <span class="k">def</span> <span class="nf">wrap_list_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">{</span>
-            <span class="s2">&quot;objects&quot;</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span>
-            <span class="s2">&quot;per_page&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">paginator</span><span class="o">.</span><span class="n">per_page</span><span class="p">,</span>
-            <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">paginator</span><span class="o">.</span><span class="n">count</span><span class="p">,</span>
-            <span class="s2">&quot;num_page&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">paginator</span><span class="o">.</span><span class="n">num_pages</span><span class="p">,</span>
-            <span class="s2">&quot;page&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">}</span>
+            <span class="s2">&#34;objects&#34;</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span>
+            <span class="s2">&#34;per_page&#34;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">paginator</span><span class="o">.</span><span class="n">per_page</span><span class="p">,</span>
+            <span class="s2">&#34;count&#34;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">paginator</span><span class="o">.</span><span class="n">count</span><span class="p">,</span>
+            <span class="s2">&#34;num_page&#34;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">paginator</span><span class="o">.</span><span class="n">num_pages</span><span class="p">,</span>
+            <span class="s2">&#34;page&#34;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">}</span>
 
 	<span class="k">def</span> <span class="nf">paginate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">queryset</span><span class="p">,</span> <span class="n">per_page</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">per_page</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
@@ -138,13 +132,11 @@ It has so small code base that it can fit to many web frameworks, like <a href="
     <span class="k">def</span> <span class="nf">list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">qs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_queryset</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">paginate</span><span class="p">(</span><span class="n">qs</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">)</span>
-</code></pre></div>
-
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">paginator</span><span class="o">.</span><span class="n">page</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">page</span><span class="p">)</span></code></pre></div>
 
 <p>You just have to update your <code>resources.py</code> :</p>
 
-<p><div class="highlight"><pre><code class="language-python" data-lang="python"><span></span><span class="kn">from</span> <span class="nn">restless.dj</span> <span class="kn">import</span> <span class="n">DjangoResource</span>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">restless.dj</span> <span class="kn">import</span> <span class="n">DjangoResource</span>
 <span class="kn">from</span> <span class="nn">restless.preparers</span> <span class="kn">import</span> <span class="n">FieldsPreparer</span>
 <span class="kn">from</span> <span class="nn">.mixins</span> <span class="kn">import</span> <span class="n">APIPaginatorMixin</span>
 
@@ -154,7 +146,7 @@ It has so small code base that it can fit to many web frameworks, like <a href="
         <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;name&#39;</span><span class="p">})</span>
 
 	<span class="k">def</span> <span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    	<span class="k">return</span> <span class="n">Pizza</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+    	<span class="k">return</span> <span class="n">Pizza</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span>
 
 <span class="k">class</span> <span class="nc">PizzaResource</span><span class="p">(</span><span class="n">APIPaginatorMixin</span><span class="p">,</span> <span class="n">DjangoResource</span><span class="p">):</span>
 	<span class="n">preparer</span> <span class="o">=</span> <span class="n">FieldsPreparer</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">{</span>
@@ -163,9 +155,7 @@ It has so small code base that it can fit to many web frameworks, like <a href="
         <span class="s1">&#39;country&#39;</span><span class="p">:</span> <span class="s1">&#39;country.id&#39;</span><span class="p">})</span>
 
     <span class="k">def</span> <span class="nf">get_queryset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-    	<span class="k">return</span> <span class="n">Country</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
-</code></pre></div>
-</p>
+    	<span class="k">return</span> <span class="n">Country</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="nb">all</span><span class="p">()</span></code></pre></div>
 
 <p>And just enjoy your paginated Restful API.
 This is why I love <a href="https://github.com/toastdriven/restless">Restless</a>. I agree to say that you&rsquo;ll write probably more code than <a href="http://www.django-rest-framework.org/">Django Rest Framework</a> but you&rsquo;ll get more control of all the magic your Restless API do.</p>
@@ -180,7 +170,7 @@ This is why I love <a href="https://github.com/toastdriven/restless">Restless</a
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2018 toxinu <small class="latest-update">(latest update at 2018-07-26 16:48:53 &#43;0200 CEST)</small>
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-03-14 15:21:16 &#43;0100 CET)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

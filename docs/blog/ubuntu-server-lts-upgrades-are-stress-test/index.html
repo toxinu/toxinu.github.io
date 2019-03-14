@@ -88,20 +88,16 @@ And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress tes
 
 <p>But this is the recommended solution.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>apt-get update
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">apt-get update
 aptitude full-upgrade
 apt-get install update-manager-core
 grub-install /dev/sda
 update-grub
-reboot
-</code></pre></div>
-
+reboot</code></pre></div>
 
 <p>Your server is ready to upgrade.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="k">do</span>-release-upgrade -d
-</code></pre></div>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">do</span>-release-upgrade -d</code></pre></div>
 
 <p>The <strong>-d</strong> option say that you want to do develpment upgrade, cause this isn&rsquo;t officially supported.</p>
 
@@ -111,11 +107,9 @@ reboot
 So Say <strong>NO</strong> when upgrade script ask you to reboot.
 Press x to destroy session and return into your initial terminal.</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span>grub-install /dev/sda
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">grub-install /dev/sda
 update-grub
-reboot
-</code></pre></div>
-
+reboot</code></pre></div>
 
 <p>Where am I wrong with <code>grub-install</code> and <code>update-grub</code> ?
 Ok ok, I haven&rsquo;t search more but packages must do it ? With os-prober, etc&hellip;</p>
@@ -126,18 +120,16 @@ Ok ok, I haven&rsquo;t search more but packages must do it ? With os-prober, etc
 
 <p>If for X reason your <strong>felt</strong> into a Grub Rescue hole this can help you:</p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span></span><span class="nb">set</span> <span class="nv">prefix</span><span class="o">=(</span>hd0,2<span class="o">)</span>/boot/grub
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">set</span> <span class="nv">prefix</span><span class="o">=(</span>hd0,2<span class="o">)</span>/boot/grub
 <span class="nb">set</span> <span class="nv">root</span><span class="o">=(</span>hd0,2<span class="o">)</span>
 insmod <span class="o">(</span>hd0,2<span class="o">)</span>/boot/grub/linux.mod
 linux /vmlinuz <span class="nv">root</span><span class="o">=</span>/dev/sda2 ro
 initrd /initrd.img
-boot
-</code></pre></div>
-
+boot</code></pre></div>
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2018 toxinu <small class="latest-update">(latest update at 2018-07-26 16:48:53 &#43;0200 CEST)</small>
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-03-14 15:21:16 &#43;0100 CET)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

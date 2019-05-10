@@ -15,7 +15,7 @@ publish:
 	find . | grep -v 'src\|Makefile\|.git\|.' | xargs rm -r
 
 	echo "Generating site"
-	cd src && hugo -s src
+	hugo -s src
 	# echo "toxi.nu" > docs/CNAME
 
 	echo "Updating gh-pages branch"

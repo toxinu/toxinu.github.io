@@ -1,32 +1,8 @@
-HUGO_VERSION ?= 0.26
-
-install:
-	if [ ! -a .bin/hugo ] ; \
-	then \
-		mkdir -p .bin ; \
-		cd .bin ; \
-		curl -L https://github.com/spf13/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_Linux-64bit.tar.gz | tar zx  ; \
-		cd .. ; \
-	fi; \
-	if [ ! -f hugo ] ; \
-	then \
-		ln -s .bin/hugo hugo ; \
-	fi;
-
-clean:
-	rm -r .bin
-	rm hugo
-
 build:
-	hugo
+	hugo -s src
 
 serve:
-	hugo serve
-
-download-caddy:
-	mkdir -p .bin/caddy
-	cd .bin/caddy && curl -L "https://caddyserver.com/download/build?os=linux&arch=amd64&features=git%2Cminify" | tar zx
-	cd ../..
+	hugo -s src serve
 
 publish:
 	if [[ `git status -s` ]]; then  \
@@ -35,14 +11,15 @@ publish:
 	fi
 
 	echo "Removing existing files"
-	rm -rf docs/*
+	find .
+	find . | grep -v 'src\|Makefile\|.git' | xargs rm -r
 
 	echo "Generating site"
-	hugo
+	cd src && hugo - src
 	# echo "toxi.nu" > docs/CNAME
 
 	echo "Updating gh-pages branch"
-	git add docs && git commit -m "Publishing a new print..."
+	git add . && git commit -m "Publishing a new print..."
 	git push
 
-.PHONY: install clean build serve
+.PHONY: build serve

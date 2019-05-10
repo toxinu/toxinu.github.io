@@ -4,7 +4,7 @@ pygmentscodefences = true
 pygmentsuseclasses = true
 theme = "toxinu"
 title = "toxinu"
-publishDir = "docs"
+publishDir = ".."
 [params]
 description = "Developer, hacker, music listener and books reader."
 email = "toxinu@gmail.com"

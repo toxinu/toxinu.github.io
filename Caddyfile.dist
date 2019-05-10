@@ -1,7 +1,0 @@
-:6200 {
-    git github.com/toxinu/toxi.nu /var/www/toxi.nu/git {
-        then /var/www/toxi.nu/git/hugo --destination=/var/www/toxi.nu/public
-        hook /webhook "{webhook secret key}"
-    }
-    log stdout
-}

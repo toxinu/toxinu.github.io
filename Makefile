@@ -12,7 +12,7 @@ publish:
 
 	echo "Removing existing files"
 	find .
-	find . | grep -v 'src\|Makefile\|.git' | xargs rm -r
+	find . | grep -v 'src\|Makefile\|.git\|.' | xargs rm -r
 
 	echo "Generating site"
 	cd src && hugo - src

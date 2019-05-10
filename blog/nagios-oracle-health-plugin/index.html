@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="referrer" content="no-referrer">
+    <meta name="author" content="toxinu" />
+	<meta name="description" content="Developer, hacker, music listener and books reader.">
+
+	<title>
+	
+	
+	     Nagios Oracle health plugin 
+	
+	</title>
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+	
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+<body>
+    <div class="masthead grid">
+        <div class="inline left">
+            <a class="home" href="/">toxinu</a>
+        </div>
+        <ul class="inline right">
+            <li><a href="/code">Code</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>
+
+<div class="grid">
+<h1>Nagios Oracle health plugin</h1>
+    <span class="small">Posted on 28 October 2011</span>
+
+    <div>
+
+<p>This is more a memo than an article. A quick and dirty <a href="http://labs.consol.de/nagios/check_oracle_health">check_oracle_health</a> plugin installation, with prerequires.</p>
+
+<p>Developped by <a href="https://github.com/lausser">Gerhard Lausser</a>, an active <a href="http://www.shinken-monitoring.org/">Shinken</a> developper with <a href="https://github.com/naparuba">Jean Gabès</a>.</p>
+
+<p>Like most of Nagios plugins, it&rsquo;s in Perl language and it&rsquo;s use DBD::Oracle module, and this module need an Oracle client.</p>
+
+<h2 id="oracle-instant-client">Oracle Instant Client</h2>
+
+<p>You have to create a fucking Oracle account&hellip; Yes I know you think :</p>
+
+<p><em>&ldquo;What&rsquo;s this great article ?! Proprietary software are just awesome!&rdquo;</em>.</p>
+
+<p>Go to <a href="http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html">Oracle Instant Client Downloads Page</a>. Get the <strong>Instant Client Package - Basic</strong> and <strong>sdk</strong>.
+Or use my personnal <a href="http://dl.socketubs.net/nagios/oracle/">links</a> above.</p>
+
+<p>For the story, i have fucked my brain during three hours cause I have download the <strong>Instant Client Package - Basic Lite</strong> and try to work with a Western American charset database&hellip; And of course, Basic Lite does not support it.</p>
+
+<p>Derp.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># x86</span>
+wget http://dl.socketubs.net/nagios/oracle/instantclient-basic-linux-11.2.0.3.0.zip
+wget http://dl.socketubs.net/nagios/oracle/instantclient-sdk-linux-11.2.0.3.0.zip
+<span class="c1"># X86_64</span>
+wget http://dl.socketubs.net/nagios/oracle/instantclient-basic-linux.x64-11.2.0.3.0.zip
+wget http://dl.socketubs.net/nagios/oracle/instantclient-sdk-linux.x64-11.2.0.3.0.zip
+
+unzip instantclient-basiclite-linux*.zip
+unzip instantclient-sdk-linux*.zip
+mv instantclient_11_2 /opt</code></pre></div>
+
+<h2 id="dbd-oracle">DBD::Oracle</h2>
+
+<p>Install pre-requires :</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">apt-get install libaio-dev
+cpan DBI</code></pre></div>
+
+<p>Get module sources.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">wget http://search.cpan.org/CPAN/authors/id/P/PY/PYTHIAN/DBD-Oracle-1.56.tar.gz
+tar xvf DBD-Oracle-1.56.tar.gz
+<span class="nb">cd</span> !$</code></pre></div>
+
+<p>DBD::Oracle module need path to Oracle Instant Client.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">ORACLE_HOME</span><span class="o">=</span>/opt/instantclient_11_2
+<span class="nb">export</span> <span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$ORACLE_HOME</span>
+<span class="nb">echo</span> <span class="s1">&#39;ORACLE_HOME=&#34;/opt/instantclient_11_2&#34;&#39;</span> &gt;&gt; /etc/environment
+<span class="nb">echo</span> <span class="s1">&#39;LD_LIBRARY_PATH=$ORACLE_HOME&#39;</span> &gt;&gt; /etc/environment</code></pre></div>
+
+<p>And compile it.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">perl Makefile.PL -V <span class="m">11</span>.2
+make
+make install</code></pre></div>
+
+<h2 id="tnsnames-ora">Tnsnames.ora</h2>
+
+<p>This file contain informations about your different databases.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir -p /opt/instantclient_11_2/network/admin
+vim !$/tnsnames.ora</code></pre></div>
+
+<p>This is and example of <em>tnsnames.ora</em> file :</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&lt;addressname&gt; <span class="o">=</span>
+ <span class="o">(</span><span class="nv">DESCRIPTION</span> <span class="o">=</span>
+   <span class="o">(</span><span class="nv">ADDRESS_LIST</span> <span class="o">=</span>
+     <span class="o">(</span><span class="nv">ADDRESS</span> <span class="o">=</span> <span class="o">(</span><span class="nv">PROTOCOL</span> <span class="o">=</span> TCP<span class="o">)(</span><span class="nv">Host</span> <span class="o">=</span> &lt;hostname&gt;<span class="o">)(</span><span class="nv">Port</span> <span class="o">=</span> &lt;port&gt;<span class="o">))</span>
+   <span class="o">)</span>
+ <span class="o">(</span><span class="nv">CONNECT_DATA</span> <span class="o">=</span>
+   <span class="o">(</span><span class="nv">SERVICE_NAME</span> <span class="o">=</span> &lt;sid&gt;<span class="o">)</span>
+ <span class="o">)</span>
+<span class="o">)</span></code></pre></div>
+
+<h2 id="check-oracle-health">check_oracle_health</h2>
+
+<p>To finish, we have to install the Nagios plugin.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">wget http://labs.consol.de/wp-content/uploads/2011/09/check_oracle_health-1.7.6.1.tar.gz
+tar xvf check_oracle_health-1.7.6.1.tar.gz
+<span class="nb">cd</span> !$
+./configure
+make
+make install</code></pre></div>
+
+<p>That&rsquo;s all !</p>
+</div>
+</div>
+	<div class="footer grid ta">
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-05-10 14:14:14 -0700 PDT)</small>
+	</div>
+	<script data-no-instant>InstantClick.init();</script>
+</body>
+</html>
+

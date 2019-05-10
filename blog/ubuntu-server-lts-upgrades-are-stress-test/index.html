@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="referrer" content="no-referrer">
+    <meta name="author" content="toxinu" />
+	<meta name="description" content="Developer, hacker, music listener and books reader.">
+
+	<title>
+	
+	
+	     Ubuntu Server LTS upgrades are stress test 
+	
+	</title>
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+	
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script type="text/javascript" src="/js/script.js"></script>
+</head>
+<body>
+    <div class="masthead grid">
+        <div class="inline left">
+            <a class="home" href="/">toxinu</a>
+        </div>
+        <ul class="inline right">
+            <li><a href="/code">Code</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </div>
+
+<div class="grid">
+<h1>Ubuntu Server LTS upgrades are stress test</h1>
+    <span class="small">Posted on 03 May 2012</span>
+
+    <div>
+
+<p><br />
+<hr></p>
+
+<h3 id="update">Update</h3>
+
+<ul>
+<li>Sept, 24 2012</li>
+</ul>
+
+<p>This article is now deprecated, Ubuntu now have a clean upgrade script.
+Just use <code>do-release-upgrade</code>.</p>
+
+<hr>
+
+<p></br ></p>
+
+<p>This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present.
+And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&hellip;</p>
+
+<p>I admit to not being an Ubuntu expert ( Debian too ) but the <code>do-release-upgrade</code> is like :</p>
+
+<blockquote>
+<p>&ldquo;Ohhh yeah take this Ultra Decap&rsquo;Net my son !&rdquo;</p>
+
+<p>&rdquo; &hellip;. But ..but what&rsquo;s dazzz sh&hellip; ?&rdquo;</p>
+
+<p>&ldquo;I don&rsquo;t know, shut up, press it and close your eyes&rdquo;</p>
+</blockquote>
+
+<p>But this is the recommended solution.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">apt-get update
+aptitude full-upgrade
+apt-get install update-manager-core
+grub-install /dev/sda
+update-grub
+reboot</code></pre></div>
+
+<p>Your server is ready to upgrade.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">do</span>-release-upgrade -d</code></pre></div>
+
+<p>The <strong>-d</strong> option say that you want to do develpment upgrade, cause this isn&rsquo;t officially supported.</p>
+
+<p>*<em>/!\ Warning /!\*</em></p>
+
+<p>You have to re-upgrade grub after the upgrade.
+So Say <strong>NO</strong> when upgrade script ask you to reboot.
+Press x to destroy session and return into your initial terminal.</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">grub-install /dev/sda
+update-grub
+reboot</code></pre></div>
+
+<p>Where am I wrong with <code>grub-install</code> and <code>update-grub</code> ?
+Ok ok, I haven&rsquo;t search more but packages must do it ? With os-prober, etc&hellip;</p>
+
+<p>But, the job is done.</p>
+
+<hr>
+
+<p>If for X reason your <strong>felt</strong> into a Grub Rescue hole this can help you:</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">set</span> <span class="nv">prefix</span><span class="o">=(</span>hd0,2<span class="o">)</span>/boot/grub
+<span class="nb">set</span> <span class="nv">root</span><span class="o">=(</span>hd0,2<span class="o">)</span>
+insmod <span class="o">(</span>hd0,2<span class="o">)</span>/boot/grub/linux.mod
+linux /vmlinuz <span class="nv">root</span><span class="o">=</span>/dev/sda2 ro
+initrd /initrd.img
+boot</code></pre></div>
+</div>
+</div>
+	<div class="footer grid ta">
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-05-10 14:14:14 -0700 PDT)</small>
+	</div>
+	<script data-no-instant>InstantClick.init();</script>
+</body>
+</html>
+

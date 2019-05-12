@@ -3,25 +3,28 @@
     <p>{{ .Site.Params.description }}</p>
     <div class="profiles grid">
         {{ if .Site.Params.github }}
-            <a id="github" href="https://github.com/{{ .Site.Params.github }}" target="_blank"><span>{{ .Site.Params.github }}</span></a>
+        <a id="github" href="https://github.com/{{ .Site.Params.github }}"
+            target="_blank"><span>{{ .Site.Params.github }}</span></a>
         {{ end }}
         {{ if .Site.Params.gitlab }}
-            <a id="gitlab" href="https://gitlab.com/{{ .Site.Params.gitlab }}" target="_blank"><span>{{ .Site.Params.gitlab }}</span></a>
+        <a id="gitlab" href="https://gitlab.com/{{ .Site.Params.gitlab }}"
+            target="_blank"><span>{{ .Site.Params.gitlab }}</span></a>
         {{ end }}
         {{ if .Site.Params.twitter }}
-            <a id="twitter" href="https://twitter.com/{{ .Site.Params.twitter }}" target="_blank"><span>{{ .Site.Params.twitter }}</span></a>
+        <a id="twitter" href="https://twitter.com/{{ .Site.Params.twitter }}"
+            target="_blank"><span>{{ .Site.Params.twitter }}</span></a>
         {{ end }}
     </div>
 </div>
 
 <ol class="stories grid">
-{{ range .Data.Pages.ByPublishDate }}
+    {{ range .Data.Pages.ByDate.Reverse }}
     {{ if eq .Section "blog" }}
-        <li>
-            <a href="{{ .Permalink }}" class="left">{{ .Title }}</a>
-            <time datetime="{{ .Date.Format "2006-01-02" }}" class="right">{{ .Date.Format "02 January 2006" }}</time>
-        </li>
+    <li>
+        <a href="{{ .Permalink }}" class="left">{{ .Title }}</a>
+        <time datetime="{{ .Date.Format "2006-01-02" }}" class="right">{{ .Date.Format "02 January 2006" }}</time>
+    </li>
     {{ end }}
-{{ end }}
+    {{ end }}
 </ol>
 {{ partial "footer.html" . }}

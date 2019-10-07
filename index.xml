@@ -270,5 +270,16 @@ toxinu toxinu toxinu  </description>
  Minne - Links aggregator.</description>
     </item>
     
+    <item>
+      <title>Games</title>
+      <link>/games/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/games/</guid>
+      <description>Below is a short list of games I have worked on mostly during game jams.
+ Pod2000 - In Pod2000, you play an agent belonging to a huge corporation that exploits planets. To exploit a planet, you need to install modules to extract oil, refinery, etc.
+ Fórnir - In Fórnir you play a Jarl who rules over a village. Try your best to keep the trust of your people by making good decisions…</description>
+    </item>
+    
   </channel>
 </rss>

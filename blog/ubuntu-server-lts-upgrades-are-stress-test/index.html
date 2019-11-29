@@ -17,7 +17,9 @@
 	
 	</title>
     <link rel="stylesheet" href="/css/style.css">
-    
+	
+		<link href="" rel="feed" type="application/rss+xml" title="toxinu" />
+	
 
     <link rel="icon" type="image/png" sizes="128x128"  href="/images/favicon.png">
     <meta name="theme-color" content="#ffffff">
@@ -40,73 +42,43 @@
 <h1>Ubuntu Server LTS upgrades are stress test</h1>
     <span class="small">Posted on 03 May 2012</span>
 
-    <div>
-
-<p><br />
-<hr></p>
-
-<h3 id="update">Update</h3>
-
-<ul>
-<li>Sept, 24 2012</li>
-</ul>
-
+    <div><p><!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
 <p>This article is now deprecated, Ubuntu now have a clean upgrade script.
 Just use <code>do-release-upgrade</code>.</p>
-
-<hr>
-
-<p></br ></p>
-
+<!-- raw HTML omitted -->
 <p>This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present.
 And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&hellip;</p>
-
 <p>I admit to not being an Ubuntu expert ( Debian too ) but the <code>do-release-upgrade</code> is like :</p>
-
 <blockquote>
-<p>&ldquo;Ohhh yeah take this Ultra Decap&rsquo;Net my son !&rdquo;</p>
-
-<p>&rdquo; &hellip;. But ..but what&rsquo;s dazzz sh&hellip; ?&rdquo;</p>
-
-<p>&ldquo;I don&rsquo;t know, shut up, press it and close your eyes&rdquo;</p>
+<p>&ldquo;Ohhh yeah take this Ultra Decap'Net my son !&rdquo;</p>
+<p>&quot; &hellip;. But ..but what's dazzz sh&hellip; ?&rdquo;</p>
+<p>&ldquo;I don't know, shut up, press it and close your eyes&rdquo;</p>
 </blockquote>
-
 <p>But this is the recommended solution.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">apt-get update
 aptitude full-upgrade
 apt-get install update-manager-core
 grub-install /dev/sda
 update-grub
 reboot</code></pre></div>
-
 <p>Your server is ready to upgrade.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">do</span>-release-upgrade -d</code></pre></div>
-
-<p>The <strong>-d</strong> option say that you want to do develpment upgrade, cause this isn&rsquo;t officially supported.</p>
-
-<p>*<em>/!\ Warning /!\*</em></p>
-
+<p>The <strong>-d</strong> option say that you want to do develpment upgrade, cause this isn't officially supported.</p>
+<p><strong>/!\ Warning /!\</strong></p>
 <p>You have to re-upgrade grub after the upgrade.
 So Say <strong>NO</strong> when upgrade script ask you to reboot.
 Press x to destroy session and return into your initial terminal.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">grub-install /dev/sda
 update-grub
 reboot</code></pre></div>
-
 <p>Where am I wrong with <code>grub-install</code> and <code>update-grub</code> ?
-Ok ok, I haven&rsquo;t search more but packages must do it ? With os-prober, etc&hellip;</p>
-
+Ok ok, I haven't search more but packages must do it ? With os-prober, etc&hellip;</p>
 <p>But, the job is done.</p>
-
-<hr>
-
+<!-- raw HTML omitted -->
 <p>If for X reason your <strong>felt</strong> into a Grub Rescue hole this can help you:</p>
-
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">set</span> <span class="nv">prefix</span><span class="o">=(</span>hd0,2<span class="o">)</span>/boot/grub
-<span class="nb">set</span> <span class="nv">root</span><span class="o">=(</span>hd0,2<span class="o">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">set</span> <span class="nv">prefix</span><span class="o">=</span><span class="o">(</span>hd0,2<span class="o">)</span>/boot/grub
+<span class="nb">set</span> <span class="nv">root</span><span class="o">=</span><span class="o">(</span>hd0,2<span class="o">)</span>
 insmod <span class="o">(</span>hd0,2<span class="o">)</span>/boot/grub/linux.mod
 linux /vmlinuz <span class="nv">root</span><span class="o">=</span>/dev/sda2 ro
 initrd /initrd.img
@@ -114,7 +86,7 @@ boot</code></pre></div>
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-10-07 20:56:36 &#43;0200 CEST)</small>
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-11-29 14:27:33 &#43;0100 CET)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

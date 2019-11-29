@@ -17,7 +17,9 @@
 	
 	</title>
     <link rel="stylesheet" href="/css/style.css">
-    
+	
+		<link href="" rel="feed" type="application/rss+xml" title="toxinu" />
+	
 
     <link rel="icon" type="image/png" sizes="128x128"  href="/images/favicon.png">
     <meta name="theme-color" content="#ffffff">
@@ -41,8 +43,7 @@
     <span class="small">Posted on 20 December 2016</span>
 
     <div><p>A small, but full of snippets, post about how to store your package metadata cleanly.</p>
-
-<p>Let&rsquo;s define a simple layout.</p>
+<p>Let's define a simple layout.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ tree .
 .
 ├── my_package
@@ -50,25 +51,25 @@
 │   └── __init__.py
 └── setup.py
 
-<span class="m">1</span> directory, <span class="m">3</span> files</code></pre></div>
-<p>All your metadata lives in <code>__about__.py</code> like that:</p>
+<span class="m">1</span> directory, <span class="m">3</span> files
+</code></pre></div><p>All your metadata lives in <code>__about__.py</code> like that:</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&#34;__title__&#34;</span><span class="p">,</span> <span class="s2">&#34;__summary__&#34;</span><span class="p">,</span> <span class="s2">&#34;__uri__&#34;</span><span class="p">,</span> <span class="s2">&#34;__version__&#34;</span><span class="p">,</span> <span class="s2">&#34;__author__&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;__email__&#34;</span><span class="p">,</span> <span class="s2">&#34;__license__&#34;</span><span class="p">,</span> <span class="s2">&#34;__copyright__&#34;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__title__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__summary__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__uri__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__version__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__author__</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__email__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__license__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__copyright__</span><span class="s2">&#34;</span><span class="p">,</span>
 <span class="p">]</span>
 
-<span class="n">__title__</span> <span class="o">=</span> <span class="s2">&#34;my-package&#34;</span>
-<span class="n">__summary__</span> <span class="o">=</span> <span class="s2">&#34;My package is something.&#34;</span>
-<span class="n">__uri__</span> <span class="o">=</span> <span class="s2">&#34;https://example.com&#34;</span>
+<span class="n">__title__</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">my-package</span><span class="s2">&#34;</span>
+<span class="n">__summary__</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">My package is something.</span><span class="s2">&#34;</span>
+<span class="n">__uri__</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">https://example.com</span><span class="s2">&#34;</span>
 
-<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&#34;0.1.0&#34;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">0.1.0</span><span class="s2">&#34;</span>
 
-<span class="n">__author__</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&#34;Geoffrey Lehée&#34;</span>
-<span class="n">__email__</span> <span class="o">=</span> <span class="s2">&#34;contact@toxi.nu&#34;</span>
+<span class="n">__author__</span> <span class="o">=</span> <span class="sa">u</span><span class="s2">&#34;</span><span class="s2">Geoffrey Lehée</span><span class="s2">&#34;</span>
+<span class="n">__email__</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">contact@toxi.nu</span><span class="s2">&#34;</span>
 
-<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&#34;BSD&#34;</span>
-<span class="n">__copyright__</span> <span class="o">=</span> <span class="s2">&#34;Copyright 2016 </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">__author__</span></code></pre></div>
-<p>Expose all your metadata at package root.</p>
+<span class="n">__license__</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">BSD</span><span class="s2">&#34;</span>
+<span class="n">__copyright__</span> <span class="o">=</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">Copyright 2016 </span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="n">__author__</span>
+</code></pre></div><p>Expose all your metadata at package root.</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">cat</span> <span class="n">my_package</span><span class="o">/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
 
 <span class="kn">from</span> <span class="nn">.__about__</span> <span class="kn">import</span> <span class="p">(</span>
@@ -77,34 +78,35 @@
 <span class="p">)</span>
 
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="s2">&#34;__title__&#34;</span><span class="p">,</span> <span class="s2">&#34;__summary__&#34;</span><span class="p">,</span> <span class="s2">&#34;__uri__&#34;</span><span class="p">,</span> <span class="s2">&#34;__version__&#34;</span><span class="p">,</span> <span class="s2">&#34;__author__&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;__email__&#34;</span><span class="p">,</span> <span class="s2">&#34;__license__&#34;</span><span class="p">,</span> <span class="s2">&#34;__copyright__&#34;</span><span class="p">,</span>
-<span class="p">]</span></code></pre></div>
-<p>This setup allow you to avoid editing your <code>setup.py</code> too frequently and keep it up to date easily.</p>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__title__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__summary__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__uri__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__version__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__author__</span><span class="s2">&#34;</span><span class="p">,</span>
+    <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__email__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__license__</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__copyright__</span><span class="s2">&#34;</span><span class="p">,</span>
+<span class="p">]</span>
+</code></pre></div><p>This setup allow you to avoid editing your <code>setup.py</code> too frequently and keep it up to date easily.</p>
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">os</span>
 
 <span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
 
 <span class="n">base_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
 
-<span class="n">about</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_dir</span><span class="p">,</span> <span class="s2">&#34;my_package&#34;</span><span class="p">,</span> <span class="s2">&#34;__about__.py&#34;</span><span class="p">))</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
-    <span class="k">exec</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span> <span class="n">about</span><span class="p">)</span>
+<span class="n">about</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base_dir</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">my_package</span><span class="s2">&#34;</span><span class="p">,</span> <span class="sa"></span><span class="s2">&#34;</span><span class="s2">__about__.py</span><span class="s2">&#34;</span><span class="p">)</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">exec</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="p">)</span><span class="p">,</span> <span class="n">about</span><span class="p">)</span>
 
 <span class="n">setup</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="s2">&#34;__title__&#34;</span><span class="p">],</span>
-    <span class="n">version</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="s2">&#34;__version__&#34;</span><span class="p">],</span>
-    <span class="n">description</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="s2">&#34;__summary__&#34;</span><span class="p">],</span>
-    <span class="n">author</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="s2">&#34;__author__&#34;</span><span class="p">],</span>
-    <span class="n">author_email</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="s2">&#34;__email__&#34;</span><span class="p">],</span>
-    <span class="n">url</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="s2">&#34;__uri__&#34;</span><span class="p">],</span>
-    <span class="n">license</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="s2">&#34;__license__&#34;</span><span class="p">]</span>
-<span class="p">)</span></code></pre></div>
-<p>Happy coding and don&rsquo;t eat too much turkeys!</p>
+    <span class="n">name</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">__title__</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">__version__</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">__summary__</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">,</span>
+    <span class="n">author</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">__author__</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">,</span>
+    <span class="n">author_email</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">__email__</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">,</span>
+    <span class="n">url</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">__uri__</span><span class="s2">&#34;</span><span class="p">]</span><span class="p">,</span>
+    <span class="n">license</span><span class="o">=</span><span class="n">about</span><span class="p">[</span><span class="sa"></span><span class="s2">&#34;</span><span class="s2">__license__</span><span class="s2">&#34;</span><span class="p">]</span>
+<span class="p">)</span>
+
+</code></pre></div><p>Happy coding and don't eat too much turkeys!</p>
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-10-07 20:56:36 &#43;0200 CEST)</small>
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-11-29 14:27:33 &#43;0100 CET)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

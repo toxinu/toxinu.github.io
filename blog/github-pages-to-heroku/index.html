@@ -17,7 +17,9 @@
 	
 	</title>
     <link rel="stylesheet" href="/css/style.css">
-    
+	
+		<link href="" rel="feed" type="application/rss+xml" title="toxinu" />
+	
 
     <link rel="icon" type="image/png" sizes="128x128"  href="/images/favicon.png">
     <meta name="theme-color" content="#ffffff">
@@ -40,36 +42,24 @@
 <h1>Github Pages to Heroku</h1>
     <span class="small">Posted on 02 September 2012</span>
 
-    <div>
-
-<h1 id="synopsis">Synopsis</h1>
-
+    <div><h1 id="synopsis">Synopsis</h1>
 <p>My initial goal was to put my jekyll website on Heroku but I have encountered many problems due of my bad Ruby level and <code>pygment</code> usage.</p>
-
 <p>During month my jekyll website was freely hosted by <strong>GitHub Pages</strong>. Thanks for all the fish. But <strong>GitHub</strong> is not for app hosting.</p>
-
 <p>Many hours of:</p>
-
 <blockquote>
 <p>&ldquo;What the fuck I have 404 ?&rdquo;
 &ldquo;Oh Damn it my local Jekyll render it correctly and not on Github&hellip;&rdquo;
 &ldquo;Ohh enough, it was just the yaml header with quotes which give me fucking 404&rdquo;</p>
 </blockquote>
-
 <h1 id="idea">Idea</h1>
-
-<p>I think it&rsquo;s important to use local rendering to be sur of it and don&rsquo;t have surprise after deployment.</p>
-
+<p>I think it's important to use local rendering to be sur of it and don't have surprise after deployment.</p>
 <ul>
 <li><code>www.socketubs.net</code> is a github repo (not Github Page)</li>
 <li><code>www.socketubs.net/_site</code> is a Heroku repo (Html app (<a href="http://kennethreitz.com/static-sites-on-heroku-cedar.html">see</a>))</li>
 <li><code>www.socketubs.net/make.sh</code> is a little bash script which do all the job</li>
 </ul>
-
 <p>Jekyll is rendered locally, hosted on Heroku, backuped on Heroku and Github for versionning.</p>
-
 <p>By the way you can see a <code>404.html</code> page.</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 <span class="c1">#############################################################</span>
@@ -80,7 +70,7 @@
 <span class="nv">github_commit</span><span class="o">=</span><span class="s2">&#34;New release&#34;</span>
 <span class="c1">#############################################################</span>
 
-<span class="k">function</span> usage <span class="o">()</span> <span class="o">{</span>
+<span class="k">function</span> usage <span class="o">(</span><span class="o">)</span> <span class="o">{</span>
 	<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -lt <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 		<span class="nb">echo</span> <span class="s2">&#34;Usage: ./make (run|deploy|open)&#34;</span>
 		<span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
@@ -91,7 +81,7 @@
 	<span class="k">fi</span>
 <span class="o">}</span>
 
-<span class="k">function</span> make_heroku <span class="o">()</span> <span class="o">{</span>
+<span class="k">function</span> make_heroku <span class="o">(</span><span class="o">)</span> <span class="o">{</span>
 	<span class="nb">cd</span> _site
 	<span class="k">if</span> ! <span class="o">[</span> -e <span class="s2">&#34;.git&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 		git init
@@ -103,7 +93,7 @@
 	<span class="nb">cd</span> ..
 <span class="o">}</span>
 
-<span class="k">function</span> update_heroku <span class="o">()</span> <span class="o">{</span>
+<span class="k">function</span> update_heroku <span class="o">(</span><span class="o">)</span> <span class="o">{</span>
 	<span class="nb">cd</span> _site
 	git add .
 	git commit -a -m <span class="s2">&#34;</span><span class="nv">$heroku_commit</span><span class="s2">&#34;</span>
@@ -111,22 +101,22 @@
 	<span class="nb">cd</span> ..
 <span class="o">}</span>
 
-<span class="k">function</span> update_github <span class="o">()</span> <span class="o">{</span>
+<span class="k">function</span> update_github <span class="o">(</span><span class="o">)</span> <span class="o">{</span>
 	git add .
 	git commit -a -m <span class="s2">&#34;</span><span class="nv">$github_commit</span><span class="s2">&#34;</span>
 	git push origin master
 <span class="o">}</span>
 
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;run&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span><span class="o">=</span> <span class="s2">&#34;run&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 	jekyll
 	make_heroku
 	<span class="nb">exit</span> <span class="m">0</span>
-<span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;deploy&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span><span class="o">=</span> <span class="s2">&#34;deploy&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 	make_heroku
 	update_heroku
 	update_github
 	<span class="nb">exit</span> <span class="m">0</span>
-<span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;open&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span><span class="o">=</span> <span class="s2">&#34;open&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 	<span class="nb">cd</span> _site
 	heroku open
 	open http://localhost:4000
@@ -135,11 +125,8 @@
 <span class="k">else</span>
 	usage
 <span class="k">fi</span></code></pre></div>
-
 <h1 id="finally">Finally</h1>
-
 <p>And finally we have this workflow:</p>
-
 <ul>
 <li>Write your articles</li>
 <li><code>./make run</code></li>
@@ -148,12 +135,11 @@
 <li>Correct if you want</li>
 <li><code>./make deploy</code></li>
 </ul>
-
 <p>Your Github repo will be updated and heroku will received new website version.</p>
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-10-07 20:56:36 &#43;0200 CEST)</small>
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-11-29 14:27:33 &#43;0100 CET)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

@@ -138,7 +138,7 @@ It&#39;s an oral biography about a strange boy (Buster Rant Casey) in a strange 
       <pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>/blog/monsieur-le-pr%C3%A9sident-une-ex%C3%A9cution-se-pr%C3%A9pare/</guid>
-      <description></description>
+      <description> « Monsieur le Président, une exécution se prépare… »  </description>
     </item>
     
     <item>
@@ -147,7 +147,7 @@ It&#39;s an oral biography about a strange boy (Buster Rant Casey) in a strange 
       <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>/blog/ephemeral-internet/</guid>
-      <description></description>
+      <description> I enjoy this ephemeral vision of the Internet.    </description>
     </item>
     
     <item>
@@ -215,10 +215,9 @@ Tools box:
       <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
       
       <guid>/blog/ubuntu-server-lts-upgrades-are-stress-test/</guid>
-      <description>This article is now deprecated, Ubuntu now have a clean upgrade script. Just use do-release-upgrade.
-This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present. And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&amp;hellip;
-I admit to not being an Ubuntu expert ( Debian too ) but the do-release-upgrade is like :
- &amp;ldquo;Ohhh yeah take this Ultra Decap&#39;Net my son !</description>
+      <description>### Update * Sept, 24 2012 This article is now deprecated, Ubuntu now have a clean upgrade script. Just use do-release-upgrade.
+ This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present. And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&amp;hellip;
+I admit to not being an Ubuntu expert ( Debian too ) but the do-release-upgrade is like :</description>
     </item>
     
     <item>
@@ -251,8 +250,9 @@ In short, these programs parse differents files written in a special syntax, for
       
       <guid>/about/</guid>
       <description>Hi, I&#39;m Geoffrey L., french full stack developer / SRE working remotely.
-My work is full of Python, Django, Javascript, React, Linuxand Sysop. &amp;lt;3 Open source.
-You can reach my here.</description>
+My work is full of Python, Django, Javascript, React, Linux and Sysop. &amp;lt;3 Open source.
+You can reach my here.
+toxinu toxinu toxinu  </description>
     </item>
     
     <item>

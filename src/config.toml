@@ -5,6 +5,10 @@ pygmentsuseclasses = true
 theme = "toxinu"
 title = "toxinu"
 publishDir = ".."
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true
 [params]
 description = "Developer, hacker, music listener and books reader."
 email = "toxinu@gmail.com"

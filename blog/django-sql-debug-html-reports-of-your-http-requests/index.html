@@ -17,7 +17,9 @@
 	
 	</title>
     <link rel="stylesheet" href="/css/style.css">
-    
+	
+		<link href="" rel="feed" type="application/rss+xml" title="toxinu" />
+	
 
     <link rel="icon" type="image/png" sizes="128x128"  href="/images/favicon.png">
     <meta name="theme-color" content="#ffffff">
@@ -40,33 +42,23 @@
 <h1>Django SQL Debug - HTML reports of your HTTP requests</h1>
     <span class="small">Posted on 04 September 2014</span>
 
-    <div><p><a href="https://github.com/django-debug-toolbar/django-debug-toolbar">Django Debug Toolbar</a> is an awesome tool but it has some limitations. It&rsquo;s an <code>HTML</code> panel that is injected in your web pages that allow you to debug and profile your application at different layers. From <code>HTTP</code> to <code>SQL</code> requests.</p>
-
+    <div><p><a href="https://github.com/django-debug-toolbar/django-debug-toolbar">Django Debug Toolbar</a> is an awesome tool but it has some limitations. It's an <code>HTML</code> panel that is injected in your web pages that allow you to debug and profile your application at different layers. From <code>HTTP</code> to <code>SQL</code> requests.</p>
 <p>But when you do applications with a <a href="http://en.wikipedia.org/wiki/Representational_state_transfer">REST</a> pattern for example, with a full javascript client for example, it quickly become pain in the ass to debug your app.
-You can&rsquo;t reproduce easily <code>POST</code>, <code>PUT</code>, etc&hellip; requests.</p>
-
-<p>Let&rsquo;s introduce <a href="https://github.com/socketubs/django-sql-debug">Django SQL Debug</a>. It&rsquo;s a tool that works with <a href="https://github.com/django-debug-toolbar/django-debug-toolbar">Django Debug Toolbar</a> to generate an <code>HTML</code> report that you can read offline or later for each <code>HTTP</code> requests.</p>
-
-<p><img src="https://raw.githubusercontent.com/socketubs/django-sql-debug/master/screenshots/01.png" alt="Django SQL Debug screenshot" /></p>
-
-<p>It&rsquo;s goal is to let you see all your <code>SQL</code> queries (<em>and more</em>) when you don&rsquo;t have a direct access to <a href="https://github.com/django-debug-toolbar/django-debug-toolbar">Django Debug Toolbar</a>.
-That&rsquo;s why it&rsquo;s generate an <code>HTML</code> report that looks like the toolbar.</p>
-
+You can't reproduce easily <code>POST</code>, <code>PUT</code>, etc&hellip; requests.</p>
+<p>Let's introduce <a href="https://github.com/socketubs/django-sql-debug">Django SQL Debug</a>. It's a tool that works with <a href="https://github.com/django-debug-toolbar/django-debug-toolbar">Django Debug Toolbar</a> to generate an <code>HTML</code> report that you can read offline or later for each <code>HTTP</code> requests.</p>
+<p><img src="https://raw.githubusercontent.com/socketubs/django-sql-debug/master/screenshots/01.png" alt="Django SQL Debug screenshot"></p>
+<p>It's goal is to let you see all your <code>SQL</code> queries (<em>and more</em>) when you don't have a direct access to <a href="https://github.com/django-debug-toolbar/django-debug-toolbar">Django Debug Toolbar</a>.
+That's why it's generate an <code>HTML</code> report that looks like the toolbar.</p>
 <p>You can install it like any other Django application:</p>
-
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">pip install django-sql-debug</code></pre></div>
-
-<p>Just add <code>django_sql_debug</code> before <code>debug_toolbar</code> in <code>INSTALLED_APPS</code>. Configure your <code>HTML</code> reports directory, let&rsquo;s use your app and see your first report.</p>
-
-<p>Development is at the very beginning and it&rsquo;s more a proof of concept for now but it&rsquo;s usable and it can save you in special cases.</p>
-
+<p>Just add <code>django_sql_debug</code> before <code>debug_toolbar</code> in <code>INSTALLED_APPS</code>. Configure your <code>HTML</code> reports directory, let's use your app and see your first report.</p>
+<p>Development is at the very beginning and it's more a proof of concept for now but it's usable and it can save you in special cases.</p>
 <p>You can find source at <a href="https://github.com/socketubs/django-sql-debug">Github</a>. Contribution and any feedbacks are welcome.</p>
-
-<p>Let&rsquo;s discuss <a href="https://news.ycombinator.com/item?id=8268848">here</a>.</p>
+<p>Let's discuss <a href="https://news.ycombinator.com/item?id=8268848">here</a>.</p>
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-10-07 20:56:36 &#43;0200 CEST)</small>
+		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-11-29 14:27:33 &#43;0100 CET)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

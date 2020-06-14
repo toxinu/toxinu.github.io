@@ -314,6 +314,14 @@
     padding-left: 0.75em;
     }
 
+    @media only screen and (max-width: 400px) {
+        .masthead ul.inline.right {
+            float: unset !important;
+            padding-inline-start: 5px;
+            justify-content: flex-end;
+        }
+    }
+
      
 
     .footer {
@@ -569,6 +577,7 @@
         </div>
         <ul class="inline right">
             <li><a href="/code">Code</a></li>
+            <li><a href="/photography">Photograpy</a></li>
             <li><a href="/games">Games</a></li>
             <li><a href="/about">About</a></li>
         </ul>
@@ -590,9 +599,9 @@ Just use <code>do-release-upgrade</code>.</p>
 And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&hellip;</p>
 <p>I admit to not being an Ubuntu expert ( Debian too ) but the <code>do-release-upgrade</code> is like :</p>
 <blockquote>
-<p>&ldquo;Ohhh yeah take this Ultra Decap'Net my son !&rdquo;</p>
-<p>&quot; &hellip;. But ..but what's dazzz sh&hellip; ?&rdquo;</p>
-<p>&ldquo;I don't know, shut up, press it and close your eyes&rdquo;</p>
+<p>&ldquo;Ohhh yeah take this Ultra Decap&rsquo;Net my son !&rdquo;</p>
+<p>&quot; &hellip;. But ..but what&rsquo;s dazzz sh&hellip; ?&rdquo;</p>
+<p>&ldquo;I don&rsquo;t know, shut up, press it and close your eyes&rdquo;</p>
 </blockquote>
 <p>But this is the recommended solution.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">apt-get update
@@ -603,7 +612,7 @@ update-grub
 reboot</code></pre></div>
 <p>Your server is ready to upgrade.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">do</span>-release-upgrade -d</code></pre></div>
-<p>The <strong>-d</strong> option say that you want to do develpment upgrade, cause this isn't officially supported.</p>
+<p>The <strong>-d</strong> option say that you want to do develpment upgrade, cause this isn&rsquo;t officially supported.</p>
 <p><strong>/!\ Warning /!\</strong></p>
 <p>You have to re-upgrade grub after the upgrade.
 So Say <strong>NO</strong> when upgrade script ask you to reboot.
@@ -612,12 +621,12 @@ Press x to destroy session and return into your initial terminal.</p>
 update-grub
 reboot</code></pre></div>
 <p>Where am I wrong with <code>grub-install</code> and <code>update-grub</code> ?
-Ok ok, I haven't search more but packages must do it ? With os-prober, etc&hellip;</p>
+Ok ok, I haven&rsquo;t search more but packages must do it ? With os-prober, etc&hellip;</p>
 <p>But, the job is done.</p>
 <hr>
 <p>If for X reason your <strong>felt</strong> into a Grub Rescue hole this can help you:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">set</span> <span class="nv">prefix</span><span class="o">=</span><span class="o">(</span>hd0,2<span class="o">)</span>/boot/grub
-<span class="nb">set</span> <span class="nv">root</span><span class="o">=</span><span class="o">(</span>hd0,2<span class="o">)</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">set</span> <span class="nv">prefix</span><span class="o">=(</span>hd0,2<span class="o">)</span>/boot/grub
+<span class="nb">set</span> <span class="nv">root</span><span class="o">=(</span>hd0,2<span class="o">)</span>
 insmod <span class="o">(</span>hd0,2<span class="o">)</span>/boot/grub/linux.mod
 linux /vmlinuz <span class="nv">root</span><span class="o">=</span>/dev/sda2 ro
 initrd /initrd.img
@@ -625,7 +634,7 @@ boot</code></pre></div>
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-11-29 15:28:04 &#43;0100 CET)</small>
+		&copy; 2020 toxinu <small class="latest-update">(latest update at 2020-06-14 14:50:35 &#43;0900 JST)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

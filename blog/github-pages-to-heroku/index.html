@@ -314,6 +314,14 @@
     padding-left: 0.75em;
     }
 
+    @media only screen and (max-width: 400px) {
+        .masthead ul.inline.right {
+            float: unset !important;
+            padding-inline-start: 5px;
+            justify-content: flex-end;
+        }
+    }
+
      
 
     .footer {
@@ -569,6 +577,7 @@
         </div>
         <ul class="inline right">
             <li><a href="/code">Code</a></li>
+            <li><a href="/photography">Photograpy</a></li>
             <li><a href="/games">Games</a></li>
             <li><a href="/about">About</a></li>
         </ul>
@@ -588,7 +597,7 @@
 &ldquo;Ohh enough, it was just the yaml header with quotes which give me fucking 404&rdquo;</p>
 </blockquote>
 <h1 id="idea">Idea</h1>
-<p>I think it's important to use local rendering to be sur of it and don't have surprise after deployment.</p>
+<p>I think it&rsquo;s important to use local rendering to be sur of it and don&rsquo;t have surprise after deployment.</p>
 <ul>
 <li><code>www.socketubs.net</code> is a github repo (not Github Page)</li>
 <li><code>www.socketubs.net/_site</code> is a Heroku repo (Html app (<a href="http://kennethreitz.com/static-sites-on-heroku-cedar.html">see</a>))</li>
@@ -606,7 +615,7 @@
 <span class="nv">github_commit</span><span class="o">=</span><span class="s2">&#34;New release&#34;</span>
 <span class="c1">#############################################################</span>
 
-<span class="k">function</span> usage <span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+<span class="k">function</span> usage <span class="o">()</span> <span class="o">{</span>
 	<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -lt <span class="m">1</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 		<span class="nb">echo</span> <span class="s2">&#34;Usage: ./make (run|deploy|open)&#34;</span>
 		<span class="nb">echo</span> <span class="s2">&#34;&#34;</span>
@@ -617,7 +626,7 @@
 	<span class="k">fi</span>
 <span class="o">}</span>
 
-<span class="k">function</span> make_heroku <span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+<span class="k">function</span> make_heroku <span class="o">()</span> <span class="o">{</span>
 	<span class="nb">cd</span> _site
 	<span class="k">if</span> ! <span class="o">[</span> -e <span class="s2">&#34;.git&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 		git init
@@ -629,7 +638,7 @@
 	<span class="nb">cd</span> ..
 <span class="o">}</span>
 
-<span class="k">function</span> update_heroku <span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+<span class="k">function</span> update_heroku <span class="o">()</span> <span class="o">{</span>
 	<span class="nb">cd</span> _site
 	git add .
 	git commit -a -m <span class="s2">&#34;</span><span class="nv">$heroku_commit</span><span class="s2">&#34;</span>
@@ -637,22 +646,22 @@
 	<span class="nb">cd</span> ..
 <span class="o">}</span>
 
-<span class="k">function</span> update_github <span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+<span class="k">function</span> update_github <span class="o">()</span> <span class="o">{</span>
 	git add .
 	git commit -a -m <span class="s2">&#34;</span><span class="nv">$github_commit</span><span class="s2">&#34;</span>
 	git push origin master
 <span class="o">}</span>
 
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span><span class="o">=</span> <span class="s2">&#34;run&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;run&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 	jekyll
 	make_heroku
 	<span class="nb">exit</span> <span class="m">0</span>
-<span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span><span class="o">=</span> <span class="s2">&#34;deploy&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;deploy&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 	make_heroku
 	update_heroku
 	update_github
 	<span class="nb">exit</span> <span class="m">0</span>
-<span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span><span class="o">=</span> <span class="s2">&#34;open&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;open&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 	<span class="nb">cd</span> _site
 	heroku open
 	open http://localhost:4000
@@ -675,7 +684,7 @@
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-11-29 15:28:04 &#43;0100 CET)</small>
+		&copy; 2020 toxinu <small class="latest-update">(latest update at 2020-06-14 14:50:35 &#43;0900 JST)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

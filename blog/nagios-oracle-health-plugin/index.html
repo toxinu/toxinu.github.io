@@ -314,6 +314,14 @@
     padding-left: 0.75em;
     }
 
+    @media only screen and (max-width: 400px) {
+        .masthead ul.inline.right {
+            float: unset !important;
+            padding-inline-start: 5px;
+            justify-content: flex-end;
+        }
+    }
+
      
 
     .footer {
@@ -569,6 +577,7 @@
         </div>
         <ul class="inline right">
             <li><a href="/code">Code</a></li>
+            <li><a href="/photography">Photograpy</a></li>
             <li><a href="/games">Games</a></li>
             <li><a href="/about">About</a></li>
         </ul>
@@ -580,10 +589,10 @@
 
     <div><p>This is more a memo than an article. A quick and dirty <a href="http://labs.consol.de/nagios/check_oracle_health">check_oracle_health</a> plugin installation, with prerequires.</p>
 <p>Developped by <a href="https://github.com/lausser">Gerhard Lausser</a>, an active <a href="http://www.shinken-monitoring.org/">Shinken</a> developper with <a href="https://github.com/naparuba">Jean Gabès</a>.</p>
-<p>Like most of Nagios plugins, it's in Perl language and it's use DBD::Oracle module, and this module need an Oracle client.</p>
+<p>Like most of Nagios plugins, it&rsquo;s in Perl language and it&rsquo;s use DBD::Oracle module, and this module need an Oracle client.</p>
 <h2 id="oracle-instant-client">Oracle Instant Client</h2>
 <p>You have to create a fucking Oracle account&hellip; Yes I know you think :</p>
-<p><em>&ldquo;What's this great article ?! Proprietary software are just awesome!&quot;</em>.</p>
+<p><em>&ldquo;What&rsquo;s this great article ?! Proprietary software are just awesome!&quot;</em>.</p>
 <p>Go to <a href="http://www.oracle.com/technetwork/database/features/instant-client/index-097480.html">Oracle Instant Client Downloads Page</a>. Get the <strong>Instant Client Package - Basic</strong> and <strong>sdk</strong>.
 Or use my personnal <a href="http://dl.socketubs.net/nagios/oracle/">links</a> above.</p>
 <p>For the story, i have fucked my brain during three hours cause I have download the <strong>Instant Client Package - Basic Lite</strong> and try to work with a Western American charset database&hellip; And of course, Basic Lite does not support it.</p>
@@ -623,13 +632,13 @@ vim !$/tnsnames.ora</code></pre></div>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">&lt;addressname&gt; <span class="o">=</span>
  <span class="o">(</span><span class="nv">DESCRIPTION</span> <span class="o">=</span>
    <span class="o">(</span><span class="nv">ADDRESS_LIST</span> <span class="o">=</span>
-     <span class="o">(</span><span class="nv">ADDRESS</span> <span class="o">=</span> <span class="o">(</span><span class="nv">PROTOCOL</span> <span class="o">=</span> TCP<span class="o">)</span><span class="o">(</span><span class="nv">Host</span> <span class="o">=</span> &lt;hostname&gt;<span class="o">)</span><span class="o">(</span><span class="nv">Port</span> <span class="o">=</span> &lt;port&gt;<span class="o">)</span><span class="o">)</span>
+     <span class="o">(</span><span class="nv">ADDRESS</span> <span class="o">=</span> <span class="o">(</span><span class="nv">PROTOCOL</span> <span class="o">=</span> TCP<span class="o">)(</span><span class="nv">Host</span> <span class="o">=</span> &lt;hostname&gt;<span class="o">)(</span><span class="nv">Port</span> <span class="o">=</span> &lt;port&gt;<span class="o">))</span>
    <span class="o">)</span>
  <span class="o">(</span><span class="nv">CONNECT_DATA</span> <span class="o">=</span>
    <span class="o">(</span><span class="nv">SERVICE_NAME</span> <span class="o">=</span> &lt;sid&gt;<span class="o">)</span>
  <span class="o">)</span>
 <span class="o">)</span></code></pre></div>
-<h2 id="checkoraclehealth">check_oracle_health</h2>
+<h2 id="check_oracle_health">check_oracle_health</h2>
 <p>To finish, we have to install the Nagios plugin.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">wget http://labs.consol.de/wp-content/uploads/2011/09/check_oracle_health-1.7.6.1.tar.gz
 tar xvf check_oracle_health-1.7.6.1.tar.gz
@@ -637,11 +646,11 @@ tar xvf check_oracle_health-1.7.6.1.tar.gz
 ./configure
 make
 make install</code></pre></div>
-<p>That's all !</p>
+<p>That&rsquo;s all !</p>
 </div>
 </div>
 	<div class="footer grid ta">
-		&copy; 2019 toxinu <small class="latest-update">(latest update at 2019-11-29 15:28:04 &#43;0100 CET)</small>
+		&copy; 2020 toxinu <small class="latest-update">(latest update at 2020-06-14 14:50:35 &#43;0900 JST)</small>
 	</div>
 	<script data-no-instant>InstantClick.init();</script>
 </body>

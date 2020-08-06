@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: toxinu.github.io
+Token: 8c7a84c63bc32c90cf748254a4ba111f4dc78ff3a8f23d249a9f71a77c2dfc53

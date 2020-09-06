@@ -10,11 +10,12 @@ publishDir = ".."
   [markup.goldmark.renderer]
     unsafe = true
 [params]
-description = "Developer, hacker, music listener and books reader."
+description = "Hacker, photographer, music listener and books reader."
 email = "toxinu@gmail.com"
 github = "toxinu"
 gitlab= "toxinu"
 twitter = "toxinu_"
+instagram = "toxinu_"
 [permalinks]
 blog = "blog/:slug/"
 fixed = ":title/"

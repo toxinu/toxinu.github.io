@@ -2,6 +2,10 @@
 <div class="ta">
     <p>{{ .Site.Params.description }}</p>
     <div class="profiles grid">
+        {{ if .Site.Params.instagram }}
+        <a id="instagram" href="https://instagram.com/{{ .Site.Params.instagram }}"
+            target="_blank"><span>{{ .Site.Params.instagram }}</span></a>
+        {{ end }}
         {{ if .Site.Params.github }}
         <a id="github" href="https://github.com/{{ .Site.Params.github }}"
             target="_blank"><span>{{ .Site.Params.github }}</span></a>

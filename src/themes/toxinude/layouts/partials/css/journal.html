@@ -1,0 +1,51 @@
+<style>
+    section#journal {
+        margin-top: 72px;
+    }
+    section#journal > p {
+        margin-bottom: 32px;
+    }
+    section#journal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    section#journal ul li {
+        border: 1px solid black;
+        display: flex;
+        margin-bottom: 8px;
+    }
+    section#journal ul li:last-of-type {
+        margin-bottom: 0;
+    }
+    section#journal ul li span {
+        font-family: 'IBMPlexMono-BoldItalic';
+        margin: 16px 16px 0 16px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    section#journal ul li p {
+        margin: 16px 16px 0 0;
+        white-space: nowrap;
+        margin-left: auto;
+    }
+    section#journal ul li a {
+        background-color: black;
+        color: white;
+        width: 55px;
+        min-width: 55px;
+        text-align: center;
+        line-height: 50px;
+    }
+    /* Page */
+    section#journal.page {
+        margin-top: 0;
+    }
+    section#journal.page h1 {
+        margin: 0;
+        margin-bottom: 72px;
+    }
+</style>

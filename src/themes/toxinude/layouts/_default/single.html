@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+{{ .Scratch.Set "active" 3 }}
+{{ partial "nav.html" . }}
+<section id="post-page">
+    <h1>{{ .Title }}</h1>
+    <div class="content">{{ .Content }}</div>
+</section>
+{{ partial "footer.html" . }}

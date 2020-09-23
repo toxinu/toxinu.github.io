@@ -14,7 +14,6 @@ googleAnalyticsAsync = true
     unsafe = true
 [params]
 # Theme
-colortheme = "classic"
 showAllPostsOnHomePage = true
 showPaginationHomePage = false
 rss = true
@@ -24,41 +23,47 @@ github = "toxinu"
 gitlab= "toxinu"
 twitter = "toxinu_"
 instagram = "toxinu_"
-[[params.social]]
-  name = "github"
-  link = "https://github.com/toxinu"
-[[params.social]]
-  name = "gitlab"
-  link = "https://gitlab.com/toxinu"
-[[params.social]]
-  name = "instagram"
-  link = "https://instagram.com/toxinu_"
-[[params.social]]
-  name = "email"
-  link = "toxinu@gmail.com"
-[[params.social]]
-  name = "twitter"
-  link = "https://www.twitter.com/toxinu_"
+[[params.photography]]
+  name = "Japanese street"
+  date = "Osaka, Japan. Summer 2020"
+  link = "/images/photography/49948441687_852661163e_k.jpg"
+  vertical = false
+[[params.photography]]
+  name = "Sakura forest"
+  date = "Osaka, Japan. Summer 2020"
+  link = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/de55c0436b869424d1d8229f217c9f57/renditions/f4bda44af635ecc956cf6a65c804cf39"
+  vertical = true
+[[params.photography]]
+  name = "Go players"
+  date = "Osaka, Japan. Summer 2020"
+  link = "/images/photography/49908304712_75c340ec20_o.jpg"
+  vertical = true
+[[params.photography]]
+  name = "Bike shop"
+  date = "Osaka, Japan. Summer 2020"
+  link = "/images/photography/49977168852_cec76e846b_k.jpg"
+  vertical = false
+[[params.photography]]
+  name = "Rainy japanese street"
+  date = "Osaka, Japan. Summer 2020"
+  link = "/images/photography/50001211431_3540089b95_k.jpg"
+  vertical = false
 [permalinks]
 blog = "blog/:slug/"
 fixed = ":title/"
-
 [[menu.main]]
 name = "Home"
 url = "/"
 weight = 1
-
 [[menu.main]]
 name = "Photography"
 url = "/photography"
 weight = 2
-
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 5
-
 [[menu.main]]
 name = "Writings"
 url = "/blog"
+weight = 3
+[[menu.main]]
+name = "About"
+url = "/about"
 weight = 4

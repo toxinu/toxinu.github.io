@@ -1,10 +1,15 @@
 <script>
-    function updateSidebar() {
+    function updateSidebar(initial) {
         [...document.querySelectorAll('#sidebar ul li')].forEach((element) => {
             element.style.textDecoration = 'none';
             element.style.backgroundColor = 'white';
         });
-        const sidebarElement = document.querySelector('#sidebar ul li a[href="' + location.hash + '"]');
+        let sidebarElement;
+        if (initial) {
+            sidebarElement = document.querySelector('#sidebar ul li a[href="#photography"]');
+        } else {
+            sidebarElement = document.querySelector('#sidebar ul li a[href="' + location.hash + '"]');
+        }
         if (sidebarElement) {
             sidebarElement.parentNode.style.backgroundColor = '#F5D8FF';
             sidebarElement.parentNode.style.textDecoration = 'underline';
@@ -30,6 +35,6 @@
             });
         };
         window.onhashchange = updateSidebar;
-        updateSidebar();
+        updateSidebar(true);
     }
 </script>

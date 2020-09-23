@@ -1,0 +1,94 @@
+<style>
+    section#about {
+        display: flex;
+        justify-content: flex-start;
+    }
+    section#about .avatar {
+        height: 100px;
+        min-height: 100px;
+        width: 100px;
+        min-width: 100px;
+        border: 1px black solid;
+        margin-right: 24px;
+        background-image: url('/images/profile-picture.png');
+        background-size: contain;
+    }
+    section#about .description {
+        display: flex;
+        flex-direction: column;
+    }
+    section#about .description .baseline {
+        font-size: 40px;
+        margin: 0 0 8px 0;
+        font-family: 'IBMPlexMono-Bold';
+        line-height: 52px;
+    }
+    section#about .description .location {
+        font-size: 16px;
+        font-family: 'IBMPlexMono-Bold';
+        margin-bottom: 8px;
+    }
+    section#about .description .social {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    section#about .description .social a {
+        margin-right: 16px;
+        white-space: nowrap;
+    }
+    section#about .description .social a:last-of-type {
+        margin-right: 0;
+    }
+    /* Page */
+    section#about-page {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    section#about-page .header {
+        width: 70%;
+    }
+    section#about-page .header h1 {
+        margin: 0;
+        margin-bottom: 72px;
+    }
+    section#about-page .content {
+        width: 90%;
+        height: 800px;
+        padding: 72px;
+        background-color: #A9B7A8;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/44af4130cc6f4e1389d80f2af8a91103/revisions/5ab738e847874d0c964a2b813e60268d/renditions/8ace93b010f8d7c16aafd1e6f28b29b0);
+    }
+    section#about-page .content .baseline {
+        font-size: 40px;
+        font-family: 'IBMPlexMono-Bold';
+        margin-bottom: 32px;
+
+    }
+    section#about-page .content .baseline span {
+        background-color: white;
+    }
+    section#about-page .content .sentence {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 16px;
+        max-width: 970px;
+    }
+    section#about-page .content .sentence span {
+        background-color: white;
+        margin-top: 32px;
+    }
+    section#about-page div.legend {
+        width: 90%;
+        font-family: 'IBMPlexMono-Regular';
+        font-size: 16px;
+        margin: auto;
+        margin-top: 16px;
+    }
+    section#about-page div.legend span:first-of-type {
+        font-family: 'IBMPlexMono-BoldItalic';
+    }
+</style>

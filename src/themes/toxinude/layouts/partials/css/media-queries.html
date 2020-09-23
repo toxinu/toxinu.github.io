@@ -1,0 +1,57 @@
+<style>
+    @media (max-width: 875px) {
+        section {
+            width: 80%;
+        }
+        section#about {
+            flex-direction: column;
+        }
+        section#about .avatar {
+            margin-bottom: 16px;
+        }
+        section#nav ul li {
+            margin-right: 20px;
+        }
+        section#photography {
+            width: 95%;
+        }
+        section#games > div ul {
+            flex-direction: column;
+        }
+        section#games > div ul li {
+            margin-right: 0;
+            margin-bottom: 32px;
+        }
+        section#journal ul li p {
+            display: none;
+        }
+        section#journal ul li a {
+            margin-left: auto;
+        }
+        footer section#nav ul {
+            display: none;
+        }
+        #sidebar {
+            display: none;
+        }
+    }
+    @media (max-width: 680px) {
+        section {
+            width: 90%;
+        }
+        section#nav {
+            align-items: flex-start;
+        }
+        section#nav ul {
+            flex-direction: column;
+        }
+        section#nav ul li {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+        footer section#nav {
+            align-items: center;
+            font-size: 12px;
+        }
+    }
+</style>

@@ -1,0 +1,364 @@
+<style>
+    @font-face {
+        font-family: 'IBMPlexMono-Bold';
+        src: url('/lib/IBMPlexMono-Bold.woff2') format('woff2'),
+             url('/lib/IBMPlexMono-Bold.woff') format('woff'),
+             url('/lib/IBMPlexMono-Bold.ttf')  format('truetype');
+    }
+    @font-face {
+        font-family: 'IBMPlexMono-BoldItalic';
+        src: url('/lib/IBMPlexMono-BoldItalic.woff2') format('woff2'),
+             url('/lib/IBMPlexMono-BoldItalic.woff') format('woff'),
+             url('/lib/IBMPlexMono-BoldItalic.ttf')  format('truetype');
+    }
+    @font-face {
+        font-family: 'IBMPlexMono-Regular';
+        src: url('/lib/IBMPlexMono-Regular.woff2') format('woff2'),
+             url('/lib/IBMPlexMono-Regular.woff') format('woff'),
+             url('/lib/IBMPlexMono-Regular.ttf')  format('truetype');
+    }
+    @font-face {
+        font-family: 'IBMPlexMono-Italic';
+        src: url('/lib/IBMPlexMono-Italic.woff2') format('woff2'),
+             url('/lib/IBMPlexMono-Italic.woff') format('woff'),
+             url('/lib/IBMPlexMono-Italic.ttf')  format('truetype');
+    }
+    *, *:before, *:after {
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        padding: 32px 0;
+        font-family: 'IBMPlexMono-Regular';
+    }
+    section {
+        width: 60%;
+        max-width: 1800px;
+        box-sizing: border-box;
+        margin-bottom: 72px;
+    }
+    p {
+        margin: 0;
+        line-height: 160%;
+    }
+    a { color: black; }
+    .line {
+        height: 3px;
+        width: 100%;
+        background-color: black;
+    }
+    /* Nav */
+    section#nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        align-items: center;
+    }
+    section#nav a {
+        text-decoration: none;
+    }
+    section#nav .site-head {
+        display: inline-flex;
+        font-family: 'IBMPlexMono-Bold';
+        height: fit-content;
+        margin-right: 16px;
+    }
+    section#nav .site-name {
+        background-color: black;
+        color: white;
+        padding: 4px 8px;
+    }
+    section#nav .site-logo {
+        background: #F5D8FF;
+        padding: 4px 8px;
+    }
+    section#nav ul {
+        margin: 0;
+        text-transform: uppercase;
+        display: flex;
+    }
+    section#nav ul li {
+        display: inline;
+        margin-right: 40px;
+    }
+    section#nav ul li:first-of-type a {
+        text-decoration: underline;
+    }
+    section#nav ul li:last-of-type {
+        margin-right: 0;
+    }
+    section#about {
+        display: flex;
+        justify-content: flex-start;
+    }
+    section#about .avatar {
+        height: 100px;
+        min-height: 100px;
+        width: 100px;
+        min-width: 100px;
+        border: 1px black solid;
+        margin-right: 24px;
+        background-image: url('/images/profile-picture.png');
+        background-size: contain;
+    }
+    section#about .description {
+        display: flex;
+        flex-direction: column;
+    }
+    section#about .description .baseline {
+        font-size: 40px;
+        margin: 0 0 8px 0;
+        font-family: 'IBMPlexMono-Bold';
+        line-height: 52px;
+    }
+    section#about .description .location {
+        font-size: 16px;
+        font-family: 'IBMPlexMono-Bold';
+        margin-bottom: 8px;
+    }
+    section#about .description .social {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    section#about .description .social a {
+        margin-right: 16px;
+        white-space: nowrap;
+    }
+    section#about .description .social a:last-of-type {
+        margin-right: 0;
+    }
+    section#photography {
+        display: flex;
+        width: 80%;
+        padding-right: 40px;
+        align-self: flex-end;
+    }
+    section#photography > div {
+        width: 65%;
+        margin-right: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    section#photography > a:last-of-type {
+        width: 35%;
+    }
+    section#games {
+        width: 100%;
+        background-color: black;
+        color: white;
+    }
+    section#games > div {
+        width: 70%;
+        padding: 64px 0;
+        margin: auto;
+    }
+    section#games > div p {
+        margin-bottom: 32px;
+    }
+    section#games > div ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    section#games > div ul li {
+        flex-basis: 100%;
+        background-color: white;
+        color: black;
+        margin-right: 24px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+    section#games > div ul li:last-of-type {
+        margin-right: 0;
+    }
+    section#games > div ul li h3 {
+        margin: 0 0 16px;
+    }
+    section#games > div ul li p {
+        margin-bottom: 16px;
+    }
+    section#games > div ul li > a {
+        margin-top: auto;
+    }
+    section#games > div ul li img {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    section#codes > p {
+        margin-bottom: 32px;
+    }
+    section#codes ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    section#codes ul li {
+        border: 1px solid black;
+        display: flex;
+        margin-bottom: 8px;
+    }
+    section#codes ul li:last-of-type {
+        margin-bottom: 0;
+    }
+    section#codes ul li > span {
+        font-family: 'IBMPlexMono-BoldItalic';
+        margin: 16px;
+        font-size: 20px;
+    }
+    section#codes ul li span p {
+        margin: 8px 0 0;
+        font-size: 16px;
+        font-family: 'IBMPlexMono-Regular';
+    }
+    section#codes ul li a {
+        background-color: black;
+        color: white;
+        width: 55px;
+        min-width: 55px;
+        text-align: center;
+        line-height: 80px;
+        margin-left: auto;
+    }
+    section#journal {
+        margin-top: 72px;
+    }
+    section#journal > p {
+        margin-bottom: 32px;
+    }
+    section#journal ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    section#journal ul li {
+        border: 1px solid black;
+        display: flex;
+        margin-bottom: 8px;
+    }
+    section#journal ul li:last-of-type {
+        margin-bottom: 0;
+    }
+    section#journal ul li span {
+        font-family: 'IBMPlexMono-BoldItalic';
+        margin: 16px 16px 0 16px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    section#journal ul li p {
+        margin: 16px 16px 0 0;
+        white-space: nowrap;
+        margin-left: auto;
+    }
+    section#journal ul li a {
+        background-color: black;
+        color: white;
+        width: 55px;
+        min-width: 55px;
+        text-align: center;
+        line-height: 50px;
+    }
+    /* Other */
+    section img {
+        width: 100%;
+    }
+    /* Footer */
+    footer {
+        width: 100%;
+        max-width: 1800px;
+        display: flex;
+        justify-content: center;
+    }
+    footer section#nav {
+        margin-bottom: 0;
+        flex-wrap: wrap;
+    }
+    footer section#nav ul {
+        margin-left: auto;
+    }
+    /* Sidebar */
+    #sidebar {
+        position: fixed;
+        top: 420px;
+        left: 32px;
+    }
+    #sidebar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    #sidebar ul li {
+        margin-bottom: 16px;
+        background-color: white;
+        width: max-content;
+    }
+    #sidebar ul li a {
+        text-decoration: none;
+    }
+    @media (max-width: 875px) {
+        section {
+            width: 80%;
+        }
+        section#about {
+            flex-direction: column;
+        }
+        section#about .avatar {
+            margin-bottom: 16px;
+        }
+        section#nav ul li {
+            margin-right: 20px;
+        }
+        section#photography {
+            width: 90%;
+        }
+        section#games > div ul {
+            flex-direction: column;
+        }
+        section#games > div ul li {
+            margin-right: 0;
+            margin-bottom: 32px;
+        }
+        section#journal ul li p {
+            display: none;
+        }
+        section#journal ul li a {
+            margin-left: auto;
+        }
+        footer section#nav ul {
+            display: none;
+        }
+        #sidebar {
+            display: none;
+        }
+    }
+    @media (max-width: 680px) {
+        section {
+            width: 90%;
+        }
+        section#nav {
+            align-items: flex-start;
+        }
+        section#nav ul {
+            flex-direction: column;
+        }
+        section#nav ul li {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+        footer section#nav {
+            align-items: center;
+            font-size: 12px;
+        }
+    }
+</style>

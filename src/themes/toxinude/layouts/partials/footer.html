@@ -1,0 +1,16 @@
+<footer>
+    <section id="nav">
+        <div class="site-head">
+            <div class="site-name">t</div>
+            <div class="site-logo">[]</div>
+        </div>
+        <p>
+            © 2020 by Geoffrey L. // Design @mylenela
+        </p>
+        <ul>
+        {{ range .Site.Menus.main }} 
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+        </ul>
+    </section>
+</footer>

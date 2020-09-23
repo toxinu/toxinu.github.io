@@ -2,7 +2,7 @@
 title = "About"
 
 +++
-Hi, I'm Geoffrey L., french full stack engineer / SRE working remotely.
+Hi, I'm Geoffrey, french full stack engineer / SRE working remotely.
 
 My work is full of <em>Python</em>, <em>Django</em>, <em>Javascript</em>, <em>React</em>, <em>Linux</em> and <em>Sysop</em>. &lt;3 Open source.
 

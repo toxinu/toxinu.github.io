@@ -1,0 +1,35 @@
+<script>
+    function updateSidebar() {
+        [...document.querySelectorAll('#sidebar ul li')].forEach((element) => {
+            element.style.textDecoration = 'none';
+            element.style.backgroundColor = 'white';
+        });
+        const sidebarElement = document.querySelector('#sidebar ul li a[href="' + location.hash + '"]');
+        if (sidebarElement) {
+            sidebarElement.parentNode.style.backgroundColor = '#F5D8FF';
+            sidebarElement.parentNode.style.textDecoration = 'underline';
+        }
+    }
+    window.onload = function() {
+        window.onscroll = function(e) {
+            let currentHash = location.hash;
+            const elements = [...document.querySelectorAll('section[data-anchor="true"]')];
+            const lastElementIndex = elements.length - 1;
+            elements.forEach((element, index) => {
+                var top = window.pageYOffset;
+                var distance = top - element.offsetTop;
+                var hash = element.getAttribute('id');
+                if (element.getAttribute('data-anchor') == 'true') {
+                    const isLast = top === window.scrollMaxY && index === lastElementIndex;
+                    if ((distance < 40 && distance > -40 && currentHash != hash) || isLast) {
+                        history.pushState(null, null, "#" + hash);
+                        currentHash = hash;
+                        updateSidebar();
+                    }
+                }
+            });
+        };
+        window.onhashchange = updateSidebar;
+        updateSidebar();
+    }
+</script>

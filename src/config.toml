@@ -2,20 +2,63 @@ baseURL = "/"
 languageCode = "en-us"
 pygmentscodefences = true
 pygmentsuseclasses = true
-theme = "toxinu"
+theme = "toxinude"
 title = "toxinu"
 publishDir = ".."
+copyright = "Geoffrey L. (toxinu)"
+googleAnalytics = "UA-178253729-1"
+googleAnalyticsAsync = true
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark.renderer]
     unsafe = true
 [params]
-description = "Hacker, photographer, music listener and books reader."
+# Theme
+colortheme = "classic"
+showAllPostsOnHomePage = true
+showPaginationHomePage = false
+rss = true
+# Other
 email = "toxinu@gmail.com"
 github = "toxinu"
 gitlab= "toxinu"
 twitter = "toxinu_"
 instagram = "toxinu_"
+[[params.social]]
+  name = "github"
+  link = "https://github.com/toxinu"
+[[params.social]]
+  name = "gitlab"
+  link = "https://gitlab.com/toxinu"
+[[params.social]]
+  name = "instagram"
+  link = "https://instagram.com/toxinu_"
+[[params.social]]
+  name = "email"
+  link = "toxinu@gmail.com"
+[[params.social]]
+  name = "twitter"
+  link = "https://www.twitter.com/toxinu_"
 [permalinks]
 blog = "blog/:slug/"
 fixed = ":title/"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Photography"
+url = "/photography"
+weight = 2
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 5
+
+[[menu.main]]
+name = "Writings"
+url = "/blog"
+weight = 4

@@ -1,0 +1,14 @@
+<section id="nav">
+    <a href="/">
+        <div class="site-head">
+            <div class="site-name">toxinu</div>
+            <div class="site-logo">[•"]</div>
+        </div>
+    </a>
+    <ul>
+    {{ $active := .Scratch.Get "active" }}
+    {{ range .Site.Menus.main }}
+        <li><a class="{{ if (eq .Weight $active )}}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+    </ul>
+</section>

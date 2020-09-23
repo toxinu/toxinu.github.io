@@ -1,15 +1,6 @@
 {{ partial "header.html" . }}
-<section id="nav">
-    <div class="site-head">
-        <div class="site-name">toxinu</div>
-        <div class="site-logo">[•"]</div>
-    </div>
-    <ul>
-    {{ range .Site.Menus.main }} 
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-    {{ end }}
-    </ul>
-</section>
+{{ .Scratch.Set "active" 1 }}
+{{ partial "nav.html" . }}
 <section id="about">
     <div class="avatar"></div>
     <div class="description">
@@ -111,7 +102,7 @@
     {{ $dataFormat := .Site.Params.dateFormat | default "2006-01-02" }}
     {{ if $showAllPostsOnHomePage }}
     <ul class="post-list">
-        {{ .Scratch.Set "count" 5 }}
+        {{ .Scratch.Set "count" 10 }}
         {{ if isset .Site.Params "postsonhomepage" }}
         {{ .Scratch.Set "count" .Site.Params.postsOnHomePage }}
         {{ end }}

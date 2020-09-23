@@ -36,7 +36,7 @@
         font-family: 'IBMPlexMono-Regular';
     }
     section {
-        width: 60%;
+        width: 70%;
         max-width: 1800px;
         box-sizing: border-box;
         margin-bottom: 72px;
@@ -64,7 +64,6 @@
     section#nav .site-head {
         display: inline-flex;
         font-family: 'IBMPlexMono-Bold';
-        height: fit-content;
         margin-right: 16px;
     }
     section#nav .site-name {
@@ -85,7 +84,7 @@
         display: inline;
         margin-right: 40px;
     }
-    section#nav ul li:first-of-type a {
+    section#nav ul li a.active {
         text-decoration: underline;
     }
     section#nav ul li:last-of-type {
@@ -133,7 +132,7 @@
     }
     section#photography {
         display: flex;
-        width: 80%;
+        width: 85%;
         padding-right: 40px;
         align-self: flex-end;
     }
@@ -287,6 +286,15 @@
     footer section#nav ul {
         margin-left: auto;
     }
+    footer section#nav .site-head {
+        margin-right: unset;
+    }
+    footer p a {
+        background-color: #F5D8FF;
+    }
+    footer p {
+        margin-left: 16px;
+    }
     /* Sidebar */
     #sidebar {
         position: fixed;
@@ -305,6 +313,114 @@
     }
     #sidebar ul li a {
         text-decoration: none;
+    }
+    /* Page */
+    section.page h1 {
+        font-size: 40px;
+        font-family: 'IBMPlexMono-Bold';
+        line-height: 52px;
+    }
+    /* Photography page */
+    section#photography-page {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    section#photography-page img {
+        width: unset;
+    }
+    section#photography-page .social {
+        margin-top: 8px;
+    }
+    section#photography-page .header {
+        width: 70%;
+    }
+    section#photography-page .header h1 {
+        margin: 0;
+        margin-bottom: 72px;
+    }
+    section#photography-page .pictures {
+        display: flex;
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+    section#photography-page .pictures a {
+        text-decoration: none;
+        margin-top: 72px;
+    }
+    section#photography-page .pictures a img {
+        max-width: 1100px;
+        width: 100%;
+    }
+    section#photography-page .pictures a.vertical img {
+        max-width: 750px;
+    }
+    section#photography-page .pictures div {
+        margin-top: 16px;
+        font-family: 'IBMPlexMono-Regular';
+        margin-right: auto;
+    }
+    section#photography-page .pictures div span:first-of-type {
+        font-family: 'IBMPlexMono-BoldItalic';
+    }
+    section#journal.page {
+        margin-top: 0;
+    }
+    section#journal.page h1 {
+        margin: 0;
+        margin-bottom: 72px;
+    }
+    section#about-page {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    section#about-page .header {
+        width: 70%;
+    }
+    section#about-page .header h1 {
+        margin: 0;
+        margin-bottom: 72px;
+    }
+    section#about-page .content {
+        width: 90%;
+        height: 800px;
+        padding: 72px;
+        background-color: #A9B7A8;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/44af4130cc6f4e1389d80f2af8a91103/revisions/5ab738e847874d0c964a2b813e60268d/renditions/8ace93b010f8d7c16aafd1e6f28b29b0);
+    }
+    section#about-page .content .baseline {
+        font-size: 40px;
+        font-family: 'IBMPlexMono-Bold';
+        margin-bottom: 32px;
+
+    }
+    section#about-page .content .baseline span {
+        background-color: white;
+    }
+    section#about-page .content .sentence {
+        font-size: 18px;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    section#about-page .content .sentence span {
+        background-color: white;
+        margin-top: 32px;
+    }
+    section#about-page div.legend {
+        width: 90%;
+        font-family: 'IBMPlexMono-Regular';
+        font-size: 16px;
+        margin: auto;
+        margin-top: 16px;
+    }
+    section#about-page div.legend span:first-of-type {
+        font-family: 'IBMPlexMono-BoldItalic';
     }
     @media (max-width: 875px) {
         section {

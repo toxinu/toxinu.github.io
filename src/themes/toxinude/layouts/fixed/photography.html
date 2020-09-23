@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+{{ .Scratch.Set "active" 2 }}
+{{ partial "nav.html" . }}
+<section id="photography-page" class="page">
+    <div class="header">
+        <h1>{{ .Title }}.</h1>
+        {{ .Content }}
+    </div>
+    <div class="pictures">
+        {{ range .Site.Params.photography }}
+        <a target="_blank" class="{{ if (eq .vertical true)}}vertical{{ end }}" href="{{ .link }}">
+            <img src="{{ .link }}" alt="{{- .name -}}"/>
+            <div><span>{{- .name -}}</span> <span>{{- .date -}}</span></div>
+        </a>
+        {{ end }}
+    </div>
+</section>
+{{ partial "footer.html" . }}

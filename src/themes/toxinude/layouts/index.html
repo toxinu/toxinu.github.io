@@ -17,10 +17,10 @@
 </section>
 <section id="photography" data-anchor="true">
     <div>
-        <a href="/photography"><img src="/images/photography/49948441687_852661163e_k.jpg" alt="Japanese street"></a>
-        <a href="/photography">See Photography →</a>
+    <a href="/photography"><img src="{{ (index .Site.Params.photography 0).link }}" alt="{{ (index .Site.Params.photography 0).name }}"></a>
+    <a href="/photography">See Photography →</a>
     </div>
-    <a href="/photography"><img src="/images/photography/49907490373_6b9a73a605_k.jpg" alt="Sakura forest"></a>
+    <a href="/photography"><img src="{{ (index .Site.Params.photography 1).link }}" alt="{{ (index .Site.Params.photography 1).name }}"></a>
 </section>
 <section id="games" data-anchor="true">
     <div>

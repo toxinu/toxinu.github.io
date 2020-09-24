@@ -8,7 +8,7 @@ Chuck Palahniuk is the guy that will use little daily weird things to make you v
 
 # Rant
 
-<img width="20%" style="margin-left:8px;float:right" src="/images/posts/palahniuk_rant.jpg" />
+<img class="small float-right" src="/images/posts/palahniuk_rant.jpg" />
 
 I really enjoy this book.
 
@@ -18,7 +18,6 @@ At the beginning, I feel a part of Fallout ambiance but after some chapters, not
 It's very difficult to give a time period about this story, you have guys who drive 80' old cars but at
 the same time, people are able to plug cables in their heads to not just watch a movie but to feel a movie.
 
-
 Every Middleton residents will give you its own anecdote with Rant in a not particular order about many subjects.
 True story or not, they will tell you many stories.
 Like every other residents you just want to be or at least meet Rant. This guy is a bad ass.
@@ -27,12 +26,13 @@ You'll learn things about some diseases and interesting facts like in the 80's, 
 about what in the world will stop or slow down their growth. This report points third world country, some years later
 AIDS appears in Africa.
 
-
 *[Wikipedia][1]* - *[Amazon][2]*
+
+---
 
 # Snuff
 
-<img width="20%" style="margin-right:8px;float:left" src="/images/posts/palahniuk_snuff.jpg" />
+<img class="small float-left" src="/images/posts/palahniuk_snuff.jpg" />
 
 > Cassie Wright, porn priestess, intends to cap her legendary career by
 > breaking the world record for serial fornication porn movies, on camera, with six hundred men
@@ -47,9 +47,9 @@ Each Chuck book is taking a precise subject and he (Chuck) will dig and dig it i
 
 *[Wikipedia][3]* - *[Amazon][4]*
 
-<center><hr></center>
+---
 
-<img width="30%" style="margin-left:8px;float:right" src="/images/posts/lovecraft_01.jpg" />
+<img class="small float-right" src="/images/posts/lovecraft_01.jpg" />
 
 My next readings will be very different, dark, deep, about holes but not same holes that *Snuff*.
 I'll discover *H. P. Lovecraft*, shame on me I have never read stuff about this author before today.

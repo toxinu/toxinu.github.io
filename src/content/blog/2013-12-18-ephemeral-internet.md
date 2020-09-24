@@ -9,5 +9,5 @@ I enjoy this ephemeral vision of the Internet.
 </center>
 
 <center>
-<img src="http://imgs.xkcd.com/comics/undocumented_feature.png" title="And it doesn't pop up a box every time asking you to use your real name. In fact, there's no way to set your name at all. You just have to keep reminding people who you are." alt="Undocumented Feature">
+<img src="http://imgs.xkcd.com/comics/undocumented_feature.png" title="And it doesn't pop up a box every time asking you to use your real name. In fact, there's no way to set your name at all. You just have to keep reminding people who you are." alt="Undocumented Feature" style="max-width: 350px">
 </center>

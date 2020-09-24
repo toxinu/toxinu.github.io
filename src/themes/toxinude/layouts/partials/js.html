@@ -1,6 +1,14 @@
 <script>
     console.log('Heya there, why are you looking at our developer tools? I mean this is a crappy static website.');
-    console.log('Nothing to see there. You better look at my resume.');
+    console.log('Nothing to see here. You better look at my resume.');
+    
+    const lightSchemeIcon = document.querySelector('link#light-scheme-icon');
+    const darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
+    const matcherLight = window.matchMedia('(prefers-color-scheme: light)');
+    const matcherDark = window.matchMedia('(prefers-color-scheme: dark)');
+    matcherLight.addListener(() => updateFavicon('light'));
+    matcherDark.addListener(() => updateFavicon('dark'));
+
     function updateSidebar(initial) {
         [...document.querySelectorAll('#sidebar ul li')].forEach((element) => {
             element.style.textDecoration = 'none';
@@ -15,6 +23,16 @@
         if (sidebarElement) {
             sidebarElement.parentNode.style.backgroundColor = '#F5D8FF';
             sidebarElement.parentNode.style.textDecoration = 'underline';
+        }
+    }
+
+    function updateFavicon() {
+        if (matcherDark.matches) {
+            lightSchemeIcon.remove();
+            document.head.append(darkSchemeIcon);
+        } else {
+            document.head.append(lightSchemeIcon);
+            darkSchemeIcon.remove();
         }
     }
     window.onload = function() {
@@ -39,6 +57,8 @@
         };
         window.onhashchange = updateSidebar;
         updateSidebar(true);
+
+        updateFavicon();
     }
 </script>
 <script>

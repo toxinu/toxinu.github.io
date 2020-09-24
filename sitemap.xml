@@ -43,11 +43,6 @@
   </url>
   
   <url>
-    <loc>/blog/django-sql-debug-html-reports-of-your-http-requests/</loc>
-    <lastmod>2014-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/blog/goodbye-disqus/</loc>
     <lastmod>2014-08-05T00:00:00+00:00</lastmod>
   </url>
@@ -65,11 +60,6 @@
   <url>
     <loc>/blog/two-latest-readings-sick/</loc>
     <lastmod>2014-04-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/monsieur-le-pr%C3%A9sident-une-ex%C3%A9cution-se-pr%C3%A9pare/</loc>
-    <lastmod>2013-12-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -118,6 +108,14 @@
   </url>
   
   <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
     <loc>/about/</loc>
   </url>
   
@@ -126,15 +124,7 @@
   </url>
   
   <url>
-    <loc>/code/</loc>
-  </url>
-  
-  <url>
     <loc>/fixed/</loc>
-  </url>
-  
-  <url>
-    <loc>/games/</loc>
   </url>
   
   <url>

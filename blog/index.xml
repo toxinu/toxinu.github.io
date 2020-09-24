@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on toxinu</title>
+    <title>Journal on toxinu</title>
     <link>/blog/</link>
-    <description>Recent content in Blogs on toxinu</description>
+    <description>Recent content in Journal on toxinu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Geoffrey L. (toxinu)</copyright>
     <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My setup - 2018</title>
+      <title>My setup in 2018</title>
       <link>/blog/my-setup-2018/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>/blog/my-setup-2018/</guid>
       <description>I&amp;rsquo;ve never been so satisfied with my current daily setup as remote-SRE (Python/Golang), so why just not sharing it?
-Hardware  ThinkPad X260 Samsung 27&amp;quot; Curved LED (yes only one screen) WASD Keyboard Cherry MX Brown 88-Key Steelseries Rival 100 mice Sennheiser HD25-1 II Headphone (for music) HyperX Cloud II Headphone (for vocal)  Software  Fedora (GNU/Linux) Gnome 3  AlternateTab Caffeine Impatience No topleft hot corner TopIcons Plus Extension to fix screen tearing   Firefox  Bitwarden Decentraleyes Firefox Multi-account containers HTTPS Everywhere I don&amp;rsquo;t care about cookies Mailvelope Privacy Badger Tab Suspender uBlock Origin   Alacritty tmux  tmux-open   Visual Studio Code  Ascetic colorscheme   wee-slack Signal VeraCrypt Clementine  Tips &amp;amp; notes  To directly run tmux with alacritty you can edit your DesktopEntry like that:  [Desktop Entry] [.</description>
+Hardware  ThinkPad X260 Samsung 27&amp;quot; Curved LED (yes only one screen) WASD Keyboard Cherry MX Brown 88-Key Steelseries Rival 100 mice Sennheiser HD25-1 II Headphone (for music) HyperX Cloud II Headphone (for vocal)  Software  Fedora (GNU/Linux) Gnome 3  AlternateTab Caffeine Impatience No topleft hot corner TopIcons Plus Extension to fix screen tearing   Firefox  Bitwarden Decentraleyes Firefox Multi-account containers HTTPS Everywhere I don&amp;rsquo;t care about cookies Mailvelope Privacy Badger Tab Suspender uBlock Origin   Alacritty tmux  tmux-open   Visual Studio Code  Ascetic colorscheme   wee-slack Signal VeraCrypt Clementine  Tips &amp;amp; notes  To directly run tmux with alacritty you can edit your DesktopEntry like that:    Use Visual Code Studio from FlatHub to have a Microsoft-free compiled binary.</description>
     </item>
     
     <item>
@@ -26,8 +26,10 @@ Hardware  ThinkPad X260 Samsung 27&amp;quot; Curved LED (yes only one screen) WA
       <guid>/blog/how-to-store-your-python-package-metadata/</guid>
       <description>A small, but full of snippets, post about how to store your package metadata cleanly.
 Let&amp;rsquo;s define a simple layout.
-$ tree . . ├── my_package │ ├── __about__.py │ └── __init__.py └── setup.py 1 directory, 3 files All your metadata lives in __about__.py like that:
-__all__ = [ &amp;#34;__title__&amp;#34;, &amp;#34;__summary__&amp;#34;, &amp;#34;__uri__&amp;#34;, &amp;#34;__version__&amp;#34;, &amp;#34;__author__&amp;#34;, &amp;#34;__email__&amp;#34;, &amp;#34;__license__&amp;#34;, &amp;#34;__copyright__&amp;#34;, ] __title__ = &amp;#34;my-package&amp;#34; __summary__ = &amp;#34;My package is something.&amp;#34; __uri__ = &amp;#34;https://example.com&amp;#34; __version__ = &amp;#34;0.</description>
+ All your metadata lives in __about__.py like that:
+ Expose all your metadata at package root.
+ This setup allow you to avoid editing your setup.py too frequently and keep it up to date easily.
+ Happy coding and don&amp;rsquo;t eat too much turkeys!</description>
     </item>
     
     <item>
@@ -61,7 +63,8 @@ Je suppose que vous connaissez H.P. Lovecraft, grand écrivain dès son plus jeu
       <description>Let&amp;rsquo;s continue with my previous blog post on Restless introduction with Django. Today I&amp;rsquo;ll show you two quick and simple Mixins for Restless. One for filtering and another for ordering.
 I won&amp;rsquo;t show you how to create Django app, models, etc. This is not the subject.
 Just to be clear, I have this models.py for our Pizza shop.
-from django.db import models class Pizza(models.Model): name = models.CharField(max_length=100) price = models.FloatField() is_vegetarian = models.</description>
+ And my resources.py:
+ Filtering We are building a very simple and not complete APIFilterMixin class.</description>
     </item>
     
     <item>
@@ -72,16 +75,6 @@ from django.db import models class Pizza(models.Model): name = models.CharField(
       <guid>/blog/restless-for-building-python-restful-api/</guid>
       <description>After trying to build RESTful API in Django with Django Rest Framework, my friend Pabluk allow me to discover Restless. A very small code base Python module to build RESTful API.
 I&amp;rsquo;m totally not a huge fan of Django Rest Framework. It&amp;rsquo;s just to restricting if you don&amp;rsquo;t make a 100% REST API, and this is often the case. First of all, you&amp;rsquo;ll have a long progression period when you&amp;rsquo;ll have a bad use of this framework.</description>
-    </item>
-    
-    <item>
-      <title>Django SQL Debug - HTML reports of your HTTP requests</title>
-      <link>/blog/django-sql-debug-html-reports-of-your-http-requests/</link>
-      <pubDate>Thu, 04 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/django-sql-debug-html-reports-of-your-http-requests/</guid>
-      <description>Django Debug Toolbar is an awesome tool but it has some limitations. It&amp;rsquo;s an HTML panel that is injected in your web pages that allow you to debug and profile your application at different layers. From HTTP to SQL requests.
-But when you do applications with a REST pattern for example, with a full javascript client for example, it quickly become pain in the ass to debug your app. You can&amp;rsquo;t reproduce easily POST, PUT, etc&amp;hellip; requests.</description>
     </item>
     
     <item>
@@ -130,15 +123,6 @@ It&amp;rsquo;s an oral biography about a strange boy (Buster Rant Casey) in a st
     </item>
     
     <item>
-      <title>« Monsieur le Président, une exécution se prépare… »</title>
-      <link>/blog/monsieur-le-pr%C3%A9sident-une-ex%C3%A9cution-se-pr%C3%A9pare/</link>
-      <pubDate>Fri, 27 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>/blog/monsieur-le-pr%C3%A9sident-une-ex%C3%A9cution-se-pr%C3%A9pare/</guid>
-      <description> « Monsieur le Président, une exécution se prépare… »  </description>
-    </item>
-    
-    <item>
       <title>Ephemeral Internet</title>
       <link>/blog/ephemeral-internet/</link>
       <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
@@ -166,7 +150,7 @@ I&amp;rsquo;ve always dreamed to be able to just swallow a pill every morning an
       
       <guid>/blog/first-thing-to-do-after-ubuntu-fresh-install/</guid>
       <description>It&amp;rsquo;s time to return to sources, Linux, good buy Apple. But this is the first thing to do on every new Ubuntu installation.
-sudo apt-get remove unity-lens-shopping sudo apt-get remove unity-scope-video-remote sudo apt-get remove unity-scope-musicstores sudo su - echo &amp;#39;OFFERS_URI=&amp;#34;https://localhost:0/&amp;#34;&amp;#39; &amp;gt;&amp;gt; /etc/environment &amp;lsquo;Cause of spyware, you know&amp;hellip;</description>
+ &amp;lsquo;Cause of spyware, you know&amp;hellip;</description>
     </item>
     
     <item>
@@ -212,7 +196,7 @@ Tools box:
       <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
       
       <guid>/blog/ubuntu-server-lts-upgrades-are-stress-test/</guid>
-      <description>### Update * Sept, 24 2012 This article is now deprecated, Ubuntu now have a clean upgrade script. Just use do-release-upgrade.
+      <description>Update  Sept, 24 2012  This article is now deprecated, Ubuntu now have a clean upgrade script. Just use do-release-upgrade.
  This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present. And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&amp;hellip;
 I admit to not being an Ubuntu expert ( Debian too ) but the do-release-upgrade is like :</description>
     </item>

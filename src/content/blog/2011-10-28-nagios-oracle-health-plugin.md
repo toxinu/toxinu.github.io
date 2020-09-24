@@ -2,7 +2,7 @@
 aliases = ["2011/10/28/Nagios-oracle-health-plugin.html"]
 date = "2011-10-28T00:00:00Z"
 title = "Nagios Oracle health plugin"
-
+slug = "nagios-oracle-health-plugin"
 +++
 This is more a memo than an article. A quick and dirty [check_oracle_health][1] plugin installation, with prerequires.
 
@@ -23,88 +23,41 @@ For the story, i have fucked my brain during three hours cause I have download t
 
 Derp.
 
-{{< highlight bash >}}
-# x86
-wget http://dl.socketubs.net/nagios/oracle/instantclient-basic-linux-11.2.0.3.0.zip
-wget http://dl.socketubs.net/nagios/oracle/instantclient-sdk-linux-11.2.0.3.0.zip
-# X86_64
-wget http://dl.socketubs.net/nagios/oracle/instantclient-basic-linux.x64-11.2.0.3.0.zip
-wget http://dl.socketubs.net/nagios/oracle/instantclient-sdk-linux.x64-11.2.0.3.0.zip
-
-unzip instantclient-basiclite-linux*.zip
-unzip instantclient-sdk-linux*.zip
-mv instantclient_11_2 /opt
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/14cd7deab91986aea354ce327a00f5f2.js"></script>
 
 ## DBD::Oracle
 
 Install pre-requires :
 
-{{< highlight bash >}}
-apt-get install libaio-dev
-cpan DBI
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/8afdb1776a64283a67e721e52b039102.js"></script>
 
 Get module sources.
 
-{{< highlight bash >}}
-wget http://search.cpan.org/CPAN/authors/id/P/PY/PYTHIAN/DBD-Oracle-1.56.tar.gz
-tar xvf DBD-Oracle-1.56.tar.gz
-cd !$
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/cc4a4648a7e909770c7cbd1f2b01a59b.js"></script>
 
 DBD::Oracle module need path to Oracle Instant Client.
 
-{{< highlight bash >}}
-export ORACLE_HOME=/opt/instantclient_11_2
-export LD_LIBRARY_PATH=$ORACLE_HOME
-echo 'ORACLE_HOME="/opt/instantclient_11_2"' >> /etc/environment
-echo 'LD_LIBRARY_PATH=$ORACLE_HOME' >> /etc/environment
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/4a018f3d3a9c2ecb796d3fa71379c6ac.js"></script>
 
 And compile it.
 
-{{< highlight bash >}}
-perl Makefile.PL -V 11.2
-make
-make install
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/7a3590ad1b65d65fd71d74b832c62f4c.js"></script>
 
 ## Tnsnames.ora
 
 This file contain informations about your different databases.
 
-{{< highlight bash >}}
-mkdir -p /opt/instantclient_11_2/network/admin
-vim !$/tnsnames.ora
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/b619ed0c840861ba04c2fa3006701213.js"></script>
 
 This is and example of _tnsnames.ora_ file :
 
-{{< highlight bash >}}
-<addressname> =
- (DESCRIPTION =
-   (ADDRESS_LIST =
-     (ADDRESS = (PROTOCOL = TCP)(Host = <hostname>)(Port = <port>))
-   )
- (CONNECT_DATA =
-   (SERVICE_NAME = <sid>)
- )
-)
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/2fa189c67bae5bae1343727b71843833.js"></script>
 
 ## check_oracle_health
 
 To finish, we have to install the Nagios plugin.
 
-{{< highlight bash >}}
-wget http://labs.consol.de/wp-content/uploads/2011/09/check_oracle_health-1.7.6.1.tar.gz
-tar xvf check_oracle_health-1.7.6.1.tar.gz
-cd !$
-./configure
-make
-make install
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/9bad9f7c4e2baac91d0ab823c324d36f.js"></script>
 
 That's all !
 

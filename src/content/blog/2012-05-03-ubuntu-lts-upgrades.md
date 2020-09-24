@@ -2,10 +2,8 @@
 aliases = ["2012/05/03/Ubuntu-Lts-Upgrades.html"]
 date = "2012-05-03T00:00:00Z"
 title = "Ubuntu Server LTS upgrades are stress test"
-
+slug = "ubuntu-server-lts-upgrades-are-stress-test"
 +++
-<br />
-<hr>
 ### Update
 * Sept, 24 2012
 
@@ -28,20 +26,11 @@ I admit to not being an Ubuntu expert ( Debian too ) but the `do-release-upgrade
 
 But this is the recommended solution.
 
-{{< highlight bash >}}
-apt-get update
-aptitude full-upgrade
-apt-get install update-manager-core
-grub-install /dev/sda
-update-grub
-reboot
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/da11ce57a00ee9000d5119909d749c72.js"></script>
 
 Your server is ready to upgrade.
 
-{{< highlight bash >}}
-do-release-upgrade -d
-{{< /highlight >}}
+`do-release-upgrade -d`
 
 The **-d** option say that you want to do develpment upgrade, cause this isn't officially supported.
 
@@ -51,11 +40,7 @@ You have to re-upgrade grub after the upgrade.
 So Say **NO** when upgrade script ask you to reboot.
 Press x to destroy session and return into your initial terminal.
 
-{{< highlight bash >}}
-grub-install /dev/sda
-update-grub
-reboot
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/ac6cf3ef3667e667350cdbda2dc2bb1f.js"></script>
 
 Where am I wrong with `grub-install` and `update-grub` ?
 Ok ok, I haven't search more but packages must do it ? With os-prober, etc...
@@ -66,11 +51,4 @@ But, the job is done.
 
 If for X reason your __felt__ into a Grub Rescue hole this can help you:
 
-{{< highlight bash >}}
-set prefix=(hd0,2)/boot/grub
-set root=(hd0,2)
-insmod (hd0,2)/boot/grub/linux.mod
-linux /vmlinuz root=/dev/sda2 ro
-initrd /initrd.img
-boot
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/fbf51d15aa335cb781e6d04a8911de85.js"></script>

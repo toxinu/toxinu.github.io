@@ -2,7 +2,7 @@
 aliases = ["2016/12/16/pip-installable-django-project.html"]
 date = "2016-12-16T00:00:00Z"
 title = "Pip installable Django project"
-
+slug = "pip-installable-django-project"
 +++
 I'll present you a [Django][1] layout which allow to ship your project (not app) as a [Python][5] package. Your users will be able to install it with [pip][2] for example.
 
@@ -18,39 +18,7 @@ Let's describe how it works!
 
 This is a little description of my typical layout for every new Django project I build.
 
-{{< highlight bash "linenos=inline,hl_lines=12 15 25 26" >}}
-$ tree .
-.
-├── conftest.py
-├── Makefile
-├── MANIFEST.in
-├── README.rst
-├── setup.cfg
-├── setup.py
-├── src
-│   └── my_awesome_project
-│       ├── __about__.py
-│       ├── apps
-│       │   ├── app_one
-│       │   └── app_two
-│       ├── core
-│       │   ├── apps.py
-│       │   ├── views.py
-│       │   └── [...]
-│       ├── runner
-│       │   ├── commands
-│       │   │   ├── django.py
-│       │   │   └── help.py
-│       │   └── decorators.py
-│       ├── settings
-│       │   ├── base.py
-│       │   └── local.dist.py
-│       ├── urls.py
-│       └── wsgi.py
-└── tests
-    └── core
-        └── test_core.py
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/55a8ad55bc184df754ee2b888d77f909.js"></script>
 
 In order to have a [pip][2] installable project we need to have a `setup.py` like every [Python][5] package.
 You'll notive that we don't need `requirements.txt` at all. Hooray! All your dependencies will be organized in `setup.py`.
@@ -65,14 +33,7 @@ It's always a good thing to give users `local.dist.py` (*line 26*) or `productio
 Always try to put a little description below every settings that can be complex. But don't try to describe all them all if it seems easy to understand.
 This kind of documentation can be difficult to keep up-to-date.
 
-{{< highlight python >}}
-LOGIN_URL = 'https://localhost:8000/login'
-# Set these to drop to an unprivileged user after
-# binding the SMTP daemon (Default: False)
-DROP_PRIVILEGES_USER = False
-# Product name appear in email templates and optouts pages
-PRODUCT_NAME = 'My Awesome App'
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/2dad5ae47ec46bc6f6346b8312fad952.js"></script>
 
 ## Install process
 
@@ -90,28 +51,7 @@ A production deployment for a [PyPI][8] published project will be:
 
 Let's take a quick look at `setup.py`:
 
-
-{{< highlight python >}}
-[...]
-    entry_points={
-        'console_scripts': [
-            'my-awesome-project = my_awesome_project.runner:main']
-    },
-    extras_require={
-        'dev': [
-            'bumpversion==0.5.3',
-            'docker-compose==1.9.0'
-        ],
-        'tests': [
-            'pytest==3.0.5',
-            'flake8==3.2.1',
-            'libfaketime==0.4.2',
-            'factory-boy==2.7.0',
-            'fake-factory==0.7.2'
-        ],
-    },
-[...]
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/9af5e8a6d99c2134ddbb5a3c73c422a2.js"></script>
 
 This `extra_require` option is pretty useful. You can have a `production`
 one which contains for example [Gunicorn][9] or [Psycopg][10], etc...
@@ -122,40 +62,18 @@ First of all, don't panic! You still have `django-admin` command line tool which
 
 Instead of `python manage.py shell`, you can do:
 
-{{< highlight bash >}}
-DJANGO_SETTINGS_MODULE=my_awesome_project.settings django-admin shell
-{{< /highlight >}}
+<code>DJANGO_SETTINGS_MODULE=my_awesome_project.settings django-admin shell</code>
 
 Ok, it's very verbose. This is why this template give you another approach with `runner` which use [click][11] library.
 
 Main goal is to be able to do something like:
-
-{{< highlight bash >}}
-my-awesome-project django shell
-{{< /highlight >}}
+<code>my-awesome-project django shell</code>
 
 Then every Django commands will be accessible. You can take a look at how it works [here][12].
 
 This is a dead simple example of a custom command which return Django version.
 
-{{< highlight python >}}
-$ cat src/my_awesome_project/runner/commands/version.py
-import click
-import django
-
-
-@click.command()
-def version():
-    "Show Django version."
-    click.echo('Django {}'.format(django.__version__))
-{{< /highlight >}}
-
-Then you'll be able to do:
-
-{{< highlight bash >}}
-$ my-awesome-project version
-Django 1.10.1
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/e67c5319355419ea070a753b20f86897.js"></script>
 
 ## End
 

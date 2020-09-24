@@ -2,7 +2,7 @@
 aliases = ["2012/09/02/Github-Pages-to-Heroku.html"]
 date = "2012-09-02T00:00:00Z"
 title = "Github Pages to Heroku"
-
+slug = "github-pages-to-heroku"
 +++
 # Synopsis
 
@@ -28,73 +28,7 @@ Jekyll is rendered locally, hosted on Heroku, backuped on Heroku and Github for 
 
 By the way you can see a ``404.html`` page.
 
-{{< highlight bash >}}
-#!/bin/bash
-
-#############################################################
-# Variables
-heroku_repo="_site"
-heroku_url="git@heroku.com:socketubs.git"
-heroku_commit="New release"
-github_commit="New release"
-#############################################################
-
-function usage () {
-	if [ $# -lt 1 ]; then
-		echo "Usage: ./make (run|deploy|open)"
-		echo ""
-		echo " run         Run jekyll into _site"
-		echo " deploy      Deploy your website on heroku and save it on github"
-		echo " open        Open local and remote version in browser"
-		exit 1
-	fi
-}
-
-function make_heroku () {
-	cd _site
-	if ! [ -e ".git" ]; then
-		git init
-		git remote add heroku $heroku_url
-	fi
-	touch index.php
-	echo "php_flag engine off" > .htaccess
-	echo "ErrorDocument 404 /404.html" >> .htaccess$
-	cd ..
-}
-
-function update_heroku () {
-	cd _site
-	git add .
-	git commit -a -m "$heroku_commit"
-	git push -u -f heroku master
-	cd ..
-}
-
-function update_github () {
-	git add .
-	git commit -a -m "$github_commit"
-	git push origin master
-}
-
-if [ "$1" == "run" ]; then
-	jekyll
-	make_heroku
-	exit 0
-elif [ "$1" == "deploy" ]; then
-	make_heroku
-	update_heroku
-	update_github
-	exit 0
-elif [ "$1" == "open" ]; then
-	cd _site
-	heroku open
-	open http://localhost:4000
-	python -m SimpleHTTPServer 4000
-	cd ..
-else
-	usage
-fi
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/c65ffc587a72b62b1df53ddfba98374f.js"></script>
 
 # Finally
 

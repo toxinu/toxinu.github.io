@@ -2,7 +2,7 @@
 aliases = ["2014/11/28/restless-presentation-and-pagination.html"]
 date = "2014-11-28T00:00:00Z"
 title = "Restless for building Python RESTful API"
-
+slug = "restless-for-building-python-restful-api"
 +++
 After trying to build RESTful API in Django with [Django Rest Framework][0], my friend [Pabluk][1] allow me to discover [Restless][2]. A very small code base Python module to build RESTful API.
 
@@ -15,104 +15,27 @@ Let's try a [Django][5] integration.
 
 #### Example
 
-This is your existing `models.py` :
+This is your existing `models.py`:
 
-{{< highlight python >}}
-class Country(models.Model):
-	name = models.CharField(max_length=2)
-
-class Pizza(models.Model):
-    name = models.CharField(max_length=255)
-    country = models.ForeignKey(Country)
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/d125f613cf1ec679c7dba0cd54f8d7fd.js"></script>
 
 You have to understand that your API will expose *Resources*, this is how many framework call it. Let's create a `resources.py`.
 
-{{< highlight python >}}
-from restless.dj import DjangoResource
-from restless.preparers import FieldsPreparer
+<script src="https://gist.github.com/toxinu/feee3461dd8cb0f9200a6586d9ca3275.js"></script>
 
-class CountryResource(DjangoResource):
-    preparer = FieldsPreparer(fields={
-        'id': 'id',
-        'name': 'name'})
+And now just expose it through your `urls.py`:
 
-class PizzaResource(DjangoResource):
-	preparer = FieldsPreparer(fields={
-    	'id': 'id',
-        'name': 'name',
-        'country': 'country.id'})
-{{< /highlight >}}
-
-And now just expose it through your `urls.py` :
-
-{{< highlight python >}}
-[...]
-url(r'^api/countries/', include(CountryResource.urls())),
-url(r'^api/pizzas/', include(PizzaResource.urls())),
-[...]
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/7f3c36eedb1a785bc28e71c6a020bd65.js"></script>
 
 This is quite simple, I won't explain you how to use `POST`, `PATCH`, etc... Just read [documentation][6].
 
 But just leave me show you a simple mixin for pagination. Let's create a `mixins.py`, just as Django *Class Based View*.
 
-{{< highlight python >}}
-from django.core.paginator import Paginator
+<script src="https://gist.github.com/toxinu/e720b66f9e4e32ce565a74c5e57e00c7.js"></script>
 
-class APIPaginatorMixin:
-    per_page = 25
+You just have to update your `resources.py`:
 
-    def get_queryset(self):
-        raise NotImplementedError()
-
-    def wrap_list_response(self, data):
-        return {
-            "objects": data,
-            "per_page": self.paginator.per_page,
-            "count": self.paginator.count,
-            "num_page": self.paginator.num_pages,
-            "page": self.page}
-
-	def paginate(self, queryset, per_page=None):
-        if per_page is None:
-            per_page = self.per_page
-
-        per_page_arg = int(self.request.GET.get('per_page'))
-        self.paginator = Paginator(queryset, per_page)
-
-        self.page = int(self.request.GET.get('page', 1))
-
-    def list(self):
-        qs = self.get_queryset()
-        self.paginate(qs)
-        return self.paginator.page(self.page)
-{{< /highlight >}}
-
-You just have to update your `resources.py` :
-
-{{< highlight python >}}
-from restless.dj import DjangoResource
-from restless.preparers import FieldsPreparer
-from .mixins import APIPaginatorMixin
-
-class CountryResource(APIPaginatorMixin, DjangoResource):
-    preparer = FieldsPreparer(fields={
-        'id': 'id',
-        'name': 'name'})
-
-	def get_queryset(self):
-    	return Pizza.objects.all()
-
-class PizzaResource(APIPaginatorMixin, DjangoResource):
-	preparer = FieldsPreparer(fields={
-    	'id': 'id',
-        'name': 'name',
-        'country': 'country.id'})
-
-    def get_queryset(self):
-    	return Country.objects.all()
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/28c57a79a60b5cd9ff51db96ae625fa2.js"></script>
 
 And just enjoy your paginated Restful API.
 This is why I love [Restless][2]. I agree to say that you'll write probably more code than [Django Rest Framework][0] but you'll get more control of all the magic your Restless API do.

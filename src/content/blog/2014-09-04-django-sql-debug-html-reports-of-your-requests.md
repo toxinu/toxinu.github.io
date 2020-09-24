@@ -2,7 +2,7 @@
 aliases = ["2014/09/04/django-sql-debug-html-reports-of-your-requests.html"]
 date = "2014-09-04T00:00:00Z"
 title = "Django SQL Debug - HTML reports of your HTTP requests"
-
+draft = true
 +++
 [Django Debug Toolbar][1] is an awesome tool but it has some limitations. It's an `HTML` panel that is injected in your web pages that allow you to debug and profile your application at different layers. From `HTTP` to `SQL` requests.
 
@@ -11,16 +11,14 @@ You can't reproduce easily `POST`, `PUT`, etc... requests.
 
 Let's introduce [Django SQL Debug][3]. It's a tool that works with [Django Debug Toolbar][1] to generate an `HTML` report that you can read offline or later for each `HTTP` requests.
 
-![Django SQL Debug screenshot](https://raw.githubusercontent.com/socketubs/django-sql-debug/master/screenshots/01.png)
+![Django SQL Debug screenshot](https://raw.githubusercontent.com/toxinu/django-sql-debug/master/screenshots/01.png)
 
 It's goal is to let you see all your `SQL` queries (*and more*) when you don't have a direct access to [Django Debug Toolbar][1].
 That's why it's generate an `HTML` report that looks like the toolbar.
 
 You can install it like any other Django application:
 
-{{< highlight bash >}}
-pip install django-sql-debug
-{{< /highlight >}}
+<code>pip install django-sql-debug</code>
 
 Just add `django_sql_debug` before `debug_toolbar` in `INSTALLED_APPS`. Configure your `HTML` reports directory, let's use your app and see your first report.
 

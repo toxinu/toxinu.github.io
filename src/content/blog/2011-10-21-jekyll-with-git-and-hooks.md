@@ -2,7 +2,7 @@
 aliases = ["2011/10/21/Jekyll-with-Git-and-Hooks.html"]
 date = "2011-10-21T00:00:00Z"
 title = "Jekyll with Git and Hooks"
-
+slug = "jekyll-with-git-and-hooks"
 +++
 Good bye my lovely [Pyame][1]... Hello [Jekyll][2] ! Pyame is my personnal static website creator written in Python under heavy development. These days I searched powerfull, light and easy to use static website creator, and Jekyll is arrived. Thanks God.
 
@@ -28,42 +28,22 @@ __Server__  :
 
 Jekyll installation is easy like trolling about proprietary software. [Docs][4].
 
-{{< highlight bash >}}
-sudo gem install jekyll
-{{< / highlight >}}
+`sudo gem install jekyll`
 
 Next ? I think you know how to install git instance. There are too many tutorials and docs on the Internet.
 
 ## Githooks
 
 Githooks are specials scripts which will be execute when git received, a push, a commit, an update...
-Look at your _.git/hooks_ folder on your server:
+Look at your `.git/hooks` folder on your server:
 
-{{< highlight bash >}}
-socketubs@socket-desktop:~/Repositories/canopsis$ ls -lh .git/hooks/
-total 44K
--rwxrwxr-x 1 socketubs socketubs  452 2011-10-21 21:04 applypatch-msg.sample
--rwxrwxr-x 1 socketubs socketubs  896 2011-10-21 21:04 commit-msg.sample
--rwxrwxr-x 1 socketubs socketubs  160 2011-10-21 21:04 post-commit.sample
--rwxrwxr-x 1 socketubs socketubs  552 2011-10-21 21:04 post-receive.sample
--rwxrwxr-x 1 socketubs socketubs  189 2011-10-21 21:04 post-update.sample
-...
-{{< / highlight >}}
+<script src="https://gist.github.com/toxinu/d95f5ed8c5c755418d4d0a9b3c7f62f8.js"></script>
 
 A short description is present at the top of each files.
 
-This is my __post-receive__ file :
+This is my `post-receive` file :
 
-{{< highlight bash >}}
-root@socketubs:/srv/gitosis/repositories/socket_site.git/hooks# cat post-receive
-#!/bin/sh
-
-echo "-- Attempting to pull and launch jekyll --"
-cd /var/www/socket_site
-git --git-dir /var/www/socket_site/.git pull file:///srv/.../socket_site.git/ master
-jekyll
-echo
-{{< / highlight >}}
+<script src="https://gist.github.com/toxinu/c74cb29f1da8680f033b6814c3bd6815.js"></script>
 
 ## The pie on the cherry
 

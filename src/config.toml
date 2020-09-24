@@ -24,24 +24,29 @@ gitlab= "toxinu"
 twitter = "toxinu_"
 instagram = "toxinu_"
 [[params.photography]]
-  name = "Rainy day under a bridge."
+  name = "Rainy day under a bridge at Fukishima-ku (福島区)"
   date = "Osaka, Japan. Summer 2020"
   link = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04/revisions/62340e8b146c76c197afb6b2e4c1e163/renditions/5f802399326f833b803527d0aeb796f9"
   vertical = false
 [[params.photography]]
-  name = "Sunset at Abeno Harukas (あべのハルカス)"
-  date = "Osaka, Japan. Summer 2020"
-  link = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/faa0a71736a34ac6a37f88c717a5274d/revisions/4444f856048ad8daac05b76791de8883/renditions/3d02f845240fe8452083b943f9a9898e"
+  name = "Sakura forest (吉野町)"
+  date = "Yoshino, Japan. Summer 2020"
+  link = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/265b5a14c95805aee85eed4b124faac9"
   vertical = true
+[[params.photography]]
+  name = "Nightly shoppers at a street corner"
+  date = "Osaka, Japan. Summer 2020"
+  link = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f8cac8c0babd409492aa588c90d927e8/revisions/8e1c2dd1d7844a619492f7f2ec7535fd/renditions/fc205300a8a55cf4d076f01a4229e7d4"
+  vertical = false
 [[params.photography]]
   name = "Kimchi shop during summer (生野コリアタウン)"
   date = "Osaka, Japan. Summer 2020"
   link = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/da3c7bf9c20c471887851f04b3864132/revisions/74ce2980460246598d42e0916e7ed736/renditions/3538f689f3b819f73364a270468f2b36"
   vertical = false
 [[params.photography]]
-  name = "Sakura forest (吉野町)"
-  date = "Yoshino, Japan. Summer 2020"
-  link = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/265b5a14c95805aee85eed4b124faac9"
+  name = "Sunset at Abeno Harukas (あべのハルカス)"
+  date = "Osaka, Japan. Summer 2020"
+  link = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/faa0a71736a34ac6a37f88c717a5274d/revisions/4444f856048ad8daac05b76791de8883/renditions/3d02f845240fe8452083b943f9a9898e"
   vertical = true
 [[params.photography]]
   name = "Colorful Japanese street"

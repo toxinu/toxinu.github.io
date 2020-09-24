@@ -9,7 +9,7 @@
     <div class="pictures">
         {{ range .Site.Params.photography }}
         <a target="_blank" class="{{ if (eq .vertical true)}}vertical{{ end }}" href="{{ .link }}">
-            <img src="{{ .link }}" alt="{{- .name -}}"/>
+            <img loading="lazy" src="{{ .link }}" alt="{{- .name -}}"/>
             <div><span>{{- .name -}}</span> <span>{{- .date -}}</span></div>
         </a>
         {{ end }}

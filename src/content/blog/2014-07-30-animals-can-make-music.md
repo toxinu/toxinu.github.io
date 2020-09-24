@@ -4,7 +4,7 @@ date = "2014-07-30T00:00:00Z"
 title = "Animals can make music"
 
 +++
-![Animal collecive by Alex Wright](/images/posts/animals_co.jpg)
+<img class="medium" alt="Animal collecive by Alex Wright" src="/images/posts/animals_co.jpg"/>
 
 First of all, sorry about embedded videos.
 
@@ -30,16 +30,13 @@ After many listen of [Spirit They're Gone, Spirit They've Vanished][1], I just d
 
 Nevermind, let's continue.
 
-<div class="aspect-ratio">
 <iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/9_LOiiWjpug?color=white&theme=light" frameborder="0" allowfullscreen></iframe>
-</div>
+
 <cite>The Purple Bottle - Feels</cite>
 
 Energy of this music cheating you. You think there is a bunch of sound effect to produce it, but this emotion is raw. Just listen same song in acoustic to understand what I mean. Please, don't stop at the middle of the music, reward is mainly at the end.
 
-<div class="aspect-ratio">
 <iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/k0c8xqjgkqs?color=white&theme=light" frameborder="0" allowfullscreen></iframe>
-</div>
 <cite>The Purple Bottle - Feels (acoustic)</cite>
 
 Maybe you dislike how this fucking unkown guy scream in your ears, this give me chills.
@@ -60,9 +57,7 @@ I'm this guy that close eyes, move head and smile in bus next to you. Don't be w
 
 This live session is a energy ball that just explode in you, this is magic. Thank you, Animal Collective.
 
-<div class="aspect-ratio">
 <iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/H9WVVWSdlSk?color=white&theme=light" frameborder="0" allowfullscreen></iframe>
-</div>
 <cite>Animal Collective - Live (Pitchfork)</cite>
 
 You missed us Deakin.

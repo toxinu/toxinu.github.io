@@ -98,13 +98,6 @@
         font-family: 'IBMPlexMono-Regular';
         font-size: 14px;
     }
-    iframe {
-        margin: auto;
-        display: block;
-        margin-top: 16px;
-        margin-bottom: 16px;
-        border-radius: 5px;
-    }
     blockquote {
         background: white;
         border-left: 4px solid black;
@@ -134,6 +127,7 @@
         font-size: 40px;
         font-family: 'IBMPlexMono-Bold';
         line-height: 52px;
+        margin-bottom: 24px;
     }
 </style>
 <style>
@@ -229,10 +223,6 @@
         width: 70%;
         max-width: 1800px;
     }
-    section#about-page .header h1 {
-        margin: 0;
-        margin-bottom: 72px;
-    }
     section#about-page .content {
         width: 90%;
         height: fit-content;
@@ -313,10 +303,6 @@
     section#photography-page .header {
         width: 70%;
         max-width: 1800px;
-    }
-    section#photography-page .header h1 {
-        margin: 0;
-        margin-bottom: 72px;
     }
     section#photography-page .pictures {
         display: flex;
@@ -492,10 +478,6 @@
     section#journal.page {
         margin-top: 0;
     }
-    section#journal.page h1 {
-        margin: 0;
-        margin-bottom: 72px;
-    }
 </style>
 <style>
     footer {
@@ -571,12 +553,44 @@
         margin-top: 16px;
         margin-bottom: 40px;
     }
-    section#post-page .content img {
-        width: unset;
+    section#post-page .content iframe {
+        max-width: 900px;
         margin: auto;
         display: block;
-        margin: 16px 16px 40px;
+        margin-top: 16px;
+        margin-bottom: 16px;
         border-radius: 5px;
+    }
+    section#post-page .content img {
+        width: 60%;
+        max-width: 600px;
+        display: block;
+        margin: auto;
+        margin-top: 16px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+    }
+    section#post-page .content img.small {
+        width: 25%;
+        max-width: 250px;
+    }
+    section#post-page .content img.medium {
+        width: 60%;
+        max-width: 600px;
+    }
+    section#post-page .content img.large {
+        width: 80%;
+        max-width: 800px;
+    }
+    section#post-page .content img.float-right {
+        float: right;
+        margin-right: 0;
+        margin-left: 16px;
+    }
+    section#post-page .content img.float-left {
+        float: left;
+        margin-left: 0;
+        margin-right: 16px;
     }
 </style>
 <style>
@@ -765,7 +779,7 @@
     <a class="back-to-journal" href="/blog/">← Back to Journal</a>
     <h1>Animals can make music</h1>
     <span class="posted-on">Posted on 30 July 2014</span>
-    <div class="content"><p><img src="/images/posts/animals_co.jpg" alt="Animal collecive by Alex Wright"></p>
+    <div class="content"><img class="medium" alt="Animal collecive by Alex Wright" src="/images/posts/animals_co.jpg"/>
 <p>First of all, sorry about embedded videos.</p>
 <p>I really don&rsquo;t remember first time I listened the very first Animal Collective song. But I guess it was weird, maybe I just trashed it after some seconds. It don&rsquo;t surprise me, like many complex music kind, you have to train your ears and your mind.</p>
 <p>But in fact, I think this band deliver a very basic emotion. An emotion that just make you want to cry, move your head and just smile.</p>
@@ -783,14 +797,10 @@
 <cite>Myself previous paragraph</cite></p>
 </blockquote>
 <p>Nevermind, let&rsquo;s continue.</p>
-<div class="aspect-ratio">
 <iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/9_LOiiWjpug?color=white&theme=light" frameborder="0" allowfullscreen></iframe>
-</div>
-<cite>The Purple Bottle - Feels</cite>
+<p><cite>The Purple Bottle - Feels</cite></p>
 <p>Energy of this music cheating you. You think there is a bunch of sound effect to produce it, but this emotion is raw. Just listen same song in acoustic to understand what I mean. Please, don&rsquo;t stop at the middle of the music, reward is mainly at the end.</p>
-<div class="aspect-ratio">
 <iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/k0c8xqjgkqs?color=white&theme=light" frameborder="0" allowfullscreen></iframe>
-</div>
 <cite>The Purple Bottle - Feels (acoustic)</cite>
 <p>Maybe you dislike how this fucking unkown guy scream in your ears, this give me chills.</p>
 <p>Each time I listen and watch this video I saw a young little boy smiling and crying at the same time.</p>
@@ -801,9 +811,7 @@
 <p>Have you ever cried not about the mix of context and music, but just cause of music ?</p>
 <p>I&rsquo;m this guy that close eyes, move head and smile in bus next to you. Don&rsquo;t be worry, I&rsquo;m a cool guy, just full of emotion.</p>
 <p>This live session is a energy ball that just explode in you, this is magic. Thank you, Animal Collective.</p>
-<div class="aspect-ratio">
 <iframe width="560" height="315" src="//www.youtube-nocookie.com/embed/H9WVVWSdlSk?color=white&theme=light" frameborder="0" allowfullscreen></iframe>
-</div>
 <cite>Animal Collective - Live (Pitchfork)</cite>
 <p>You missed us Deakin.
 Let&rsquo;s continue on <a href="https://boards.4chan.org/mu/">/mu</a>.</p>

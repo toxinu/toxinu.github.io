@@ -98,13 +98,6 @@
         font-family: 'IBMPlexMono-Regular';
         font-size: 14px;
     }
-    iframe {
-        margin: auto;
-        display: block;
-        margin-top: 16px;
-        margin-bottom: 16px;
-        border-radius: 5px;
-    }
     blockquote {
         background: white;
         border-left: 4px solid black;
@@ -134,6 +127,7 @@
         font-size: 40px;
         font-family: 'IBMPlexMono-Bold';
         line-height: 52px;
+        margin-bottom: 24px;
     }
 </style>
 <style>
@@ -229,10 +223,6 @@
         width: 70%;
         max-width: 1800px;
     }
-    section#about-page .header h1 {
-        margin: 0;
-        margin-bottom: 72px;
-    }
     section#about-page .content {
         width: 90%;
         height: fit-content;
@@ -313,10 +303,6 @@
     section#photography-page .header {
         width: 70%;
         max-width: 1800px;
-    }
-    section#photography-page .header h1 {
-        margin: 0;
-        margin-bottom: 72px;
     }
     section#photography-page .pictures {
         display: flex;
@@ -492,10 +478,6 @@
     section#journal.page {
         margin-top: 0;
     }
-    section#journal.page h1 {
-        margin: 0;
-        margin-bottom: 72px;
-    }
 </style>
 <style>
     footer {
@@ -571,12 +553,44 @@
         margin-top: 16px;
         margin-bottom: 40px;
     }
-    section#post-page .content img {
-        width: unset;
+    section#post-page .content iframe {
+        max-width: 900px;
         margin: auto;
         display: block;
-        margin: 16px 16px 40px;
+        margin-top: 16px;
+        margin-bottom: 16px;
         border-radius: 5px;
+    }
+    section#post-page .content img {
+        width: 60%;
+        max-width: 600px;
+        display: block;
+        margin: auto;
+        margin-top: 16px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+    }
+    section#post-page .content img.small {
+        width: 25%;
+        max-width: 250px;
+    }
+    section#post-page .content img.medium {
+        width: 60%;
+        max-width: 600px;
+    }
+    section#post-page .content img.large {
+        width: 80%;
+        max-width: 800px;
+    }
+    section#post-page .content img.float-right {
+        float: right;
+        margin-right: 0;
+        margin-left: 16px;
+    }
+    section#post-page .content img.float-left {
+        float: left;
+        margin-left: 0;
+        margin-right: 16px;
     }
 </style>
 <style>
@@ -767,11 +781,11 @@
     <span class="posted-on">Posted on 11 March 2015</span>
     <div class="content"><p>Premier article en français ! Il n&rsquo;est jamais trop tard me direz-vous. Pourquoi ? Car je vais parler un peu de littérature et également d&rsquo;un bouquin qui a été très tardivement mais récemment traduit en français.</p>
 <p>L&rsquo;ouvrage qui m&rsquo;a donné envie de rédiger cet article est bien entendu, <a href="http://fr.wikipedia.org/wiki/Les_Montagnes_hallucin%C3%A9es">Les Montagnes Hallucinées</a> du grand <a href="http://fr.wikipedia.org/wiki/H._P._Lovecraft">H.P. Lovecraft</a>.</p>
-<p><img alt="H.P. Lovecraft - Les Montagnes Hallucinées" src="/images/posts/montagnes_hallucinees.jpg" /></p>
+<p><img class="small" alt="H.P. Lovecraft - Les Montagnes Hallucinées" src="/images/posts/montagnes_hallucinees.jpg" /></p>
 <p>Je suppose que vous connaissez H.P. Lovecraft, grand écrivain dès son plus jeune âge, 9 ans (en 1899, il est donc né en 1890) jusqu&rsquo;à ces 46 ans (mort jeune). Il a très largement fait découvrir à tous les amateurs côté États-Unis comme Angleterre, le genre associé à l&rsquo;horreur, fantastique et un peu de science-fiction. La grande qualité de Lovecraft, hormis son style d&rsquo;écriture tout à fait fabuleux est la précision scientifique de ces récits à l&rsquo;époque ou le l&rsquo;Homme n&rsquo;avait qu&rsquo;à de très rares reprises foulé l&rsquo;Antarctique. C&rsquo;est d&rsquo;ailleurs une des raisons de la crédibilité de ces ouvrages.</p>
 <p>Petit aparté, en lisant les <em>Montagnes Hallucinées</em>, je me suis mis à lire la page Wikipédia de l'<a href="http://fr.wikipedia.org/wiki/Antarctique">Antarctique</a> et j&rsquo;ai appris qu&rsquo;il y avait des montagnes (<a href="http://fr.wikipedia.org/wiki/Cha%C3%AEne_Gamburtsev">Chaîne Gamburtsev</a>) aux points culminants de 3000 mètres mais dissimulées sous une couche de glace allant jusqu&rsquo;à elle-même 3km de profondeur (un peu d&rsquo;info <a href="http://www.sciencesetavenir.fr/nature-environnement/20111117.OBS4727/l-enigme-des-montagnes-cachees-de-l-antarctique.html">ici</a>). Assez fou ! Bref, je reprends.</p>
 <p>L&rsquo;écriture du second bouquin dont je voulais parler a été en partie motivé par rapport à cette précision scientifique employée par <em>H.P. Lovecraft</em>. Je parle ici des <a href="http://fr.wikipedia.org/wiki/Les_Montagnes_hallucinog%C3%A8nes">Montagnes Hallucinogènes</a>, écrit, tenez-vous bien par <a href="http://fr.wikipedia.org/wiki/Arthur_C._Clarke">Arthur C. Clarke</a>. Cet homme était un pur génie, vous le connaissez probablement grâce à son film réalisé avec <a href="http://fr.wikipedia.org/wiki/Stanley_Kubrick">Stanley Kubrick</a>, <a href="http://fr.wikipedia.org/wiki/2001,_l%27Odyss%C3%A9e_de_l%27espace">2001, l&rsquo;Odyssé de l&rsquo;espace</a>. Car oui regarder un film c&rsquo;est quand même bien moins chiant que de lire des livres. <em>Arthur C. Clarke</em> a écrit énormément de livres, d&rsquo;articles scientifiques, il était pilote d&rsquo;avion de chasse durant la Seconde Guerre mondiale, il a entre autres inventé les stations géostationnaires, fait des films, etc&hellip; Il a même une station et un astéroïde en son nom, dans le genre &ldquo;classe&rdquo; c&rsquo;est chaud de concurrencer.</p>
-<p><img alt="Arthur C. Clarke - Les Montagnes Hallucinogènes" src="/images/posts/montagnes_hallucinogenes.jpg" /></p>
+<p><img class="small" alt="Arthur C. Clarke - Les Montagnes Hallucinogènes" src="/images/posts/montagnes_hallucinogenes.jpg" /></p>
 <p>Du coup, <em>Arthur C. Clarke</em> à 22 ans, encore inconnu (ou presque), alors que le fandome de la science-fiction Anglaise commence à battre son plein, décide d&rsquo;écrire cette petite nouvelle dans un fanzine (The Satellite, je crois). <em>Les Montagnes Hallucinogènes</em> est un pastiche à la sauce British d&rsquo;une des plus grandes œuvres de Lovecraft (livre cité précédemment). Le truc c&rsquo;est qu&rsquo;elle a été publié en 1940 en anglais et seulement en 2008 en français, notamment grâce à la maison d&rsquo;édition associative <a href="http://fr.wikipedia.org/wiki/La_Clef_d%27Argent">La Clef d&rsquo;Argent</a> et la traduction de <a href="http://fr.wikipedia.org/wiki/Philippe_Gindre">Philippe Gindre</a>. C&rsquo;est très fin, même ultra raffiné, précurseur des <a href="http://fr.wikipedia.org/wiki/Monty_Python">Monty Python</a> dans le même genre plus tard. Il y un énorme travail de <a href="http://fr.wikipedia.org/wiki/La_Clef_d%27Argent">La Clef d&rsquo;Argent</a>, qui ont dû bien galérer à trouver les &ldquo;clins d’œils&rdquo;, &ldquo;private jokes&rdquo;, comme ils disent dans les notes du bouquin, qu'<em>Arthur C. Clarke</em> a pu faire il y a 70 ans. En bref, c&rsquo;est court, drôle et ça vaut le coup d&rsquo;être lu par tout fan d'<em>H.P. Lovecraft</em>.</p>
 <p>Pour ceux qui connaissaient <em>Les Montagnes Hallucinées</em>, j&rsquo;espère vous avoir donné envie de lire cet pastiche du feu <em>Arthur C. Clarke</em>, et pour ceux qui ne connaissaient même pas <em>H.P. Lovecraft</em>, honte à vous et il n&rsquo;est jamais trop tard ! Plongez et ne vous arrêtez plus.</p>
 <p>Quant à moi, je me garde de ne pas lire le fameux <a href="http://fr.wikipedia.org/wiki/Necronomicon">Necronomicon</a>, Ô combien mis en garde par l&rsquo;Arabe fou <a href="http://fr.wikipedia.org/wiki/Personnages_du_mythe_de_Cthulhu#Abdul_al-Hazred">Abdul&rsquo;al-Hazred</a>, quant à la dangerosité de l&rsquo;ouvrage.</p>

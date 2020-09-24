@@ -99,13 +99,6 @@
         font-family: 'IBMPlexMono-Regular';
         font-size: 14px;
     }
-    iframe {
-        margin: auto;
-        display: block;
-        margin-top: 16px;
-        margin-bottom: 16px;
-        border-radius: 5px;
-    }
     blockquote {
         background: white;
         border-left: 4px solid black;
@@ -135,6 +128,7 @@
         font-size: 40px;
         font-family: 'IBMPlexMono-Bold';
         line-height: 52px;
+        margin-bottom: 24px;
     }
 </style>
 <style>
@@ -230,10 +224,6 @@
         width: 70%;
         max-width: 1800px;
     }
-    section#about-page .header h1 {
-        margin: 0;
-        margin-bottom: 72px;
-    }
     section#about-page .content {
         width: 90%;
         height: fit-content;
@@ -314,10 +304,6 @@
     section#photography-page .header {
         width: 70%;
         max-width: 1800px;
-    }
-    section#photography-page .header h1 {
-        margin: 0;
-        margin-bottom: 72px;
     }
     section#photography-page .pictures {
         display: flex;
@@ -493,10 +479,6 @@
     section#journal.page {
         margin-top: 0;
     }
-    section#journal.page h1 {
-        margin: 0;
-        margin-bottom: 72px;
-    }
 </style>
 <style>
     footer {
@@ -572,12 +554,44 @@
         margin-top: 16px;
         margin-bottom: 40px;
     }
-    section#post-page .content img {
-        width: unset;
+    section#post-page .content iframe {
+        max-width: 900px;
         margin: auto;
         display: block;
-        margin: 16px 16px 40px;
+        margin-top: 16px;
+        margin-bottom: 16px;
         border-radius: 5px;
+    }
+    section#post-page .content img {
+        width: 60%;
+        max-width: 600px;
+        display: block;
+        margin: auto;
+        margin-top: 16px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+    }
+    section#post-page .content img.small {
+        width: 25%;
+        max-width: 250px;
+    }
+    section#post-page .content img.medium {
+        width: 60%;
+        max-width: 600px;
+    }
+    section#post-page .content img.large {
+        width: 80%;
+        max-width: 800px;
+    }
+    section#post-page .content img.float-right {
+        float: right;
+        margin-right: 0;
+        margin-left: 16px;
+    }
+    section#post-page .content img.float-left {
+        float: left;
+        margin-left: 0;
+        margin-right: 16px;
     }
 </style>
 <style>

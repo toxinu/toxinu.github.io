@@ -303,6 +303,10 @@
     section#photography-page img {
         width: unset;
     }
+    section#photography-page img.loading {
+        background-color: #F7F7F7;
+        border-radius: 5px;
+    }
     section#photography-page .social {
         margin-top: 8px;
     }
@@ -780,3 +784,77 @@ during 3 minutes, next part is like emotionally high explosion but it will hurt 
         </ul>
     </section>
 </footer>
+<script>
+    console.log('Heya there, why are you looking at our developer tools? I mean this is a crappy static website.');
+    console.log('Nothing to see here. You better look at my resume.');
+    
+    const lightSchemeIcon = document.querySelector('link#light-scheme-icon');
+    const darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
+    matcherLight = window.matchMedia('(prefers-color-scheme: light)');
+    matcherDark = window.matchMedia('(prefers-color-scheme: dark)');
+    matcherLight.addListener(() => updateFavicon('light'));
+    matcherDark.addListener(() => updateFavicon('dark'));
+
+    function updateSidebar(initial) {
+        [...document.querySelectorAll('#sidebar ul li')].forEach((element) => {
+            element.style.textDecoration = 'none';
+            element.style.backgroundColor = 'white';
+        });
+        let sidebarElement;
+        if (initial) {
+            sidebarElement = document.querySelector('#sidebar ul li a[href="#photography"]');
+        } else {
+            sidebarElement = document.querySelector('#sidebar ul li a[href="' + location.hash + '"]');
+        }
+        if (sidebarElement) {
+            sidebarElement.parentNode.style.backgroundColor = '#F5D8FF';
+            sidebarElement.parentNode.style.textDecoration = 'underline';
+        }
+    }
+
+    function updateFavicon() {
+        if (matcherDark.matches) {
+            lightSchemeIcon.remove();
+            document.head.append(darkSchemeIcon);
+        } else {
+            document.head.append(lightSchemeIcon);
+            darkSchemeIcon.remove();
+        }
+    }
+    window.onload = function() {
+        window.onscroll = function(e) {
+            let currentHash = location.hash;
+            const elements = [...document.querySelectorAll('section[data-anchor="true"]')];
+            const lastElementIndex = elements.length - 1;
+            elements.forEach((element, index) => {
+                var top = window.pageYOffset;
+                var distance = top - element.offsetTop;
+                var hash = element.getAttribute('id');
+                var documentHeight = document.body.scrollHeight - window.innerHeight;
+                if (element.getAttribute('data-anchor') == 'true') {
+                    const isLast = top === documentHeight && index === lastElementIndex;
+                    if ((distance < 40 && distance > -40 && currentHash != hash) || isLast) {
+                        history.pushState(null, null, "#" + hash);
+                        currentHash = hash;
+                        updateSidebar();
+                    }
+                }
+            });
+        };
+        window.onhashchange = updateSidebar;
+        updateSidebar(true);
+        updateFavicon();
+        var lazyLoadInstance = new LazyLoad({});
+    }
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178253729-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-178253729-1');
+</script>
+<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
+

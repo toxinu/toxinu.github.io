@@ -13,32 +13,39 @@
         flex-direction: column;
     }
     section#journal ul li {
-        border: 1px solid black;
-        display: flex;
         margin-bottom: 8px;
     }
     section#journal ul li:last-of-type {
         margin-bottom: 0;
     }
-    section#journal ul li span {
-        font-family: 'IBMPlexMono-BoldItalic';
-        margin: 16px 16px 0 16px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+    section#journal ul li a {
+        border: 1px solid black;
+        display: flex;
+        text-decoration: none;
     }
-    section#journal ul li p {
-        margin: 16px 16px 0 0;
+    section#journal ul li a div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px;
+        width: 100%;
+    }
+    section#journal ul li a div > span {
+        font-family: 'IBMPlexMono-BoldItalic';
+    }
+    section#journal ul li a div p {
         white-space: nowrap;
         margin-left: auto;
     }
-    section#journal ul li a {
+    section#journal ul li a span.box-link {
         background-color: black;
         color: white;
         width: 55px;
         min-width: 55px;
         text-align: center;
         line-height: 50px;
+        margin-left: auto;
     }
     /* Page */
     section#journal.page {

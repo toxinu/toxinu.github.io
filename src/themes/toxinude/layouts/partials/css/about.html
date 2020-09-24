@@ -45,9 +45,11 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        max-width: unset;
     }
     section#about-page .header {
         width: 70%;
+        max-width: 1800px;
     }
     section#about-page .header h1 {
         margin: 0;
@@ -55,8 +57,11 @@
     }
     section#about-page .content {
         width: 90%;
-        height: 800px;
-        padding: 72px;
+        height: fit-content;
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: #A9B7A8;
         background-size: cover;
         background-repeat: no-repeat;
@@ -66,14 +71,14 @@
         font-size: 40px;
         font-family: 'IBMPlexMono-Bold';
         margin-bottom: 32px;
-
+        width: 70%;
     }
     section#about-page .content .baseline span {
         background-color: white;
     }
     section#about-page .content .sentence {
         font-size: 18px;
-        width: 100%;
+        width: 70%;
         margin-bottom: 16px;
         max-width: 970px;
     }

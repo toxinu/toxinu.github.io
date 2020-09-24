@@ -10,24 +10,32 @@
         flex-direction: column;
     }
     section#codes ul li {
-        border: 1px solid black;
-        display: flex;
         margin-bottom: 8px;
     }
     section#codes ul li:last-of-type {
         margin-bottom: 0;
     }
-    section#codes ul li > span {
-        font-family: 'IBMPlexMono-BoldItalic';
+    section#codes ul li a {
+        border: 1px solid black;
+        display: flex;
+        text-decoration: none;
+    }
+    section#codes ul li a div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         margin: 16px;
+    }
+    section#codes ul li a div > span {
+        font-family: 'IBMPlexMono-BoldItalic';
         font-size: 20px;
     }
-    section#codes ul li span p {
-        margin: 8px 0 0;
+    section#codes ul li a div  p {
+        margin-top: 8px;
         font-size: 16px;
         font-family: 'IBMPlexMono-Regular';
     }
-    section#codes ul li a {
+    section#codes ul li a span.box-link {
         background-color: black;
         color: white;
         width: 55px;

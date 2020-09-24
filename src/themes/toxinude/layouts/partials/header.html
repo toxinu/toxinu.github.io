@@ -13,10 +13,10 @@
 
 	<title>
 	{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
-	{{ if eq $url "/" }}
+	{{ if eq $url "" }}
 	    {{ .Site.Title }}
 	{{ else }}
-	    {{ if .Params.heading }} {{ .Title }} | {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
+	    {{ if .Params.heading }} {{ .Site.Title }} | {{ .Params.heading }} {{ else }} {{ .Site.Title }} | {{ .Title }} {{ end }}
 	{{ end }}
 	</title>
 	{{ if .RelPermalink }}

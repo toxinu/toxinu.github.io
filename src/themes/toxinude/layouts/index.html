@@ -17,10 +17,14 @@
 </section>
 <section id="photography" data-anchor="true">
     <div>
-    <a href="/photography"><img src="{{ (index .Site.Params.photography 0).link }}" alt="{{ (index .Site.Params.photography 0).name }}"></a>
+    <a href="/photography">
+        <img
+            src="{{ (index .Site.Params.photography 0).linkSmall }}"
+            alt="{{ (index .Site.Params.photography 0).name }}">
+    </a>
     <a href="/photography">See Photography →</a>
     </div>
-    <a href="/photography"><img src="{{ (index .Site.Params.photography 1).link }}" alt="{{ (index .Site.Params.photography 1).name }}"></a>
+    <a href="/photography"><img src="{{ (index .Site.Params.photography 1).linkSmall }}" alt="{{ (index .Site.Params.photography 1).name }}"></a>
 </section>
 <section id="games" data-anchor="true">
     <div>

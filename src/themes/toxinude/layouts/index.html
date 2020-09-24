@@ -19,7 +19,10 @@
     <div>
     <a href="/photography">
         <img
-            src="{{ (index .Site.Params.photography 0).linkSmall }}"
+            class="lazy"
+            loading="lazy"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
+            data-src="{{ (index .Site.Params.photography 0).linkSmall }}"
             alt="{{ (index .Site.Params.photography 0).name }}">
     </a>
     <a href="/photography">See Photography →</a>
@@ -32,7 +35,7 @@
         <ul>
             <li>
                 <h3>Pod2000</h3>
-                <img src="/images/games-pod2000.png" alt="Pod2000 screenshot"/>
+                <img src="/images/games-pod2000-min.png" alt="Pod2000 screenshot"/>
                 <p>
                     In Pod2000, you play an agent belonging to a huge corporation that exploits planets. To exploit a planet, you need to install modules to extract oil, refinery, etc.
                 </p>
@@ -40,7 +43,7 @@
             </li>
             <li>
                 <h3>Fórnir</h3>
-                <img src="/images/games-fornir.png" alt="Fórnir screenshot"/>
+                <img src="/images/games-fornir-min.png" alt="Fórnir screenshot"/>
                 <p>
                     In Fórnir you play a Jarl who rules over a village. Try your best to keep the trust of your people by making good decisions…
                 </p>
@@ -140,4 +143,3 @@
 </section>
 {{ partial "sidebar.html" . }}
 {{ partial "footer.html" . }}
-{{ partial "js.html" . }}

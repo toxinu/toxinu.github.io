@@ -24,8 +24,9 @@
                 var top = window.pageYOffset;
                 var distance = top - element.offsetTop;
                 var hash = element.getAttribute('id');
+                var documentHeight = document.body.scrollHeight - window.innerHeight;
                 if (element.getAttribute('data-anchor') == 'true') {
-                    const isLast = top === window.scrollMaxY && index === lastElementIndex;
+                    const isLast = top === documentHeight && index === lastElementIndex;
                     if ((distance < 40 && distance > -40 && currentHash != hash) || isLast) {
                         history.pushState(null, null, "#" + hash);
                         currentHash = hash;

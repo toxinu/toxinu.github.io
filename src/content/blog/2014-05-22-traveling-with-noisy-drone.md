@@ -16,14 +16,14 @@ For me exploration means that every part of the adventure won't be enjoyable but
 
 <center><hr></center>
 
-<img alt="Ben Frost - A U R O R A" style="margin-left:8px;float:right" src="/images/posts/ben_frost_aurora.jpg" />
+<img alt="Ben Frost - A U R O R A" style="margin-bottom:16px;float:right" src="/images/posts/ben_frost_aurora.jpg" />
 
 <small>This album is not out for now (release is May, 26) , if you want to listen it, you'll have to retrieve it from Pirate Bay from example and buy it if you enjoy this album.</small>
 
 Just listen to *Secant* by [Ben Frost][3] (A U R O R A), you'll take hard industrial beats
 during 3 minutes, next part is like emotionally high explosion but it will hurt you at same time. It's like a small light in a very unhealthy dark hole full of spikes. *Diphenyl Oxalate* (next track) is pure noise, that is good for you. I agree to say that Ben Frost is a hard *electro/experimental/noise* artist to understand, this guy just do an absolutely large amount of work, and not just music. If you can't understand him for now, please, keep reading.
 
-<img alt="Fennesz - Venice" style="margin-right:8px;float:left" src="/images/posts/fennesz_venice.jpg" />
+<img alt="Fennesz - Venice" style="margin-bottom:16px;float:left" src="/images/posts/fennesz_venice.jpg" />
 
 [Christian Fennesz][4] is an experimental guitar artist in electronic music. Some of his work is easier to appreciate, understand them. Ben Frost sound is more *modern* in different points, it's hard to explain. Just forget previous artist for now. If you come from **ambient** world you'll probably enjoy his work. Drop your ears to [Venice][11]'s (Youtube) [Fennesz][4] album. Okay, is it better than Ben Frost ? Will you stay here ?
 
@@ -31,7 +31,7 @@ Notable [Aphex Twin][5] have done some drone stuff in his [Selected Ambient Work
 
 Famous [Boards Of Canada][1] band, is not very far away from noise sound, try [Corsair][13] (Youtube).
 
-<img alt="Tim Hecker - Ravedeath, 1972" style="margin-left:8px;float:right" src="/images/posts/tim_hecker_ravedeath_1972.jpg" />
+<img alt="Tim Hecker - Ravedeath, 1972" style="margin-bottom:16px;float:right" src="/images/posts/tim_hecker_ravedeath_1972.jpg" />
 
 Next step, [Tim Hecker][2] is a Canadian artist who have recently release for me one his best album, [Virgin][10]. But wait! I advice you to listen older stuff, [The Piano Drop][14] (Youtube). You guy, if you really enjoy it, you just found an amount stuff to work on. I agree to say that with Tim Hecker we add a small amount of what we can call *noise*, but for me it's a tool to expand to rich emotional music behind it. I can only advice you to drop your ass in a great sofa, put a headphone, close your eyes and listen to [Ravedeath, 1972][15] (Wikipedia). [Tim Hecker][2] is that guy, that really allow me to discover what is drone/noise/experimental electro music. You can find more stuff, under the name of Jetone, just go to Wikipedia. When you'll familiar with this sound, open [Virgin][10], latest Tim Hecker album. It's just a masterpiece, really.
 

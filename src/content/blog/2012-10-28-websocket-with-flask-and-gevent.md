@@ -2,7 +2,7 @@
 aliases = ["2012/10/28/Websocket_with_flask_and_gevent.html"]
 date = "2012-10-28T00:00:00Z"
 title = "Websocket with Flask and Gevent"
-
+slug = "websocket-with-flask-and-gevent"
 +++
 ## Ubik, package manager for Unix
 
@@ -28,27 +28,11 @@ By the way, [gevent-socketio][6] seems to be a solid __socket.io__ Python implem
 
 This is my Flask app structure:
 
-{{< highlight bash >}}
-.
-├── runserver.py
-├── requirements.txt
-└── app
-    ├── __init__.py
-    ├── views.py
-    ├── websocket.py
-    ├── static
-    │   └── ...
-    └── templates
-        └── index.html
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/8be85a458570fbbc16b1a7ac5d673e38.js"></script>
 
 ### requirements.txt
 
-{{< highlight bash >}}
-flask
-gevent
-gevent-websocket
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/d724c7ae35f050ff6646f4b884021627.js"></script>
 
 ### \_\_init\_\_.py
 
@@ -56,28 +40,7 @@ This is the _app core_, create your app, import every shared object you want to 
 
 And don't forget to import views at the end to avoid circular imports.
 
-{{< highlight python >}}
-# coding: utf-8
-import os
-
-from flask import Flask
-from websocket import handle_websocket
-
-app = Flask(__name__)
-app.secret_key = os.urandom(24)
-app.debug = True
-
-def my_app(environ, start_response):
-    path = environ["PATH_INFO"]
-    if path == "/":
-        return app(environ, start_response)
-    elif path == "/websocket":
-        handle_websocket(environ["wsgi.websocket"])
-    else:
-        return app(environ, start_response)
-
-import views
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/0ce950084c8eff3498c8183e22903166.js"></script>
 
 ### websocket.py
 
@@ -86,107 +49,37 @@ Messages from browser arrived here, and you can easily send message throught web
 
 Use ``json``, please.
 
-{{< highlight python >}}
-# coding: utf-8
-import json
-
-def handle_websocket(ws):
-    while True:
-        message = ws.receive()
-        if message is None:
-            break
-        else:
-            message = json.loads(message)
-
-            r  = "I have received this message from you : %s" % message
-            r += "<br>Glad to be your webserver."
-            ws.send(json.dumps({'output': r}))
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/0f564024eb4bca43172ff2636d37094b.js"></script>
 
 ### views.py
 
 Simple ``flask`` view to ``index.html`` template.
 
-{{< highlight python >}}
-# coding: utf-8
-from flask import render_template
-
-from app import app
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/36512a82d1f5cc4c65bc9f1c656a4cec.js"></script>
 
 ### runserver.py
 
 Run your app with this script. It import your app and feed ``WSGIServer`` with it.
 
-{{< highlight python >}}
-#!/usr/bin/env python
-# coding: utf-8
-from gevent.pywsgi import WSGIServer
-from geventwebsocket.handler import WebSocketHandler
-
-from app import my_app
-
-if __name__ == '__main__':
-    http_server = WSGIServer(('',5000), my_app, handler_class=WebSocketHandler)
-    http_server.serve_forever()
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/cc3282171485950cf87d9e0e5e2bc338.js"></script>
 
 ### index.html
 
 And a quick _Javascript_ websocket example.
 
-{{< highlight html >}}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-</head>
-<p>Websocket with Flask, Gevent and Gevent-websocket</p>
-<p id="log"></p>
-<button id="send" type="button">Send!</button>
-<body>
-    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            if ("WebSocket" in window) {
-                ws = new WebSocket("ws://" + document.domain + ":5000/websocket");
-                ws.onmessage = function (msg) {
-                    var message = JSON.parse(msg.data);
-                    $("p#log").html(message.output);
-                };
-            };
-
-            // Bind send button to websocket
-            $("button#send").live("click", function() {
-                ws.send(JSON.stringify({'output': 'Sent from my browser!'}));
-            });
-
-            // Cleanly close websocket when unload window
-            window.onbeforeunload = function() {
-                ws.onclose = function () {}; // disable onclose handler first
-                ws.close()
-            };
-        });
-    </script>
-</body>
-</html>
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/48203b61ca9772e53a445aa272604457.js"></script>
 
 All can find all this stuff in this [repository][8].
 Thanks to [tzangms][9].
 
-## What now ?
+## What now?
 
 Play websockets with Flask and Python is fun !
 
 I will continue to improve [__Ubik__][1] _webui_ with _websocket_ and you have to take a look at the _0.2_ branch.
 Bunch of new features is coming !
 
-[1]: https://github.com/Socketubs/Ubik
+[1]: https://gitlab.com/toxinu/ubik
 [2]: http://flask.pocoo.org/
 [3]: http://www.gevent.org/
 [4]: http://www.gelens.org/code/gevent-websocket/

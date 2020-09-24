@@ -13,9 +13,10 @@ I really don't remember first time I listened the very first Animal Collective s
 But in fact, I think this band deliver a very basic emotion. An emotion that just make you want to cry, move your head and just smile.
 
 > Then I go and take some pills
-> Cause I cant do all of my do's and still feel ill
-> You get that WOOOO!
 >
+> Cause I cant do all of my do's and still feel ill
+>
+> You get that WOOOO!
 > <cite>The Purple Bottle - Feels</cite>
 
 If you never listen Animal collective I think there is a song that you have to start with. It will show you some emotional works.
@@ -25,7 +26,6 @@ These guys, mostly Panda Bear and Avey Tare at their beginnings wasn't good musi
 After many listen of [Spirit They're Gone, Spirit They've Vanished][1], I just don't understand how I can say:
 
 >[..] wasn't good musicians [..]
->
 ><cite>Myself previous paragraph</cite>
 
 Nevermind, let's continue.

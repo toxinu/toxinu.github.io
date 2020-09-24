@@ -2,7 +2,7 @@
 aliases = ["2012/05/06/TheMall-Simple-Python-Shopping-list.html"]
 date = "2012-05-06T00:00:00Z"
 title = "TheMall - A simple Python web shopping list"
-
+slug = "themall-a-simple-python-web-shopping-list"
 +++
 I have used [myTinyTodo][1] for at least 1 year but I'm fed up of Mysql database and Php...
 Am I serious ?
@@ -31,13 +31,7 @@ And this is my personnal [Shopping list][3] if you want a quick look.
 
 __Quick Installation__
 
-{{< highlight bash >}}
-pip install Flask
-cd /var/www
-git clone https://github.com/Socketubs/TheMall.git TheMall
-cd TheMall
-python main.py
-{{< /highlight >}}
+<script src="https://gist.github.com/toxinu/43566c66c5b4cab86a274378284164fa.js"></script>
 
 __Next__
 

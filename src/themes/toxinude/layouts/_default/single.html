@@ -2,7 +2,7 @@
 {{ .Scratch.Set "active" 3 }}
 {{ partial "nav.html" . }}
 <section id="post-page" class="page">
-    <a class="back-to-journal" href="/blog">← Back to Journal</a>
+    <a class="back-to-journal" href="/blog/">← Back to Journal</a>
     <h1>{{ .Title }}</h1>
     <span class="posted-on">Posted on {{ .Date.Format "02 January 2006" }}</span>
     <div class="content">{{ .Content }}</div>

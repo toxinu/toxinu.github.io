@@ -17,6 +17,9 @@
         box-sizing: border-box;
         margin-bottom: 72px;
     }
+    li {
+        margin-bottom: 8px;
+    }
     p {
         margin: 0;
         line-height: 160%;
@@ -30,8 +33,49 @@
     section img {
         width: 100%;
     }
+    h2 {
+        font-family: 'IBMPlexMono-Bold';
+        font-size: 24px;
+    }
+    code {
+        background-color: #F7F7F7;
+        padding: 1px;
+        border-radius: 3px;
+        font-family: 'IBMPlexMono-Regular';
+        font-size: 14px;
+    }
+    iframe {
+        margin: auto;
+        display: block;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        border-radius: 5px;
+        border: 2px solid #F5D8FF;
+    }
+    blockquote {
+        background: #F9F9F9;
+        border-left: 10px solid #F5D8FF;
+        margin: 16px 0;
+        padding: 16px;
+        quotes: "\201C""\201D""\2018""\2019";
+        border-radius: 5px;
+    }
+    blockquote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 14px;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+    }
+    blockquote p {
+        display: inline;
+    }
+    h2 code {
+        font-size: 18px;
+    }
     /* Page */
-        section.page h1 {
+    section.page h1 {
         font-size: 40px;
         font-family: 'IBMPlexMono-Bold';
         line-height: 52px;

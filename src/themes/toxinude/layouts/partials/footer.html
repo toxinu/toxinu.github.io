@@ -7,11 +7,12 @@
             </div>
         </a>
         <p>
-            © 2020 by Geoffrey L. // Design <a target="_blank" href="https://twitter.com/mylenela">@mylenela</a>
+            © 2020 by Geoffrey L. // Design <a target="_blank" href="https://twitter.com/mylenela">@mylenela ↪</a>
         </p>
         <ul>
+        {{ $active := .Scratch.Get "active" }}
         {{ range .Site.Menus.main }} 
-            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+            <li><a class="{{ if (eq .Weight $active )}}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
         </ul>
     </section>

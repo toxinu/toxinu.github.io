@@ -13,9 +13,13 @@
         {{ range (sort .Site.RegularPages "Date" "desc") }}
         {{ if and (eq .Section "blog") (eq .IsNode false) }}
         <li class="post-item">
-            <span>{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</span>
-            <p><time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time></p>
-            <a href="{{ .Permalink }}">→</a>
+            <a href="{{ .Permalink }}">
+                <div>
+                    <span>{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</span>
+                    <p><time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         {{ end }}
         {{ end }}

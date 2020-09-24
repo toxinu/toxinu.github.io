@@ -48,6 +48,8 @@
              url('/lib/IBMPlexMono-Italic.woff') format('woff'),
              url('/lib/IBMPlexMono-Italic.ttf')  format('truetype');
     }
+</style>
+<style>
     *, *:before, *:after {
         box-sizing: border-box;
     }
@@ -66,9 +68,15 @@
         box-sizing: border-box;
         margin-bottom: 72px;
     }
+    li {
+        margin-bottom: 8px;
+    }
     p {
         margin: 0;
         line-height: 160%;
+    }
+    strong {
+        font-family: 'IBMPlexMono-Bold';
     }
     a { color: black; }
     .line {
@@ -76,7 +84,56 @@
         width: 100%;
         background-color: black;
     }
+    section img {
+        width: 100%;
+    }
+    h2 {
+        font-family: 'IBMPlexMono-Bold';
+        font-size: 24px;
+    }
+    code {
+        background-color: #F7F7F7;
+        padding: 1px;
+        border-radius: 3px;
+        font-family: 'IBMPlexMono-Regular';
+        font-size: 14px;
+    }
+    iframe {
+        margin: auto;
+        display: block;
+        margin-top: 16px;
+        margin-bottom: 16px;
+        border-radius: 5px;
+    }
+    blockquote {
+        background: white;
+        border-left: 4px solid black;
+        margin: 16px;
+        padding: 0 16px;
+        font-family: 'IBMPlexMono-Italic';
+    }
+    blockquote p:last-of-type cite {
+        display: block;
+        margin-top: 32px;
+    }
+    h2 code {
+        font-size: 18px;
+    }
+    hr {
+        border: 0;
+        height: 1px;
+        background: #333;
+        background-image: linear-gradient(to right, #ccc, #333, #ccc);
+        margin: 32px 0;
+    }
      
+    section.page h1 {
+        font-size: 40px;
+        font-family: 'IBMPlexMono-Bold';
+        line-height: 52px;
+    }
+</style>
+<style>
     section#nav {
         display: flex;
         justify-content: space-between;
@@ -115,6 +172,8 @@
     section#nav ul li:last-of-type {
         margin-right: 0;
     }
+</style>
+<style>
     section#about {
         display: flex;
         justify-content: flex-start;
@@ -155,6 +214,66 @@
     section#about .description .social a:last-of-type {
         margin-right: 0;
     }
+     
+    section#about-page {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: unset;
+    }
+    section#about-page .header {
+        width: 70%;
+        max-width: 1800px;
+    }
+    section#about-page .header h1 {
+        margin: 0;
+        margin-bottom: 72px;
+    }
+    section#about-page .content {
+        width: 90%;
+        height: fit-content;
+        min-height: 900px;
+        padding: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #A9B7A8;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/44af4130cc6f4e1389d80f2af8a91103/revisions/5ab738e847874d0c964a2b813e60268d/renditions/8ace93b010f8d7c16aafd1e6f28b29b0);
+    }
+    section#about-page .content .baseline {
+        font-size: 40px;
+        font-family: 'IBMPlexMono-Bold';
+        margin-bottom: 32px;
+        width: 70%;
+    }
+    section#about-page .content .baseline span {
+        background-color: white;
+    }
+    section#about-page .content .sentence {
+        font-size: 18px;
+        width: 70%;
+        margin-bottom: 16px;
+        max-width: 970px;
+    }
+    section#about-page .content .sentence span {
+        background-color: white;
+        margin-top: 32px;
+    }
+    section#about-page div.legend {
+        width: 90%;
+        font-family: 'IBMPlexMono-Regular';
+        font-size: 16px;
+        margin: auto;
+        margin-top: 16px;
+    }
+    section#about-page div.legend span:first-of-type {
+        font-family: 'IBMPlexMono-BoldItalic';
+    }
+</style>
+<style>
     section#photography {
         display: flex;
         width: 85%;
@@ -171,15 +290,69 @@
     section#photography > a:last-of-type {
         width: 35%;
     }
+     
+    section#photography-page {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        max-width: unset;
+    }
+    section#photography-page img {
+        width: unset;
+    }
+    section#photography-page .social {
+        margin-top: 8px;
+    }
+    section#photography-page .social a {
+        margin-right: 16px;
+    }
+    section#photography-page .header {
+        width: 70%;
+        max-width: 1800px;
+    }
+    section#photography-page .header h1 {
+        margin: 0;
+        margin-bottom: 72px;
+    }
+    section#photography-page .pictures {
+        display: flex;
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+    section#photography-page .pictures a {
+        text-decoration: none;
+        margin-top: 72px;
+    }
+    section#photography-page .pictures a img {
+        max-width: 1400px;
+        width: 100%;
+    }
+    section#photography-page .pictures a.vertical img {
+        max-width: 750px;
+    }
+    section#photography-page .pictures div {
+        margin-top: 16px;
+        font-family: 'IBMPlexMono-Regular';
+        margin-right: auto;
+    }
+    section#photography-page .pictures div span:first-of-type {
+        font-family: 'IBMPlexMono-BoldItalic';
+    }
+</style>
+<style>
     section#games {
         width: 100%;
         background-color: black;
         color: white;
+        max-width: unset;
     }
     section#games > div {
         width: 70%;
         padding: 64px 0;
         margin: auto;
+        max-width: 1800px;
     }
     section#games > div p {
         margin-bottom: 32px;
@@ -215,6 +388,8 @@
         width: 100%;
         margin-bottom: 16px;
     }
+</style>
+<style>
     section#codes > p {
         margin-bottom: 32px;
     }
@@ -226,24 +401,32 @@
         flex-direction: column;
     }
     section#codes ul li {
-        border: 1px solid black;
-        display: flex;
         margin-bottom: 8px;
     }
     section#codes ul li:last-of-type {
         margin-bottom: 0;
     }
-    section#codes ul li > span {
-        font-family: 'IBMPlexMono-BoldItalic';
+    section#codes ul li a {
+        border: 1px solid black;
+        display: flex;
+        text-decoration: none;
+    }
+    section#codes ul li a div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
         margin: 16px;
+    }
+    section#codes ul li a div > span {
+        font-family: 'IBMPlexMono-BoldItalic';
         font-size: 20px;
     }
-    section#codes ul li span p {
-        margin: 8px 0 0;
+    section#codes ul li a div  p {
+        margin-top: 8px;
         font-size: 16px;
         font-family: 'IBMPlexMono-Regular';
     }
-    section#codes ul li a {
+    section#codes ul li a span.box-link {
         background-color: black;
         color: white;
         width: 55px;
@@ -252,6 +435,8 @@
         line-height: 80px;
         margin-left: auto;
     }
+</style>
+<style>
     section#journal {
         margin-top: 72px;
     }
@@ -266,47 +451,65 @@
         flex-direction: column;
     }
     section#journal ul li {
-        border: 1px solid black;
-        display: flex;
         margin-bottom: 8px;
     }
     section#journal ul li:last-of-type {
         margin-bottom: 0;
     }
-    section#journal ul li span {
-        font-family: 'IBMPlexMono-BoldItalic';
-        margin: 16px 16px 0 16px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+    section#journal ul li a {
+        border: 1px solid black;
+        display: flex;
+        text-decoration: none;
     }
-    section#journal ul li p {
-        margin: 16px 16px 0 0;
+    section#journal ul li a div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 16px;
+        width: 100%;
+    }
+    section#journal ul li a div > span {
+        font-family: 'IBMPlexMono-BoldItalic';
+    }
+    section#journal ul li a div p {
         white-space: nowrap;
         margin-left: auto;
     }
-    section#journal ul li a {
+    section#journal ul li a span.box-link {
         background-color: black;
         color: white;
         width: 55px;
         min-width: 55px;
         text-align: center;
         line-height: 50px;
+        margin-left: auto;
     }
      
-    section img {
-        width: 100%;
+    section#journal.page {
+        margin-top: 0;
     }
-     
+    section#journal.page h1 {
+        margin: 0;
+        margin-bottom: 72px;
+    }
+</style>
+<style>
     footer {
-        width: 100%;
+        width: 70%;
         max-width: 1800px;
         display: flex;
         justify-content: center;
     }
     footer section#nav {
+        width: 100%;
+    }
+    footer section#nav {
         margin-bottom: 0;
         flex-wrap: wrap;
+    }
+    footer section#nav p a {
+        text-decoration: underline;
     }
     footer section#nav ul {
         margin-left: auto;
@@ -314,13 +517,11 @@
     footer section#nav .site-head {
         margin-right: unset;
     }
-    footer p a {
-        background-color: #F5D8FF;
-    }
     footer p {
         margin-left: 16px;
     }
-     
+</style>
+<style>
     #sidebar {
         position: fixed;
         top: 420px;
@@ -339,114 +540,43 @@
     #sidebar ul li a {
         text-decoration: none;
     }
-     
-    section.page h1 {
-        font-size: 40px;
-        font-family: 'IBMPlexMono-Bold';
-        line-height: 52px;
-    }
-     
-    section#photography-page {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    section#photography-page img {
-        width: unset;
-    }
-    section#photography-page .social {
-        margin-top: 8px;
-    }
-    section#photography-page .header {
-        width: 70%;
-    }
-    section#photography-page .header h1 {
-        margin: 0;
-        margin-bottom: 72px;
-    }
-    section#photography-page .pictures {
-        display: flex;
-        width: 95%;
-        flex-direction: column;
-        align-items: center;
-    }
-    section#photography-page .pictures a {
-        text-decoration: none;
-        margin-top: 72px;
-    }
-    section#photography-page .pictures a img {
-        max-width: 1100px;
-        width: 100%;
-    }
-    section#photography-page .pictures a.vertical img {
-        max-width: 750px;
-    }
-    section#photography-page .pictures div {
-        margin-top: 16px;
-        font-family: 'IBMPlexMono-Regular';
-        margin-right: auto;
-    }
-    section#photography-page .pictures div span:first-of-type {
-        font-family: 'IBMPlexMono-BoldItalic';
-    }
-    section#journal.page {
-        margin-top: 0;
-    }
-    section#journal.page h1 {
-        margin: 0;
-        margin-bottom: 72px;
-    }
-    section#about-page {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-    section#about-page .header {
-        width: 70%;
-    }
-    section#about-page .header h1 {
-        margin: 0;
-        margin-bottom: 72px;
-    }
-    section#about-page .content {
-        width: 90%;
-        height: 800px;
-        padding: 72px;
-        background-color: #A9B7A8;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-image: url(https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/44af4130cc6f4e1389d80f2af8a91103/revisions/5ab738e847874d0c964a2b813e60268d/renditions/8ace93b010f8d7c16aafd1e6f28b29b0);
-    }
-    section#about-page .content .baseline {
-        font-size: 40px;
-        font-family: 'IBMPlexMono-Bold';
-        margin-bottom: 32px;
-
-    }
-    section#about-page .content .baseline span {
-        background-color: white;
-    }
-    section#about-page .content .sentence {
-        font-size: 18px;
-        width: 100%;
+</style>
+<style>
+    section#post-page a.back-to-journal {
         margin-bottom: 16px;
+        display: block;
     }
-    section#about-page .content .sentence span {
-        background-color: white;
+    section#post-page h1 {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    section#post-page h2 {
+        margin: 0;
+        margin-top: 40px;
+    }
+    section#post-page .posted-on {
+        font-size: 14px;
+    }
+    section#post-page .content {
         margin-top: 32px;
     }
-    section#about-page div.legend {
-        width: 90%;
-        font-family: 'IBMPlexMono-Regular';
-        font-size: 16px;
-        margin: auto;
+    section#post-page .content p {
+        line-height: 170%;
+        margin-bottom: 24px;
+    }
+    section#post-page .content .gist {
         margin-top: 16px;
+        margin-bottom: 40px;
     }
-    section#about-page div.legend span:first-of-type {
-        font-family: 'IBMPlexMono-BoldItalic';
+    section#post-page .content img {
+        width: unset;
+        margin: auto;
+        display: block;
+        margin: 16px 16px 40px;
+        border-radius: 5px;
     }
+</style>
+<style>
     @media (max-width: 875px) {
         section {
             width: 80%;
@@ -461,7 +591,10 @@
             margin-right: 20px;
         }
         section#photography {
-            width: 90%;
+            width: 95%;
+        }
+        section#games > div {
+            width: 80%;
         }
         section#games > div ul {
             flex-direction: column;
@@ -476,11 +609,23 @@
         section#journal ul li a {
             margin-left: auto;
         }
+        footer {
+            width: 80%;
+        }
         footer section#nav ul {
             display: none;
         }
         #sidebar {
             display: none;
+        }
+        section#about-page .header {
+            width: 80%;
+        }
+        section#photography-page .header {
+            width: 80%;
+        }
+        section#photography-page .header {
+            width: 80%;
         }
     }
     @media (max-width: 680px) {
@@ -497,9 +642,39 @@
             margin-right: 0;
             margin-bottom: 16px;
         }
+        section#games > div {
+            width: 90%;
+        }
+        footer {
+            width: 90%;
+        }
         footer section#nav {
             align-items: center;
             font-size: 12px;
+        }
+        section#photography-page .header {
+            width: 90%;
+        }
+        section#about-page .header {
+            width: 90%;
+        }
+        section#about-page .content {
+            padding: 40px;
+        }
+        section#about-page .content .baseline {
+            width: 90%;
+        }
+        section#about-page .content .sentence {
+            width: 90%;
+        }
+    }
+    @media (max-width: 410px) {
+        footer p {
+            margin-left: unset;
+            margin-top: 8px;
+        }
+        section#about-page .content .baseline {
+            font-size: 24px;
         }
     }
 </style>
@@ -529,8 +704,9 @@
                 var top = window.pageYOffset;
                 var distance = top - element.offsetTop;
                 var hash = element.getAttribute('id');
+                var documentHeight = document.body.scrollHeight - window.innerHeight;
                 if (element.getAttribute('data-anchor') == 'true') {
-                    const isLast = top === window.scrollMaxY && index === lastElementIndex;
+                    const isLast = top === documentHeight && index === lastElementIndex;
                     if ((distance < 40 && distance > -40 && currentHash != hash) || isLast) {
                         history.pushState(null, null, "#" + hash);
                         currentHash = hash;
@@ -561,7 +737,7 @@
     
         <li><a class="" href="/photography">Photography</a></li>
     
-        <li><a class="active" href="/blog">Writings</a></li>
+        <li><a class="active" href="/blog">Journal</a></li>
     
         <li><a class="" href="/about">About</a></li>
     
@@ -579,169 +755,229 @@
         
         
         <li class="post-item">
-            <span>My setup - 2018</span>
-            <p><time datetime="2018-04-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-04-12</time></p>
-            <a href="/blog/my-setup-2018/">→</a>
+            <a href="/blog/my-setup-2018/">
+                <div>
+                    <span>My setup in 2018</span>
+                    <p><time datetime="2018-04-12 00:00:00 &#43;0000 UTC" itemprop="datePublished">2018-04-12</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>How to store your Python package metadata</span>
-            <p><time datetime="2016-12-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-12-20</time></p>
-            <a href="/blog/how-to-store-your-python-package-metadata/">→</a>
+            <a href="/blog/how-to-store-your-python-package-metadata/">
+                <div>
+                    <span>How to store your Python package metadata</span>
+                    <p><time datetime="2016-12-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-12-20</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Pip installable Django project</span>
-            <p><time datetime="2016-12-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-12-16</time></p>
-            <a href="/blog/pip-installable-django-project/">→</a>
+            <a href="/blog/pip-installable-django-project/">
+                <div>
+                    <span>Pip installable Django project</span>
+                    <p><time datetime="2016-12-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">2016-12-16</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>H.P. Lovecraft, hallucinations et Tekeli&#39;li !</span>
-            <p><time datetime="2015-03-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-03-11</time></p>
-            <a href="/blog/h.p.-lovecraft-hallucinations-et-tekelili/">→</a>
+            <a href="/blog/h.p.-lovecraft-hallucinations-et-tekelili/">
+                <div>
+                    <span>H.P. Lovecraft, hallucinations et Tekeli&#39;li !</span>
+                    <p><time datetime="2015-03-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">2015-03-11</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Filtering and ordering with Restless</span>
-            <p><time datetime="2014-12-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-12-29</time></p>
-            <a href="/blog/filtering-and-ordering-with-restless/">→</a>
+            <a href="/blog/filtering-and-ordering-with-restless/">
+                <div>
+                    <span>Filtering and ordering with Restless</span>
+                    <p><time datetime="2014-12-29 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-12-29</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Restless for building Python RESTful API</span>
-            <p><time datetime="2014-11-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-11-28</time></p>
-            <a href="/blog/restless-for-building-python-restful-api/">→</a>
+            <a href="/blog/restless-for-building-python-restful-api/">
+                <div>
+                    <span>Restless for building Python RESTful API</span>
+                    <p><time datetime="2014-11-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-11-28</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Django SQL Debug - HTML reports of your HTTP requests</span>
-            <p><time datetime="2014-09-04 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-09-04</time></p>
-            <a href="/blog/django-sql-debug-html-reports-of-your-http-requests/">→</a>
+            <a href="/blog/goodbye-disqus/">
+                <div>
+                    <span>Goodbye Disqus</span>
+                    <p><time datetime="2014-08-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-08-05</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Goodbye Disqus</span>
-            <p><time datetime="2014-08-05 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-08-05</time></p>
-            <a href="/blog/goodbye-disqus/">→</a>
+            <a href="/blog/animals-can-make-music/">
+                <div>
+                    <span>Animals can make music</span>
+                    <p><time datetime="2014-07-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-07-30</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Animals can make music</span>
-            <p><time datetime="2014-07-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-07-30</time></p>
-            <a href="/blog/animals-can-make-music/">→</a>
+            <a href="/blog/traveling-with-noisy-drone/">
+                <div>
+                    <span>Traveling with Noisy drone</span>
+                    <p><time datetime="2014-05-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-05-22</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Traveling with Noisy drone</span>
-            <p><time datetime="2014-05-22 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-05-22</time></p>
-            <a href="/blog/traveling-with-noisy-drone/">→</a>
+            <a href="/blog/two-latest-readings-sick/">
+                <div>
+                    <span>Two latest readings - *sick*</span>
+                    <p><time datetime="2014-04-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-04-16</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Two latest readings - *sick*</span>
-            <p><time datetime="2014-04-16 00:00:00 &#43;0000 UTC" itemprop="datePublished">2014-04-16</time></p>
-            <a href="/blog/two-latest-readings-sick/">→</a>
+            <a href="/blog/ephemeral-internet/">
+                <div>
+                    <span>Ephemeral Internet</span>
+                    <p><time datetime="2013-12-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2013-12-18</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>« Monsieur le Président, une exécution se prépare… »</span>
-            <p><time datetime="2013-12-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">2013-12-27</time></p>
-            <a href="/blog/monsieur-le-pr%C3%A9sident-une-ex%C3%A9cution-se-pr%C3%A9pare/">→</a>
+            <a href="/blog/no-normal-food-for-2-months/">
+                <div>
+                    <span>No normal food for 2 months</span>
+                    <p><time datetime="2013-08-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2013-08-10</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Ephemeral Internet</span>
-            <p><time datetime="2013-12-18 00:00:00 &#43;0000 UTC" itemprop="datePublished">2013-12-18</time></p>
-            <a href="/blog/ephemeral-internet/">→</a>
+            <a href="/blog/first-thing-to-do-after-ubuntu-fresh-install/">
+                <div>
+                    <span>First thing to do after Ubuntu fresh install</span>
+                    <p><time datetime="2012-12-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2012-12-10</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>No normal food for 2 months</span>
-            <p><time datetime="2013-08-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2013-08-10</time></p>
-            <a href="/blog/no-normal-food-for-2-months/">→</a>
+            <a href="/blog/websocket-with-flask-and-gevent/">
+                <div>
+                    <span>Websocket with Flask and Gevent</span>
+                    <p><time datetime="2012-10-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">2012-10-28</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>First thing to do after Ubuntu fresh install</span>
-            <p><time datetime="2012-12-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">2012-12-10</time></p>
-            <a href="/blog/first-thing-to-do-after-ubuntu-fresh-install/">→</a>
+            <a href="/blog/github-pages-to-heroku/">
+                <div>
+                    <span>Github Pages to Heroku</span>
+                    <p><time datetime="2012-09-02 00:00:00 &#43;0000 UTC" itemprop="datePublished">2012-09-02</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Websocket with Flask and Gevent</span>
-            <p><time datetime="2012-10-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">2012-10-28</time></p>
-            <a href="/blog/websocket-with-flask-and-gevent/">→</a>
+            <a href="/blog/themall-a-simple-python-web-shopping-list/">
+                <div>
+                    <span>TheMall - A simple Python web shopping list</span>
+                    <p><time datetime="2012-05-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2012-05-06</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Github Pages to Heroku</span>
-            <p><time datetime="2012-09-02 00:00:00 &#43;0000 UTC" itemprop="datePublished">2012-09-02</time></p>
-            <a href="/blog/github-pages-to-heroku/">→</a>
+            <a href="/blog/ubuntu-server-lts-upgrades-are-stress-test/">
+                <div>
+                    <span>Ubuntu Server LTS upgrades are stress test</span>
+                    <p><time datetime="2012-05-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">2012-05-03</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>TheMall - A simple Python web shopping list</span>
-            <p><time datetime="2012-05-06 00:00:00 &#43;0000 UTC" itemprop="datePublished">2012-05-06</time></p>
-            <a href="/blog/themall-a-simple-python-web-shopping-list/">→</a>
+            <a href="/blog/nagios-oracle-health-plugin/">
+                <div>
+                    <span>Nagios Oracle health plugin</span>
+                    <p><time datetime="2011-10-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">2011-10-28</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
         
         <li class="post-item">
-            <span>Ubuntu Server LTS upgrades are stress test</span>
-            <p><time datetime="2012-05-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">2012-05-03</time></p>
-            <a href="/blog/ubuntu-server-lts-upgrades-are-stress-test/">→</a>
-        </li>
-        
-        
-        
-        <li class="post-item">
-            <span>Nagios Oracle health plugin</span>
-            <p><time datetime="2011-10-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">2011-10-28</time></p>
-            <a href="/blog/nagios-oracle-health-plugin/">→</a>
-        </li>
-        
-        
-        
-        <li class="post-item">
-            <span>Jekyll with Git and Hooks</span>
-            <p><time datetime="2011-10-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2011-10-21</time></p>
-            <a href="/blog/jekyll-with-git-and-hooks/">→</a>
+            <a href="/blog/jekyll-with-git-and-hooks/">
+                <div>
+                    <span>Jekyll with Git and Hooks</span>
+                    <p><time datetime="2011-10-21 00:00:00 &#43;0000 UTC" itemprop="datePublished">2011-10-21</time></p>
+                </div>
+                <span class="box-link">→</span>
+            </a>
         </li>
         
         
@@ -765,17 +1001,18 @@
             </div>
         </a>
         <p>
-            © 2020 by Geoffrey L. // Design <a target="_blank" href="https://twitter.com/mylenela">@mylenela</a>
+            © 2020 by Geoffrey L. // Design <a target="_blank" href="https://twitter.com/mylenela">@mylenela ↪</a>
         </p>
         <ul>
+        
          
-            <li><a href="/">Home</a></li>
+            <li><a class="" href="/">Home</a></li>
          
-            <li><a href="/photography">Photography</a></li>
+            <li><a class="" href="/photography">Photography</a></li>
          
-            <li><a href="/blog">Writings</a></li>
+            <li><a class="active" href="/blog">Journal</a></li>
          
-            <li><a href="/about">About</a></li>
+            <li><a class="" href="/about">About</a></li>
         
         </ul>
     </section>

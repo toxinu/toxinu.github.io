@@ -5,7 +5,7 @@ pygmentsuseclasses = true
 theme = "toxinude"
 title = "toxinu"
 publishDir = "../docs"
-copyright = "Geoffrey L. (toxinu)"
+copyright = "toxinu"
 googleAnalytics = "UA-178253729-1"
 googleAnalyticsAsync = true
 [markup]

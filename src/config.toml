@@ -23,16 +23,9 @@ github = "toxinu"
 gitlab= "toxinu"
 twitter = "toxinu_"
 instagram = "toxinu_"
-# [[params.photography]]
-#   name = "Rainy day under a bridge at Fukishima-ku (福島区)"
-#   date = "Osaka, Japan. Summer 2020"
-#   linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04/revisions/62340e8b146c76c197afb6b2e4c1e163/renditions/f3b91663fa99de47153afbdbc0d0776f"
-#   linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04/revisions/62340e8b146c76c197afb6b2e4c1e163/renditions/5f802399326f833b803527d0aeb796f9"
-#   link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04"
-#   vertical = false
 [[params.photography]]
   name = "Buildings reaching the blue sky at Minato-ku (港区)"
-  date = "Osaka, Japan. Summer 2020"
+  date = "Tokyo, Japan. Sprin 2021"
   linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/b177dd81156f45fdb36a712f618957d5/revisions/41cbd213c7214376b05371991adbfe26/renditions/15dfba4bcd1cd69dcbf2e88db3d88d4e"
   linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/b177dd81156f45fdb36a712f618957d5/revisions/41cbd213c7214376b05371991adbfe26/renditions/15dfba4bcd1cd69dcbf2e88db3d88d4e"
   link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/b177dd81156f45fdb36a712f618957d5"
@@ -43,6 +36,13 @@ instagram = "toxinu_"
   linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/f408bd7b4af66ed6c3c0151b5ee0efbb"
   linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/265b5a14c95805aee85eed4b124faac9"
   vertical = true
+[[params.photography]]
+  name = "Rainy day under a bridge at Fukishima-ku (福島区)"
+  date = "Osaka, Japan. Summer 2020"
+  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04/revisions/62340e8b146c76c197afb6b2e4c1e163/renditions/f3b91663fa99de47153afbdbc0d0776f"
+  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04/revisions/62340e8b146c76c197afb6b2e4c1e163/renditions/5f802399326f833b803527d0aeb796f9"
+  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04"
+  vertical = false
 [[params.photography]]
   name = "Nightly shoppers at a street corner"
   date = "Osaka, Japan. Summer 2020"
@@ -88,6 +88,12 @@ instagram = "toxinu_"
   date = "Osaka, Japan. Summer 2020"
   linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f0fe85ab80134148a353fed03057cab6/revisions/87912fdbdd53ce0e3a872e94c1c0dafd/renditions/948f577e808561be8b807531f9f09aad"
   link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/f0fe85ab80134148a353fed03057cab6"
+  vertical = false
+[[params.photography]]
+  name = "Port of Kobe in the Autumn"
+  date = "Kobe, Japan. Autumn 2020"
+  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/712346d3ff6541cfa5003e1b3f688594/revisions/db45f543b9b44f1cae29e46adbf435f8/renditions/32837a6b6e260802e96c17f7934c37dc"
+  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/712346d3ff6541cfa5003e1b3f688594"
   vertical = false
 [[params.photography]]
   name = "Buddha statue (宝山寺)"

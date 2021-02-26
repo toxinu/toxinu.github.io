@@ -45,13 +45,6 @@ instagram = "toxinu_"
   link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04"
   vertical = false
 [[params.photography]]
-  name = "Nightly shoppers at a street corner"
-  date = "Osaka, Japan. Summer 2020"
-  linkSmall = "https://lightroom.adobe.com/v2c/catalogs/6d3fc92f9b3e4fce9dac912b4e5741c6/assets/f8cac8c0babd409492aa588c90d927e8/revisions/8e1c2dd1d7844a619492f7f2ec7535fd/renditions/6642ccd65d3ce4ecf7c2d6b1a67767ff"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f8cac8c0babd409492aa588c90d927e8/revisions/8e1c2dd1d7844a619492f7f2ec7535fd/renditions/fc205300a8a55cf4d076f01a4229e7d4"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/f8cac8c0babd409492aa588c90d927e8"
-  vertical = false
-[[params.photography]]
   name = "Kimchi shop during summer (生野コリアタウン)"
   date = "Osaka, Japan. Summer 2020"
   linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/da3c7bf9c20c471887851f04b3864132/revisions/74ce2980460246598d42e0916e7ed736/renditions/a28261b97418842868487d10a4620e53"
@@ -85,16 +78,23 @@ instagram = "toxinu_"
   link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/a3d17cd05f5e4b0b9880f1b782e5a9dd"
   vertical = false
 [[params.photography]]
-  name = "Bike shop"
-  date = "Osaka, Japan. Summer 2020"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f0fe85ab80134148a353fed03057cab6/revisions/87912fdbdd53ce0e3a872e94c1c0dafd/renditions/948f577e808561be8b807531f9f09aad"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/f0fe85ab80134148a353fed03057cab6"
-  vertical = false
-[[params.photography]]
   name = "Port of Kobe in the Autumn"
   date = "Kobe, Japan. Autumn 2020"
   linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/712346d3ff6541cfa5003e1b3f688594/revisions/db45f543b9b44f1cae29e46adbf435f8/renditions/32837a6b6e260802e96c17f7934c37dc"
   link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/712346d3ff6541cfa5003e1b3f688594"
+  vertical = false
+[[params.photography]]
+  name = "Nightly shoppers at a street corner"
+  date = "Osaka, Japan. Summer 2020"
+  linkSmall = "https://lightroom.adobe.com/v2c/catalogs/6d3fc92f9b3e4fce9dac912b4e5741c6/assets/f8cac8c0babd409492aa588c90d927e8/revisions/8e1c2dd1d7844a619492f7f2ec7535fd/renditions/6642ccd65d3ce4ecf7c2d6b1a67767ff"
+  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f8cac8c0babd409492aa588c90d927e8/revisions/8e1c2dd1d7844a619492f7f2ec7535fd/renditions/fc205300a8a55cf4d076f01a4229e7d4"
+  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/f8cac8c0babd409492aa588c90d927e8"
+  vertical = false
+[[params.photography]]
+  name = "Bike shop"
+  date = "Osaka, Japan. Summer 2020"
+  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f0fe85ab80134148a353fed03057cab6/revisions/87912fdbdd53ce0e3a872e94c1c0dafd/renditions/948f577e808561be8b807531f9f09aad"
+  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/f0fe85ab80134148a353fed03057cab6"
   vertical = false
 [[params.photography]]
   name = "Buddha statue (宝山寺)"

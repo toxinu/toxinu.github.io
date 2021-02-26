@@ -33,7 +33,8 @@ instagram = "toxinu_"
 [[params.photography]]
   name = "Sakura forest (吉野町)"
   date = "Yoshino, Japan. Summer 2020"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/f408bd7b4af66ed6c3c0151b5ee0efbb"
+  # linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/f408bd7b4af66ed6c3c0151b5ee0efbb"
+  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/265b5a14c95805aee85eed4b124faac9"
   linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/265b5a14c95805aee85eed4b124faac9"
   vertical = true
 [[params.photography]]

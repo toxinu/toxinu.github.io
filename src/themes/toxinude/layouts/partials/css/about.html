@@ -8,7 +8,7 @@
         min-height: 100px;
         width: 100px;
         min-width: 100px;
-        border: 1px black solid;
+        border: 1px var(--foreground-color) solid;
         margin-right: 24px;
         background-image: url('/images/toxinu-profile.png');
         background-size: cover;
@@ -34,7 +34,7 @@
     }
     section#about .description .social a {
         margin-right: 16px;
-        white-space: nowrap;
+        var(--text-background-color)-space: nowrap;
     }
     section#about .description .social a:last-of-type {
         margin-right: 0;
@@ -71,7 +71,7 @@
         width: 70%;
     }
     section#about-page .content .baseline span {
-        background-color: white;
+        background-color: var(--text-background-color);
     }
     section#about-page .content .sentence {
         font-size: 18px;
@@ -79,7 +79,7 @@
         margin-bottom: 16px;
     }
     section#about-page .content .sentence span {
-        background-color: white;
+        background-color: var(--text-background-color);
         margin-top: 32px;
     }
     section#about-page div.legend {

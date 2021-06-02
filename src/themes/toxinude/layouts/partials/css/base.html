@@ -1,4 +1,19 @@
 <style>
+    :root {
+        --background-color: #F7F7F7;
+        --text-background-color: var(--text-background-color);
+        --foreground-color: black;
+        --accent-color: #F5D8FF;
+    }
+
+    /* @media screen and (prefers-color-scheme: dark) {
+        :root {
+            --background-color: black;
+            --text-background-color: #696969;
+            --foreground-color: #F7F7F7;
+        }
+    } */
+
     *, *:before, *:after {
         box-sizing: border-box;
     }
@@ -10,6 +25,8 @@
         width: 100%;
         padding: 32px 0;
         font-family: 'IBMPlexMono-Regular';
+        background-color: var(--background-color);
+        color: var(--foreground-color);
     }
     section {
         width: 70%;
@@ -27,11 +44,11 @@
     strong {
         font-family: 'IBMPlexMono-Bold';
     }
-    a { color: black; }
+    a { color: var(--foreground-color); }
     .line {
         height: 3px;
         width: 100%;
-        background-color: black;
+        background-color: var(--foreground-color);
     }
     section img {
         width: 100%;
@@ -41,15 +58,15 @@
         font-size: 24px;
     }
     code {
-        background-color: #F7F7F7;
+        background-color: var(--background-color);
         padding: 1px;
         border-radius: 3px;
         font-family: 'IBMPlexMono-Regular';
         font-size: 14px;
     }
     blockquote {
-        background: white;
-        border-left: 4px solid black;
+        background: var(--text-background-color);
+        border-left: 4px solid var(--foreground-color);
         margin: 16px;
         padding: 0 16px;
         font-family: 'IBMPlexMono-Italic';
@@ -69,7 +86,7 @@
         margin: 32px 0;
     }
     #instantclick-bar {
-        background: black;
+        background: var(--foreground-color);
     }
     /* Page */
     section.page h1 {

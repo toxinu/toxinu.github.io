@@ -12,7 +12,7 @@
     function updateSidebar(initial) {
         [...document.querySelectorAll('#sidebar ul li')].forEach((element) => {
             element.style.textDecoration = 'none';
-            element.style.backgroundColor = 'var(--text-background-color)';
+            element.style.backgroundColor = 'white';
         });
         let sidebarElement;
         if (initial) {
@@ -21,7 +21,7 @@
             sidebarElement = document.querySelector('#sidebar ul li a[href="' + location.hash + '"]');
         }
         if (sidebarElement) {
-            sidebarElement.parentNode.style.backgroundColor = 'var(--accent-color)';
+            sidebarElement.parentNode.style.backgroundColor = '#F5D8FF';
             sidebarElement.parentNode.style.textDecoration = 'underline';
         }
     }

@@ -2,7 +2,7 @@
 <html lang="en-us">
 <head>
 	<meta charset="utf-8">
-	<meta name="theme-color" content="var(--accent-color)">
+	<meta name="theme-color" content="#F5D8FF">
 	<meta http-equiv="X-UA-Compatible" content="chrome=1">
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
@@ -60,15 +60,6 @@
     }
 </style>
 <style>
-    :root {
-        --background-color: #F7F7F7;
-        --text-background-color: var(--text-background-color);
-        --foreground-color: black;
-        --accent-color: #F5D8FF;
-    }
-
-     
-
     *, *:before, *:after {
         box-sizing: border-box;
     }
@@ -80,8 +71,6 @@
         width: 100%;
         padding: 32px 0;
         font-family: 'IBMPlexMono-Regular';
-        background-color: var(--background-color);
-        color: var(--foreground-color);
     }
     section {
         width: 70%;
@@ -99,11 +88,11 @@
     strong {
         font-family: 'IBMPlexMono-Bold';
     }
-    a { color: var(--foreground-color); }
+    a { color: black; }
     .line {
         height: 3px;
         width: 100%;
-        background-color: var(--foreground-color);
+        background-color: black;
     }
     section img {
         width: 100%;
@@ -113,15 +102,15 @@
         font-size: 24px;
     }
     code {
-        background-color: var(--background-color);
+        background-color: #F7F7F7;
         padding: 1px;
         border-radius: 3px;
         font-family: 'IBMPlexMono-Regular';
         font-size: 14px;
     }
     blockquote {
-        background: var(--text-background-color);
-        border-left: 4px solid var(--foreground-color);
+        background: white;
+        border-left: 4px solid black;
         margin: 16px;
         padding: 0 16px;
         font-family: 'IBMPlexMono-Italic';
@@ -141,7 +130,7 @@
         margin: 32px 0;
     }
     #instantclick-bar {
-        background: var(--foreground-color);
+        background: black;
     }
      
     section.page h1 {
@@ -167,12 +156,12 @@
         margin-right: 16px;
     }
     section#nav .site-name {
-        background-color: var(--foreground-color);
-        color: var(--background-color);
+        background-color: black;
+        color: white;
         padding: 4px 8px;
     }
     section#nav .site-logo {
-        background: var(--accent-color);
+        background: #F5D8FF;
         padding: 4px 8px;
     }
     section#nav ul {
@@ -201,7 +190,7 @@
         min-height: 100px;
         width: 100px;
         min-width: 100px;
-        border: 1px var(--foreground-color) solid;
+        border: 1px black solid;
         margin-right: 24px;
         background-image: url('/images/toxinu-profile.png');
         background-size: cover;
@@ -227,7 +216,7 @@
     }
     section#about .description .social a {
         margin-right: 16px;
-        var(--text-background-color)-space: nowrap;
+        white-space: nowrap;
     }
     section#about .description .social a:last-of-type {
         margin-right: 0;
@@ -264,7 +253,7 @@
         width: 70%;
     }
     section#about-page .content .baseline span {
-        background-color: var(--text-background-color);
+        background-color: white;
     }
     section#about-page .content .sentence {
         font-size: 18px;
@@ -272,7 +261,7 @@
         margin-bottom: 16px;
     }
     section#about-page .content .sentence span {
-        background-color: var(--text-background-color);
+        background-color: white;
         margin-top: 32px;
     }
     section#about-page div.legend {
@@ -315,7 +304,7 @@
         width: unset;
     }
     section#photography-page img.loading {
-        background-color: var(--background-color);
+        background-color: #F7F7F7;
         border-radius: 5px;
     }
     section#photography-page .social {
@@ -357,8 +346,8 @@
 <style>
     section#games {
         width: 100%;
-        background-color: var(--foreground-color);
-        color: var(--text-background-color);
+        background-color: black;
+        color: white;
         max-width: unset;
     }
     section#games > div {
@@ -378,8 +367,8 @@
     }
     section#games > div ul li {
         flex-basis: 100%;
-        background-color: var(--text-background-color);
-        color: var(--foreground-color);
+        background-color: white;
+        color: black;
         margin-right: 24px;
         padding: 24px;
         display: flex;
@@ -420,7 +409,7 @@
         margin-bottom: 0;
     }
     section#codes ul li a {
-        border: 1px solid var(--foreground-color);
+        border: 1px solid black;
         display: flex;
         text-decoration: none;
     }
@@ -440,8 +429,8 @@
         font-family: 'IBMPlexMono-Regular';
     }
     section#codes ul li a span.box-link {
-        background-color: var(--foreground-color);
-        color: var(--text-background-color);
+        background-color: black;
+        color: white;
         width: 55px;
         min-width: 55px;
         text-align: center;
@@ -470,7 +459,7 @@
         margin-bottom: 0;
     }
     section#journal ul li a {
-        border: 1px solid var(--foreground-color);
+        border: 1px solid black;
         display: flex;
         text-decoration: none;
     }
@@ -486,12 +475,12 @@
         font-family: 'IBMPlexMono-BoldItalic';
     }
     section#journal ul li a div p {
-        var(--text-background-color)-space: nowrap;
+        white-space: nowrap;
         margin-left: auto;
     }
     section#journal ul li a span.box-link {
-        background-color: var(--foreground-color);
-        color: var(--text-background-color);
+        background-color: black;
+        color: white;
         width: 55px;
         min-width: 55px;
         text-align: center;
@@ -543,7 +532,7 @@
     }
     #sidebar ul li {
         margin-bottom: 16px;
-        background-color: var(--text-background-color);
+        background-color: white;
         width: max-content;
     }
     #sidebar ul li a {
@@ -806,7 +795,7 @@
     function updateSidebar(initial) {
         [...document.querySelectorAll('#sidebar ul li')].forEach((element) => {
             element.style.textDecoration = 'none';
-            element.style.backgroundColor = 'var(--text-background-color)';
+            element.style.backgroundColor = 'white';
         });
         let sidebarElement;
         if (initial) {
@@ -815,7 +804,7 @@
             sidebarElement = document.querySelector('#sidebar ul li a[href="' + location.hash + '"]');
         }
         if (sidebarElement) {
-            sidebarElement.parentNode.style.backgroundColor = 'var(--accent-color)';
+            sidebarElement.parentNode.style.backgroundColor = '#F5D8FF';
             sidebarElement.parentNode.style.textDecoration = 'underline';
         }
     }

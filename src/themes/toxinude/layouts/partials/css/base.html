@@ -1,19 +1,4 @@
 <style>
-    :root {
-        --background-color: #F7F7F7;
-        --text-background-color: var(--text-background-color);
-        --foreground-color: black;
-        --accent-color: #F5D8FF;
-    }
-
-    /* @media screen and (prefers-color-scheme: dark) {
-        :root {
-            --background-color: black;
-            --text-background-color: #696969;
-            --foreground-color: #F7F7F7;
-        }
-    } */
-
     *, *:before, *:after {
         box-sizing: border-box;
     }
@@ -25,8 +10,6 @@
         width: 100%;
         padding: 32px 0;
         font-family: 'IBMPlexMono-Regular';
-        background-color: var(--background-color);
-        color: var(--foreground-color);
     }
     section {
         width: 70%;
@@ -44,11 +27,11 @@
     strong {
         font-family: 'IBMPlexMono-Bold';
     }
-    a { color: var(--foreground-color); }
+    a { color: black; }
     .line {
         height: 3px;
         width: 100%;
-        background-color: var(--foreground-color);
+        background-color: black;
     }
     section img {
         width: 100%;
@@ -58,15 +41,15 @@
         font-size: 24px;
     }
     code {
-        background-color: var(--background-color);
+        background-color: #F7F7F7;
         padding: 1px;
         border-radius: 3px;
         font-family: 'IBMPlexMono-Regular';
         font-size: 14px;
     }
     blockquote {
-        background: var(--text-background-color);
-        border-left: 4px solid var(--foreground-color);
+        background: white;
+        border-left: 4px solid black;
         margin: 16px;
         padding: 0 16px;
         font-family: 'IBMPlexMono-Italic';
@@ -86,7 +69,7 @@
         margin: 32px 0;
     }
     #instantclick-bar {
-        background: var(--foreground-color);
+        background: black;
     }
     /* Page */
     section.page h1 {

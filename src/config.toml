@@ -26,109 +26,84 @@ instagram = "toxinu_"
 [[params.photography]]
   name = "Buildings reaching the blue sky at Minato-ku (港区)"
   date = "Tokyo, Japan. Sprin 2021"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/b177dd81156f45fdb36a712f618957d5/revisions/41cbd213c7214376b05371991adbfe26/renditions/15dfba4bcd1cd69dcbf2e88db3d88d4e"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/b177dd81156f45fdb36a712f618957d5/revisions/41cbd213c7214376b05371991adbfe26/renditions/15dfba4bcd1cd69dcbf2e88db3d88d4e"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/b177dd81156f45fdb36a712f618957d5"
+  linkSmall = "/images/photography/blue-sky-with-building.jpg"
+  linkMedium = "/images/photography/blue-sky-with-building.jpg"
   vertical = false
 [[params.photography]]
   name = "Sakura forest (吉野町)"
   date = "Yoshino, Japan. Summer 2020"
-  # linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/f408bd7b4af66ed6c3c0151b5ee0efbb"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/265b5a14c95805aee85eed4b124faac9"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f88a931f6ca642f38169acfd9c2ba9c0/revisions/8c4fc90b47c845510a7299d7a106d190/renditions/265b5a14c95805aee85eed4b124faac9"
+  linkSmall = "/images/photography/yoshino-sakura.jpg"
+  linkMedium = "/images/photography/yoshino-sakura.jpg"
   vertical = true
 [[params.photography]]
   name = "Rainy day under a bridge at Fukishima-ku (福島区)"
   date = "Osaka, Japan. Summer 2020"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04/revisions/62340e8b146c76c197afb6b2e4c1e163/renditions/f3b91663fa99de47153afbdbc0d0776f"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04/revisions/62340e8b146c76c197afb6b2e4c1e163/renditions/5f802399326f833b803527d0aeb796f9"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/c3c2fa6ffa3849759c7f4c9b0d3aff04"
+  linkMedium = "/images/photography/osaka-raining-bridge.jpg"
   vertical = false
 [[params.photography]]
   name = "Kimchi shop during summer (生野コリアタウン)"
   date = "Osaka, Japan. Summer 2020"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/da3c7bf9c20c471887851f04b3864132/revisions/74ce2980460246598d42e0916e7ed736/renditions/a28261b97418842868487d10a4620e53"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/da3c7bf9c20c471887851f04b3864132/revisions/74ce2980460246598d42e0916e7ed736/renditions/3538f689f3b819f73364a270468f2b36"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/da3c7bf9c20c471887851f04b3864132"
+  linkMedium = "/images/photography/osaka-kimchi-shop.jpg"
   vertical = false
 [[params.photography]]
   name = "Sunset at Abeno Harukas (あべのハルカス)"
   date = "Osaka, Japan. Summer 2020"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/faa0a71736a34ac6a37f88c717a5274d/revisions/4444f856048ad8daac05b76791de8883/renditions/100218cb46939abf02475399d096b171"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/faa0a71736a34ac6a37f88c717a5274d/revisions/4444f856048ad8daac05b76791de8883/renditions/3d02f845240fe8452083b943f9a9898e"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/faa0a71736a34ac6a37f88c717a5274d"
+  linkMedium = "/images/photography/osaka-abeno-harukas.jpg"
   vertical = true
 [[params.photography]]
   name = "Colorful Japanese street"
   date = "Osaka, Japan. Summer 2020"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/bb806663e1e6462391de3ea1846d34fa/revisions/97d03b960a366ae0598d5ae3b95f3fe7/renditions/750430132c90d1b752bd3ef13c41c876"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/bb806663e1e6462391de3ea1846d34fa/revisions/97d03b960a366ae0598d5ae3b95f3fe7/renditions/f95123dec4cfd9ef97631d4963798951"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/bb806663e1e6462391de3ea1846d34fa"
+  linkMedium = "/images/photography/osaka-colorful-street.jpg"
   vertical = false
 [[params.photography]]
   name = "Go players"
   date = "Osaka, Japan. Summer 2020"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/28a8e7efee2f4bd09e1cbcebc976e7d1/revisions/e3f8a30c5cb8468b8d5479b76eb93af2/renditions/f5c23a89a87ed1ca30933e4dc1a632e9"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/28a8e7efee2f4bd09e1cbcebc976e7d1"
+  linkMedium = "/images/photography/osaka-go-players.jpg"
   vertical = false
 [[params.photography]]
   name = "Old temple stand in wood (宝山寺)"
   date = "Hōzan-ji, Japan. Summer 2020"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/a3d17cd05f5e4b0b9880f1b782e5a9dd/revisions/ab605deafc6c4d868030bafcb9c763f4/renditions/28c9ea58df6b5658abbc474f6fffb3b2"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/a3d17cd05f5e4b0b9880f1b782e5a9dd"
+  linkMedium = "/images/photography/hozan-ji-summer.jpg"
   vertical = false
 [[params.photography]]
   name = "Port of Kobe in the Autumn"
   date = "Kobe, Japan. Autumn 2020"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/712346d3ff6541cfa5003e1b3f688594/revisions/db45f543b9b44f1cae29e46adbf435f8/renditions/32837a6b6e260802e96c17f7934c37dc"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/712346d3ff6541cfa5003e1b3f688594"
+  linkMedium = "/images/photography/kobe-automn.jpg"
   vertical = false
 [[params.photography]]
   name = "Old shop keeper in Tokyo street"
   date = "Tokyo Japan. June, 2021"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/b11f4fc17bda4bb597c82e18266e4a03/revisions/2def30cda5ddd78c81db225ddf20505e/renditions/4d57b840834dc70f22c7296a3f4ecd44"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/b11f4fc17bda4bb597c82e18266e4a03/revisions/2def30cda5ddd78c81db225ddf20505e/renditions/4d57b840834dc70f22c7296a3f4ecd44"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/b11f4fc17bda4bb597c82e18266e4a03"
+  linkMedium = "/images/photography/shop-keeper-tokyo.jpg"
   vertical = false
 [[params.photography]]
   name = "People in the train using the Ginza Line"
   date = "Tokyo, Japan. June, 2021"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/8e4f75dc3a804a9a8a6f9bd9b872441c/revisions/2f31baa3e6ca905dc4b7812b848f5c6b/renditions/b99dd76c789b7f18247738e74b6a0ed5"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/8e4f75dc3a804a9a8a6f9bd9b872441c/revisions/2f31baa3e6ca905dc4b7812b848f5c6b/renditions/b99dd76c789b7f18247738e74b6a0ed5"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/8e4f75dc3a804a9a8a6f9bd9b872441c"
+  linkMedium = "/images/photography/people-in-the-ginza-line.jpg"
   vertical = false
 [[params.photography]]
   name = "Thirsty dog in the street"
   date = "Tokyo, Japan. June 2021"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/24488de55dc64026b8e6edd30a0af4a0/revisions/ec88875d143463dd2bd663160f4e0180/renditions/9a608f32caec69419617afb32bfc64c7"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/24488de55dc64026b8e6edd30a0af4a0/revisions/ec88875d143463dd2bd663160f4e0180/renditions/9a608f32caec69419617afb32bfc64c7"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/24488de55dc64026b8e6edd30a0af4a0"
+  linkMedium = "/images/photography/thirsty-dog-in-the-street.jpg"
   vertical = false
 [[params.photography]]
   name = "Lady ordering food at a shop"
   date = "Tokyo, Japan. June 2021"
-  linkSmall = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/eba02b00caf9444c921a2102e108298d/revisions/af93df1b4d4e1658ffc0cbab15124473/renditions/2b0cdbd90efe57cb7f4a514b2729a432"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/eba02b00caf9444c921a2102e108298d/revisions/af93df1b4d4e1658ffc0cbab15124473/renditions/2b0cdbd90efe57cb7f4a514b2729a432"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/eba02b00caf9444c921a2102e108298d"
+  linkMedium = "/images/photography/lady-ordering-food.jpg"
   vertical = false
 [[params.photography]]
   name = "Nightly shoppers at a street corner"
   date = "Osaka, Japan. Summer 2020"
-  linkSmall = "https://lightroom.adobe.com/v2c/catalogs/6d3fc92f9b3e4fce9dac912b4e5741c6/assets/f8cac8c0babd409492aa588c90d927e8/revisions/8e1c2dd1d7844a619492f7f2ec7535fd/renditions/6642ccd65d3ce4ecf7c2d6b1a67767ff"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f8cac8c0babd409492aa588c90d927e8/revisions/8e1c2dd1d7844a619492f7f2ec7535fd/renditions/fc205300a8a55cf4d076f01a4229e7d4"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/f8cac8c0babd409492aa588c90d927e8"
+  linkMedium = "/images/photography/nightly-shoppers.jpg"
   vertical = false
 [[params.photography]]
   name = "Bike shop"
   date = "Osaka, Japan. Summer 2020"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/f0fe85ab80134148a353fed03057cab6/revisions/87912fdbdd53ce0e3a872e94c1c0dafd/renditions/948f577e808561be8b807531f9f09aad"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/f0fe85ab80134148a353fed03057cab6"
+  linkMedium = "/images/photography/bike-shop-osaka.jpg"
   vertical = false
 [[params.photography]]
   name = "Buddha statue (宝山寺)"
   date = "Hōzan-ji, Japan. Summer 2020"
-  linkMedium = "https://lightroom.adobe.com/v2c/spaces/1fc18912204748c594ce4308a60f3f5c/assets/088fde982e8148a8a897e1a154f3c07a/revisions/bb9b1f8688164eefa2566e4acdaf7d3b/renditions/cbef5a495141055aacf6399e7ff04b51"
-  link = "https://lightroom.adobe.com/shares/1fc18912204748c594ce4308a60f3f5c/albums/f0f6e55847e94ac58d2cb18819344234/assets/088fde982e8148a8a897e1a154f3c07a"
+  linkMedium = "/images/photography/buddha-statue.jpg"
   vertical = false
 [permalinks]
 blog = "blog/:slug/"

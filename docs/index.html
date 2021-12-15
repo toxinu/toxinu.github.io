@@ -767,7 +767,7 @@
         <ul>
             <li>
                 <h3>Pod2000</h3>
-                <img src="/images/games-pod2000-min.png" alt="Pod2000 screenshot"/>
+                <img class="lazy" loading="lazy" data-src="/images/games-pod2000-min.png" alt="Pod2000 screenshot"/>
                 <p>
                     In Pod2000, you play an agent belonging to a huge corporation that exploits planets. To exploit a planet, you need to install modules to extract oil, refinery, etc.
                 </p>
@@ -775,7 +775,7 @@
             </li>
             <li>
                 <h3>Fórnir</h3>
-                <img src="/images/games-fornir-min.png" alt="Fórnir screenshot"/>
+                <img class="lazy" loading="lazy" data-src="/images/games-fornir-min.png" alt="Fórnir screenshot"/>
                 <p>
                     In Fórnir you play a Jarl who rules over a village. Try your best to keep the trust of your people by making good decisions…
                 </p>
@@ -1015,13 +1015,6 @@
 <script>
     console.log('Heya there, why are you looking at our developer tools? I mean this is a crappy static website.');
     console.log('Nothing to see here. You better look at my resume.');
-    
-    const lightSchemeIcon = document.querySelector('link#light-scheme-icon');
-    const darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
-    matcherLight = window.matchMedia('(prefers-color-scheme: light)');
-    matcherDark = window.matchMedia('(prefers-color-scheme: dark)');
-    matcherLight.addListener(() => updateFavicon('light'));
-    matcherDark.addListener(() => updateFavicon('dark'));
 
     function updateSidebar(initial) {
         [...document.querySelectorAll('#sidebar ul li')].forEach((element) => {
@@ -1040,15 +1033,6 @@
         }
     }
 
-    function updateFavicon() {
-        if (matcherDark.matches) {
-            lightSchemeIcon.remove();
-            document.head.append(darkSchemeIcon);
-        } else {
-            document.head.append(lightSchemeIcon);
-            darkSchemeIcon.remove();
-        }
-    }
     window.onload = function() {
         window.onscroll = function(e) {
             let currentHash = location.hash;
@@ -1071,7 +1055,6 @@
         };
         window.onhashchange = updateSidebar;
         updateSidebar(true);
-        updateFavicon();
         var lazyLoadInstance = new LazyLoad({});
     }
 </script>

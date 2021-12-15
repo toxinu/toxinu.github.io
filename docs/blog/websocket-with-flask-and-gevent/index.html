@@ -809,13 +809,6 @@ Bunch of new features is coming !</p>
 <script>
     console.log('Heya there, why are you looking at our developer tools? I mean this is a crappy static website.');
     console.log('Nothing to see here. You better look at my resume.');
-    
-    const lightSchemeIcon = document.querySelector('link#light-scheme-icon');
-    const darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
-    matcherLight = window.matchMedia('(prefers-color-scheme: light)');
-    matcherDark = window.matchMedia('(prefers-color-scheme: dark)');
-    matcherLight.addListener(() => updateFavicon('light'));
-    matcherDark.addListener(() => updateFavicon('dark'));
 
     function updateSidebar(initial) {
         [...document.querySelectorAll('#sidebar ul li')].forEach((element) => {
@@ -834,15 +827,6 @@ Bunch of new features is coming !</p>
         }
     }
 
-    function updateFavicon() {
-        if (matcherDark.matches) {
-            lightSchemeIcon.remove();
-            document.head.append(darkSchemeIcon);
-        } else {
-            document.head.append(lightSchemeIcon);
-            darkSchemeIcon.remove();
-        }
-    }
     window.onload = function() {
         window.onscroll = function(e) {
             let currentHash = location.hash;
@@ -865,7 +849,6 @@ Bunch of new features is coming !</p>
         };
         window.onhashchange = updateSidebar;
         updateSidebar(true);
-        updateFavicon();
         var lazyLoadInstance = new LazyLoad({});
     }
 </script>

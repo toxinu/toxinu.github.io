@@ -15,7 +15,7 @@
       
       <guid>/blog/my-setup-2018/</guid>
       <description>I&amp;rsquo;ve never been so satisfied with my current daily setup as remote-SRE (Python/Golang), so why just not sharing it?
-Hardware  ThinkPad X260 Samsung 27&amp;quot; Curved LED (yes only one screen) WASD Keyboard Cherry MX Brown 88-Key Steelseries Rival 100 mice Sennheiser HD25-1 II Headphone (for music) HyperX Cloud II Headphone (for vocal)  Software  Fedora (GNU/Linux) Gnome 3  AlternateTab Caffeine Impatience No topleft hot corner TopIcons Plus Extension to fix screen tearing   Firefox  Bitwarden Decentraleyes Firefox Multi-account containers HTTPS Everywhere I don&amp;rsquo;t care about cookies Mailvelope Privacy Badger Tab Suspender uBlock Origin   Alacritty tmux  tmux-open   Visual Studio Code  Ascetic colorscheme   wee-slack Signal VeraCrypt Clementine  Tips &amp;amp; notes  To directly run tmux with alacritty you can edit your DesktopEntry like that:    Use Visual Code Studio from FlatHub to have a Microsoft-free compiled binary.</description>
+Hardware ThinkPad X260 Samsung 27&amp;quot; Curved LED (yes only one screen) WASD Keyboard Cherry MX Brown 88-Key Steelseries Rival 100 mice Sennheiser HD25-1 II Headphone (for music) HyperX Cloud II Headphone (for vocal) Software Fedora (GNU/Linux) Gnome 3 AlternateTab Caffeine Impatience No topleft hot corner TopIcons Plus Extension to fix screen tearing Firefox Bitwarden Decentraleyes Firefox Multi-account containers HTTPS Everywhere I don&amp;rsquo;t care about cookies Mailvelope Privacy Badger Tab Suspender uBlock Origin Alacritty tmux tmux-open Visual Studio Code Ascetic colorscheme wee-slack Signal VeraCrypt Clementine Tips &amp;amp; notes To directly run tmux with alacritty you can edit your DesktopEntry like that: Use Visual Code Studio from FlatHub to have a Microsoft-free compiled binary.</description>
     </item>
     
     <item>
@@ -26,10 +26,10 @@ Hardware  ThinkPad X260 Samsung 27&amp;quot; Curved LED (yes only one screen) WA
       <guid>/blog/how-to-store-your-python-package-metadata/</guid>
       <description>A small, but full of snippets, post about how to store your package metadata cleanly.
 Let&amp;rsquo;s define a simple layout.
- All your metadata lives in __about__.py like that:
- Expose all your metadata at package root.
- This setup allow you to avoid editing your setup.py too frequently and keep it up to date easily.
- Happy coding and don&amp;rsquo;t eat too much turkeys!</description>
+All your metadata lives in __about__.py like that:
+Expose all your metadata at package root.
+This setup allow you to avoid editing your setup.py too frequently and keep it up to date easily.
+Happy coding and don&amp;rsquo;t eat too much turkeys!</description>
     </item>
     
     <item>
@@ -63,8 +63,8 @@ Je suppose que vous connaissez H.P. Lovecraft, grand écrivain dès son plus jeu
       <description>Let&amp;rsquo;s continue with my previous blog post on Restless introduction with Django. Today I&amp;rsquo;ll show you two quick and simple Mixins for Restless. One for filtering and another for ordering.
 I won&amp;rsquo;t show you how to create Django app, models, etc. This is not the subject.
 Just to be clear, I have this models.py for our Pizza shop.
- And my resources.py:
- Filtering We are building a very simple and not complete APIFilterMixin class.</description>
+And my resources.py:
+Filtering We are building a very simple and not complete APIFilterMixin class.</description>
     </item>
     
     <item>
@@ -85,7 +85,7 @@ I&amp;rsquo;m totally not a huge fan of Django Rest Framework. It&amp;rsquo;s ju
       <guid>/blog/goodbye-disqus/</guid>
       <description>Hi folks,
 I just trash Disqus from my website cause of some disgusting issues.
- A bunch of js imported A bunch of ajax requests everywhere A big performance issue on page rendering, specially on mobile A urls migration wizard that just doesn&amp;rsquo;t work  I have tested Isso, a Python commentary mechanize. But still young and I fail to import all comments from Disqus. I make some try and thinking about Discourse integration.</description>
+A bunch of js imported A bunch of ajax requests everywhere A big performance issue on page rendering, specially on mobile A urls migration wizard that just doesn&amp;rsquo;t work I have tested Isso, a Python commentary mechanize. But still young and I fail to import all comments from Disqus. I make some try and thinking about Discourse integration.</description>
     </item>
     
     <item>
@@ -128,7 +128,7 @@ It&amp;rsquo;s an oral biography about a strange boy (Buster Rant Casey) in a st
       <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>/blog/ephemeral-internet/</guid>
-      <description> I enjoy this ephemeral vision of the Internet.    </description>
+      <description> I enjoy this ephemeral vision of the Internet. </description>
     </item>
     
     <item>
@@ -150,7 +150,7 @@ I&amp;rsquo;ve always dreamed to be able to just swallow a pill every morning an
       
       <guid>/blog/first-thing-to-do-after-ubuntu-fresh-install/</guid>
       <description>It&amp;rsquo;s time to return to sources, Linux, good buy Apple. But this is the first thing to do on every new Ubuntu installation.
- &amp;lsquo;Cause of spyware, you know&amp;hellip;</description>
+&amp;lsquo;Cause of spyware, you know&amp;hellip;</description>
     </item>
     
     <item>
@@ -173,7 +173,7 @@ Node.js, blah, blah Ok, I have many many times hear good things about Node.</des
       <description>Synopsis My initial goal was to put my jekyll website on Heroku but I have encountered many problems due of my bad Ruby level and pygment usage.
 During month my jekyll website was freely hosted by GitHub Pages. Thanks for all the fish. But GitHub is not for app hosting.
 Many hours of:
- &amp;ldquo;What the fuck I have 404 ?&amp;rdquo; &amp;ldquo;Oh Damn it my local Jekyll render it correctly and not on Github&amp;hellip;&amp;rdquo; &amp;ldquo;Ohh enough, it was just the yaml header with quotes which give me fucking 404&amp;rdquo;</description>
+&amp;ldquo;What the fuck I have 404 ?&amp;rdquo; &amp;ldquo;Oh Damn it my local Jekyll render it correctly and not on Github&amp;hellip;&amp;rdquo; &amp;ldquo;Ohh enough, it was just the yaml header with quotes which give me fucking 404&amp;rdquo;</description>
     </item>
     
     <item>
@@ -183,11 +183,11 @@ Many hours of:
       
       <guid>/blog/themall-a-simple-python-web-shopping-list/</guid>
       <description>I have used myTinyTodo for at least 1 year but I&amp;rsquo;m fed up of Mysql database and Php&amp;hellip; Am I serious ?
- &amp;ldquo;Mysql database for shopping list ? A bazooka to kill a fly ?&amp;rdquo;
- The plan is to create a simple Python todo list mainly for shopping list with mobile interface. It&amp;rsquo;s was the objectif.
+&amp;ldquo;Mysql database for shopping list ? A bazooka to kill a fly ?&amp;rdquo;
+The plan is to create a simple Python todo list mainly for shopping list with mobile interface. It&amp;rsquo;s was the objectif.
 Tools box:
- Python Flask Twitter bootstrap Json  Description
- Simple authentification Very light design Mobile design (responsive) Very very light Todo List In fact, looks like a Shopping List  You can see project page here.</description>
+Python Flask Twitter bootstrap Json Description
+Simple authentification Very light design Mobile design (responsive) Very very light Todo List In fact, looks like a Shopping List You can see project page here.</description>
     </item>
     
     <item>
@@ -196,9 +196,10 @@ Tools box:
       <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
       
       <guid>/blog/ubuntu-server-lts-upgrades-are-stress-test/</guid>
-      <description>Update  Sept, 24 2012  This article is now deprecated, Ubuntu now have a clean upgrade script. Just use do-release-upgrade.
- This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present. And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&amp;hellip;
-I admit to not being an Ubuntu expert ( Debian too ) but the do-release-upgrade is like :</description>
+      <description>Update Sept, 24 2012 This article is now deprecated, Ubuntu now have a clean upgrade script. Just use do-release-upgrade.
+This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present. And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&amp;hellip;
+I admit to not being an Ubuntu expert ( Debian too ) but the do-release-upgrade is like :
+&amp;ldquo;Ohhh yeah take this Ultra Decap&amp;rsquo;Net my son !</description>
     </item>
     
     <item>

@@ -12,11 +12,10 @@ publish:
 
 	echo "Removing existing files"
 	find .
-	find . | grep -v 'src\|Makefile\|.git\|.' | xargs rm -r
+	find . | grep -v 'src\|Makefile\|.git\|.' | xargs -r rm -r
 
 	echo "Generating site"
 	hugo -s src
-	# echo "toxi.nu" > docs/CNAME
 
 	echo "Updating gh-pages branch"
 	git add . && git commit -m "Publishing a new print..."

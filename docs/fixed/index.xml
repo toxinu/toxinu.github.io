@@ -14,10 +14,11 @@
       
       <guid>/</guid>
       <description>// Not used +++ title = &amp;ldquo;Code&amp;rdquo; +++ Below is a short list of projects I have created or worked on. You can find many more recent projects on Github or Gitlab.
-  Sublimall - SublimeText 3 plugin to sync your configuration. ~560 stars
-  Pyhn - Hacker News command line client. ~380 stars
-  Requirements - Python requirements helper. ~300 stars
-  Leselys - Web based RSS reader.</description>
+Sublimall - SublimeText 3 plugin to sync your configuration. ~560 stars
+Pyhn - Hacker News command line client. ~380 stars
+Requirements - Python requirements helper. ~300 stars
+Leselys - Web based RSS reader. ~220 stars
+Isit - Python environment discoverer.</description>
     </item>
     
     <item>
@@ -27,8 +28,8 @@
       
       <guid>/</guid>
       <description>// Not used +++ title = &amp;ldquo;Games&amp;rdquo; +++ Below is a short list of games I have worked on mostly during game jams.
-  Pod2000 - In Pod2000, you play an agent belonging to a huge corporation that exploits planets. To exploit a planet, you need to install modules to extract oil, refinery, etc.
-  Fórnir - In Fórnir you play a Jarl who rules over a village. Try your best to keep the trust of your people by making good decisions…</description>
+Pod2000 - In Pod2000, you play an agent belonging to a huge corporation that exploits planets. To exploit a planet, you need to install modules to extract oil, refinery, etc.
+Fórnir - In Fórnir you play a Jarl who rules over a village. Try your best to keep the trust of your people by making good decisions…</description>
     </item>
     
     <item>
@@ -47,7 +48,7 @@
       
       <guid>/photography/</guid>
       <description>Hardware: Fujifilm X-T30 (FUJINON XF35mmF2 R WR) | Olympus OM-1n (28mm)
-Twitter ↪ Instagram ↪ Flickr ↪ 500px ↪  </description>
+Twitter ↪ Instagram ↪ Flickr ↪ 500px ↪ </description>
     </item>
     
   </channel>

@@ -21,7 +21,7 @@ rss = true
 email = "toxinu@gmail.com"
 github = "toxinu"
 gitlab= "toxinu"
-twitter = "toxinu_"
+twitter = ""
 instagram = "toxinu_"
 [[params.photography]]
   name = "Buildings reaching the blue sky at Minato-ku (港区)"

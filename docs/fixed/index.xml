@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Fixeds on toxinu</title>
-    <link>/fixed/</link>
+    <link>//localhost:1313/fixed/</link>
     <description>Recent content in Fixeds on toxinu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>toxinu</copyright>
-    <atom:link href="/fixed/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/fixed/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>/</link>
+      <link>//localhost:1313/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/</guid>
+      <guid>//localhost:1313/</guid>
       <description>// Not used +++ title = &amp;ldquo;Code&amp;rdquo; +++ Below is a short list of projects I have created or worked on. You can find many more recent projects on Github or Gitlab.&#xA;Sublimall - SublimeText 3 plugin to sync your configuration. ~560 stars&#xA;Pyhn - Hacker News command line client. ~380 stars&#xA;Requirements - Python requirements helper. ~300 stars&#xA;Leselys - Web based RSS reader. ~220 stars&#xA;Isit - Python environment discoverer.</description>
     </item>
     <item>
       <title></title>
-      <link>/</link>
+      <link>//localhost:1313/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/</guid>
+      <guid>//localhost:1313/</guid>
       <description>// Not used +++ title = &amp;ldquo;Games&amp;rdquo; +++ Below is a short list of games I have worked on mostly during game jams.&#xA;Pod2000 - In Pod2000, you play an agent belonging to a huge corporation that exploits planets. To exploit a planet, you need to install modules to extract oil, refinery, etc.&#xA;Fórnir - In Fórnir you play a Jarl who rules over a village. Try your best to keep the trust of your people by making good decisions…</description>
     </item>
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>//localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/about/</guid>
+      <guid>//localhost:1313/about/</guid>
       <description></description>
     </item>
     <item>
       <title>Photography</title>
-      <link>/photography/</link>
+      <link>//localhost:1313/photography/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>/photography/</guid>
+      <guid>//localhost:1313/photography/</guid>
       <description>Hardware: Fujifilm X-T30 (FUJINON XF35mmF2 R WR) | Olympus OM-1n (28mm)&#xA;Instagram ↪ Flickr ↪ 500px ↪ </description>
     </item>
   </channel>

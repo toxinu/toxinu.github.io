@@ -18,14 +18,14 @@ showAllPostsOnHomePage = true
 showPaginationHomePage = false
 rss = true
 # Other
-email = "toxinu@gmail.com"
+email = "jo@kikitama.com"
 github = "toxinu"
 gitlab= "toxinu"
 twitter = ""
 instagram = "toxinu_"
 [[params.photography]]
   name = "Buildings reaching the blue sky at Minato-ku (港区)"
-  date = "Tokyo, Japan. Sprin 2021"
+  date = "Tokyo, Japan. Spring 2021"
   linkSmall = "/images/photography/blue-sky-with-building.jpg"
   linkMedium = "/images/photography/blue-sky-with-building.jpg"
   vertical = false

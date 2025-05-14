@@ -6,50 +6,35 @@
     <description>Recent content in Fixeds on toxinu</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>toxinu</copyright><atom:link href="/fixed/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>toxinu</copyright>
+    <atom:link href="/fixed/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
       <link>/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/</guid>
-      <description>// Not used +++ title = &amp;ldquo;Code&amp;rdquo; +++ Below is a short list of projects I have created or worked on. You can find many more recent projects on Github or Gitlab.
-Sublimall - SublimeText 3 plugin to sync your configuration. ~560 stars
-Pyhn - Hacker News command line client. ~380 stars
-Requirements - Python requirements helper. ~300 stars
-Leselys - Web based RSS reader. ~220 stars
-Isit - Python environment discoverer.</description>
+      <description>// Not used +++ title = &amp;ldquo;Code&amp;rdquo; +++ Below is a short list of projects I have created or worked on. You can find many more recent projects on Github or Gitlab.&#xA;Sublimall - SublimeText 3 plugin to sync your configuration. ~560 stars&#xA;Pyhn - Hacker News command line client. ~380 stars&#xA;Requirements - Python requirements helper. ~300 stars&#xA;Leselys - Web based RSS reader. ~220 stars&#xA;Isit - Python environment discoverer.</description>
     </item>
-    
     <item>
       <title></title>
       <link>/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/</guid>
-      <description>// Not used +++ title = &amp;ldquo;Games&amp;rdquo; +++ Below is a short list of games I have worked on mostly during game jams.
-Pod2000 - In Pod2000, you play an agent belonging to a huge corporation that exploits planets. To exploit a planet, you need to install modules to extract oil, refinery, etc.
-Fórnir - In Fórnir you play a Jarl who rules over a village. Try your best to keep the trust of your people by making good decisions…</description>
+      <description>// Not used +++ title = &amp;ldquo;Games&amp;rdquo; +++ Below is a short list of games I have worked on mostly during game jams.&#xA;Pod2000 - In Pod2000, you play an agent belonging to a huge corporation that exploits planets. To exploit a planet, you need to install modules to extract oil, refinery, etc.&#xA;Fórnir - In Fórnir you play a Jarl who rules over a village. Try your best to keep the trust of your people by making good decisions…</description>
     </item>
-    
     <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/about/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Photography</title>
       <link>/photography/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/photography/</guid>
-      <description>Hardware: Fujifilm X-T30 (FUJINON XF35mmF2 R WR) | Olympus OM-1n (28mm)
-Instagram ↪ Flickr ↪ 500px ↪ </description>
+      <description>Hardware: Fujifilm X-T30 (FUJINON XF35mmF2 R WR) | Olympus OM-1n (28mm)&#xA;Instagram ↪ Flickr ↪ 500px ↪ </description>
     </item>
-    
   </channel>
 </rss>

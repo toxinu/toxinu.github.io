@@ -6,8 +6,6 @@ theme = "toxinude"
 title = "toxinu"
 publishDir = "../docs"
 copyright = "toxinu"
-googleAnalytics = "UA-178253729-1"
-googleAnalyticsAsync = true
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark.renderer]
@@ -22,7 +20,7 @@ email = "jo@kikitama.com"
 github = "toxinu"
 gitlab= "toxinu"
 twitter = ""
-instagram = "toxinu_"
+instagram = ""
 [[params.photography]]
   name = "Buildings reaching the blue sky at Minato-ku (港区)"
   date = "Tokyo, Japan. Spring 2021"

@@ -7,223 +7,140 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>toxinu</copyright>
-    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My setup in 2018</title>
       <link>/blog/my-setup-2018/</link>
       <pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>/blog/my-setup-2018/</guid>
-      <description>I&amp;rsquo;ve never been so satisfied with my current daily setup as remote-SRE (Python/Golang), so why just not sharing it?
-Hardware ThinkPad X260 Samsung 27&amp;quot; Curved LED (yes only one screen) WASD Keyboard Cherry MX Brown 88-Key Steelseries Rival 100 mice Sennheiser HD25-1 II Headphone (for music) HyperX Cloud II Headphone (for vocal) Software Fedora (GNU/Linux) Gnome 3 AlternateTab Caffeine Impatience No topleft hot corner TopIcons Plus Extension to fix screen tearing Firefox Bitwarden Decentraleyes Firefox Multi-account containers HTTPS Everywhere I don&amp;rsquo;t care about cookies Mailvelope Privacy Badger Tab Suspender uBlock Origin Alacritty tmux tmux-open Visual Studio Code Ascetic colorscheme wee-slack Signal VeraCrypt Clementine Tips &amp;amp; notes To directly run tmux with alacritty you can edit your DesktopEntry like that: Use Visual Code Studio from FlatHub to have a Microsoft-free compiled binary.</description>
+      <description>I&amp;rsquo;ve never been so satisfied with my current daily setup as remote-SRE (Python/Golang), so why just not sharing it?&#xA;Hardware ThinkPad X260 Samsung 27&amp;quot; Curved LED (yes only one screen) WASD Keyboard Cherry MX Brown 88-Key Steelseries Rival 100 mice Sennheiser HD25-1 II Headphone (for music) HyperX Cloud II Headphone (for vocal) Software Fedora (GNU/Linux) Gnome 3 AlternateTab Caffeine Impatience No topleft hot corner TopIcons Plus Extension to fix screen tearing Firefox Bitwarden Decentraleyes Firefox Multi-account containers HTTPS Everywhere I don&amp;rsquo;t care about cookies Mailvelope Privacy Badger Tab Suspender uBlock Origin Alacritty tmux tmux-open Visual Studio Code Ascetic colorscheme wee-slack Signal VeraCrypt Clementine Tips &amp;amp; notes To directly run tmux with alacritty you can edit your DesktopEntry like that: Use Visual Code Studio from FlatHub to have a Microsoft-free compiled binary.</description>
     </item>
-    
     <item>
       <title>How to store your Python package metadata</title>
       <link>/blog/how-to-store-your-python-package-metadata/</link>
       <pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate>
-      
       <guid>/blog/how-to-store-your-python-package-metadata/</guid>
-      <description>A small, but full of snippets, post about how to store your package metadata cleanly.
-Let&amp;rsquo;s define a simple layout.
-All your metadata lives in __about__.py like that:
-Expose all your metadata at package root.
-This setup allow you to avoid editing your setup.py too frequently and keep it up to date easily.
-Happy coding and don&amp;rsquo;t eat too much turkeys!</description>
+      <description>A small, but full of snippets, post about how to store your package metadata cleanly.&#xA;Let&amp;rsquo;s define a simple layout.&#xA;All your metadata lives in __about__.py like that:&#xA;Expose all your metadata at package root.&#xA;This setup allow you to avoid editing your setup.py too frequently and keep it up to date easily.&#xA;Happy coding and don&amp;rsquo;t eat too much turkeys!</description>
     </item>
-    
     <item>
       <title>Pip installable Django project</title>
       <link>/blog/pip-installable-django-project/</link>
       <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
-      
       <guid>/blog/pip-installable-django-project/</guid>
-      <description>I&amp;rsquo;ll present you a Django layout which allow to ship your project (not app) as a Python package. Your users will be able to install it with pip for example.
-This template is available as a Cookiecutter template. But I&amp;rsquo;ll remove every references, because this paper is mainly written to present you a Django project layout. Maybe I&amp;rsquo;ll do another post about Cookiecutter later.
-My first need is to be able to install my Django project via pip install my-awesome-app and access it via my-awesome-app entry point without losing manage.</description>
+      <description>I&amp;rsquo;ll present you a Django layout which allow to ship your project (not app) as a Python package. Your users will be able to install it with pip for example.&#xA;This template is available as a Cookiecutter template. But I&amp;rsquo;ll remove every references, because this paper is mainly written to present you a Django project layout. Maybe I&amp;rsquo;ll do another post about Cookiecutter later.&#xA;My first need is to be able to install my Django project via pip install my-awesome-app and access it via my-awesome-app entry point without losing manage.</description>
     </item>
-    
     <item>
       <title>H.P. Lovecraft, hallucinations et Tekeli&#39;li !</title>
       <link>/blog/h.p.-lovecraft-hallucinations-et-tekelili/</link>
       <pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate>
-      
       <guid>/blog/h.p.-lovecraft-hallucinations-et-tekelili/</guid>
-      <description>Premier article en français ! Il n&amp;rsquo;est jamais trop tard me direz-vous. Pourquoi ? Car je vais parler un peu de littérature et également d&amp;rsquo;un bouquin qui a été très tardivement mais récemment traduit en français.
-L&amp;rsquo;ouvrage qui m&amp;rsquo;a donné envie de rédiger cet article est bien entendu, Les Montagnes Hallucinées du grand H.P. Lovecraft.
-Je suppose que vous connaissez H.P. Lovecraft, grand écrivain dès son plus jeune âge, 9 ans (en 1899, il est donc né en 1890) jusqu&amp;rsquo;à ces 46 ans (mort jeune).</description>
+      <description>Premier article en français ! Il n&amp;rsquo;est jamais trop tard me direz-vous. Pourquoi ? Car je vais parler un peu de littérature et également d&amp;rsquo;un bouquin qui a été très tardivement mais récemment traduit en français.&#xA;L&amp;rsquo;ouvrage qui m&amp;rsquo;a donné envie de rédiger cet article est bien entendu, Les Montagnes Hallucinées du grand H.P. Lovecraft.&#xA;Je suppose que vous connaissez H.P. Lovecraft, grand écrivain dès son plus jeune âge, 9 ans (en 1899, il est donc né en 1890) jusqu&amp;rsquo;à ces 46 ans (mort jeune).</description>
     </item>
-    
     <item>
       <title>Filtering and ordering with Restless</title>
       <link>/blog/filtering-and-ordering-with-restless/</link>
       <pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate>
-      
       <guid>/blog/filtering-and-ordering-with-restless/</guid>
-      <description>Let&amp;rsquo;s continue with my previous blog post on Restless introduction with Django. Today I&amp;rsquo;ll show you two quick and simple Mixins for Restless. One for filtering and another for ordering.
-I won&amp;rsquo;t show you how to create Django app, models, etc. This is not the subject.
-Just to be clear, I have this models.py for our Pizza shop.
-And my resources.py:
-Filtering We are building a very simple and not complete APIFilterMixin class.</description>
+      <description>Let&amp;rsquo;s continue with my previous blog post on Restless introduction with Django. Today I&amp;rsquo;ll show you two quick and simple Mixins for Restless. One for filtering and another for ordering.&#xA;I won&amp;rsquo;t show you how to create Django app, models, etc. This is not the subject.&#xA;Just to be clear, I have this models.py for our Pizza shop.&#xA;And my resources.py:&#xA;Filtering We are building a very simple and not complete APIFilterMixin class.</description>
     </item>
-    
     <item>
       <title>Restless for building Python RESTful API</title>
       <link>/blog/restless-for-building-python-restful-api/</link>
       <pubDate>Fri, 28 Nov 2014 00:00:00 +0000</pubDate>
-      
       <guid>/blog/restless-for-building-python-restful-api/</guid>
-      <description>After trying to build RESTful API in Django with Django Rest Framework, my friend Pabluk allow me to discover Restless. A very small code base Python module to build RESTful API.
-I&amp;rsquo;m totally not a huge fan of Django Rest Framework. It&amp;rsquo;s just to restricting if you don&amp;rsquo;t make a 100% REST API, and this is often the case. First of all, you&amp;rsquo;ll have a long progression period when you&amp;rsquo;ll have a bad use of this framework.</description>
+      <description>After trying to build RESTful API in Django with Django Rest Framework, my friend Pabluk allow me to discover Restless. A very small code base Python module to build RESTful API.&#xA;I&amp;rsquo;m totally not a huge fan of Django Rest Framework. It&amp;rsquo;s just to restricting if you don&amp;rsquo;t make a 100% REST API, and this is often the case. First of all, you&amp;rsquo;ll have a long progression period when you&amp;rsquo;ll have a bad use of this framework.</description>
     </item>
-    
     <item>
       <title>Goodbye Disqus</title>
       <link>/blog/goodbye-disqus/</link>
       <pubDate>Tue, 05 Aug 2014 00:00:00 +0000</pubDate>
-      
       <guid>/blog/goodbye-disqus/</guid>
-      <description>Hi folks,
-I just trash Disqus from my website cause of some disgusting issues.
-A bunch of js imported A bunch of ajax requests everywhere A big performance issue on page rendering, specially on mobile A urls migration wizard that just doesn&amp;rsquo;t work I have tested Isso, a Python commentary mechanize. But still young and I fail to import all comments from Disqus. I make some try and thinking about Discourse integration.</description>
+      <description>Hi folks,&#xA;I just trash Disqus from my website cause of some disgusting issues.&#xA;A bunch of js imported A bunch of ajax requests everywhere A big performance issue on page rendering, specially on mobile A urls migration wizard that just doesn&amp;rsquo;t work I have tested Isso, a Python commentary mechanize. But still young and I fail to import all comments from Disqus. I make some try and thinking about Discourse integration.</description>
     </item>
-    
     <item>
       <title>Animals can make music</title>
       <link>/blog/animals-can-make-music/</link>
       <pubDate>Wed, 30 Jul 2014 00:00:00 +0000</pubDate>
-      
       <guid>/blog/animals-can-make-music/</guid>
-      <description>First of all, sorry about embedded videos.
-I really don&amp;rsquo;t remember first time I listened the very first Animal Collective song. But I guess it was weird, maybe I just trashed it after some seconds. It don&amp;rsquo;t surprise me, like many complex music kind, you have to train your ears and your mind.
-But in fact, I think this band deliver a very basic emotion. An emotion that just make you want to cry, move your head and just smile.</description>
+      <description>First of all, sorry about embedded videos.&#xA;I really don&amp;rsquo;t remember first time I listened the very first Animal Collective song. But I guess it was weird, maybe I just trashed it after some seconds. It don&amp;rsquo;t surprise me, like many complex music kind, you have to train your ears and your mind.&#xA;But in fact, I think this band deliver a very basic emotion. An emotion that just make you want to cry, move your head and just smile.</description>
     </item>
-    
     <item>
       <title>Traveling with Noisy drone</title>
       <link>/blog/traveling-with-noisy-drone/</link>
       <pubDate>Thu, 22 May 2014 00:00:00 +0000</pubDate>
-      
       <guid>/blog/traveling-with-noisy-drone/</guid>
-      <description>I really enjoy electro/drone/experimental music.
-From Boards of Canada to Tim Hecker with Ben Frost, return to Fennesz and finish with Aphex Twin.
-These guys are explorer, they try to take you away in their world. I want to write something because there are two recent albums that make sure that I love music exploration, Virgin from Tim Hecker and A U R O R A by Ben Frost.
-For me exploration means that every part of the adventure won&amp;rsquo;t be enjoyable but it&amp;rsquo;s an experimentation.</description>
+      <description>I really enjoy electro/drone/experimental music.&#xA;From Boards of Canada to Tim Hecker with Ben Frost, return to Fennesz and finish with Aphex Twin.&#xA;These guys are explorer, they try to take you away in their world. I want to write something because there are two recent albums that make sure that I love music exploration, Virgin from Tim Hecker and A U R O R A by Ben Frost.&#xA;For me exploration means that every part of the adventure won&amp;rsquo;t be enjoyable but it&amp;rsquo;s an experimentation.</description>
     </item>
-    
     <item>
       <title>Two latest readings - *sick*</title>
       <link>/blog/two-latest-readings-sick/</link>
       <pubDate>Wed, 16 Apr 2014 00:00:00 +0000</pubDate>
-      
       <guid>/blog/two-latest-readings-sick/</guid>
-      <description>Chuck Palahniuk is the guy that will use little daily weird things to make you very petty.
-Rant I really enjoy this book.
-It&amp;rsquo;s an oral biography about a strange boy (Buster Rant Casey) in a strange world (Middleton) where live strange residents. This story is timeless. You&amp;rsquo;ll retrieve subjects about sex, diseases, cars and cars. At the beginning, I feel a part of Fallout ambiance but after some chapters, not anymore.</description>
+      <description>Chuck Palahniuk is the guy that will use little daily weird things to make you very petty.&#xA;Rant I really enjoy this book.&#xA;It&amp;rsquo;s an oral biography about a strange boy (Buster Rant Casey) in a strange world (Middleton) where live strange residents. This story is timeless. You&amp;rsquo;ll retrieve subjects about sex, diseases, cars and cars. At the beginning, I feel a part of Fallout ambiance but after some chapters, not anymore.</description>
     </item>
-    
     <item>
       <title>Ephemeral Internet</title>
       <link>/blog/ephemeral-internet/</link>
       <pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate>
-      
       <guid>/blog/ephemeral-internet/</guid>
       <description> I enjoy this ephemeral vision of the Internet. </description>
     </item>
-    
     <item>
       <title>No normal food for 2 months</title>
       <link>/blog/no-normal-food-for-2-months/</link>
       <pubDate>Sat, 10 Aug 2013 00:00:00 +0000</pubDate>
-      
       <guid>/blog/no-normal-food-for-2-months/</guid>
-      <description>The game.
-About four months ago I discover this blog entry and I realize that some other guys have been thinking about a new way to eat.
-Full disclosure: I&amp;rsquo;m totally not a big eater, I was mainly eating pasta, rice, etc.. And sometimes sushi at restaurant, cause I love sushi.
-I&amp;rsquo;ve always dreamed to be able to just swallow a pill every morning and to be in perfect food health in a very small kind of pollution to produce it.</description>
+      <description>The game.&#xA;About four months ago I discover this blog entry and I realize that some other guys have been thinking about a new way to eat.&#xA;Full disclosure: I&amp;rsquo;m totally not a big eater, I was mainly eating pasta, rice, etc.. And sometimes sushi at restaurant, cause I love sushi.&#xA;I&amp;rsquo;ve always dreamed to be able to just swallow a pill every morning and to be in perfect food health in a very small kind of pollution to produce it.</description>
     </item>
-    
     <item>
       <title>First thing to do after Ubuntu fresh install</title>
       <link>/blog/first-thing-to-do-after-ubuntu-fresh-install/</link>
       <pubDate>Mon, 10 Dec 2012 00:00:00 +0000</pubDate>
-      
       <guid>/blog/first-thing-to-do-after-ubuntu-fresh-install/</guid>
-      <description>It&amp;rsquo;s time to return to sources, Linux, good buy Apple. But this is the first thing to do on every new Ubuntu installation.
-&amp;lsquo;Cause of spyware, you know&amp;hellip;</description>
+      <description>It&amp;rsquo;s time to return to sources, Linux, good buy Apple. But this is the first thing to do on every new Ubuntu installation.&#xA;&amp;lsquo;Cause of spyware, you know&amp;hellip;</description>
     </item>
-    
     <item>
       <title>Websocket with Flask and Gevent</title>
       <link>/blog/websocket-with-flask-and-gevent/</link>
       <pubDate>Sun, 28 Oct 2012 00:00:00 +0000</pubDate>
-      
       <guid>/blog/websocket-with-flask-and-gevent/</guid>
-      <description>Ubik, package manager for Unix If you follow me on Github you have maybe already seen that I currently develop a package manager for Unix, Ubik.
-In order to test my API, I create a WebUI for Ubik and the websockets comes to me. My two prefered web framework are Django and Flask, but I need a lightweight web app, so welcome to Flask.
-Node.js, blah, blah Ok, I have many many times hear good things about Node.</description>
+      <description>Ubik, package manager for Unix If you follow me on Github you have maybe already seen that I currently develop a package manager for Unix, Ubik.&#xA;In order to test my API, I create a WebUI for Ubik and the websockets comes to me. My two prefered web framework are Django and Flask, but I need a lightweight web app, so welcome to Flask.&#xA;Node.js, blah, blah Ok, I have many many times hear good things about Node.</description>
     </item>
-    
     <item>
       <title>Github Pages to Heroku</title>
       <link>/blog/github-pages-to-heroku/</link>
       <pubDate>Sun, 02 Sep 2012 00:00:00 +0000</pubDate>
-      
       <guid>/blog/github-pages-to-heroku/</guid>
-      <description>Synopsis My initial goal was to put my jekyll website on Heroku but I have encountered many problems due of my bad Ruby level and pygment usage.
-During month my jekyll website was freely hosted by GitHub Pages. Thanks for all the fish. But GitHub is not for app hosting.
-Many hours of:
-&amp;ldquo;What the fuck I have 404 ?&amp;rdquo; &amp;ldquo;Oh Damn it my local Jekyll render it correctly and not on Github&amp;hellip;&amp;rdquo; &amp;ldquo;Ohh enough, it was just the yaml header with quotes which give me fucking 404&amp;rdquo;</description>
+      <description>Synopsis My initial goal was to put my jekyll website on Heroku but I have encountered many problems due of my bad Ruby level and pygment usage.&#xA;During month my jekyll website was freely hosted by GitHub Pages. Thanks for all the fish. But GitHub is not for app hosting.&#xA;Many hours of:&#xA;&amp;ldquo;What the fuck I have 404 ?&amp;rdquo; &amp;ldquo;Oh Damn it my local Jekyll render it correctly and not on Github&amp;hellip;&amp;rdquo; &amp;ldquo;Ohh enough, it was just the yaml header with quotes which give me fucking 404&amp;rdquo;</description>
     </item>
-    
     <item>
       <title>TheMall - A simple Python web shopping list</title>
       <link>/blog/themall-a-simple-python-web-shopping-list/</link>
       <pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate>
-      
       <guid>/blog/themall-a-simple-python-web-shopping-list/</guid>
-      <description>I have used myTinyTodo for at least 1 year but I&amp;rsquo;m fed up of Mysql database and Php&amp;hellip; Am I serious ?
-&amp;ldquo;Mysql database for shopping list ? A bazooka to kill a fly ?&amp;rdquo;
-The plan is to create a simple Python todo list mainly for shopping list with mobile interface. It&amp;rsquo;s was the objectif.
-Tools box:
-Python Flask Twitter bootstrap Json Description
-Simple authentification Very light design Mobile design (responsive) Very very light Todo List In fact, looks like a Shopping List You can see project page here.</description>
+      <description>I have used myTinyTodo for at least 1 year but I&amp;rsquo;m fed up of Mysql database and Php&amp;hellip; Am I serious ?&#xA;&amp;ldquo;Mysql database for shopping list ? A bazooka to kill a fly ?&amp;rdquo;&#xA;The plan is to create a simple Python todo list mainly for shopping list with mobile interface. It&amp;rsquo;s was the objectif.&#xA;Tools box:&#xA;Python Flask Twitter bootstrap Json Description&#xA;Simple authentification Very light design Mobile design (responsive) Very very light Todo List In fact, looks like a Shopping List You can see project page here.</description>
     </item>
-    
     <item>
       <title>Ubuntu Server LTS upgrades are stress test</title>
       <link>/blog/ubuntu-server-lts-upgrades-are-stress-test/</link>
       <pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate>
-      
       <guid>/blog/ubuntu-server-lts-upgrades-are-stress-test/</guid>
-      <description>Update Sept, 24 2012 This article is now deprecated, Ubuntu now have a clean upgrade script. Just use do-release-upgrade.
-This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present. And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&amp;hellip;
-I admit to not being an Ubuntu expert ( Debian too ) but the do-release-upgrade is like :
-&amp;ldquo;Ohhh yeah take this Ultra Decap&amp;rsquo;Net my son !</description>
+      <description>Update Sept, 24 2012 This article is now deprecated, Ubuntu now have a clean upgrade script. Just use do-release-upgrade.&#xA;This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present. And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&amp;hellip;&#xA;I admit to not being an Ubuntu expert ( Debian too ) but the do-release-upgrade is like :&#xA;&amp;ldquo;Ohhh yeah take this Ultra Decap&amp;rsquo;Net my son !</description>
     </item>
-    
     <item>
       <title>Nagios Oracle health plugin</title>
       <link>/blog/nagios-oracle-health-plugin/</link>
       <pubDate>Fri, 28 Oct 2011 00:00:00 +0000</pubDate>
-      
       <guid>/blog/nagios-oracle-health-plugin/</guid>
-      <description>This is more a memo than an article. A quick and dirty check_oracle_health plugin installation, with prerequires.
-Developped by Gerhard Lausser, an active Shinken developper with Jean Gabès.
-Like most of Nagios plugins, it&amp;rsquo;s in Perl language and it&amp;rsquo;s use DBD::Oracle module, and this module need an Oracle client.
-Oracle Instant Client You have to create a fucking Oracle account&amp;hellip; Yes I know you think :
-&amp;ldquo;What&amp;rsquo;s this great article ?</description>
+      <description>This is more a memo than an article. A quick and dirty check_oracle_health plugin installation, with prerequires.&#xA;Developped by Gerhard Lausser, an active Shinken developper with Jean Gabès.&#xA;Like most of Nagios plugins, it&amp;rsquo;s in Perl language and it&amp;rsquo;s use DBD::Oracle module, and this module need an Oracle client.&#xA;Oracle Instant Client You have to create a fucking Oracle account&amp;hellip; Yes I know you think :&#xA;&amp;ldquo;What&amp;rsquo;s this great article ?</description>
     </item>
-    
     <item>
       <title>Jekyll with Git and Hooks</title>
       <link>/blog/jekyll-with-git-and-hooks/</link>
       <pubDate>Fri, 21 Oct 2011 00:00:00 +0000</pubDate>
-      
       <guid>/blog/jekyll-with-git-and-hooks/</guid>
-      <description>Good bye my lovely Pyame&amp;hellip; Hello Jekyll ! Pyame is my personnal static website creator written in Python under heavy development. These days I searched powerfull, light and easy to use static website creator, and Jekyll is arrived. Thanks God.
-In short, these programs parse differents files written in a special syntax, for example : Markdown, Textile, etc. An easy syntax to make your articles or docs more swag. And it generate html output.</description>
+      <description>Good bye my lovely Pyame&amp;hellip; Hello Jekyll ! Pyame is my personnal static website creator written in Python under heavy development. These days I searched powerfull, light and easy to use static website creator, and Jekyll is arrived. Thanks God.&#xA;In short, these programs parse differents files written in a special syntax, for example : Markdown, Textile, etc. An easy syntax to make your articles or docs more swag. And it generate html output.</description>
     </item>
-    
   </channel>
 </rss>

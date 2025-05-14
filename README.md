@@ -1,4 +1,4 @@
 ```
 $ hugo version  
-hugo v0.102.1-e9c3ce16abc391ee5be38f88b0499d0e8e19104c linux/amd64 BuildDate=2022-08-29T12:58:13Z VendorInfo=gohugoio
+hugo v0.103.0-beebf2afb09a7be36cf12bdec8a99ae9286504e2 darwin/arm64 BuildDate=2022-09-15T16:23:56Z VendorInfo=gohugoio
 ```

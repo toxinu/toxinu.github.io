@@ -1,8 +1,8 @@
 build:
-	hugo -s src
+	./hugo -s src
 
 serve:
-	hugo -s src serve
+	./hugo -s src serve
 
 publish:
 	if [[ `git status -s` ]]; then  \
@@ -15,7 +15,7 @@ publish:
 	find . | grep -v 'src\|Makefile\|.git\|.' | xargs -r rm -r
 
 	echo "Generating site"
-	hugo -s src
+	./hugo -s src
 
 	echo "Updating gh-pages branch"
 	git add . && git commit -m "Publishing a new print..."

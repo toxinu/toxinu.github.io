@@ -14,7 +14,7 @@
 	<title>
 	
 	
-	     toxinu | Ubuntu Server LTS upgrades are stress test 
+	     toxinu | About 
 	
 	</title>
 	
@@ -203,10 +203,10 @@
     }
 
     section#about .description .baseline {
-        font-size: 40px;
+        font-size: 30px;
         margin: 0 0 8px 0;
         font-family: 'IBMPlexMono-Bold';
-        line-height: 52px;
+        line-height: 32px;
     }
 
     section#about .description .location {
@@ -742,49 +742,37 @@
     
         <li><a class="" href="/photography/">Photography</a></li>
     
-        <li><a class="active" href="/blog/">Journal</a></li>
-    
-        <li><a class="" href="/about/">About</a></li>
+        <li><a class="active" href="/about/">About</a></li>
     
     </ul>
 </section>
-<section id="post-page" class="page">
-    <a class="back-to-journal" href="/blog/">← Back to Journal</a>
-    <h1>Ubuntu Server LTS upgrades are stress test</h1>
-    <span class="posted-on">Posted on 03 May 2012</span>
-    <div class="content"><h3 id="update">Update</h3>
-<ul>
-<li>Sept, 24 2012</li>
-</ul>
-<p>This article is now deprecated, Ubuntu now have a clean upgrade script.
-Just use <code>do-release-upgrade</code>.</p>
-<hr>
-</br >
-<p>This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present.
-And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&hellip;</p>
-<p>I admit to not being an Ubuntu expert ( Debian too ) but the <code>do-release-upgrade</code> is like :</p>
-<blockquote>
-<p>&ldquo;Ohhh yeah take this Ultra Decap&rsquo;Net my son !&rdquo;</p>
-<p>&quot; &hellip;. But ..but what&rsquo;s dazzz sh&hellip; ?&quot;</p>
-<p>&ldquo;I don&rsquo;t know, shut up, press it and close your eyes&rdquo;</p>
-</blockquote>
-<p>But this is the recommended solution.</p>
-<script src="https://gist.github.com/toxinu/da11ce57a00ee9000d5119909d749c72.js"></script>
-<p>Your server is ready to upgrade.</p>
-<p><code>do-release-upgrade -d</code></p>
-<p>The <strong>-d</strong> option say that you want to do develpment upgrade, cause this isn&rsquo;t officially supported.</p>
-<p><strong>/!\ Warning /!\</strong></p>
-<p>You have to re-upgrade grub after the upgrade.
-So Say <strong>NO</strong> when upgrade script ask you to reboot.
-Press x to destroy session and return into your initial terminal.</p>
-<script src="https://gist.github.com/toxinu/ac6cf3ef3667e667350cdbda2dc2bb1f.js"></script>
-<p>Where am I wrong with <code>grub-install</code> and <code>update-grub</code> ?
-Ok ok, I haven&rsquo;t search more but packages must do it ? With os-prober, etc&hellip;</p>
-<p>But, the job is done.</p>
-<hr>
-<p>If for X reason your <strong>felt</strong> into a Grub Rescue hole this can help you:</p>
-<script src="https://gist.github.com/toxinu/fbf51d15aa335cb781e6d04a8911de85.js"></script>
-</div>
+<section id="about-page" class="page">
+    <div class="header">
+        <h1>About.</h1>
+    </div>
+    <div class="content">
+        <div class="baseline">
+            <span>
+                Hi, I’m toxinu, full-stack engineer & DevOps working remotely.
+            </span>
+        </div>
+        <div class="sentence">
+            <span>My work is full of <em>Python</em>, <em>Django</em>, <em>Javascript</em>, <em>React</em>,
+                <em>Go</em>, <em>Linux</em> and <em>DevOps</em>. &lt;3 Open source.
+                <br>
+                I’m currently working at <a target="_blank" href="https://opencraft.com/">Opencraft ↪</a> since 2019, a
+                fully remote company, leading provider of <a target="_blank" href="https://open.edx.org/">Open edX ↪</a>
+                platform development.</span>
+        </div>
+        <div class="sentence">
+            <span>I am also passionated about photography, check out some of my work <a href="/photography">here
+                    →</a>.</span>
+        </div>
+        <div class="sentence">
+            <span>You can reach me by <a target="_blank" href="mailto:toxinu+website@gmail.com">email ↪</a>.</span>
+        </div>
+    </div>
+    <div class="legend"><span>View of Osaka city from Abeno Harukas.</span> <span>Osaka, Japan. Summer 2020</span></div>
 </section>
 <footer>
     <section id="nav">
@@ -795,7 +783,7 @@ Ok ok, I haven&rsquo;t search more but packages must do it ? With os-prober, etc
             </div>
         </a>
         <p>
-            © 2021 by toxinu // Design <a target="_blank" href="https://www.mylenela.com/">@mylenela ↪</a>
+            © 2025 by toxinu // Design <a target="_blank" href="https://www.mylenela.com/">@mylenela ↪</a>
         </p>
         <ul>
         
@@ -804,9 +792,7 @@ Ok ok, I haven&rsquo;t search more but packages must do it ? With os-prober, etc
          
             <li><a class="" href="/photography/">Photography</a></li>
          
-            <li><a class="active" href="/blog/">Journal</a></li>
-         
-            <li><a class="" href="/about/">About</a></li>
+            <li><a class="active" href="/about/">About</a></li>
         
         </ul>
     </section>
@@ -859,5 +845,4 @@ Ok ok, I haven&rsquo;t search more but packages must do it ? With os-prober, etc
 </script>
 <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
-
 

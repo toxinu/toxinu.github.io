@@ -114,10 +114,10 @@ weight = 1
 name = "Photography"
 url = "/photography/"
 weight = 2
-[[menu.main]]
-name = "Journal"
-url = "/blog/"
-weight = 3
+#[[menu.main]]
+#name = "Journal"
+#url = "/blog/"
+#weight = 3
 [[menu.main]]
 name = "About"
 url = "/about/"

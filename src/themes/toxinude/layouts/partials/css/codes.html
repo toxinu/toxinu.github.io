@@ -1,6 +1,21 @@
 <style>
+    section#codes {
+        width: 100%;
+        max-width: unset;
+        background-color: black;
+        color: white;
+    }
+    section#codes > div {
+        width: 70%;
+        padding: 64px 0;
+        margin: auto;
+        max-width: 1800px;
+    }
     section#codes > p {
         margin-bottom: 32px;
+    }
+    section#codes p a {
+        color: white;
     }
     section#codes ul {
         list-style: none;
@@ -15,29 +30,30 @@
     section#codes ul li:last-of-type {
         margin-bottom: 0;
     }
-    section#codes ul li a {
-        border: 1px solid black;
+    section#codes ul li {
+        border: 1px solid white;
         display: flex;
         text-decoration: none;
+        color: white;
     }
-    section#codes ul li a div {
+    section#codes ul li div {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         margin: 16px;
     }
-    section#codes ul li a div > span {
+    section#codes ul li div > span {
         font-family: 'IBMPlexMono-BoldItalic';
         font-size: 20px;
     }
-    section#codes ul li a div  p {
+    section#codes ul li div  p {
         margin-top: 8px;
         font-size: 16px;
         font-family: 'IBMPlexMono-Regular';
     }
-    section#codes ul li a span.box-link {
-        background-color: black;
-        color: white;
+    section#codes ul li span.box-link {
+        background-color: white;
+        color: black;
         width: 55px;
         min-width: 55px;
         text-align: center;

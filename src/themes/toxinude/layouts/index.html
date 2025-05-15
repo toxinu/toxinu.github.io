@@ -4,114 +4,43 @@
 <section id="about">
     <div class="avatar"></div>
     <div class="description">
-        <p class="baseline">touch hello \</p>
-        <p class="baseline">printf "&s, software engineer.\n" Jo \</p>
-        <p class="baseline">echo -n "amateur-photographer"</p>
-        <p class="location">Currently living on Earth.</p>
+        <p class="baseline">Hello,</p>
+        <p class="baseline">ジョ「Jo」,</p>
+        <p class="baseline">Tech Lead ➾,</p>
+        <p class="baseline">Senior software engineer,</p>
+        <p class="baseline">and amateur-photographer.</p>
+        <p class="location">Currently living on Earth, around Tokyo, Japan.</p>
         <div class="social">
-<!--            <a href="https://instagram.com/toxinu_" target="_blank">Instagram ↪</a>-->
             <a href="https://github.com/toxinu" target="_blank">Github ↪</a>
             <a href="https://gitlab.com/toxinu" target="_blank">Gitlab ↪</a>
-            <!-- <a href="https://twitter.com/toxinu_" target="_blank">Twitter ↪</a> -->
             <a href="https://www.linkedin.com/in/geoffreylehee/" target="_blank">Linkedin ↪</a>
             <a href="mailto:jo@kikitama.com" target="_blank">Email ↪</a>
         </div>
     </div>
 </section>
-<section id="photography" data-anchor="true">
+
+<section id="codes" data-anchor="true">
     <div>
-    <a href="/photography">
-        <img
-            class="lazy"
-            loading="lazy"
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E"
-            data-src="{{ (index .Site.Params.photography 0).linkSmall }}"
-            alt="{{ (index .Site.Params.photography 0).name }}">
-    </a>
-    <a href="/photography">See Photography →</a>
-    </div>
-    <a href="/photography"><img src="{{ (index .Site.Params.photography 1).linkSmall }}" alt="{{ (index .Site.Params.photography 1).name }}"></a>
-</section>
-<section id="games" data-anchor="true">
-    <div>
-        <p>Games I’ve work on during Game Jams</p>
-        <ul>
+        <ul class="boxes">
             <li>
-                <h3>Pod2000</h3>
-                <img class="lazy" loading="lazy" data-src="/images/games-pod2000-min.png" alt="Pod2000 screenshot"/>
-                <p>
-                    In Pod2000, you play an agent belonging to a huge corporation that exploits planets. To exploit a planet, you need to install modules to extract oil, refinery, etc.
-                </p>
-                <a target="_blank" href="https://grena.itch.io/pod2000">Play Pod2000 ↪</a>
+                <div>
+                    <span>Programming</span>
+                    <p>Python, Golang, Typescript, React.js</p>
+                </div>
             </li>
             <li>
-                <h3>Fórnir</h3>
-                <img class="lazy" loading="lazy" data-src="/images/games-fornir-min.png" alt="Fórnir screenshot"/>
-                <p>
-                    In Fórnir you play a Jarl who rules over a village. Try your best to keep the trust of your people by making good decisions…
-                </p>
-                <a target="_blank" href="https://ldjam.com/events/ludum-dare/43/fornir">Play Fórnir ↪</a>
-            </li>
+                <div>
+                    <span>System</span>
+                    <p>Terraform, Kubernetes, AWS</p>
+                </div>
+             </li>
+            <li>
+                <div>
+                    <span>Languages</span>
+                    <p>French (Native), English - Professional, Japanese - Learning</p>
+                </div>
+             </li>
         </ul>
     </div>
-</section>
-<section id="codes" data-anchor="true">
-    <p>Projects I have created or worked on. You can find many more recent projects on <a href="https://github.com/toxinu">Github</a> or <a href="https://gitlab.com/toxinu">Gitlab</a>.</p>
-    <ul class="boxes">
-        <li>
-            <a target="_blank" href="https://github.com/toxinu/sublimall">
-                <div>
-                    <span>Sublimall</span>
-                    <p>SublimeText 3 plugin to sync your configuration</p>
-                </div>
-                <span class="box-link">↪</span>
-            </a>
-        </li>
-        <li>
-            <a target="_blank" href="https://github.com/toxinu/pyhn">
-                <div>
-                    <span>Pyhn</span>
-                    <p>Hacker News command line client</p>
-                </div>
-                <span class="box-link">↪</span>
-            </a>
-        </li>
-        <li>
-            <a target="_blank" href="https://github.com/toxinu/requirements">
-                <div>
-                    <span>Requirements</span>
-                    <p>Python requirements helper</p>    
-                </div>
-                <span class="box-link">↪</span>
-            </a>
-        </li>
-        <li>
-            <a target="_blank" href="https://github.com/toxinu/leselys">
-                <div>
-                    <span>Leselys</span>
-                    <p>Web based RSS reader</p>
-                </div>
-                <span class="box-link">↪</span>
-            </a>
-        </li>
-        <li>
-            <a target="_blank" href="https://github.com/toxinu/isit">
-                <div>
-                    <span>Isit</span>
-                    <p>Python environment discoverer</p>
-                </div>
-                <span class="box-link">↪</span>
-            </a>
-        </li>
-        <li>
-            <a target="_blank" href="https://github.com/toxinu/minne">
-                <div>
-                    <span>Minne</span>
-                    <p>Links aggregator</p>
-                </div>
-                <span class="box-link">↪</span>
-            </a>
-        </li>
-    </ul>
 </section>
 {{ partial "footer.html" . }}

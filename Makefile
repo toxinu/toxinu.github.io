@@ -1,5 +1,5 @@
 build:
-	./hugo -s src
+	./hugo --minify -s src
 
 serve:
 	./hugo -s src serve

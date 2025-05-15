@@ -1,5 +1,5 @@
 build:
-	./hugo -s src --verbose
+	./hugo -s src
 
 serve:
 	./hugo -s src serve

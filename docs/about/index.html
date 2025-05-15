@@ -76,7 +76,7 @@
         width: 70%;
         max-width: 1800px;
         box-sizing: border-box;
-        margin-bottom: 72px;
+        margin-bottom: 56px;
     }
     li {
         margin-bottom: 8px;
@@ -362,8 +362,8 @@
 <style>
     section#games {
         width: 100%;
-        background-color: black;
-        color: white;
+        background-color: white;
+        color: black;
         max-width: unset;
     }
     section#games > div {
@@ -408,8 +408,23 @@
     }
 </style>
 <style>
+    section#codes {
+        width: 100%;
+        max-width: unset;
+        background-color: black;
+        color: white;
+    }
+    section#codes > div {
+        width: 70%;
+        padding: 64px 0;
+        margin: auto;
+        max-width: 1800px;
+    }
     section#codes > p {
         margin-bottom: 32px;
+    }
+    section#codes p a {
+        color: white;
     }
     section#codes ul {
         list-style: none;
@@ -424,29 +439,30 @@
     section#codes ul li:last-of-type {
         margin-bottom: 0;
     }
-    section#codes ul li a {
-        border: 1px solid black;
+    section#codes ul li {
+        border: 1px solid white;
         display: flex;
         text-decoration: none;
+        color: white;
     }
-    section#codes ul li a div {
+    section#codes ul li div {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         margin: 16px;
     }
-    section#codes ul li a div > span {
+    section#codes ul li div > span {
         font-family: 'IBMPlexMono-BoldItalic';
         font-size: 20px;
     }
-    section#codes ul li a div  p {
+    section#codes ul li div  p {
         margin-top: 8px;
         font-size: 16px;
         font-family: 'IBMPlexMono-Regular';
     }
-    section#codes ul li a span.box-link {
-        background-color: black;
-        color: white;
+    section#codes ul li span.box-link {
+        background-color: white;
+        color: black;
         width: 55px;
         min-width: 55px;
         text-align: center;
@@ -731,7 +747,7 @@
 <section id="nav">
     <a href="/">
         <div class="site-head">
-            <div class="site-name">toxinu</div>
+            <div class="site-name">ホーム</div>
             <div class="site-logo">[•"]</div>
         </div>
     </a>
@@ -753,23 +769,25 @@
     <div class="content">
         <div class="baseline">
             <span>
-                Hi, I’m toxinu, full-stack engineer & DevOps working remotely.
+                Hi, I’m Jo,<br />
+                Tech Lead,<br />
+                Senior Software Engineer,
+                and SRE from Tokyo, Japan.
             </span>
         </div>
         <div class="sentence">
             <span>My work is full of <em>Python</em>, <em>Django</em>, <em>Javascript</em>, <em>React</em>,
                 <em>Go</em>, <em>Linux</em> and <em>DevOps</em>. &lt;3 Open source.
                 <br>
-                I’m currently working at <a target="_blank" href="https://opencraft.com/">Opencraft ↪</a> since 2019, a
-                fully remote company, leading provider of <a target="_blank" href="https://open.edx.org/">Open edX ↪</a>
-                platform development.</span>
+                I’m currently working at <a target="_blank" href="https://wealth-park.com/">WealthPark ↪</a> since 2024, a modern real estate management platform.</a>
+            </span>
         </div>
         <div class="sentence">
             <span>I am also passionated about photography, check out some of my work <a href="/photography">here
-                    →</a>.</span>
+                    ↪</a>.</span>
         </div>
         <div class="sentence">
-            <span>You can reach me by <a target="_blank" href="mailto:toxinu+website@gmail.com">email ↪</a>.</span>
+            <span>You can reach me by <a target="_blank" href="mailto:jo@kikitama.com">email ↪</a>.</span>
         </div>
     </div>
     <div class="legend"><span>View of Osaka city from Abeno Harukas.</span> <span>Osaka, Japan. Summer 2020</span></div>
@@ -797,52 +815,3 @@
         </ul>
     </section>
 </footer>
-<script>
-    console.log('Heya there, why are you looking at our developer tools? I mean this is a crappy static website.');
-    console.log('Nothing to see here. You better look at my resume.');
-
-    function updateSidebar(initial) {
-        [...document.querySelectorAll('#sidebar ul li')].forEach((element) => {
-            element.style.textDecoration = 'none';
-            element.style.backgroundColor = 'white';
-        });
-        let sidebarElement;
-        if (initial) {
-            sidebarElement = document.querySelector('#sidebar ul li a[href="#photography"]');
-        } else {
-            sidebarElement = document.querySelector('#sidebar ul li a[href="' + location.hash + '"]');
-        }
-        if (sidebarElement) {
-            sidebarElement.parentNode.style.backgroundColor = '#F5D8FF';
-            sidebarElement.parentNode.style.textDecoration = 'underline';
-        }
-    }
-
-    window.onload = function() {
-        window.onscroll = function(e) {
-            let currentHash = location.hash;
-            const elements = [...document.querySelectorAll('section[data-anchor="true"]')];
-            const lastElementIndex = elements.length - 1;
-            elements.forEach((element, index) => {
-                var top = window.pageYOffset;
-                var distance = top - element.offsetTop;
-                var hash = element.getAttribute('id');
-                var documentHeight = document.body.scrollHeight - window.innerHeight;
-                if (element.getAttribute('data-anchor') == 'true') {
-                    const isLast = top === documentHeight && index === lastElementIndex;
-                    if ((distance < 40 && distance > -40 && currentHash != hash) || isLast) {
-                        history.pushState(null, null, "#" + hash);
-                        currentHash = hash;
-                        updateSidebar();
-                    }
-                }
-            });
-        };
-        window.onhashchange = updateSidebar;
-        updateSidebar(true);
-        var lazyLoadInstance = new LazyLoad({});
-    }
-</script>
-<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.2/dist/lazyload.min.js"></script>
-

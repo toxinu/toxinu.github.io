@@ -1,181 +1,182 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>toxinu</title><link>/</link><description>Recent content on toxinu</description><generator>Hugo</generator><language>en-us</language><copyright>toxinu</copyright><lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>My setup in 2018</title><link>/blog/my-setup-2018/</link><pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate><guid>/blog/my-setup-2018/</guid><description>&lt;p>I&amp;rsquo;ve never been so satisfied with my current daily setup as remote-SRE (Python/Golang), so why just not sharing it?&lt;/p>
-&lt;h2 id="hardware">Hardware&lt;/h2>
-&lt;ul>
-&lt;li>ThinkPad X260&lt;/li>
-&lt;li>Samsung 27&amp;quot; Curved LED (yes only one screen)&lt;/li>
-&lt;li>WASD Keyboard Cherry MX Brown 88-Key&lt;/li>
-&lt;li>Steelseries Rival 100 mice&lt;/li>
-&lt;li>Sennheiser HD25-1 II Headphone (for music)&lt;/li>
-&lt;li>HyperX Cloud II Headphone (for vocal)&lt;/li>
-&lt;/ul>
-&lt;h2 id="software">Software&lt;/h2>
-&lt;ul>
-&lt;li>Fedora (GNU/Linux)&lt;/li>
-&lt;li>Gnome 3
-&lt;ul>
-&lt;li>&lt;a href="https://extensions.gnome.org/extension/15/alternatetab/">AlternateTab&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://extensions.gnome.org/extension/517/caffeine/">Caffeine&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://extensions.gnome.org/extension/277/impatience/">Impatience&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://extensions.gnome.org/extension/118/no-topleft-hot-corner/">No topleft hot corner&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://extensions.gnome.org/extension/1031/topicons/">TopIcons Plus&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/kazysmaster/gnome-shell-extension-disable-unredirect">Extension to fix screen tearing&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Firefox
-&lt;ul>
-&lt;li>&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/">Bitwarden&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/">Decentraleyes&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/">Firefox Multi-account containers&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/">HTTPS Everywhere&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies/">I don&amp;rsquo;t care about cookies&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/mailvelope/">Mailvelope&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/">Privacy Badger&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/tab-suspender-tab-unloader/">Tab Suspender&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://github.com/jwilm/alacritty">Alacritty&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://github.com/toxinu/dotfiles">tmux&lt;/a>
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/tmux-plugins/tmux-open">tmux-open&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://code.visualstudio.com/">Visual Studio Code&lt;/a>
-&lt;ul>
-&lt;li>&lt;a href="https://github.com/gerane/VSCodeThemes/tree/master/gerane.Theme-Ascetic">Ascetic&lt;/a> colorscheme&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="https://github.com/wee-slack/wee-slack">wee-slack&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://signal.org/">Signal&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.veracrypt.fr/">VeraCrypt&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.clementine-player.org/">Clementine&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="tips--notes">Tips &amp;amp; notes&lt;/h2>
-&lt;ul>
-&lt;li>To directly run &lt;em>tmux&lt;/em> with &lt;em>alacritty&lt;/em> you can edit your &lt;code>DesktopEntry&lt;/code> like that:&lt;/li>
-&lt;/ul>
-&lt;script src="https://gist.github.com/toxinu/42950e9a91ba1f0141e569fc3018dc15.js">&lt;/script>
-&lt;ul>
-&lt;li>Use Visual Code Studio from &lt;a href="https://flathub.org/apps/details/com.visualstudio.code">FlatHub&lt;/a> to have a Microsoft-free compiled binary. Because binaries given by Microsoft are not open source.&lt;/li>
-&lt;li>My dotfiles are on &lt;a href="https://gitlab.com/toxinu/dotfiles">Gitlab&lt;/a>.&lt;/li>
-&lt;li>I don&amp;rsquo;t have standing desk, but I have a nice seat. My back never hurts.&lt;/li>
-&lt;li>My &lt;a href="https://gitlab.com/toxinu/dotfiles/blob/29279988ebf8fe9387ae2ecc3f2fea571f95794e/.config/alacritty/alacritty.yml#L90-115">terminal&lt;/a> and &lt;a href="https://github.com/gerane/VSCodeThemes/tree/master/gerane.Theme-Ascetic">editor&lt;/a> have grey &amp;amp; white (monochrome for editor) colorschemes. I advize you to try it if you have regular headcaches.&lt;/li>
-&lt;li>I&amp;rsquo;m self hosting some services like: &lt;a href="https://github.com/shaarli/Shaarli">Shaarli&lt;/a>, &lt;a href="https://tt-rss.org/">TinyTinyRss&lt;/a>, &lt;a href="https://nextcloud.com/">Nextcloud&lt;/a>, &lt;a href="https://github.com/RSS-Bridge/rss-bridge">RSS-Bridge&lt;/a> and more.&lt;/li>
-&lt;/ul>
-&lt;p>The most important part, buy a nebulizer diffuser it&amp;rsquo;s amazing. My favorite essential oils are &amp;ldquo;Pepper mint&amp;rdquo;, &amp;ldquo;Tea tree&amp;rdquo; &amp;amp; &amp;ldquo;Niaouli&amp;rdquo;.&lt;/p></description></item><item><title>How to store your Python package metadata</title><link>/blog/how-to-store-your-python-package-metadata/</link><pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate><guid>/blog/how-to-store-your-python-package-metadata/</guid><description>&lt;p>A small, but full of snippets, post about how to store your package metadata cleanly.&lt;/p>
-&lt;p>Let&amp;rsquo;s define a simple layout.&lt;/p>
-&lt;script src="https://gist.github.com/toxinu/1d11ec668a057a871720bf8d7946829a.js">&lt;/script>
-&lt;p>All your metadata lives in &lt;code>__about__.py&lt;/code> like that:&lt;/p>
-&lt;script src="https://gist.github.com/toxinu/5ef6f5e67bd496f430ca5850b536aef4.js">&lt;/script>
-&lt;p>Expose all your metadata at package root.&lt;/p>
-&lt;script src="https://gist.github.com/toxinu/96abf6963e0009648b6b4d62fa4a6e23.js">&lt;/script>
-&lt;p>This setup allow you to avoid editing your &lt;code>setup.py&lt;/code> too frequently and keep it up to date easily.&lt;/p>
-&lt;script src="https://gist.github.com/toxinu/8059bdcc1e868a1237c692913df2209b.js">&lt;/script>
-&lt;p>Happy coding and don&amp;rsquo;t eat too much turkeys!&lt;/p></description></item><item><title>Pip installable Django project</title><link>/blog/pip-installable-django-project/</link><pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate><guid>/blog/pip-installable-django-project/</guid><description>&lt;p>I&amp;rsquo;ll present you a &lt;a href="https://www.djangoproject.com/">Django&lt;/a> layout which allow to ship your project (not app) as a &lt;a href="https://www.python.org/">Python&lt;/a> package. Your users will be able to install it with &lt;a href="https://pip.pypa.io/en/stable/">pip&lt;/a> for example.&lt;/p>
-&lt;p>This template is available as a &lt;a href="https://cookiecutter.readthedocs.io/en/latest/">Cookiecutter&lt;/a> template. But I&amp;rsquo;ll remove every references, because this paper is mainly written to present you a Django project layout. Maybe I&amp;rsquo;ll do another post about Cookiecutter later.&lt;/p>
-&lt;p>My first need is to be able to install my Django project via &lt;code>pip install my-awesome-app&lt;/code> and access it via &lt;code>my-awesome-app&lt;/code> entry point
-without losing &lt;code>manage.py&lt;/code> flexibility.
-The first reference for this template is &lt;a href="https://github.com/getsentry/sentry">Sentry&lt;/a> project. I&amp;rsquo;m really appreciative of how this project is nicely built by nice people.&lt;/p></description></item><item><title>H.P. Lovecraft, hallucinations et Tekeli'li !</title><link>/blog/h.p.-lovecraft-hallucinations-et-tekelili/</link><pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate><guid>/blog/h.p.-lovecraft-hallucinations-et-tekelili/</guid><description>&lt;p>Premier article en français ! Il n&amp;rsquo;est jamais trop tard me direz-vous. Pourquoi ? Car je vais parler un peu de littérature et également d&amp;rsquo;un bouquin qui a été très tardivement mais récemment traduit en français.&lt;/p>
-&lt;p>L&amp;rsquo;ouvrage qui m&amp;rsquo;a donné envie de rédiger cet article est bien entendu, &lt;a href="http://fr.wikipedia.org/wiki/Les_Montagnes_hallucin%C3%A9es">Les Montagnes Hallucinées&lt;/a> du grand &lt;a href="http://fr.wikipedia.org/wiki/H._P._Lovecraft">H.P. Lovecraft&lt;/a>.&lt;/p>
-&lt;img class="small" alt="H.P. Lovecraft - Les Montagnes Hallucinées" src="/images/posts/montagnes_hallucinees.jpg" />
-&lt;p>Je suppose que vous connaissez H.P. Lovecraft, grand écrivain dès son plus jeune âge, 9 ans (en 1899, il est donc né en 1890) jusqu&amp;rsquo;à ces 46 ans (mort jeune). Il a très largement fait découvrir à tous les amateurs côté États-Unis comme Angleterre, le genre associé à l&amp;rsquo;horreur, fantastique et un peu de science-fiction. La grande qualité de Lovecraft, hormis son style d&amp;rsquo;écriture tout à fait fabuleux est la précision scientifique de ces récits à l&amp;rsquo;époque ou le l&amp;rsquo;Homme n&amp;rsquo;avait qu&amp;rsquo;à de très rares reprises foulé l&amp;rsquo;Antarctique. C&amp;rsquo;est d&amp;rsquo;ailleurs une des raisons de la crédibilité de ces ouvrages.&lt;/p></description></item><item><title>Filtering and ordering with Restless</title><link>/blog/filtering-and-ordering-with-restless/</link><pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate><guid>/blog/filtering-and-ordering-with-restless/</guid><description>&lt;p>Let&amp;rsquo;s continue with my &lt;a href="/blog/restless-for-building-python-restful-api/">previous blog post&lt;/a> on &lt;a href="https://github.com/toastdriven/restless">Restless&lt;/a> introduction with &lt;a href="https://www.djangoproject.com/">Django&lt;/a>.
-Today I&amp;rsquo;ll show you two quick and simple &lt;a href="http://en.wikipedia.org/wiki/Mixin">Mixins&lt;/a> for Restless. One for &lt;strong>filtering&lt;/strong> and another for &lt;strong>ordering&lt;/strong>.&lt;/p>
-&lt;p>I won&amp;rsquo;t show you how to create Django app, models, etc. This is not the subject.&lt;/p>
-&lt;p>Just to be clear, I have this &lt;code>models.py&lt;/code> for our Pizza shop.&lt;/p>
-&lt;script src="https://gist.github.com/toxinu/67504abbff4a0eefda4152e65c94e4c0.js">&lt;/script>
-&lt;p>And my &lt;code>resources.py&lt;/code>:&lt;/p>
-&lt;script src="https://gist.github.com/toxinu/7f1c073ff66286bec7277bdf474f0b57.js">&lt;/script>
-&lt;h2 id="filtering">Filtering&lt;/h2>
-&lt;p>We are building a very simple and not complete &lt;code>APIFilterMixin&lt;/code> class.&lt;/p>
-&lt;script src="https://gist.github.com/toxinu/137663f558cd056449556caf300dd525.js">&lt;/script>
-&lt;p>As you can see &lt;code>allowed_fields_filter&lt;/code> allow us to put filters (with lookup) that we want to authorize on our &lt;code>Resource&lt;/code>.&lt;/p></description></item><item><title>Restless for building Python RESTful API</title><link>/blog/restless-for-building-python-restful-api/</link><pubDate>Fri, 28 Nov 2014 00:00:00 +0000</pubDate><guid>/blog/restless-for-building-python-restful-api/</guid><description>&lt;p>After trying to build RESTful API in Django with &lt;a href="http://www.django-rest-framework.org/">Django Rest Framework&lt;/a>, my friend &lt;a href="http://seminar.io">Pabluk&lt;/a> allow me to discover &lt;a href="https://github.com/toastdriven/restless">Restless&lt;/a>. A very small code base Python module to build RESTful API.&lt;/p>
-&lt;p>I&amp;rsquo;m totally not a huge fan of &lt;a href="http://www.django-rest-framework.org/">Django Rest Framework&lt;/a>. It&amp;rsquo;s just to restricting if you don&amp;rsquo;t make a 100% REST API, and this is often the case. First of all, you&amp;rsquo;ll have a long progression period when you&amp;rsquo;ll have a bad use of this framework. I think it&amp;rsquo;s to complex while we try a build something simple. A RESTful API.&lt;/p></description></item><item><title>Goodbye Disqus</title><link>/blog/goodbye-disqus/</link><pubDate>Tue, 05 Aug 2014 00:00:00 +0000</pubDate><guid>/blog/goodbye-disqus/</guid><description>&lt;p>Hi folks,&lt;/p>
-&lt;p>I just trash &lt;a href="https://disqus.com/">Disqus&lt;/a> from my website cause of some disgusting issues.&lt;/p>
-&lt;ul>
-&lt;li>A bunch of &lt;code>js&lt;/code> imported&lt;/li>
-&lt;li>A bunch of ajax requests everywhere&lt;/li>
-&lt;li>A big performance issue on page rendering, specially on mobile&lt;/li>
-&lt;li>A urls migration wizard that just doesn&amp;rsquo;t work&lt;/li>
-&lt;/ul>
-&lt;p>I have tested &lt;a href="https://github.com/posativ/isso">Isso&lt;/a>, a Python commentary mechanize. But still young and I fail to import all comments from Disqus.
-I make some try and thinking about &lt;a href="https://github.com/discourse/discourse">Discourse&lt;/a> integration. It&amp;rsquo;s a very good software. All crappy &lt;em>phpbb&lt;/em> are just a shame compare to Discourse. But still a little heavy for a blog commentary system like mine.&lt;/p></description></item><item><title>Animals can make music</title><link>/blog/animals-can-make-music/</link><pubDate>Wed, 30 Jul 2014 00:00:00 +0000</pubDate><guid>/blog/animals-can-make-music/</guid><description>&lt;img class="medium" alt="Animal collecive by Alex Wright" src="/images/posts/animals_co.jpg"/>
-&lt;p>First of all, sorry about embedded videos.&lt;/p>
-&lt;p>I really don&amp;rsquo;t remember first time I listened the very first Animal Collective song. But I guess it was weird, maybe I just trashed it after some seconds. It don&amp;rsquo;t surprise me, like many complex music kind, you have to train your ears and your mind.&lt;/p>
-&lt;p>But in fact, I think this band deliver a very basic emotion. An emotion that just make you want to cry, move your head and just smile.&lt;/p></description></item><item><title>Traveling with Noisy drone</title><link>/blog/traveling-with-noisy-drone/</link><pubDate>Thu, 22 May 2014 00:00:00 +0000</pubDate><guid>/blog/traveling-with-noisy-drone/</guid><description>&lt;p>I really enjoy &lt;em>electro/drone/experimental&lt;/em> music.&lt;/p>
-&lt;p>From &lt;a href="http://en.wikipedia.org/wiki/Boards_of_Canada">Boards of Canada&lt;/a> to &lt;a href="http://en.wikipedia.org/wiki/Tim_Hecker">Tim Hecker&lt;/a> with &lt;a href="http://en.wikipedia.org/wiki/Ben_Frost_(musician)">Ben Frost&lt;/a>, return to &lt;a href="http://en.wikipedia.org/wiki/Christian_Fennesz">Fennesz&lt;/a> and finish with &lt;a href="http://en.wikipedia.org/wiki/Aphex_Twin">Aphex Twin&lt;/a>.&lt;/p>
-&lt;p>These guys are explorer, they try to take you away in their world.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>toxinu</title><link>/</link><description>Recent content on toxinu</description><generator>Hugo</generator><language>en-us</language><copyright>toxinu</copyright><lastBuildDate>Thu, 12 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>My setup in 2018</title><link>/blog/my-setup-2018/</link><pubDate>Thu, 12 Apr 2018 00:00:00 +0000</pubDate><guid>/blog/my-setup-2018/</guid><description>&lt;p&gt;I&amp;rsquo;ve never been so satisfied with my current daily setup as remote-SRE (Python/Golang), so why just not sharing it?&lt;/p&gt;
+&lt;h2 id="hardware"&gt;Hardware&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;ThinkPad X260&lt;/li&gt;
+&lt;li&gt;Samsung 27&amp;quot; Curved LED (yes only one screen)&lt;/li&gt;
+&lt;li&gt;WASD Keyboard Cherry MX Brown 88-Key&lt;/li&gt;
+&lt;li&gt;Steelseries Rival 100 mice&lt;/li&gt;
+&lt;li&gt;Sennheiser HD25-1 II Headphone (for music)&lt;/li&gt;
+&lt;li&gt;HyperX Cloud II Headphone (for vocal)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="software"&gt;Software&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fedora (GNU/Linux)&lt;/li&gt;
+&lt;li&gt;Gnome 3
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://extensions.gnome.org/extension/15/alternatetab/"&gt;AlternateTab&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://extensions.gnome.org/extension/517/caffeine/"&gt;Caffeine&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://extensions.gnome.org/extension/277/impatience/"&gt;Impatience&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://extensions.gnome.org/extension/118/no-topleft-hot-corner/"&gt;No topleft hot corner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://extensions.gnome.org/extension/1031/topicons/"&gt;TopIcons Plus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/kazysmaster/gnome-shell-extension-disable-unredirect"&gt;Extension to fix screen tearing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Firefox
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/"&gt;Bitwarden&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/decentraleyes/"&gt;Decentraleyes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/"&gt;Firefox Multi-account containers&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/https-everywhere/"&gt;HTTPS Everywhere&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/i-dont-care-about-cookies/"&gt;I don&amp;rsquo;t care about cookies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/mailvelope/"&gt;Mailvelope&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/"&gt;Privacy Badger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/tab-suspender-tab-unloader/"&gt;Tab Suspender&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/"&gt;uBlock Origin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/jwilm/alacritty"&gt;Alacritty&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/toxinu/dotfiles"&gt;tmux&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/tmux-plugins/tmux-open"&gt;tmux-open&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://code.visualstudio.com/"&gt;Visual Studio Code&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/gerane/VSCodeThemes/tree/master/gerane.Theme-Ascetic"&gt;Ascetic&lt;/a&gt; colorscheme&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/wee-slack/wee-slack"&gt;wee-slack&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://signal.org/"&gt;Signal&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.veracrypt.fr/"&gt;VeraCrypt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.clementine-player.org/"&gt;Clementine&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="tips--notes"&gt;Tips &amp;amp; notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;To directly run &lt;em&gt;tmux&lt;/em&gt; with &lt;em&gt;alacritty&lt;/em&gt; you can edit your &lt;code&gt;DesktopEntry&lt;/code&gt; like that:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;script src="https://gist.github.com/toxinu/42950e9a91ba1f0141e569fc3018dc15.js"&gt;&lt;/script&gt;
+&lt;ul&gt;
+&lt;li&gt;Use Visual Code Studio from &lt;a href="https://flathub.org/apps/details/com.visualstudio.code"&gt;FlatHub&lt;/a&gt; to have a Microsoft-free compiled binary. Because binaries given by Microsoft are not open source.&lt;/li&gt;
+&lt;li&gt;My dotfiles are on &lt;a href="https://gitlab.com/toxinu/dotfiles"&gt;Gitlab&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;I don&amp;rsquo;t have standing desk, but I have a nice seat. My back never hurts.&lt;/li&gt;
+&lt;li&gt;My &lt;a href="https://gitlab.com/toxinu/dotfiles/blob/29279988ebf8fe9387ae2ecc3f2fea571f95794e/.config/alacritty/alacritty.yml#L90-115"&gt;terminal&lt;/a&gt; and &lt;a href="https://github.com/gerane/VSCodeThemes/tree/master/gerane.Theme-Ascetic"&gt;editor&lt;/a&gt; have grey &amp;amp; white (monochrome for editor) colorschemes. I advize you to try it if you have regular headcaches.&lt;/li&gt;
+&lt;li&gt;I&amp;rsquo;m self hosting some services like: &lt;a href="https://github.com/shaarli/Shaarli"&gt;Shaarli&lt;/a&gt;, &lt;a href="https://tt-rss.org/"&gt;TinyTinyRss&lt;/a&gt;, &lt;a href="https://nextcloud.com/"&gt;Nextcloud&lt;/a&gt;, &lt;a href="https://github.com/RSS-Bridge/rss-bridge"&gt;RSS-Bridge&lt;/a&gt; and more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The most important part, buy a nebulizer diffuser it&amp;rsquo;s amazing. My favorite essential oils are &amp;ldquo;Pepper mint&amp;rdquo;, &amp;ldquo;Tea tree&amp;rdquo; &amp;amp; &amp;ldquo;Niaouli&amp;rdquo;.&lt;/p&gt;</description></item><item><title>How to store your Python package metadata</title><link>/blog/how-to-store-your-python-package-metadata/</link><pubDate>Tue, 20 Dec 2016 00:00:00 +0000</pubDate><guid>/blog/how-to-store-your-python-package-metadata/</guid><description>&lt;p&gt;A small, but full of snippets, post about how to store your package metadata cleanly.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s define a simple layout.&lt;/p&gt;
+&lt;script src="https://gist.github.com/toxinu/1d11ec668a057a871720bf8d7946829a.js"&gt;&lt;/script&gt;
+&lt;p&gt;All your metadata lives in &lt;code&gt;__about__.py&lt;/code&gt; like that:&lt;/p&gt;
+&lt;script src="https://gist.github.com/toxinu/5ef6f5e67bd496f430ca5850b536aef4.js"&gt;&lt;/script&gt;
+&lt;p&gt;Expose all your metadata at package root.&lt;/p&gt;
+&lt;script src="https://gist.github.com/toxinu/96abf6963e0009648b6b4d62fa4a6e23.js"&gt;&lt;/script&gt;
+&lt;p&gt;This setup allow you to avoid editing your &lt;code&gt;setup.py&lt;/code&gt; too frequently and keep it up to date easily.&lt;/p&gt;
+&lt;script src="https://gist.github.com/toxinu/8059bdcc1e868a1237c692913df2209b.js"&gt;&lt;/script&gt;
+&lt;p&gt;Happy coding and don&amp;rsquo;t eat too much turkeys!&lt;/p&gt;</description></item><item><title>Pip installable Django project</title><link>/blog/pip-installable-django-project/</link><pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate><guid>/blog/pip-installable-django-project/</guid><description>&lt;p&gt;I&amp;rsquo;ll present you a &lt;a href="https://www.djangoproject.com/"&gt;Django&lt;/a&gt; layout which allow to ship your project (not app) as a &lt;a href="https://www.python.org/"&gt;Python&lt;/a&gt; package. Your users will be able to install it with &lt;a href="https://pip.pypa.io/en/stable/"&gt;pip&lt;/a&gt; for example.&lt;/p&gt;
+&lt;p&gt;This template is available as a &lt;a href="https://cookiecutter.readthedocs.io/en/latest/"&gt;Cookiecutter&lt;/a&gt; template. But I&amp;rsquo;ll remove every references, because this paper is mainly written to present you a Django project layout. Maybe I&amp;rsquo;ll do another post about Cookiecutter later.&lt;/p&gt;
+&lt;p&gt;My first need is to be able to install my Django project via &lt;code&gt;pip install my-awesome-app&lt;/code&gt; and access it via &lt;code&gt;my-awesome-app&lt;/code&gt; entry point
+without losing &lt;code&gt;manage.py&lt;/code&gt; flexibility.
+The first reference for this template is &lt;a href="https://github.com/getsentry/sentry"&gt;Sentry&lt;/a&gt; project. I&amp;rsquo;m really appreciative of how this project is nicely built by nice people.&lt;/p&gt;</description></item><item><title>H.P. Lovecraft, hallucinations et Tekeli'li !</title><link>/blog/h.p.-lovecraft-hallucinations-et-tekelili/</link><pubDate>Wed, 11 Mar 2015 00:00:00 +0000</pubDate><guid>/blog/h.p.-lovecraft-hallucinations-et-tekelili/</guid><description>&lt;p&gt;Premier article en français ! Il n&amp;rsquo;est jamais trop tard me direz-vous. Pourquoi ? Car je vais parler un peu de littérature et également d&amp;rsquo;un bouquin qui a été très tardivement mais récemment traduit en français.&lt;/p&gt;
+&lt;p&gt;L&amp;rsquo;ouvrage qui m&amp;rsquo;a donné envie de rédiger cet article est bien entendu, &lt;a href="http://fr.wikipedia.org/wiki/Les_Montagnes_hallucin%C3%A9es"&gt;Les Montagnes Hallucinées&lt;/a&gt; du grand &lt;a href="http://fr.wikipedia.org/wiki/H._P._Lovecraft"&gt;H.P. Lovecraft&lt;/a&gt;.&lt;/p&gt;
+&lt;img class="small" alt="H.P. Lovecraft - Les Montagnes Hallucinées" src="/images/posts/montagnes_hallucinees.jpg" /&gt;
+&lt;p&gt;Je suppose que vous connaissez H.P. Lovecraft, grand écrivain dès son plus jeune âge, 9 ans (en 1899, il est donc né en 1890) jusqu&amp;rsquo;à ces 46 ans (mort jeune). Il a très largement fait découvrir à tous les amateurs côté États-Unis comme Angleterre, le genre associé à l&amp;rsquo;horreur, fantastique et un peu de science-fiction. La grande qualité de Lovecraft, hormis son style d&amp;rsquo;écriture tout à fait fabuleux est la précision scientifique de ces récits à l&amp;rsquo;époque ou le l&amp;rsquo;Homme n&amp;rsquo;avait qu&amp;rsquo;à de très rares reprises foulé l&amp;rsquo;Antarctique. C&amp;rsquo;est d&amp;rsquo;ailleurs une des raisons de la crédibilité de ces ouvrages.&lt;/p&gt;</description></item><item><title>Filtering and ordering with Restless</title><link>/blog/filtering-and-ordering-with-restless/</link><pubDate>Mon, 29 Dec 2014 00:00:00 +0000</pubDate><guid>/blog/filtering-and-ordering-with-restless/</guid><description>&lt;p&gt;Let&amp;rsquo;s continue with my &lt;a href="/blog/restless-for-building-python-restful-api/"&gt;previous blog post&lt;/a&gt; on &lt;a href="https://github.com/toastdriven/restless"&gt;Restless&lt;/a&gt; introduction with &lt;a href="https://www.djangoproject.com/"&gt;Django&lt;/a&gt;.
+Today I&amp;rsquo;ll show you two quick and simple &lt;a href="http://en.wikipedia.org/wiki/Mixin"&gt;Mixins&lt;/a&gt; for Restless. One for &lt;strong&gt;filtering&lt;/strong&gt; and another for &lt;strong&gt;ordering&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I won&amp;rsquo;t show you how to create Django app, models, etc. This is not the subject.&lt;/p&gt;
+&lt;p&gt;Just to be clear, I have this &lt;code&gt;models.py&lt;/code&gt; for our Pizza shop.&lt;/p&gt;
+&lt;script src="https://gist.github.com/toxinu/67504abbff4a0eefda4152e65c94e4c0.js"&gt;&lt;/script&gt;
+&lt;p&gt;And my &lt;code&gt;resources.py&lt;/code&gt;:&lt;/p&gt;
+&lt;script src="https://gist.github.com/toxinu/7f1c073ff66286bec7277bdf474f0b57.js"&gt;&lt;/script&gt;
+&lt;h2 id="filtering"&gt;Filtering&lt;/h2&gt;
+&lt;p&gt;We are building a very simple and not complete &lt;code&gt;APIFilterMixin&lt;/code&gt; class.&lt;/p&gt;
+&lt;script src="https://gist.github.com/toxinu/137663f558cd056449556caf300dd525.js"&gt;&lt;/script&gt;
+&lt;p&gt;As you can see &lt;code&gt;allowed_fields_filter&lt;/code&gt; allow us to put filters (with lookup) that we want to authorize on our &lt;code&gt;Resource&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Restless for building Python RESTful API</title><link>/blog/restless-for-building-python-restful-api/</link><pubDate>Fri, 28 Nov 2014 00:00:00 +0000</pubDate><guid>/blog/restless-for-building-python-restful-api/</guid><description>&lt;p&gt;After trying to build RESTful API in Django with &lt;a href="http://www.django-rest-framework.org/"&gt;Django Rest Framework&lt;/a&gt;, my friend &lt;a href="http://seminar.io"&gt;Pabluk&lt;/a&gt; allow me to discover &lt;a href="https://github.com/toastdriven/restless"&gt;Restless&lt;/a&gt;. A very small code base Python module to build RESTful API.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m totally not a huge fan of &lt;a href="http://www.django-rest-framework.org/"&gt;Django Rest Framework&lt;/a&gt;. It&amp;rsquo;s just to restricting if you don&amp;rsquo;t make a 100% REST API, and this is often the case. First of all, you&amp;rsquo;ll have a long progression period when you&amp;rsquo;ll have a bad use of this framework. I think it&amp;rsquo;s to complex while we try a build something simple. A RESTful API.&lt;/p&gt;</description></item><item><title>Goodbye Disqus</title><link>/blog/goodbye-disqus/</link><pubDate>Tue, 05 Aug 2014 00:00:00 +0000</pubDate><guid>/blog/goodbye-disqus/</guid><description>&lt;p&gt;Hi folks,&lt;/p&gt;
+&lt;p&gt;I just trash &lt;a href="https://disqus.com/"&gt;Disqus&lt;/a&gt; from my website cause of some disgusting issues.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A bunch of &lt;code&gt;js&lt;/code&gt; imported&lt;/li&gt;
+&lt;li&gt;A bunch of ajax requests everywhere&lt;/li&gt;
+&lt;li&gt;A big performance issue on page rendering, specially on mobile&lt;/li&gt;
+&lt;li&gt;A urls migration wizard that just doesn&amp;rsquo;t work&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I have tested &lt;a href="https://github.com/posativ/isso"&gt;Isso&lt;/a&gt;, a Python commentary mechanize. But still young and I fail to import all comments from Disqus.
+I make some try and thinking about &lt;a href="https://github.com/discourse/discourse"&gt;Discourse&lt;/a&gt; integration. It&amp;rsquo;s a very good software. All crappy &lt;em&gt;phpbb&lt;/em&gt; are just a shame compare to Discourse. But still a little heavy for a blog commentary system like mine.&lt;/p&gt;</description></item><item><title>Animals can make music</title><link>/blog/animals-can-make-music/</link><pubDate>Wed, 30 Jul 2014 00:00:00 +0000</pubDate><guid>/blog/animals-can-make-music/</guid><description>&lt;img class="medium" alt="Animal collecive by Alex Wright" src="/images/posts/animals_co.jpg"/&gt;
+&lt;p&gt;First of all, sorry about embedded videos.&lt;/p&gt;
+&lt;p&gt;I really don&amp;rsquo;t remember first time I listened the very first Animal Collective song. But I guess it was weird, maybe I just trashed it after some seconds. It don&amp;rsquo;t surprise me, like many complex music kind, you have to train your ears and your mind.&lt;/p&gt;
+&lt;p&gt;But in fact, I think this band deliver a very basic emotion. An emotion that just make you want to cry, move your head and just smile.&lt;/p&gt;</description></item><item><title>Traveling with Noisy drone</title><link>/blog/traveling-with-noisy-drone/</link><pubDate>Thu, 22 May 2014 00:00:00 +0000</pubDate><guid>/blog/traveling-with-noisy-drone/</guid><description>&lt;p&gt;I really enjoy &lt;em&gt;electro/drone/experimental&lt;/em&gt; music.&lt;/p&gt;
+&lt;p&gt;From &lt;a href="http://en.wikipedia.org/wiki/Boards_of_Canada"&gt;Boards of Canada&lt;/a&gt; to &lt;a href="http://en.wikipedia.org/wiki/Tim_Hecker"&gt;Tim Hecker&lt;/a&gt; with &lt;a href="http://en.wikipedia.org/wiki/Ben_Frost_(musician)"&gt;Ben Frost&lt;/a&gt;, return to &lt;a href="http://en.wikipedia.org/wiki/Christian_Fennesz"&gt;Fennesz&lt;/a&gt; and finish with &lt;a href="http://en.wikipedia.org/wiki/Aphex_Twin"&gt;Aphex Twin&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;These guys are explorer, they try to take you away in their world.
 I want to write something because there are two recent albums that make sure that
-I love music exploration, &lt;a href="http://en.wikipedia.org/wiki/Virgins_(Tim_Hecker_album)">Virgin&lt;/a> from &lt;a href="http://en.wikipedia.org/wiki/Tim_Hecker">Tim Hecker&lt;/a> and A U R O R A by &lt;a href="http://en.wikipedia.org/wiki/Ben_Frost_(musician)">Ben Frost&lt;/a>.&lt;/p>
-&lt;p>For me exploration means that every part of the adventure won&amp;rsquo;t be enjoyable but it&amp;rsquo;s an experimentation. Like when you just travel, you&amp;rsquo;ll walk an hour and hour to reach the top of the mountain. It could be difficult, but when you reach your goal or just understand why you are here, it&amp;rsquo;s enjoyable. I think you can apply this to music. Music is not just entertainment, it&amp;rsquo;s research, travel, bad or good.&lt;/p></description></item><item><title>Two latest readings - *sick*</title><link>/blog/two-latest-readings-sick/</link><pubDate>Wed, 16 Apr 2014 00:00:00 +0000</pubDate><guid>/blog/two-latest-readings-sick/</guid><description>&lt;p>Chuck Palahniuk is the guy that will use little daily weird things to make you very petty.&lt;/p>
-&lt;h1 id="rant">Rant&lt;/h1>
-&lt;img class="small float-right" src="/images/posts/palahniuk_rant.jpg" />
-&lt;p>I really enjoy this book.&lt;/p>
-&lt;p>It&amp;rsquo;s an oral biography about a strange boy (Buster Rant Casey) in a strange world (Middleton) where live strange residents.
+I love music exploration, &lt;a href="http://en.wikipedia.org/wiki/Virgins_(Tim_Hecker_album)"&gt;Virgin&lt;/a&gt; from &lt;a href="http://en.wikipedia.org/wiki/Tim_Hecker"&gt;Tim Hecker&lt;/a&gt; and A U R O R A by &lt;a href="http://en.wikipedia.org/wiki/Ben_Frost_(musician)"&gt;Ben Frost&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For me exploration means that every part of the adventure won&amp;rsquo;t be enjoyable but it&amp;rsquo;s an experimentation. Like when you just travel, you&amp;rsquo;ll walk an hour and hour to reach the top of the mountain. It could be difficult, but when you reach your goal or just understand why you are here, it&amp;rsquo;s enjoyable. I think you can apply this to music. Music is not just entertainment, it&amp;rsquo;s research, travel, bad or good.&lt;/p&gt;</description></item><item><title>Two latest readings - *sick*</title><link>/blog/two-latest-readings-sick/</link><pubDate>Wed, 16 Apr 2014 00:00:00 +0000</pubDate><guid>/blog/two-latest-readings-sick/</guid><description>&lt;p&gt;Chuck Palahniuk is the guy that will use little daily weird things to make you very petty.&lt;/p&gt;
+&lt;h1 id="rant"&gt;Rant&lt;/h1&gt;
+&lt;img class="small float-right" src="/images/posts/palahniuk_rant.jpg" /&gt;
+&lt;p&gt;I really enjoy this book.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s an oral biography about a strange boy (Buster Rant Casey) in a strange world (Middleton) where live strange residents.
 This story is timeless. You&amp;rsquo;ll retrieve subjects about sex, diseases, cars and cars.
 At the beginning, I feel a part of Fallout ambiance but after some chapters, not anymore.
 It&amp;rsquo;s very difficult to give a time period about this story, you have guys who drive 80&amp;rsquo; old cars but at
-the same time, people are able to plug cables in their heads to not just watch a movie but to feel a movie.&lt;/p></description></item><item><title>Ephemeral Internet</title><link>/blog/ephemeral-internet/</link><pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate><guid>/blog/ephemeral-internet/</guid><description>&lt;center>
+the same time, people are able to plug cables in their heads to not just watch a movie but to feel a movie.&lt;/p&gt;</description></item><item><title>Ephemeral Internet</title><link>/blog/ephemeral-internet/</link><pubDate>Wed, 18 Dec 2013 00:00:00 +0000</pubDate><guid>/blog/ephemeral-internet/</guid><description>&lt;center&gt;
 I enjoy this ephemeral vision of the Internet.
-&lt;/center>
-&lt;center>
-&lt;img src="http://imgs.xkcd.com/comics/undocumented_feature.png" title="And it doesn't pop up a box every time asking you to use your real name. In fact, there's no way to set your name at all. You just have to keep reminding people who you are." alt="Undocumented Feature" style="max-width: 350px">
-&lt;/center></description></item><item><title>No normal food for 2 months</title><link>/blog/no-normal-food-for-2-months/</link><pubDate>Sat, 10 Aug 2013 00:00:00 +0000</pubDate><guid>/blog/no-normal-food-for-2-months/</guid><description>&lt;p>The game.&lt;/p>
-&lt;p>About four months ago I discover &lt;a href="http://robrhinehart.com/?p=298">this&lt;/a> blog entry and I realize that some other guys have been thinking about a new way to eat.&lt;/p>
-&lt;p>&lt;strong>Full disclosure&lt;/strong>: I&amp;rsquo;m totally not a big eater, I was mainly eating &lt;em>pasta&lt;/em>, &lt;em>rice&lt;/em>, etc.. And sometimes sushi at restaurant, cause I love sushi.&lt;/p>
-&lt;p>I&amp;rsquo;ve always dreamed to be able to just swallow a pill every morning and to be in perfect food health in a very small kind of pollution to produce it.
-This can sounds like a child dream but it&amp;rsquo;s totally not, cause today it&amp;rsquo;s my second month without solid food birthday.&lt;/p></description></item><item><title>First thing to do after Ubuntu fresh install</title><link>/blog/first-thing-to-do-after-ubuntu-fresh-install/</link><pubDate>Mon, 10 Dec 2012 00:00:00 +0000</pubDate><guid>/blog/first-thing-to-do-after-ubuntu-fresh-install/</guid><description>&lt;p>It&amp;rsquo;s time to return to sources, Linux, good buy Apple.
-But this is the first thing to do on every new Ubuntu installation.&lt;/p>
-&lt;script src="https://gist.github.com/toxinu/0b463d50229b66dcc7c6699ebfd2ba48.js">&lt;/script>
-&lt;p>&amp;lsquo;Cause of &lt;a href="http://www.fsf.org/blogs/rms/ubuntu-spyware-what-to-do">&lt;strong>spyware&lt;/strong>&lt;/a>, you know&amp;hellip;&lt;/p></description></item><item><title>Websocket with Flask and Gevent</title><link>/blog/websocket-with-flask-and-gevent/</link><pubDate>Sun, 28 Oct 2012 00:00:00 +0000</pubDate><guid>/blog/websocket-with-flask-and-gevent/</guid><description>&lt;h2 id="ubik-package-manager-for-unix">Ubik, package manager for Unix&lt;/h2>
-&lt;p>If you follow me on &lt;a href="https://github.com/Socketubs">Github&lt;/a> you have maybe already seen that I currently develop a package manager for Unix, &lt;a href="https://gitlab.com/toxinu/ubik">Ubik&lt;/a>.&lt;/p>
-&lt;p>In order to test my API, I create a &lt;em>WebUI&lt;/em> for &lt;em>Ubik&lt;/em> and the websockets comes to me.
-My two prefered web framework are &lt;strong>Django&lt;/strong> and &lt;strong>Flask&lt;/strong>, but I need a &lt;em>lightweight&lt;/em> web app, so welcome to Flask.&lt;/p>
-&lt;h2 id="nodejs-blah-blah">Node.js, blah, blah&lt;/h2>
-&lt;p>Ok, I have many many times hear good things about &lt;strong>Node.js&lt;/strong> and &lt;strong>&lt;a href="http://www.gelens.org/code/gevent-websocket/">Socket.io&lt;/a>&lt;/strong>, no doubt.
-But my focus is to do a lightweight and &lt;strong>full Python&lt;/strong> implemented application.&lt;/p></description></item><item><title>Github Pages to Heroku</title><link>/blog/github-pages-to-heroku/</link><pubDate>Sun, 02 Sep 2012 00:00:00 +0000</pubDate><guid>/blog/github-pages-to-heroku/</guid><description>&lt;h1 id="synopsis">Synopsis&lt;/h1>
-&lt;p>My initial goal was to put my jekyll website on Heroku but I have encountered many problems due of my bad Ruby level and &lt;code>pygment&lt;/code> usage.&lt;/p>
-&lt;p>During month my jekyll website was freely hosted by &lt;strong>GitHub Pages&lt;/strong>. Thanks for all the fish. But &lt;strong>GitHub&lt;/strong> is not for app hosting.&lt;/p>
-&lt;p>Many hours of:&lt;/p>
-&lt;blockquote>
-&lt;p>&amp;ldquo;What the fuck I have 404 ?&amp;rdquo;
+&lt;/center&gt;
+&lt;center&gt;
+&lt;img src="http://imgs.xkcd.com/comics/undocumented_feature.png" title="And it doesn't pop up a box every time asking you to use your real name. In fact, there's no way to set your name at all. You just have to keep reminding people who you are." alt="Undocumented Feature" style="max-width: 350px"&gt;
+&lt;/center&gt;</description></item><item><title>No normal food for 2 months</title><link>/blog/no-normal-food-for-2-months/</link><pubDate>Sat, 10 Aug 2013 00:00:00 +0000</pubDate><guid>/blog/no-normal-food-for-2-months/</guid><description>&lt;p&gt;The game.&lt;/p&gt;
+&lt;p&gt;About four months ago I discover &lt;a href="http://robrhinehart.com/?p=298"&gt;this&lt;/a&gt; blog entry and I realize that some other guys have been thinking about a new way to eat.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Full disclosure&lt;/strong&gt;: I&amp;rsquo;m totally not a big eater, I was mainly eating &lt;em&gt;pasta&lt;/em&gt;, &lt;em&gt;rice&lt;/em&gt;, etc.. And sometimes sushi at restaurant, cause I love sushi.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve always dreamed to be able to just swallow a pill every morning and to be in perfect food health in a very small kind of pollution to produce it.
+This can sounds like a child dream but it&amp;rsquo;s totally not, cause today it&amp;rsquo;s my second month without solid food birthday.&lt;/p&gt;</description></item><item><title>First thing to do after Ubuntu fresh install</title><link>/blog/first-thing-to-do-after-ubuntu-fresh-install/</link><pubDate>Mon, 10 Dec 2012 00:00:00 +0000</pubDate><guid>/blog/first-thing-to-do-after-ubuntu-fresh-install/</guid><description>&lt;p&gt;It&amp;rsquo;s time to return to sources, Linux, good buy Apple.
+But this is the first thing to do on every new Ubuntu installation.&lt;/p&gt;
+&lt;script src="https://gist.github.com/toxinu/0b463d50229b66dcc7c6699ebfd2ba48.js"&gt;&lt;/script&gt;
+&lt;p&gt;&amp;lsquo;Cause of &lt;a href="http://www.fsf.org/blogs/rms/ubuntu-spyware-what-to-do"&gt;&lt;strong&gt;spyware&lt;/strong&gt;&lt;/a&gt;, you know&amp;hellip;&lt;/p&gt;</description></item><item><title>Websocket with Flask and Gevent</title><link>/blog/websocket-with-flask-and-gevent/</link><pubDate>Sun, 28 Oct 2012 00:00:00 +0000</pubDate><guid>/blog/websocket-with-flask-and-gevent/</guid><description>&lt;h2 id="ubik-package-manager-for-unix"&gt;Ubik, package manager for Unix&lt;/h2&gt;
+&lt;p&gt;If you follow me on &lt;a href="https://github.com/Socketubs"&gt;Github&lt;/a&gt; you have maybe already seen that I currently develop a package manager for Unix, &lt;a href="https://gitlab.com/toxinu/ubik"&gt;Ubik&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In order to test my API, I create a &lt;em&gt;WebUI&lt;/em&gt; for &lt;em&gt;Ubik&lt;/em&gt; and the websockets comes to me.
+My two prefered web framework are &lt;strong&gt;Django&lt;/strong&gt; and &lt;strong&gt;Flask&lt;/strong&gt;, but I need a &lt;em&gt;lightweight&lt;/em&gt; web app, so welcome to Flask.&lt;/p&gt;
+&lt;h2 id="nodejs-blah-blah"&gt;Node.js, blah, blah&lt;/h2&gt;
+&lt;p&gt;Ok, I have many many times hear good things about &lt;strong&gt;Node.js&lt;/strong&gt; and &lt;strong&gt;&lt;a href="http://www.gelens.org/code/gevent-websocket/"&gt;Socket.io&lt;/a&gt;&lt;/strong&gt;, no doubt.
+But my focus is to do a lightweight and &lt;strong&gt;full Python&lt;/strong&gt; implemented application.&lt;/p&gt;</description></item><item><title>Github Pages to Heroku</title><link>/blog/github-pages-to-heroku/</link><pubDate>Sun, 02 Sep 2012 00:00:00 +0000</pubDate><guid>/blog/github-pages-to-heroku/</guid><description>&lt;h1 id="synopsis"&gt;Synopsis&lt;/h1&gt;
+&lt;p&gt;My initial goal was to put my jekyll website on Heroku but I have encountered many problems due of my bad Ruby level and &lt;code&gt;pygment&lt;/code&gt; usage.&lt;/p&gt;
+&lt;p&gt;During month my jekyll website was freely hosted by &lt;strong&gt;GitHub Pages&lt;/strong&gt;. Thanks for all the fish. But &lt;strong&gt;GitHub&lt;/strong&gt; is not for app hosting.&lt;/p&gt;
+&lt;p&gt;Many hours of:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;What the fuck I have 404 ?&amp;rdquo;
 &amp;ldquo;Oh Damn it my local Jekyll render it correctly and not on Github&amp;hellip;&amp;rdquo;
-&amp;ldquo;Ohh enough, it was just the yaml header with quotes which give me fucking 404&amp;rdquo;&lt;/p></description></item><item><title>TheMall - A simple Python web shopping list</title><link>/blog/themall-a-simple-python-web-shopping-list/</link><pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate><guid>/blog/themall-a-simple-python-web-shopping-list/</guid><description>&lt;p>I have used &lt;a href="http://mytinytodo.net">myTinyTodo&lt;/a> for at least 1 year but I&amp;rsquo;m fed up of Mysql database and Php&amp;hellip;
-Am I serious ?&lt;/p>
-&lt;blockquote>
-&lt;p>&amp;ldquo;Mysql database for shopping list ? A bazooka to kill a fly ?&amp;rdquo;&lt;/p>&lt;/blockquote>
-&lt;p>The plan is to create a simple Python todo list mainly for shopping list with mobile interface. It&amp;rsquo;s was the objectif.&lt;/p>
-&lt;p>&lt;strong>Tools box&lt;/strong>:&lt;/p>
-&lt;ul>
-&lt;li>Python&lt;/li>
-&lt;li>Flask&lt;/li>
-&lt;li>Twitter bootstrap&lt;/li>
-&lt;li>Json&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Description&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Simple authentification&lt;/li>
-&lt;li>Very light design&lt;/li>
-&lt;li>Mobile design (responsive)&lt;/li>
-&lt;li>Very very light Todo List&lt;/li>
-&lt;li>In fact, looks like a Shopping List&lt;/li>
-&lt;/ul>
-&lt;p>You can see project page &lt;a href="http://socketubs.github.com/TheMall">here&lt;/a>.
-And this is my personnal &lt;a href="http://todo.socketubs.net">Shopping list&lt;/a> if you want a quick look.&lt;/p></description></item><item><title>Ubuntu Server LTS upgrades are stress test</title><link>/blog/ubuntu-server-lts-upgrades-are-stress-test/</link><pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate><guid>/blog/ubuntu-server-lts-upgrades-are-stress-test/</guid><description>&lt;h3 id="update">Update&lt;/h3>
-&lt;ul>
-&lt;li>Sept, 24 2012&lt;/li>
-&lt;/ul>
-&lt;p>This article is now deprecated, Ubuntu now have a clean upgrade script.
-Just use &lt;code>do-release-upgrade&lt;/code>.&lt;/p>
-&lt;hr>
-&lt;/br >
-&lt;p>This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present.
-And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&amp;hellip;&lt;/p>
-&lt;p>I admit to not being an Ubuntu expert ( Debian too ) but the &lt;code>do-release-upgrade&lt;/code> is like :&lt;/p>
-&lt;blockquote>
-&lt;p>&amp;ldquo;Ohhh yeah take this Ultra Decap&amp;rsquo;Net my son !&amp;rdquo;&lt;/p></description></item><item><title>Nagios Oracle health plugin</title><link>/blog/nagios-oracle-health-plugin/</link><pubDate>Fri, 28 Oct 2011 00:00:00 +0000</pubDate><guid>/blog/nagios-oracle-health-plugin/</guid><description>&lt;p>This is more a memo than an article. A quick and dirty &lt;a href="http://labs.consol.de/nagios/check_oracle_health">check_oracle_health&lt;/a> plugin installation, with prerequires.&lt;/p>
-&lt;p>Developped by &lt;a href="https://github.com/lausser">Gerhard Lausser&lt;/a>, an active &lt;a href="http://www.shinken-monitoring.org/">Shinken&lt;/a> developper with &lt;a href="https://github.com/naparuba">Jean Gabès&lt;/a>.&lt;/p>
-&lt;p>Like most of Nagios plugins, it&amp;rsquo;s in Perl language and it&amp;rsquo;s use DBD::Oracle module, and this module need an Oracle client.&lt;/p>
-&lt;h2 id="oracle-instant-client">Oracle Instant Client&lt;/h2>
-&lt;p>You have to create a fucking Oracle account&amp;hellip; Yes I know you think :&lt;/p>
-&lt;p>&lt;em>&amp;ldquo;What&amp;rsquo;s this great article ?! Proprietary software are just awesome!&amp;rdquo;&lt;/em>.&lt;/p></description></item><item><title>Jekyll with Git and Hooks</title><link>/blog/jekyll-with-git-and-hooks/</link><pubDate>Fri, 21 Oct 2011 00:00:00 +0000</pubDate><guid>/blog/jekyll-with-git-and-hooks/</guid><description>&lt;p>Good bye my lovely &lt;a href="http://socketubs.github.com/TheMall">Pyame&lt;/a>&amp;hellip; Hello &lt;a href="http://jekyllrb.com/">Jekyll&lt;/a> ! Pyame is my personnal static website creator written in Python under heavy development. These days I searched powerfull, light and easy to use static website creator, and Jekyll is arrived. Thanks God.&lt;/p>
-&lt;p>In short, these programs parse differents files written in a special syntax, for example : Markdown, Textile, etc. An easy syntax to make your articles or docs more swag. And it generate html output.&lt;/p></description></item><item><title>About</title><link>/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/about/</guid><description/></item><item><title>Photography</title><link>/photography/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/photography/</guid><description/></item></channel></rss>
+&amp;ldquo;Ohh enough, it was just the yaml header with quotes which give me fucking 404&amp;rdquo;&lt;/p&gt;</description></item><item><title>TheMall - A simple Python web shopping list</title><link>/blog/themall-a-simple-python-web-shopping-list/</link><pubDate>Sun, 06 May 2012 00:00:00 +0000</pubDate><guid>/blog/themall-a-simple-python-web-shopping-list/</guid><description>&lt;p&gt;I have used &lt;a href="http://mytinytodo.net"&gt;myTinyTodo&lt;/a&gt; for at least 1 year but I&amp;rsquo;m fed up of Mysql database and Php&amp;hellip;
+Am I serious ?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Mysql database for shopping list ? A bazooka to kill a fly ?&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The plan is to create a simple Python todo list mainly for shopping list with mobile interface. It&amp;rsquo;s was the objectif.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools box&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python&lt;/li&gt;
+&lt;li&gt;Flask&lt;/li&gt;
+&lt;li&gt;Twitter bootstrap&lt;/li&gt;
+&lt;li&gt;Json&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Simple authentification&lt;/li&gt;
+&lt;li&gt;Very light design&lt;/li&gt;
+&lt;li&gt;Mobile design (responsive)&lt;/li&gt;
+&lt;li&gt;Very very light Todo List&lt;/li&gt;
+&lt;li&gt;In fact, looks like a Shopping List&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can see project page &lt;a href="http://socketubs.github.com/TheMall"&gt;here&lt;/a&gt;.
+And this is my personnal &lt;a href="http://todo.socketubs.net"&gt;Shopping list&lt;/a&gt; if you want a quick look.&lt;/p&gt;</description></item><item><title>Ubuntu Server LTS upgrades are stress test</title><link>/blog/ubuntu-server-lts-upgrades-are-stress-test/</link><pubDate>Thu, 03 May 2012 00:00:00 +0000</pubDate><guid>/blog/ubuntu-server-lts-upgrades-are-stress-test/</guid><description>&lt;h3 id="update"&gt;Update&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Sept, 24 2012&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This article is now deprecated, Ubuntu now have a clean upgrade script.
+Just use &lt;code&gt;do-release-upgrade&lt;/code&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;/br &gt;
+&lt;p&gt;This week I had to upgrade some Ubuntu Server 10.04 to the new Canonical present.
+And as much to upgrade my Debian scares me, then Ubuntu is a fabulous stress test&amp;hellip;&lt;/p&gt;
+&lt;p&gt;I admit to not being an Ubuntu expert ( Debian too ) but the &lt;code&gt;do-release-upgrade&lt;/code&gt; is like :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Ohhh yeah take this Ultra Decap&amp;rsquo;Net my son !&amp;rdquo;&lt;/p&gt;</description></item><item><title>Nagios Oracle health plugin</title><link>/blog/nagios-oracle-health-plugin/</link><pubDate>Fri, 28 Oct 2011 00:00:00 +0000</pubDate><guid>/blog/nagios-oracle-health-plugin/</guid><description>&lt;p&gt;This is more a memo than an article. A quick and dirty &lt;a href="http://labs.consol.de/nagios/check_oracle_health"&gt;check_oracle_health&lt;/a&gt; plugin installation, with prerequires.&lt;/p&gt;
+&lt;p&gt;Developped by &lt;a href="https://github.com/lausser"&gt;Gerhard Lausser&lt;/a&gt;, an active &lt;a href="http://www.shinken-monitoring.org/"&gt;Shinken&lt;/a&gt; developper with &lt;a href="https://github.com/naparuba"&gt;Jean Gabès&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Like most of Nagios plugins, it&amp;rsquo;s in Perl language and it&amp;rsquo;s use DBD::Oracle module, and this module need an Oracle client.&lt;/p&gt;
+&lt;h2 id="oracle-instant-client"&gt;Oracle Instant Client&lt;/h2&gt;
+&lt;p&gt;You have to create a fucking Oracle account&amp;hellip; Yes I know you think :&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;What&amp;rsquo;s this great article ?! Proprietary software are just awesome!&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Jekyll with Git and Hooks</title><link>/blog/jekyll-with-git-and-hooks/</link><pubDate>Fri, 21 Oct 2011 00:00:00 +0000</pubDate><guid>/blog/jekyll-with-git-and-hooks/</guid><description>&lt;p&gt;Good bye my lovely &lt;a href="http://socketubs.github.com/TheMall"&gt;Pyame&lt;/a&gt;&amp;hellip; Hello &lt;a href="http://jekyllrb.com/"&gt;Jekyll&lt;/a&gt; ! Pyame is my personnal static website creator written in Python under heavy development. These days I searched powerfull, light and easy to use static website creator, and Jekyll is arrived. Thanks God.&lt;/p&gt;
+&lt;p&gt;In short, these programs parse differents files written in a special syntax, for example : Markdown, Textile, etc. An easy syntax to make your articles or docs more swag. And it generate html output.&lt;/p&gt;</description></item><item><title>About</title><link>/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/about/</guid><description/></item><item><title>Photography</title><link>/photography/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/photography/</guid><description/></item></channel></rss>

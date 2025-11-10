@@ -2,7 +2,7 @@
 
 # New author details
 NEW_NAME="toxinu"
-NEW_EMAIL="jo@kikitama.com"
+NEW_EMAIL="toxinu@gmail.com"
 
 # Use git filter-branch to update all commits
 git filter-branch --env-filter "

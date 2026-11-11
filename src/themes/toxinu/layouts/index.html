@@ -23,7 +23,7 @@
 
 <ol class="stories grid">
     {{ range .Site.Pages.ByDate.Reverse }}
-        {{ if and (eq .Section "blog") (eq .IsNode false) }}
+        {{ if and (eq .Section "blog") (eq .IsPage false) }}
             <li>
                 <a href="{{ .Permalink }}" class="left">{{ .Title }}</a>
                 <time datetime="{{ .Date.Format "2006-01-02" }}" class="right">{{ .Date.Format "02 Jan 2006" }}</time>

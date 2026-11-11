@@ -1,11 +1,12 @@
 baseURL = "/"
-languageCode = "en-us"
 pygmentscodefences = true
 pygmentsuseclasses = true
 theme = "toxinude"
 title = "toxinu"
 publishDir = "../docs"
 copyright = "toxinu"
+[language]
+locale = "en-us"
 [markup]
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark.renderer]
@@ -16,7 +17,7 @@ showAllPostsOnHomePage = true
 showPaginationHomePage = false
 rss = true
 # Other
-email = "toxinu@gmail.com"
+email = "jo@kikitama.com"
 github = "toxinu"
 gitlab= "toxinu"
 twitter = ""

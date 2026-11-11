@@ -11,7 +11,7 @@
     {{ if $showAllPostsOnHomePage }}
     <ul class="post-list">
         {{ range (sort .Site.RegularPages "Date" "desc") }}
-        {{ if and (eq .Section "blog") (eq .IsNode false) }}
+        {{ if and (eq .Section "blog") (eq .IsPage false) }}
         <li class="post-item">
             <a href="{{ .Permalink }}">
                 <div>

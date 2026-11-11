@@ -1,8 +1,8 @@
 build:
-	./hugo --minify -s src
+	hugo --minify -s src
 
 serve:
-	./hugo -s src serve
+	hugo -s src serve
 
 publish:
 	if [[ `git status -s` ]]; then  \
